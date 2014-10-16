@@ -1,14 +1,14 @@
 //
-//  Permanent_EraserAppDelegate.m
+//  PEAppDelegate.m
 //  Permanent Eraser
 //
 //  Created by Chad Armstrong on 10/13/14.
 //  Copyright 2014 Edenwaith. All rights reserved.
 //
 
-#import "Permanent_EraserAppDelegate.h"
+#import "PEAppDelegate.h"
 
-@implementation Permanent_EraserAppDelegate
+@implementation PEAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	// Insert code here to initialize your application 
@@ -58,6 +58,21 @@
 - (IBAction)eraseFiles:(id)sender
 {
 	isCurrentlyErasing = NO;
+	
+	NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    int result = 0;
+    
+    [openPanel setCanChooseDirectories:YES];
+    
+    // NSHomeDirectory() can be used instead of the first nil (for the directory
+    // path) to set the default directory to be the home directory.  Having
+    // the path set to nil opens to the last opened directory.
+    result = [openPanel runModalForDirectory:nil file:nil types:nil];
+    
+    if (result == NSOKButton) 
+    {
+
+    } 
 }
 
 - (IBAction)openPreferences:(id)sender

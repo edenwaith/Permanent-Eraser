@@ -1,5 +1,5 @@
 //
-//  Permanent_EraserAppDelegate.h
+//  PEAppDelegate.h
 //  Permanent Eraser
 //
 //  Created by Chad Armstrong on 10/13/14.
@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Permanent_EraserAppDelegate : NSObject { // <NSApplicationDelegate> {
-    NSWindow *window;
+@interface PEAppDelegate : NSObject
+{ 
 	NSStatusItem *statusBarItem;
 	IBOutlet NSMenu *statusMenu;
 	BOOL isCurrentlyErasing;
