@@ -1,0 +1,11 @@
+"Cancel" = "Annulla";
+"ErasingFileWarning" = "Vuoi eliminare definitivamente questo file?";
+"ErasingFilesWarning" = "Vuoi eliminare definitivamente questi files?";
+"ErasingMessage" = "Elimino";
+"ErasingTrashWarning" = "Vuoi eliminare definitivamente i files nel cestino?";
+"ErrorDeletingDiscMessage" = "Permanent Eraser non può eliminare il contenuto di questo CD/DVD.";
+"ErrorDeletingMessage" = "Permanent Eraser non può eliminare il file \"%@\"";
+"ErrorTitle" = "Attenzione!";
+"OK" = "OK";
+"PreparingMessage" = "Predispongo l'eliminazione…";
+"Quit" = "Esci";

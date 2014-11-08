@@ -1,0 +1,729 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXApplicationTarget section */
+		29B97326FDCFA39411CA2CEA /* PermanentEraser */ = {
+			isa = PBXApplicationTarget;
+			buildConfigurationList = 84D1577808EB759400EF9E06 /* Build configuration list for PBXApplicationTarget "PermanentEraser" */;
+			buildPhases = (
+				29B97327FDCFA39411CA2CEA /* Headers */,
+				29B97328FDCFA39411CA2CEA /* Resources */,
+				29B9732BFDCFA39411CA2CEA /* Sources */,
+				29B9732DFDCFA39411CA2CEA /* Frameworks */,
+			);
+			dependencies = (
+			);
+			name = PermanentEraser;
+			productInstallPath = "$(HOME)/Applications";
+			productName = PermanentEraser;
+			productReference = 17587328FF379C6511CA2CBB /* Permanent Eraser.app */;
+			productSettingsXML = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<!DOCTYPE plist PUBLIC \"-//Apple Computer//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+<plist version=\"1.0\">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeOSTypes</key>
+			<array>
+				<string>****</string>
+			</array>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>Permanent Eraser</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Permanent Eraser 2.2.0</string>
+	<key>CFBundleIconFile</key>
+	<string>PE22</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.edenwaith.permanenteraser</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Permanent Eraser</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>2.2.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>6</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+</dict>
+</plist>
+";
+		};
+/* End PBXApplicationTarget section */
+
+/* Begin PBXBuildFile section */
+		080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		29B9732CFDCFA39411CA2CEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		32CA4F650368D2AA00C91783 /* PermanentEraser_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */; };
+		8405E9D90B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
+		8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		8405E9DB0B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
+		8405E9DC0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		84524315048BDAA40003BAA1 /* PEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84524313048BDAA40003BAA1 /* PEController.h */; };
+		84524316048BDAA40003BAA1 /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
+		84583AE60B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		848DFB1506181178000C5867 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 848DFB1406181178000C5867 /* srm */; };
+		84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		84E63DAF09B53F1500DA4444 /* PermanentEraser_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */; };
+		84E63DB009B53F1500DA4444 /* PEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84524313048BDAA40003BAA1 /* PEController.h */; };
+		84E63DB209B53F1500DA4444 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		84E63DB309B53F1500DA4444 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		84E63DB409B53F1500DA4444 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 848DFB1406181178000C5867 /* srm */; };
+		84E63DB609B53F1500DA4444 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		84E63DBA09B53F1500DA4444 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		84E63DBB09B53F1500DA4444 /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
+		84E63DBD09B53F1500DA4444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8409A2560C0C586B00951A52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = EraseTrash;
+		};
+		84E724800C0D0E56005C0E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84E724770C0D0E56005C0E9C /* Erase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = Erase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84F6D3610C0BB41100CC11F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/Automator;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		17587328FF379C6511CA2CBB /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PermanentEraser_Prefix.h; sourceTree = "<group>"; };
+		8404CE780B7433D600CECB37 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = zh_TW; path = zh_TW.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		8404CE790B7433F600CECB37 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8404CE870B74349F00CECB37 /* zh_TW */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEvent+ModifierKeys.h"; sourceTree = "<group>"; };
+		8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+ModifierKeys.m"; sourceTree = "<group>"; };
+		8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EraseTrash.xcodeproj; path = EraseTrash/EraseTrash.xcodeproj; sourceTree = "<group>"; };
+		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
+		84524313048BDAA40003BAA1 /* PEController.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = PEController.h; sourceTree = "<group>"; };
+		84524314048BDAA40003BAA1 /* PEController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = PEController.m; sourceTree = "<group>"; };
+		84583AE50B54A1840078A640 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		845E65E20B967C6100391EE2 /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
+		845EF8410BE97B9E00EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		845EF8450BE97BD800EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		845EF8480BE97BE100EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		848DFB1406181178000C5867 /* srm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = srm; sourceTree = "<group>"; };
+		84CF81EC08F5EACA00F021FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84CF81F408F5EBCB00F021FB /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84E63DC209B53F1500DA4444 /* Info-PermanentEraser__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Info-PermanentEraser__Upgraded_.plist"; sourceTree = "<group>"; };
+		84E63DC309B53F1500DA4444 /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E724770C0D0E56005C0E9C /* Erase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Erase.xcodeproj; path = Erase/Erase.xcodeproj; sourceTree = "<group>"; };
+		84EAA1680B517B7C00D31BD2 /* French */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = French; path = French.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		84EAA16D0B517BA000D31BD2 /* French */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84EAA16E0B517BB600D31BD2 /* French */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = French; path = French.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84F20CFE0B45F71E00DD4983 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = Dutch.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		84F20D130B45F75200DD4983 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Dutch; path = Dutch.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84FB950A0B4CAA0400486D06 /* Dutch */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = Dutch; path = Dutch.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84FCCDE008ECDE4A00333510 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		84FCCDEC08ECDE7A00333510 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84FE592E0EE1D99E00C4A959 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84FE592F0EE1D9C400C4A959 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84FE595B0EE1DB8300C4A959 /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29B9732DFDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
+				84583AE60B54A1840078A640 /* Carbon.framework in Frameworks */,
+				845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E63DBC09B53F1500DA4444 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E63DBD09B53F1500DA4444 /* Cocoa.framework in Frameworks */,
+				84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */,
+				845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				84524313048BDAA40003BAA1 /* PEController.h */,
+				84524314048BDAA40003BAA1 /* PEController.m */,
+				8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */,
+				8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84583AE50B54A1840078A640 /* Carbon.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17587328FF379C6511CA2CBB /* Permanent Eraser.app */,
+				84E63DC309B53F1500DA4444 /* Permanent Eraser.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* PermanentEraser */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				84F6D5010C0BDD9F00CC11F4 /* Automator */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				84E63DC209B53F1500DA4444 /* Info-PermanentEraser__Upgraded_.plist */,
+			);
+			name = PermanentEraser;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8411A3DF0BAE2CBF00AA5045 /* PE.icns */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				84CF81EB08F5EACA00F021FB /* Localizable.strings */,
+				848DFB1406181178000C5867 /* srm */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				843100AD0B9A2A5C00C031C1 /* DiscRecording */,
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8409A24E0C0C586A00951A52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8409A2570C0C586B00951A52 /* EraseTrash.action */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		843100AD0B9A2A5C00C031C1 /* DiscRecording */ = {
+			isa = PBXGroup;
+			children = (
+				845E65E20B967C6100391EE2 /* DiscRecording.framework */,
+			);
+			name = DiscRecording;
+			sourceTree = "<group>";
+		};
+		84E724780C0D0E56005C0E9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84E724810C0D0E56005C0E9C /* Erase.action */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F6D5010C0BDD9F00CC11F4 /* Automator */ = {
+			isa = PBXGroup;
+			children = (
+				84E724770C0D0E56005C0E9C /* Erase.xcodeproj */,
+				8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */,
+			);
+			name = Automator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		29B97327FDCFA39411CA2CEA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CA4F650368D2AA00C91783 /* PermanentEraser_Prefix.h in Headers */,
+				84524315048BDAA40003BAA1 /* PEController.h in Headers */,
+				8405E9D90B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E63DAE09B53F1500DA4444 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E63DAF09B53F1500DA4444 /* PermanentEraser_Prefix.h in Headers */,
+				84E63DB009B53F1500DA4444 /* PEController.h in Headers */,
+				8405E9DB0B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84E63DBE09B53F1500DA4444 /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded)" */;
+			buildPhases = (
+				84E63DAE09B53F1500DA4444 /* Headers */,
+				84E63DB109B53F1500DA4444 /* Resources */,
+				84E63DB909B53F1500DA4444 /* Sources */,
+				84E63DBC09B53F1500DA4444 /* Frameworks */,
+				84F6D3610C0BB41100CC11F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PermanentEraser (Upgraded)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = PermanentEraser;
+			productReference = 84E63DC309B53F1500DA4444 /* Permanent Eraser.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 84D1577C08EB759400EF9E06 /* Build configuration list for PBXProject "PermanentEraser" */;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				Dutch,
+				zh_TW,
+				sv,
+				Italian,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* PermanentEraser */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 84E724780C0D0E56005C0E9C /* Products */;
+					ProjectRef = 84E724770C0D0E56005C0E9C /* Erase.xcodeproj */;
+				},
+				{
+					ProductGroup = 8409A24E0C0C586A00951A52 /* Products */;
+					ProjectRef = 8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */;
+				},
+			);
+			targets = (
+				84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */,
+				29B97326FDCFA39411CA2CEA /* PermanentEraser */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8409A2570C0C586B00951A52 /* EraseTrash.action */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EraseTrash.action;
+			remoteRef = 8409A2560C0C586B00951A52 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84E724810C0D0E56005C0E9C /* Erase.action */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Erase.action;
+			remoteRef = 84E724800C0D0E56005C0E9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29B97328FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				080E96DCFE201CFB7F000001 /* MainMenu.nib in Resources */,
+				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
+				848DFB1506181178000C5867 /* srm in Resources */,
+				84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */,
+				8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E63DB109B53F1500DA4444 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E63DB209B53F1500DA4444 /* MainMenu.nib in Resources */,
+				84E63DB309B53F1500DA4444 /* InfoPlist.strings in Resources */,
+				84E63DB409B53F1500DA4444 /* srm in Resources */,
+				84E63DB609B53F1500DA4444 /* Localizable.strings in Resources */,
+				8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29B9732BFDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
+				84524316048BDAA40003BAA1 /* PEController.m in Sources */,
+				8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84E63DB909B53F1500DA4444 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84E63DBA09B53F1500DA4444 /* main.m in Sources */,
+				84E63DBB09B53F1500DA4444 /* PEController.m in Sources */,
+				8405E9DC0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+				84FCCDEC08ECDE7A00333510 /* German */,
+				84F20D130B45F75200DD4983 /* Dutch */,
+				84EAA16D0B517BA000D31BD2 /* French */,
+				8404CE790B7433F600CECB37 /* zh_TW */,
+				845EF8450BE97BD800EE6556 /* sv */,
+				84FE592E0EE1D99E00C4A959 /* Italian */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+				84FCCDE008ECDE4A00333510 /* German */,
+				84F20CFE0B45F71E00DD4983 /* Dutch */,
+				84EAA1680B517B7C00D31BD2 /* French */,
+				8404CE780B7433D600CECB37 /* zh_TW */,
+				845EF8410BE97B9E00EE6556 /* sv */,
+				84FE595B0EE1DB8300C4A959 /* Italian */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		84CF81EB08F5EACA00F021FB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CF81EC08F5EACA00F021FB /* English */,
+				84CF81F408F5EBCB00F021FB /* German */,
+				84FB950A0B4CAA0400486D06 /* Dutch */,
+				84EAA16E0B517BB600D31BD2 /* French */,
+				8404CE870B74349F00CECB37 /* zh_TW */,
+				845EF8480BE97BE100EE6556 /* sv */,
+				84FE592F0EE1D9C400C4A959 /* Italian */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84D1577908EB759400EF9E06 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OPTIMIZATION_CFLAGS = "-O0";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = PermanentEraser_Prefix.h;
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		84D1577A08EB759400EF9E06 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = PermanentEraser_Prefix.h;
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		84D1577B08EB759400EF9E06 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRECOMPILE_PREFIX_HEADER = YES;
+				PREFIX_HEADER = PermanentEraser_Prefix.h;
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		84D1577D08EB759400EF9E06 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 3.3;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.2;
+				OTHER_LDFLAGS_ppc = "-prebind";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.2.8.sdk;
+			};
+			name = Development;
+		};
+		84D1577E08EB759400EF9E06 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Deployment;
+		};
+		84D1577F08EB759400EF9E06 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Default;
+		};
+		84E63DBF09B53F1500DA4444 /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Development;
+		};
+		84E63DC009B53F1500DA4444 /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		84E63DC109B53F1500DA4444 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D1577808EB759400EF9E06 /* Build configuration list for PBXApplicationTarget "PermanentEraser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D1577908EB759400EF9E06 /* Development */,
+				84D1577A08EB759400EF9E06 /* Deployment */,
+				84D1577B08EB759400EF9E06 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84D1577C08EB759400EF9E06 /* Build configuration list for PBXProject "PermanentEraser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D1577D08EB759400EF9E06 /* Development */,
+				84D1577E08EB759400EF9E06 /* Deployment */,
+				84D1577F08EB759400EF9E06 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84E63DBE09B53F1500DA4444 /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84E63DBF09B53F1500DA4444 /* Development */,
+				84E63DC009B53F1500DA4444 /* Deployment */,
+				84E63DC109B53F1500DA4444 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

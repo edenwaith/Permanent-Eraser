@@ -1,0 +1,11 @@
+"Cancel" = "Avbryt";
+"ErasingFileWarning" = "Vill radera denna filen permanent?";
+"ErasingFilesWarning" = "Vill radera dessa filerna permanent?";
+"ErasingMessage" = "Raderar";
+"ErasingTrashWarning" = "Vill radera filerna permanent i papperskorgen?";
+"ErrorDeletingDiscMessage" = "Permanent Eraser kan inte radera enheten.";
+"ErrorDeletingMessage" = "Permanent Eraser kan inte radera filen \"%@\"";
+"ErrorTitle" = "Varning!";
+"OK" = "OK";
+"PreparingMessage" = "Startar radering av…";
+"Quit" = "Avsluta";

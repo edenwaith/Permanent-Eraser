@@ -1,0 +1,20 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {cancelErasing = id; goToProductPage = id; sendFeedback = id; }; 
+            CLASS = PEController; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                cancelButton = NSButton; 
+                cancelMenuItem = NSMenuItem; 
+                "erasing_msg" = NSTextField; 
+                indicator = NSProgressIndicator; 
+                "progress_msg" = NSTextField; 
+                theWindow = id; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
