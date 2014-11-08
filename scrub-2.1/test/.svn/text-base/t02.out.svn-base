@@ -1,7 +1,0 @@
-scrub: using NNSA NAP-14.x patterns
-scrub: scrubbing file 409600 bytes (~400KB)
-scrub: random  |................................................|
-scrub: random  |................................................|
-scrub: 0x00    |................................................|
-scrub: verify  |................................................|
-scrub: unlinking file

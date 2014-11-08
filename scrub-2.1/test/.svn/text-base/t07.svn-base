@@ -1,9 +1,0 @@
-#!/bin/sh
-TESTFILE=${TMPDIR:-/tmp}/scrub-testfile.$$
-rm -f $TESTFILE
-./pad 400k $TESTFILE
-(./tsig $TESTFILE && ./tsig $TESTFILE) >t07.out 2>&1
-diff t07.exp t07.out >t07.diff 
-rc=$?
-rm -f $TESTFILE
-exit $rc
