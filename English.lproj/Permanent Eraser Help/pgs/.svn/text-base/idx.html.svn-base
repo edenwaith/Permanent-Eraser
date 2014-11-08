@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/sgml/loosedtd.html">
+
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<link media="all" rel="stylesheet" href="../sty/genlist_style.css">
+		<title>Index</title>
+		<style type = "text/css">
+		li  {	list-style: none;
+				padding: 3px; margin-left: -40px; border-bottom: 1px solid #eee; width: 470px;}
+		</style>
+	</head>
+
+    <body>
+    
+    	<div id="banner">
+		<a name="topics"></a>
+			<div id="machelp">
+				<a class="bread" href="../PermanentEraserHelp.html">Permanent Eraser Help</a>
+			</div>
+			<!--
+			<div id="index">
+				<a class="leftborder" href="topics.html">Index</a>
+			</div>
+			-->
+		</div>
+		
+		<br />
+		
+		<div id="mainbox">
+			<div id="pagetitle">
+				<h1>Index</h1>
+			</div>
+
+			<ul>
+				<li><a href = "acknowledgments.html">Acknowledgments</a></li>
+				<li><a href = "about.html">Discover Permanent Eraser</a></li>
+				<li><a href = "erase-files.html">Erase Files</a></li>
+				<li><a href = "erase-optical-discs.html">Erase Optical Discs</a></li>
+				<li><a href = "erase-trash.html">Erase Trash</a></li>
+				<li><a href = "erasing-levels.html">Erasing Levels</a></li>
+				<li><a href = "faq.html">Frequently Asked Questions</a></li>			
+				<li><a href = "prefs-general.html">General Preferences</a></li>
+				<li><a href = "known-issues.html">Known issues</a></li>
+				<li><a href = "prefs-plugins.html">Plug-ins</a></li>
+				<li><a href = "preferences.html">Preferences</a></li>
+				<li><a href = "prefs-updates.html">Update Preferences</a></li>
+				<li><a href = "history.html">Version History</a></li>
+				<li><a href = "whatsnew.html">What's New In Permanent Eraser?</a></li>
+			</ul>
+
+			<p></p>
+		
+		</div>
+		
+	</body>
+
+</html>

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm
+END
+mkinstalldirs
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/mkinstalldirs
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/Makefile.in
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/configure.in
+END
+depcomp
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/depcomp
+END
+srm.spec
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/srm.spec
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/README
+END
+Credits
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/Credits
+END
+srm.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/srm.spec.in
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/config.h.in
+END
+Changes
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/Changes
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/COPYING
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/Makefile.am
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/missing
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/141/branches/Permanent%20Eraser/srm-7/srm/install-sh
+END

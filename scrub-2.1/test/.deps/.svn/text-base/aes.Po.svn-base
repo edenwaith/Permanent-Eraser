@@ -1,0 +1,5 @@
+aes.o aes.o: ../src/aes.c ../config/config.h ../src/aes.h
+
+../config/config.h:
+
+../src/aes.h:

@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7
+END
+options.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/options.h
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/configure
+END
+sha1.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/sha1.h
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/Makefile.in
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/AUTHORS
+END
+prng.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/prng.c
+END
+osxpkg.sh.in
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/osxpkg.sh.in
+END
+config.guess
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/config.guess
+END
+config.sub
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/config.sub
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/INSTALL
+END
+schemes.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/schemes.c
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/COPYING
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/NEWS
+END
+schemes.h
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/schemes.h
+END
+sha1random.c
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/sha1random.c
+END
+sha1random.h
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/sha1random.h
+END
+wipe.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/wipe.c
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/configure.in
+END
+standard.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/standard.h
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/ChangeLog
+END
+wipe.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/wipe.h
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/README
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/config.h.in
+END
+log.c
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/log.c
+END
+rand.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/rand.c
+END
+log.h
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/log.h
+END
+bcwipe.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/bcwipe.spec.in
+END
+bcwipe.1
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/bcwipe.1
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/missing
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/Makefile.am
+END
+rand.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/rand.h
+END
+options.c
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/options.c
+END
+sha1.c
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/sha1.c
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/pe/!svn/ver/143/branches/Permanent%20Eraser/bcwipe/BCWipe-1.9-7/bcwipe-1.9-7/install-sh
+END

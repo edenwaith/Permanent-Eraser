@@ -1,0 +1,162 @@
+2010-11-25  Dirk Jagdmann  <doj@cubic.org>
+
+	* aclocal.m4, src/error.c, src/random.c, src/sunlink.c, win/unistd.h:
+	Windows compilation fixes
+
+2010-11-22  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/sunlink.c, README.OsX, TODO, srm.spec.in, srmtest.sh: OsX updates
+
+2010-06-06  Dirk Jagdmann  <doj@cubic.org>
+
+	* doc/srm.1, src/sunlink.c: FreeBSD fixes
+
+	* NEWS, doc/srm.1, src/sunlink.c: block device handling
+
+	* src/error.c, src/main.c, src/rename_unlink.c, src/sunlink.c, src/tree_walker.c:
+	made a run of gimpel
+
+	* src/random.c: fallback to rand()
+
+	* NEWS, configure.in, doc/srm.1, src/main.c, src/srm.h, src/sunlink.c, src/tree_walker.c:
+	-x support, FreeBSD fixes
+
+	* src/random.c: use rand48 function
+
+	* Makefile.am, configure.in, src/sunlink.c, test.sh, win/Makefile.am:
+	build updates
+
+	* win/tree.cpp, Makefile.am, src/impl.h, src/sunlink.c, src/tree_walker.c, srm.vcproj, win/srm.ico, win/srm.rc:
+	Win32 fixes
+
+	* src/Makefile.am, src/error.c, src/impl.h, src/main.c, src/rename_unlink.c, src/srm.h, src/sunlink.c, src/tree_walker.c, TODO, aclocal.m4:
+	removed global variables
+
+2009-10-19  Dirk Jagdmann  <doj@cubic.org>
+
+	* TODO, src/main.c, src/sunlink.c, srm.vcproj: Win32 fixes
+
+2009-09-26  Dirk Jagdmann  <doj@cubic.org>
+
+	* NEWS, TODO, src/main.c, src/srm.h, src/sunlink.c, doc/srm.1:
+	SIGINFO, SIGUSR2 show current write position
+
+	* doc/srm.1, src/main.c, src/srm.h, src/sunlink.c, NEWS, TODO, test.sh:
+	-v -v displays current write position
+
+	* src/sunlink.c: delete whitespace
+	use stderr for error messages
+
+	* NEWS, TODO, src/sunlink.c: check results of write() in sunlink.c
+
+2009-08-19  Dirk Jagdmann  <doj@cubic.org>
+
+	* Makefile.am, TODO, srm.vcproj: Win32 command line wildcard expansion
+
+	* lib/getopt.c, lib/getopt1.c: fix MS CC warnings
+
+	* doc/srm.1: SEE ALSO section
+
+2009-08-18  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/srm.h, src/tree_walker.c, win/config.h, TODO, aclocal.m4, configure.in:
+	fixes
+
+	* doc/srm.1: updates website
+	fixed typo
+
+2009-08-17  Dirk Jagdmann  <doj@cubic.org>
+
+	* Makefile.am: added Visual Studio project files to EXTRA_DIST
+
+	* NEWS, ChangeLog: updates
+
+	* ChangeLog, README.OsX, TODO, src/srm.h, src/sunlink.c:
+	OsX works again
+
+2009-07-29  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/sunlink.c: apple code compilation fixes
+
+2009-07-29  uid74149  <uid74149@cubicle>
+
+	* TODO, src/sunlink.c: added patch from SF Tracker 2828882
+
+2009-03-26  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/tree_walker.c: added default:
+
+2009-02-13  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/error.c, src/main.c, src/random.c, src/rename_unlink.c, src/srm.h, src/sunlink.c, src/tree_walker.c:
+	added license comments to sources
+
+	* lib/getopt.c, lib/getopt1.c: removed evil ^L
+
+	* README: speling
+
+	* COPYING: ASCII-fication
+
+2008-11-21  Dirk Jagdmann  <doj@cubic.org>
+
+	* NEWS, doc/srm.1, src/main.c, src/srm.h, src/sunlink.c, src/tree_walker.c:
+	added --doe mode
+
+	* src/tree_walker.c, test.sh:
+	don't recurse into symbolic linked directories, fix deletion of stale symlink files
+
+	* src/main.c, src/sunlink.c: more static
+
+	* src/rename_unlink.c, src/srm.h, src/tree_walker.c, NEWS, test.sh:
+	fixed deletion of fifo
+
+2008-07-21  Dirk Jagdmann  <doj@cubic.org>
+
+	* NEWS, TODO, src/main.c, src/sunlink.c, src/tree_walker.c, srm.vcproj, win/tree.cpp:
+	Win32 fixes
+
+	* win/config.h, configure.in: bumped version to 1.2.10
+
+2008-07-19  Dirk Jagdmann  <doj@cubic.org>
+
+	* NEWS, src/sunlink.c: Debian 4 fixes
+
+2008-07-10  Dirk Jagdmann  <doj@cubic.org>
+
+	* Makefile.am, aclocal.m4: last minute fixes
+
+	* NEWS, TODO, src/error.c, src/main.c, src/random.c, src/rename_unlink.c, src/srm.h, src/sunlink.c, src/tree_walker.c, srm.sln, srm.vcproj, win/config.h, win/tree.cpp, win/unistd.h:
+	Win32 port
+
+2008-07-08  Dirk Jagdmann  <doj@cubic.org>
+
+	* aclocal.m4, autogen.sh, test.sh: fixes
+
+	* Makefile.cvs, TODO, aclocal.m4, autogen.sh, configure.in, INSTALL, Makefile.am:
+	added --enable-debug
+
+	* doc/srm.1, src/main.c, src/rename_unlink.c, src/srm.h, src/sunlink.c:
+	added some ideas from Apple's srm
+
+	* test.sh: check if file really was removed
+
+	* src/tree_walker.c: fixed linux
+
+2008-04-07  Dirk Jagdmann  <doj@cubic.org>
+
+	* src/tree_walker.c: fixed error msg
+
+2008-04-02  Dirk Jagdmann  <doj@cubic.org>
+
+	* INSTALL, TODO, aclocal.m4: 64bit linux test
+
+	* Credits, INSTALL, Makefile.cvs, Makefile.in, NEWS, TODO, aclocal.m4, config.h.in, configure, depcomp, doc/Makefile.in, install-sh, lib/Makefile.in, missing, mkinstalldirs, src/Makefile.am, src/Makefile.in, stamp-h.in, AUTHORS, ChangeLog, Changes:
+	cleanup auto* tools
+
+	* configure.in, src/sunlink.c: disable data journal on ext3
+
+2008-04-02  Dirk Jagdmann  <doj@cubic.org>
+
+	* Makefile.cvs (all): created this file
+
+

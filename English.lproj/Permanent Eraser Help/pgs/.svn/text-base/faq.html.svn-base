@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/sgml/loosedtd.html">
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="keywords" content="FAQ, system requirements, universal binary, PowerPC, Intel, DoD, Guttman, CD-RW, DVD-RW, Secure Empty, resource fork, alias, short cut, keyboard shortcuts, Burn, known issues">
+		<meta name="description" content="Frequently Asked Questions">
+		<link media="all" rel="stylesheet" href="../sty/task_style.css">
+		<title>FAQ</title>
+	</head>
+
+    <body>
+    
+    	<div id="banner">
+		<a name="faq"></a>
+			<div id="machelp">
+				<a class="bread" href="../PermanentEraserHelp.html">Permanent Eraser Help</a>
+			</div>
+			<div id="index">
+				<a class="leftborder" href="idx.html">Index</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+
+			<div id="caticon">
+				<img width="32" height="32" alt="Permanent Eraser Icon" src="../gfx/xicnpe.png">
+			</div>
+			<div id="pagetitle">
+				<h1>Frequently Asked Questions</h1>
+			</div>	
+
+			<ul class = "faq_list">
+				
+				<li>
+					<a name = "howtouse"></a>
+					<b>How is Permanent Eraser used?</b>
+					<p>
+						<ul>
+							<li>Erase the Trash:  Double-click on the Permanent Eraser icon, and it will erase the contents of your Trash.</li>
+							<li>Erase selected files:  Select the files to delete in the Finder, and drag them onto the Permanent Eraser icon.  Permanent Eraser will then only erase those specific files.</li>
+							<li>Erase optical discs: Select a rewritable optical disc (CD-RW or DVD-RW) and drag it onto the Permanent Eraser icon to completely write over the disc's data.</li>
+						</ul>
+					</p>
+				</li>
+				<li>
+					<a name = "advantages"></a>
+					<b>What are the advantages of using Permanent Eraser over Mac OS X's Secure Empty Trash feature?</b>
+					<p>
+						<ul>
+							<li>Security - The Secure Empty Trash feature uses the US DoD method of overwriting files 7 times, whereas Permanent Eraser uses the Gutmann Method which uses a special pattern to overwrite files 35 times.</li>
+							<li>Tracking - Permanent Eraser shows the real-time progress of the files while they are being erased, but the Mac Finder's progress bar updates only after an entire file has been deleted.</li>
+							<li>Flexibility - Mac OS X only securely erases files that are in the Trash, but Permanent Eraser can erase individual files and rewritable discs as well as the files in the Trash.</li>
+						</ul>
+					</p>
+				
+				</li>
+				<li>
+					<a name = "ub"></a>
+					<b>Will Permanent Eraser run on Intel-based Macs?</b>
+					<p>Yes.  Version 2.2 (and later) of Permanent Eraser runs natively on Intel and PowerPC based Macs.</p>
+				</li>
+				<li>
+					<a name = "erasecds"></a>
+					<b>Can Permanent Eraser erase CD-RW and DVD-RW discs?</b>
+					<p>Yes.  This was a new feature introduced with Permanent Eraser 2.3.</p>
+				</li>					
+				<li>
+					<a name = "resourcefork"></a>
+					<b>Are resource forks erased?</b>
+					<p>Yes, resource forks are erased.</p>
+				</li>
+				<li>
+					<a name = "aliases"></a>
+					<b>Can aliases be erased?</b>
+					<p>Yes, aliases can be erased if they are in the Trash.</p>
+				</li>
+				<li>
+					<a name = "mangled"></a>
+					<b>Are file names mangled?</b>
+					<p>Yes, before the file is unlinked, the original file name is renamed with a random set of characters to make it even more difficult to discover the former name of the file.</p> 
+				</li>
+				<li>
+					<a name = "optionalwarning"></a>
+					<b>Is there a way to hide the warning after Permanent Eraser starts?</b>
+					<p>Permanent Eraser 2.2.3 introduced a feature where a dialog box would appear once the application had launched.  This warning gives the user the option to either quit or continue with the program.  To prevent this warning from appearing, hold down the Option key when launching Permanent Eraser. 
+					<br /><br />
+					
+					To make this setting permanent, open up the <a href = "prefs-general.html">General Preferences</a> and uncheck the <b>Warn before erasing</b> option.
+					
+					<!--Terminal (/Applications/Utilities/Terminal.app) and type: <br /> 
+					<kbd>defaults write com.edenwaith.permanenteraser WarnBeforeErasing -bool NO</kbd>-->
+					<br /><br />
+					Permanent Eraser 2.4 (and later) offers a feature in the warning dialog to suppress this warning.  Click the "Do not show this message again" checkbox and the warning will be disabled.
+					
+					</p>
+				</li>
+				<li>
+					<a name = "sound"></a>
+					<b>Can the sound effects be disabled?</b>
+					<p>Yes.  Go to the <a href = "prefs-general.html">General Preferences</a> and uncheck the <b>Play sounds</b> option.</p>
+					<!--
+					<p>Yes.  To disable any of Permanent Eraser's sound effects, type the following from the Terminal: <code>defaults write com.edenwaith.permanenteraser BeepBeforeTerminating -bool NO</code></p> -->
+				</li>
+				<li>
+					<a name = "freespace"></a>
+					<b>Does Permanent Eraser shred free space?</b>
+					<p>At this time, Permanent Eraser cannot shred the free space on a disk.  If you have Mac OS 10.4 or later, you can use <a href = "http://docs.info.apple.com/article.html?path=DiskUtility/10.5/en/duh1010.html" target = "_blank">Disk Utility</a> to erase the free space on your drives.</p>
+				</li>
+				<li>
+					<a name = "os9"></a>
+					<b>Does Permanent Eraser run on Mac OS 9 or earlier?</b>
+					<p>No.  Permanent Eraser has been developed to run on Mac OS X only.  If you need a utility to erase files on Mac OS 9 (or earlier), try <a href = "http://www.thenextwave.com/burnHP.html" target = "_blank">Burn</a>.
+				</li>
+				<li>
+					<a name = "ssd"></a>
+					<b> Can Permanent Eraser erase data from a flash-based drive (SSD, thumb drive, etc.)?</b>
+					<p>Due to the differences in how flash-based drives read and write data (versus traditional magnetic media hard drives), it is not recommended to use Permanent Eraser or any other traditional hard drive wiping method on flash-based drives. At this time, there does not seem to be a reliable method via software to erase data from flash-based drives. The best advice is to encrypt your drive, which can help provide some measure of protection for your data.</p>
+				</li>
+				
+			</ul>
+
+			<h2 class="seealso">See also</h2>
+			<p class="seealso"><a href = "known-issues.html">Known Issues</a></p>
+			
+			<p></p>
+		
+		</div>
+	</body>
+
+</html>

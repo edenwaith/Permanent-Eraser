@@ -1,0 +1,19 @@
+- for srm 1.2.12
+ + check ext2 special flags, unremovable, immutable, appendonly
+ + FreeBSD test, check st_flags in sunlink.c
+ + check with ext4 (http://ext4.wiki.kernel.org/index.php/Main_Page), jfs, xfs, reiserfs
+
+- make a library from sunlink.c so other programs can use the function
+- use only code in lib/ on platforms which don't have these functions
+- check for OS in configure.in
+- only compile files in lib/ depending on platform
+
+- overwrite POSIX extended attributes: attr(5), listxattr, ...
+- handle NTFS alternate data streams
+- overwrite raw devices by using their /dev/ device node
+- make a shared lib that can be used with LD_PRELOAD and intercepts unlink()
+
+- HPux test
+- Solaris test
+- AIX test
+- whatever POSIX platform test

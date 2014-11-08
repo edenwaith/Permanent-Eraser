@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3
+END
+pcre.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/pcre.h
+END
+get.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/get.c
+END
+internal.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/internal.h
+END
+chartables.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/chartables.c
+END
+maketables.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/maketables.c
+END
+study.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/study.c
+END
+pcre.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/pcre.c
+END
+config.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pe/!svn/ver/2/branches/Permanent%20Eraser/AGRegex/pcre-4.3/config.h
+END

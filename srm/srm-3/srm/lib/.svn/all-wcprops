@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/Makefile.in
+END
+getopt.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/getopt.c
+END
+getopt1.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/getopt1.c
+END
+snprintf.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/snprintf.c
+END
+getopt.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/getopt.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pe/!svn/ver/2/branches/Permanent%20Eraser/srm-3/srm/lib/Makefile.am
+END

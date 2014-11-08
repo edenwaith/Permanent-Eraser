@@ -1,0 +1,2 @@
+/Users/admin/Programs/Permanent Eraser/Erase/Erase.m: In function '-[Erase runWithInput:fromAction:error:]':
+/Users/admin/Programs/Permanent Eraser/Erase/Erase.m:17: warning: unused variable 'fileName'

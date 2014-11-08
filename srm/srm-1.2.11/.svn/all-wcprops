@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11
+END
+configure
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/configure
+END
+Makefile.in
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/Makefile.in
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/AUTHORS
+END
+configure.in
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/configure.in
+END
+depcomp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/depcomp
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/ChangeLog
+END
+test.sh
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/test.sh
+END
+srm.sln
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/srm.sln
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/README
+END
+srm.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/srm.spec.in
+END
+config.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/config.h.in
+END
+srm.vcproj
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/srm.vcproj
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/TODO
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/INSTALL
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/COPYING
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/Makefile.am
+END
+missing
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/missing
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/NEWS
+END
+aclocal.m4
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/aclocal.m4
+END
+install-sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/pe/!svn/ver/111/branches/Permanent%20Eraser/srm-1.2.11/install-sh
+END

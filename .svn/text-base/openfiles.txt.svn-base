@@ -1,0 +1,780 @@
+COMMAND    PID  USER   FD     TYPE    DEVICE  SIZE/OFF     NODE NAME
+loginwind   34 admin  cwd      DIR      14,3      1326        2 /
+loginwind   34 admin  txt      REG      14,3    930016  1923885 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
+loginwind   34 admin  txt      REG      14,3    595712  1924738 /System/Library/PrivateFrameworks/Admin.framework/Versions/A/Admin
+loginwind   34 admin  txt      REG      14,3    332016   726431 /System/Library/PrivateFrameworks/URLMount.framework/Versions/A/URLMount
+loginwind   34 admin  txt      REG      14,3    103024   734897 /System/Library/LoginPlugins/FSDisconnect.loginPlugin/Contents/MacOS/FSDisconnect
+loginwind   34 admin  txt      REG      14,3   5992752  1923480 /System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages
+loginwind   34 admin  txt      REG      14,3   1148272   721749 /System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit
+loginwind   34 admin  txt      REG      14,3   5364960   713797 /System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+loginwind   34 admin  txt      REG      14,3    912640   727213 /usr/lib/libcurl.4.dylib
+loginwind   34 admin  txt      REG      14,3    247344   734927 /System/Library/LoginPlugins/DisplayServices.loginPlugin/Contents/MacOS/DisplayServices
+loginwind   34 admin  txt      REG      14,3    355840   730798 /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/MacOS/BezelServices
+loginwind   34 admin  txt      REG      14,3     63552  1924874 /System/Library/PrivateFrameworks/MachineSettings.framework/Versions/A/MachineSettings
+loginwind   34 admin  txt      REG      14,3    412928   718416 /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib
+loginwind   34 admin  txt      REG      14,3    148736   712609 /System/Library/Extensions/AudioIPCDriver.kext/Contents/Resources/AudioIPCPlugIn.bundle/Contents/MacOS/AudioIPCPlugIn
+loginwind   34 admin  txt      REG      14,3    123056   709131 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+loginwind   34 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+loginwind   34 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+loginwind   34 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+loginwind   34 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+loginwind   34 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+loginwind   34 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+loginwind   34 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+loginwind   34 admin  txt      REG      14,3   8593408  3261143 /Library/Caches/com.apple.LaunchServices-0230.csstore
+loginwind   34 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+loginwind   34 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+loginwind   34 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+loginwind   34 admin    1     PIPE 0x2bf3ce8     16384          
+loginwind   34 admin    2     PIPE 0x2bf3ce8     16384          
+loginwind   34 admin    3u    unix 0x3135bb0       0t0          ->0x2bf1dd0
+loginwind   34 admin    4u     REG      14,3      3140  3261561 /private/var/run/utmpx
+loginwind   34 admin    5r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+loginwind   34 admin    6r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+loginwind   34 admin    7r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+launchd    133 admin  cwd      DIR      14,3      1326        2 /
+launchd    133 admin  txt      REG      14,3    288768   727613 /sbin/launchd
+launchd    133 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+launchd    133 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+launchd    133 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+launchd    133 admin    1     PIPE 0x2bf4f44     16384          
+launchd    133 admin    2     PIPE 0x2bf4f44     16384          
+launchd    133 admin    3u  KQUEUE                              count=0, state=0x1
+launchd    133 admin    4u    unix 0x2bf1000       0t0          /tmp/launchd-133.i2sk9r/sock
+launchd    133 admin    5u   systm 0x29c0fe4       0t0          [1:1:0]
+launchd    133 admin    6r     CHR      13,1       0t0 52207620 /dev/autofs_nowait
+launchd    133 admin    7u    unix 0x3042aa0       0t0          ->0x3135ee0
+launchd    133 admin    8u    unix 0x31355d8       0t0          /private/tmp/com.hp.launchport
+launchd    133 admin    9u    unix 0x3135a18       0t0          ->0x311d110
+launchd    133 admin   10u    unix 0x2bf1bb0       0t0          /tmp/launch-GSfIZI/Render
+launchd    133 admin   11u    unix 0x3135990       0t0          /tmp/launch-WUPUX9/Listeners
+launchd    133 admin   12u    unix 0x311d3b8       0t0          /tmp/launch-vHQ1gW/:0
+launchd    133 admin   13r     DIR      14,3      1088   711979 /Library/Preferences
+launchd    133 admin   14r     DIR      14,3        68  1276670 /private/var/db/PanicReporter
+launchd    133 admin   15u    unix 0x4c9ce58       0t0          ->0x3042550
+launchd    133 admin   16u    unix 0x3135198       0t0          ->0x311d990
+launchd    133 admin   17r     DIR      14,3      1088   711979 /Library/Preferences
+launchd    133 admin   18     PIPE 0x2bf2ed8     16384          
+launchd    133 admin   19     PIPE 0x2bf3518     16384          
+launchd    133 admin   20     PIPE 0x2bf28fc     16384          
+launchd    133 admin   21     PIPE 0x2bf4260     16384          
+launchd    133 admin   22     PIPE 0x2bf45e4     16384          
+launchd    133 admin   24     PIPE 0x2bf3130     16384          
+launchd    133 admin   25     PIPE 0x2bf36a8     16384          
+launchd    133 admin   26     PIPE 0x2bf2dac     16384          
+launchd    133 admin   27     PIPE 0x2bf47d8     16384          
+launchd    133 admin   28     PIPE 0x2bf2c1c     16384          
+launchd    133 admin   29     PIPE 0x2bf2834     16384          
+launchd    133 admin   30     PIPE 0x2bf34b4     16384          
+launchd    133 admin   31     PIPE 0x2bf2b54     16384          
+launchd    133 admin   32     PIPE 0x2bf2578     16384          
+launchd    133 admin   33     PIPE 0x2bf2a8c     16384          
+launchd    133 admin   35     PIPE 0x2bf2f3c     16384          
+launchd    133 admin   36     PIPE 0x2bf3f40     16384          
+launchd    133 admin   37     PIPE 0x2bf244c     16384          
+Spotlight  139 admin  cwd      DIR      14,3      1326        2 /
+Spotlight  139 admin  txt      REG      14,3    704592   764548 /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight
+Spotlight  139 admin  txt      REG      14,3    286016   732512 /System/Library/PrivateFrameworks/Calculate.framework/Versions/A/Calculate
+Spotlight  139 admin  txt      REG      14,3    332016   726431 /System/Library/PrivateFrameworks/URLMount.framework/Versions/A/URLMount
+Spotlight  139 admin  txt      REG      14,3    211488   712719 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+Spotlight  139 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Spotlight  139 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Spotlight  139 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Spotlight  139 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Spotlight  139 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Spotlight  139 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Spotlight  139 admin    1     PIPE 0x2bf30cc     16384          
+Spotlight  139 admin    2     PIPE 0x2bf30cc     16384          
+Spotlight  139 admin    3r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+UserEvent  140 admin  cwd      DIR      14,3      1326        2 /
+UserEvent  140 admin  txt      REG      14,3     60672   791743 /usr/sbin/UserEventAgent
+UserEvent  140 admin  txt      REG      14,3    128464  1924938 /System/Library/UserEventPlugins/AirPortUserAgent.plugin/Contents/MacOS/AirPortUserAgent
+UserEvent  140 admin  txt      REG      14,3     43136  1924944 /System/Library/UserEventPlugins/alfUIplugin.plugin/Contents/MacOS/alfUIplugin
+UserEvent  140 admin  txt      REG      14,3     48944   730170 /System/Library/UserEventPlugins/AppleHIDMouseAgent.plugin/Contents/MacOS/AppleHIDMouseAgent
+UserEvent  140 admin  txt      REG      14,3    960704  1924754 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Apple80211
+UserEvent  140 admin  txt      REG      14,3     57520   737375 /System/Library/UserEventPlugins/BluetoothUserAgent-Plugin.plugin/Contents/MacOS/BluetoothUserAgent-Plugin
+UserEvent  140 admin  txt      REG      14,3    148736   712609 /System/Library/Extensions/AudioIPCDriver.kext/Contents/Resources/AudioIPCPlugIn.bundle/Contents/MacOS/AudioIPCPlugIn
+UserEvent  140 admin  txt      REG      14,3    123056   709131 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+UserEvent  140 admin  txt      REG      14,3     54432   730698 /System/Library/UserEventPlugins/BTMMPortInUseAgent.plugin/Contents/MacOS/BTMMPortInUseAgent
+UserEvent  140 admin  txt      REG      14,3    111152  1924952 /System/Library/UserEventPlugins/iCalAlarmAgent.plugin/Contents/MacOS/iCalAlarmAgent
+UserEvent  140 admin  txt      REG      14,3     53056  1399793 /System/Library/UserEventPlugins/InstrumentsHotKeyAgent.plugin/Contents/MacOS/InstrumentsHotKeyAgent
+UserEvent  140 admin  txt      REG      14,3    148608  1924958 /System/Library/UserEventPlugins/ParentalControlsUEAPlugin.plugin/Contents/MacOS/ParentalControlsUEAPlugin
+UserEvent  140 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+UserEvent  140 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+UserEvent  140 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+UserEvent  140 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+UserEvent  140 admin    1     PIPE 0x2bf357c     16384          
+UserEvent  140 admin    2     PIPE 0x2bf357c     16384          
+UserEvent  140 admin    3r     DIR      14,3       340   706309 /System/Library/UserEventPlugins
+pboard     143 admin  cwd      DIR      14,3      1326        2 /
+pboard     143 admin  txt      REG      14,3     38192   712345 /usr/sbin/pboard
+pboard     143 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+pboard     143 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+pboard     143 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+pboard     143 admin    1     PIPE 0x2bf4580     16384          
+pboard     143 admin    2     PIPE 0x2bf4580     16384          
+pboard     143 admin    9u    unix 0x3135ee0       0t0          ->0x3042aa0
+Dock       145 admin  cwd      DIR      14,3      1326        2 /
+Dock       145 admin  txt      REG      14,3   2321856   735077 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+Dock       145 admin  txt      REG      14,3        70   735131 /System/Library/CoreServices/Dock.app/Contents/Resources/empty.png
+Dock       145 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Dock       145 admin  txt      REG      14,3      1011   735193 /System/Library/CoreServices/Dock.app/Contents/Resources/separator.png
+Dock       145 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Dock       145 admin  txt      REG      14,3       844   735141 /System/Library/CoreServices/Dock.app/Contents/Resources/indicator_large.png
+Dock       145 admin  txt      REG      14,3       480   735140 /System/Library/CoreServices/Dock.app/Contents/Resources/frontline.png
+Dock       145 admin  txt      REG      14,3     65567   735190 /System/Library/CoreServices/Dock.app/Contents/Resources/scurve-m.png
+Dock       145 admin  txt      REG      14,3   1445888  1727398 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.dock.iconcache
+Dock       145 admin  txt      REG      14,3     24171   735199 /System/Library/CoreServices/Dock.app/Contents/Resources/trashfull.png
+Dock       145 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Dock       145 admin  txt      REG      14,3     21741   735197 /System/Library/CoreServices/Dock.app/Contents/Resources/stackitemshadow.png
+Dock       145 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Dock       145 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Dock       145 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Dock       145 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Dock       145 admin    1     PIPE 0x2bf3450     16384          
+Dock       145 admin    2     PIPE 0x2bf3450     16384          
+Dock       145 admin    4u  KQUEUE                              count=0, state=0x2
+Dock       145 admin    5     PIPE 0x2bf2ce4     16384          
+Dock       145 admin    6     PIPE 0x2bf2c80     16384          
+Dock       145 admin    7u     REG      14,3     47104  1727410 /Users/admin/Library/Preferences/com.apple.dock.db
+Dock       145 admin    8r     DIR      14,3      2924  1652812 /Users/admin/Programs/33 RPM
+Dock       145 admin   10r     DIR      14,3      8670   706232 /Applications
+Dock       145 admin   13r     DIR      14,3       952  1727172 /Users/admin/Downloads
+ATSServer  146 admin  cwd      DIR      14,3      1326        2 /
+ATSServer  146 admin  txt      REG      14,3   5779616   706261 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/ATSServer
+ATSServer  146 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+ATSServer  146 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+ATSServer  146 admin  txt      REG      14,3    107351  1907116 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/User.fcache
+ATSServer  146 admin  txt      REG      14,3    124328   736440 /System/Library/Fonts/Geeza Pro.ttf
+ATSServer  146 admin  txt      REG      14,3    531341   716442 /System/Library/Fonts/Monaco.dfont
+ATSServer  146 admin  txt      REG      14,3   1038477  1904479 /Users/admin/Library/Fonts/Arial/..namedfork/rsrc
+ATSServer  146 admin  txt      REG      14,3    486916   716434 /System/Library/Fonts/Geneva.dfont
+ATSServer  146 admin  txt      REG      14,3    615690  1904971 /Users/admin/Library/Fonts/Verdana/..namedfork/rsrc
+ATSServer  146 admin  txt      REG      14,3    159001  1861292 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/Local.fcache
+ATSServer  146 admin  txt      REG      14,3    165828  1730964 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/System.fcache
+ATSServer  146 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+ATSServer  146 admin  txt      REG      14,3  10823828   712481 /System/Library/Fonts/儷黑 Pro.ttf
+ATSServer  146 admin  txt      REG      14,3  15394588   720665 /System/Library/Fonts/AppleGothic.ttf
+ATSServer  146 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+ATSServer  146 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+ATSServer  146 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+ATSServer  146 admin    1     PIPE 0x2bf370c     16384          
+ATSServer  146 admin    2     PIPE 0x2bf370c     16384          
+ATSServer  146 admin    3u     REG      14,3    403456  1727190 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/font
+ATSServer  146 admin    4u     REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+ATSServer  146 admin   16u    unix 0x311d110       0t0          ->0x3135a18
+Finder     149 admin  cwd      DIR      14,3      1326        2 /
+Finder     149 admin  txt      REG      14,3  10247232  1923814 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+Finder     149 admin  txt      REG      14,3    482336   733412 /System/Library/Frameworks/Collaboration.framework/Versions/A/Collaboration
+Finder     149 admin  txt      REG      14,3     18532   880021 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+Finder     149 admin  txt      REG      14,3    106000   765937 /System/Library/TextEncodings/Unicode Encodings.bundle/Contents/MacOS/Unicode Encodings
+Finder     149 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Finder     149 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Finder     149 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Finder     149 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Finder     149 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Finder     149 admin  txt      REG      14,3    332016   726431 /System/Library/PrivateFrameworks/URLMount.framework/Versions/A/URLMount
+Finder     149 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Finder     149 admin  txt      REG      14,3    211488   712719 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+Finder     149 admin  txt      REG      14,3      1167   745834 /System/Library/Frameworks/QuickLook.framework/Versions/A/Resources/Page01BaseMaskCorner.png
+Finder     149 admin  txt      REG      14,3      9155   745832 /System/Library/Frameworks/QuickLook.framework/Versions/A/Resources/Page01BaseCurl.png
+Finder     149 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Finder     149 admin  txt      REG      14,3    291403  1923838 /System/Library/CoreServices/Finder.app/Contents/Resources/Finder.rsrc
+Finder     149 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder     149 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Finder     149 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Finder     149 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Finder     149 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Finder     149 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Finder     149 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Finder     149 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Finder     149 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Finder     149 admin    1     PIPE 0x2bf2d48     16384          
+Finder     149 admin    2     PIPE 0x2bf2d48     16384          
+Finder     149 admin    3r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Finder     149 admin    4r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Finder     149 admin    5r     REG      14,3    291403  1923838 /System/Library/CoreServices/Finder.app/Contents/Resources/Finder.rsrc
+Finder     149 admin    6r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder     149 admin    7r     CHR      13,7       0t0 52207620 /dev/autofs_nowait
+Finder     149 admin    9u  KQUEUE                              count=0, state=0
+Finder     149 admin   10r     DIR      14,3        68    58608 /Network
+Finder     149 admin   11u  KQUEUE                              count=0, state=0x2
+Finder     149 admin   12u    unix 0x311d198       0t0          ->0x3135550
+Finder     149 admin   13u    unix 0x311dc38       0t0          ->0x30424c8
+Finder     149 admin   14u    unix 0x30424c8       0t0          ->0x311dc38
+Finder     149 admin   15u    unix 0x3135aa0       0t0          ->0x3135440
+Finder     149 admin   16u    unix 0x2bf1b28       0t0          ->0x3042bb0
+Quicksilv  156 admin  cwd      DIR      14,3      1326        2 /
+Quicksilv  156 admin  txt      REG      14,3    734592  1833896 /Applications/Quicksilver.app/Contents/MacOS/Quicksilver
+Quicksilv  156 admin  txt      REG      14,3    130576   716386 /System/Library/Frameworks/ExceptionHandling.framework/Versions/A/ExceptionHandling
+Quicksilv  156 admin  txt      REG      14,3    256976   765257 /System/Library/PrivateFrameworks/SystemUIPlugin.framework/Versions/A/SystemUIPlugin
+Quicksilv  156 admin  txt      REG      14,3    992640   739843 /System/Library/Frameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+Quicksilv  156 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Quicksilv  156 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Quicksilv  156 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+Quicksilv  156 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Quicksilv  156 admin  txt      REG      14,3   7390944  1924618 /System/Library/Frameworks/Message.framework/Versions/B/Message
+Quicksilv  156 admin  txt      REG      14,3    297996  1833918 /Applications/Quicksilver.app/Contents/PlugIns/Core Support.qsplugin/Contents/MacOS/Core Support
+Quicksilv  156 admin  txt      REG      14,3     43590  1834035 /Applications/Quicksilver.app/Contents/Resources/defaultAction.icns
+Quicksilv  156 admin  txt      REG      14,3     36664  1834028 /Applications/Quicksilver.app/Contents/Resources/ContactAddress.icns
+Quicksilv  156 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Quicksilv  156 admin  txt      REG      14,3     46896  1834020 /Applications/Quicksilver.app/Contents/Resources/Catalog.icns
+Quicksilv  156 admin  txt      REG      14,3     35970  1834030 /Applications/Quicksilver.app/Contents/Resources/ContactPhone.icns
+Quicksilv  156 admin  txt      REG      14,3     41013  1834029 /Applications/Quicksilver.app/Contents/Resources/ContactEmail.icns
+Quicksilv  156 admin  txt      REG      14,3     47252  1833990 /Applications/Quicksilver.app/Contents/PlugIns/User Data Request.qsplugin/Contents/MacOS/User Data Request
+Quicksilv  156 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Quicksilv  156 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Quicksilv  156 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Quicksilv  156 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Quicksilv  156 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Quicksilv  156 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Quicksilv  156 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Quicksilv  156 admin  txt      REG      14,3    135825  1834232 /Applications/Quicksilver.app/Contents/Resources/Quicksilver.icns
+Quicksilv  156 admin  txt      REG      14,3     56420  1833976 /Applications/Quicksilver.app/Contents/PlugIns/Primer Interface.qsplugin/Contents/MacOS/Primer Interface
+Quicksilv  156 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Quicksilv  156 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Quicksilv  156 admin  txt      REG      14,3    770208  1833852 /Applications/Quicksilver.app/Contents/Frameworks/QSFoundation.framework/Versions/A/QSFoundation
+Quicksilv  156 admin  txt      REG      14,3   1119120  1833823 /Applications/Quicksilver.app/Contents/Frameworks/QSCore.framework/Versions/A/QSCore
+Quicksilv  156 admin  txt      REG      14,3    711208  1833861 /Applications/Quicksilver.app/Contents/Frameworks/QSInterface.framework/Versions/A/QSInterface
+Quicksilv  156 admin  txt      REG      14,3    181804  1833843 /Applications/Quicksilver.app/Contents/Frameworks/QSEffects.framework/Versions/A/QSEffects
+Quicksilv  156 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Quicksilv  156 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Quicksilv  156 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Quicksilv  156 admin    1     PIPE 0x2bf2bb8     16384          
+Quicksilv  156 admin    2     PIPE 0x2bf2bb8     16384          
+Quicksilv  156 admin    3u  KQUEUE                              count=0, state=0x2
+Quicksilv  156 admin    4r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Quicksilv  156 admin    5r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Quicksilv  156 admin    6r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+iTunesHel  157 admin  cwd      DIR      14,3      1326        2 /
+iTunesHel  157 admin  txt      REG      14,3    283136  1894730 /Applications/iTunes.app/Contents/Resources/iTunesHelper.app/Contents/MacOS/iTunesHelper
+iTunesHel  157 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+iTunesHel  157 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+iTunesHel  157 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+iTunesHel  157 admin  txt      REG      14,3    388056  1900075 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/MobileDevice
+iTunesHel  157 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+iTunesHel  157 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+iTunesHel  157 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+iTunesHel  157 admin    1     PIPE 0x2bf3fa4     16384          
+iTunesHel  157 admin    2     PIPE 0x2bf3fa4     16384          
+iTunesHel  157 admin    3r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+iTunesHel  157 admin    4r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+iTunesHel  157 admin    5u    unix 0x311d440       0t0          ->0x311daa0
+iTunesHel  157 admin    6u    unix 0x3042220       0t0          ->0x3042330
+iTunesHel  157 admin    7u    unix 0x3042330       0t0          ->0x3042220
+iTunesHel  157 admin    8r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+MagiCal    158 admin  cwd      DIR      14,3      1326        2 /
+MagiCal    158 admin  txt      REG      14,3   4178160  1796780 /Applications/MagiCal.app/Contents/MacOS/MagiCal
+MagiCal    158 admin  txt      REG      14,3     58564   712314 /usr/libexec/oah/Shims/Interposers.dylib
+MagiCal    158 admin  txt      REG      14,3   3066540  1796782 /Applications/MagiCal.app/Contents/MacOS/rbframework.dylib
+MagiCal    158 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+MagiCal    158 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+MagiCal    158 admin  txt      REG      14,3     18532  1861257 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.tecx
+MagiCal    158 admin  txt      REG      14,3    106000   765937 /System/Library/TextEncodings/Unicode Encodings.bundle/Contents/MacOS/Unicode Encodings
+MagiCal    158 admin  txt      REG      14,3     19336  1736120 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.sbdl
+MagiCal    158 admin  txt      REG      14,3     67520  1796752 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Cocoa Plugin.rbx_10.dylib
+MagiCal    158 admin  txt      REG      14,3     57720  1796753 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Cocoa Plugin.rbx_5.dylib
+MagiCal    158 admin  txt      REG      14,3     76576  1796754 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Cocoa Plugin.rbx_6.dylib
+MagiCal    158 admin  txt      REG      14,3     67488  1796755 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Cocoa Plugin.rbx_7.dylib
+MagiCal    158 admin  txt      REG      14,3     22936  1796756 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Mac Plugin.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3     99156  1796757 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic MacOSX Plugin.rbx_21.dylib
+MagiCal    158 admin  txt      REG      14,3     50712  1796760 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic MacOSX Plugin.rbx_33.dylib
+MagiCal    158 admin  txt      REG      14,3    137016  1796761 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic MacOSX Plugin.rbx_34.dylib
+MagiCal    158 admin  txt      REG      14,3     19004  1796762 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic MacOSX Plugin.rbx_8.dylib
+MagiCal    158 admin  txt      REG      14,3     16852  1796763 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_1.dylib
+MagiCal    158 admin  txt      REG      14,3     13488  1796764 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_13.dylib
+MagiCal    158 admin  txt      REG      14,3     18836  1796765 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_19.dylib
+MagiCal    158 admin  txt      REG      14,3     28556  1796766 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_23.dylib
+MagiCal    158 admin  txt      REG      14,3     14032  1796767 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_35.dylib
+MagiCal    158 admin  txt      REG      14,3     19868  1796768 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Main Plugin.rbx_40.dylib
+MagiCal    158 admin  txt      REG      14,3     17244  1796769 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Picture Plugin.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3     37672  1796770 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Picture Plugin.rbx_4.dylib
+MagiCal    158 admin  txt      REG      14,3     48520  1796771 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Picture Plugin.rbx_5.dylib
+MagiCal    158 admin  txt      REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+MagiCal    158 admin  txt      REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+MagiCal    158 admin  txt      REG      14,3     21420  1796772 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic Picture Plugin.rbx_6.dylib
+MagiCal    158 admin  txt      REG      14,3    158284  1796773 /Applications/MagiCal.app/Contents/Frameworks/MBS REALbasic PNG Plugin.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3     61412  1796774 /Applications/MagiCal.app/Contents/Frameworks/RBAppearancePak.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3    589192  1719586 /Library/QuickTime/XviD_Codec-r58 (ppc).component/Contents/MacOS/XviD_Codec
+MagiCal    158 admin  txt      REG      14,3     16632  1796775 /Applications/MagiCal.app/Contents/Frameworks/RBInternetEncodings.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3     49084  1796776 /Applications/MagiCal.app/Contents/Frameworks/RBShell.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3    601280  1796777 /Applications/MagiCal.app/Contents/Frameworks/RBXML.rbx_0.dylib
+MagiCal    158 admin  txt      REG      14,3    807948   721427 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-B.dat
+MagiCal    158 admin  txt      REG      14,3     97968  1925794 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.kbdx
+MagiCal    158 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+MagiCal    158 admin  txt      REG      14,3    583412  1888827 /System/Library/QuickTime/QuickTimeFireWireDV.component/Contents/MacOS/QuickTimeFireWireDV
+MagiCal    158 admin  txt      REG      14,3    268068  1454914 /Library/QuickTime/AppleIntermediateCodec.component/Contents/MacOS/AppleIntermediateCodec
+MagiCal    158 admin  txt      REG      14,3     90784  1454994 /Library/QuickTime/AppleMPEG2Codec.component/Contents/MacOS/AppleMPEG2Codec
+MagiCal    158 admin  txt      REG      14,3    883200   730459 /System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA
+MagiCal    158 admin  txt      REG      14,3    530096   730256 /System/Library/QuickTime/ApplePixletVideo.component/Contents/MacOS/ApplePixletVideo
+MagiCal    158 admin  txt      REG      14,3    959696  1916714 /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+MagiCal    158 admin  txt      REG      14,3   4586664  1719526 /Library/QuickTime/AviImporter-r7 (ppc).component/Contents/MacOS/AviImporter
+MagiCal    158 admin  txt      REG      14,3   4478784  1719575 /Library/QuickTime/Flip4Mac WMV Import.component/Contents/MacOS/Flip4Mac WMV Import
+MagiCal    158 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+MagiCal    158 admin  txt      REG      14,3   5425538   717325 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras.rsrc
+MagiCal    158 admin  txt      REG      14,3   3893748  1719545 /Library/QuickTime/Flip4Mac WMV Advanced.component/Contents/MacOS/Flip4Mac WMV Advanced
+MagiCal    158 admin  txt      REG      14,3    103824   726511 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/ATSHI.dylib
+MagiCal    158 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+MagiCal    158 admin  txt      REG      14,3  10234096   717733 /usr/share/icu/icudt36b.dat
+MagiCal    158 admin  txt      REG      14,3   3035296   727639 /usr/lib/libstdc++.6.0.4.dylib
+MagiCal    158 admin  txt      REG      14,3    264016   727624 /usr/lib/libgcc_s.1.dylib
+MagiCal    158 admin  txt      REG      14,3   7715328   721696 /usr/lib/libSystem.B.dylib
+MagiCal    158 admin  txt      REG      14,3    122000   721676 /usr/lib/system/libmathCommon.A.dylib
+MagiCal    158 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+MagiCal    158 admin  txt      REG      14,3 161026048  1925026 /private/var/db/dyld/dyld_shared_cache_rosetta
+MagiCal    158 admin  txt      REG      14,3   2106960   712289 /usr/libexec/oah/translate
+MagiCal    158 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+MagiCal    158 admin    1     PIPE 0x2bf2af0     16384          
+MagiCal    158 admin    2     PIPE 0x2bf2af0     16384          
+MagiCal    158 admin    3r     REG      14,3    293938  1796816 /Applications/MagiCal.app/Contents/Resources/MagiCal.rsrc
+MagiCal    158 admin    4r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+MagiCal    158 admin    5r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+MagiCal    158 admin    6r     REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+MagiCal    158 admin    7r     REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+MagiCal    158 admin    8r     REG      14,3   5425538   717325 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras.rsrc
+Mail       164 admin  cwd      DIR      14,3      1326        2 /
+Mail       164 admin  txt      REG      14,3   5907728  1923720 /Applications/Mail.app/Contents/MacOS/Mail
+Mail       164 admin  txt      REG      14,3   7390944  1924618 /System/Library/Frameworks/Message.framework/Versions/B/Message
+Mail       164 admin  txt      REG      14,3    130576   716386 /System/Library/Frameworks/ExceptionHandling.framework/Versions/A/ExceptionHandling
+Mail       164 admin  txt      REG      14,3    992640   739843 /System/Library/Frameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+Mail       164 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+Mail       164 admin  txt      REG      14,3      1593   829858 /Applications/Mail.app/Contents/Resources/TB_iChat.png
+Mail       164 admin  txt      REG      14,3       458   829801 /Applications/Mail.app/Contents/Resources/Reply_White_Pressed.tiff
+Mail       164 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Mail       164 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Mail       164 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Mail       164 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Mail       164 admin  txt      REG      14,3       764   829819 /Applications/Mail.app/Contents/Resources/Show_Status_Pressed.tiff
+Mail       164 admin  txt      REG      14,3      1590   829860 /Applications/Mail.app/Contents/Resources/TB_iChat_Pressed.png
+Mail       164 admin  txt      REG      14,3    119968   849984 /System/Library/Contextual Menu Items/AutomatorCMM.plugin/Contents/MacOS/AutomatorCMM
+Mail       164 admin  txt      REG      14,3    102912   737194 /System/Library/Contextual Menu Items/BluetoothContextualMenu.plugin/Contents/MacOS/BluetoothContextualMenu
+Mail       164 admin  txt      REG      14,3    150000   730837 /System/Library/PrivateFrameworks/BezelServices.framework/Versions/A/BezelServices
+Mail       164 admin  txt      REG      14,3    103824   726511 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/ATSHI.dylib
+Mail       164 admin  txt      REG      14,3    136048  1865344 /Users/admin/Library/Mail/Bundles/SpamSieve.mailbundle/Contents/MacOS/SpamSieve
+Mail       164 admin  txt      REG      14,3      3408   734241 /System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/Resources/DDHighlightCornerTR.tiff
+Mail       164 admin  txt      REG      14,3      3412   734240 /System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/Resources/DDHighlightCornerTL.tiff
+Mail       164 admin  txt      REG      14,3       545   734237 /System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/Resources/DDBluePopDownButton.png
+Mail       164 admin  txt      REG      14,3      3408   734239 /System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/Resources/DDHighlightCornerBR.tiff
+Mail       164 admin  txt      REG      14,3    211488   712719 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+Mail       164 admin  txt      REG      14,3     30567  1923768 /Applications/Mail.app/Contents/Resources/Mail.rsrc
+Mail       164 admin  txt      REG      14,3      3412   734238 /System/Library/PrivateFrameworks/DataDetectors.framework/Versions/A/Resources/DDHighlightCornerBL.tiff
+Mail       164 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Mail       164 admin  txt      REG      14,3     72512   871208 /Library/Internet Plug-Ins/JavaPluginCocoa.bundle/Contents/MacOS/JavaPluginCocoa
+Mail       164 admin  txt      REG      14,3    265984   873369 /System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
+Mail       164 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Mail       164 admin  txt      REG      14,3    195616  1923726 /Applications/Mail.app/Contents/PlugIns/MailWebPlugIn.bundle/Contents/MacOS/MailWebPlugIn
+Mail       164 admin  txt      REG      14,3    183072   765042 /System/Library/Contextual Menu Items/FolderActionsMenu.plugin/Contents/MacOS/FolderActionsMenu
+Mail       164 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Mail       164 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Mail       164 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Mail       164 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Mail       164 admin  txt      REG      14,3     84400   721648 /usr/lib/liblangid.dylib
+Mail       164 admin  txt      REG      14,3   1763409   716445 /System/Library/Fonts/Times.dfont
+Mail       164 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Mail       164 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Mail       164 admin  txt      REG      14,3   3717396  1732686 /Users/admin/Library/Caches/com.apple.DataDetectors.intel.a57194653a3515d2
+Mail       164 admin  txt      REG      14,3   5151552   788057 /usr/share/langid/langid.inv
+Mail       164 admin  txt      REG      14,3    148736   712609 /System/Library/Extensions/AudioIPCDriver.kext/Contents/Resources/AudioIPCPlugIn.bundle/Contents/MacOS/AudioIPCPlugIn
+Mail       164 admin  txt      REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Mail       164 admin  txt      REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Mail       164 admin  txt      REG      14,3    123056   709131 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+Mail       164 admin  txt      REG      14,3    959696  1916714 /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+Mail       164 admin  txt      REG      14,3    573472  1923268 /System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLRendererFloat.bundle/GLRendererFloat
+Mail       164 admin  txt      REG      14,3    852848  1923960 /System/Library/Extensions/AppleIntelGMA950GLDriver.bundle/Contents/MacOS/AppleIntelGMA950GLDriver
+Mail       164 admin  txt      REG      14,3   3657552   718086 /System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth
+Mail       164 admin  txt      REG      14,3     18532   880021 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+Mail       164 admin  txt      REG      14,3     90784  1454994 /Library/QuickTime/AppleMPEG2Codec.component/Contents/MacOS/AppleMPEG2Codec
+Mail       164 admin  txt      REG      14,3    106000   765937 /System/Library/TextEncodings/Unicode Encodings.bundle/Contents/MacOS/Unicode Encodings
+Mail       164 admin  txt      REG      14,3    393072  1924628 /System/Library/Frameworks/Message.framework/Versions/B/Resources/Syncer.syncschema/Contents/MacOS/Syncer
+Mail       164 admin  txt      REG      14,3    608560   765012 /System/Library/PrivateFrameworks/SyncServicesUI.framework/Versions/A/SyncServicesUI
+Mail       164 admin  txt      REG      14,3    729864  1923263 /System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLByteCodes.i386.bc
+Mail       164 admin  txt      REG      14,3    268068  1454914 /Library/QuickTime/AppleIntermediateCodec.component/Contents/MacOS/AppleIntermediateCodec
+Mail       164 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Mail       164 admin  txt      REG      14,3   3893748  1719545 /Library/QuickTime/Flip4Mac WMV Advanced.component/Contents/MacOS/Flip4Mac WMV Advanced
+Mail       164 admin  txt      REG      14,3    583412  1888827 /System/Library/QuickTime/QuickTimeFireWireDV.component/Contents/MacOS/QuickTimeFireWireDV
+Mail       164 admin  txt      REG      14,3    883200   730459 /System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA
+Mail       164 admin  txt      REG      14,3   4478784  1719575 /Library/QuickTime/Flip4Mac WMV Import.component/Contents/MacOS/Flip4Mac WMV Import
+Mail       164 admin  txt      REG      14,3   7191744  1923267 /System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLEngine.bundle/GLEngine
+Mail       164 admin  txt      REG      14,3    530096   730256 /System/Library/QuickTime/ApplePixletVideo.component/Contents/MacOS/ApplePixletVideo
+Mail       164 admin  txt      REG      14,3    332016   726431 /System/Library/PrivateFrameworks/URLMount.framework/Versions/A/URLMount
+Mail       164 admin  txt      REG      14,3   4195712   712632 /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+Mail       164 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Mail       164 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Mail       164 admin  txt      REG      14,3    450560   712390 /System/Library/CoreServices/Encodings/libJapaneseConverter.dylib
+Mail       164 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Mail       164 admin    1     PIPE 0x2bf42c4     16384          
+Mail       164 admin    2     PIPE 0x2bf42c4     16384          
+Mail       164 admin    3r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Mail       164 admin    4u     REG      14,3   8511488  1618723 /Users/admin/Library/Mail/Envelope Index
+Mail       164 admin    5u     REG      14,3   8511488  1618723 /Users/admin/Library/Mail/Envelope Index
+Mail       164 admin    6u     REG      14,3   1132544  1731332 /Users/admin/Library/PubSub/Database/Database.sqlite3
+Mail       164 admin    7u     REG      14,3    155648  1727206 /Users/admin/Library/Calendars/Calendar Cache
+Mail       164 admin    8r     REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Mail       164 admin    9u    unix 0x3135660       0t0          ->0x3042990
+Mail       164 admin   10u    unix 0x3042990       0t0          ->0x3135660
+Mail       164 admin   11u  KQUEUE                              count=0, state=0
+Mail       164 admin   12u  KQUEUE                              count=0, state=0x2
+Mail       164 admin   13u    IPv4 0x3a9266c       0t0      TCP 192.168.0.105:49214->mail.mac.com:imap (ESTABLISHED)
+Mail       164 admin   14u    IPv4 0x4e8aa68       0t0      TCP 192.168.0.105:49672->mail.mac.com:imap (ESTABLISHED)
+Mail       164 admin   15u     REG      14,3    290816  1732607 /Users/admin/Library/Application Support/AddressBook/MailRecents-v4.abcdmr
+Mail       164 admin   16r     REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Mail       164 admin   17r     REG      14,3    729864  1923263 /System/Library/Frameworks/OpenGL.framework/Versions/A/Resources/GLByteCodes.i386.bc
+Mail       164 admin   18u     REG      14,3     36864  1731262 /Users/admin/Library/Mail/MessageUidsAlreadyDownloaded3
+Mail       164 admin   19u     REG      14,3    307200  1730396 /Users/admin/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+Mail       164 admin   20r     REG      14,3     30567  1923768 /Applications/Mail.app/Contents/Resources/Mail.rsrc
+Mail       164 admin   21u     REG      14,3     13312  1732598 /Users/admin/Library/Caches/com.apple.mail/Cache.db
+Mail       164 admin   22u    IPv4 0x4748e64       0t0      TCP 192.168.0.105:49220->mail.mac.com:imap (ESTABLISHED)
+Mail       164 admin   23u    IPv4 0x4748a68       0t0      TCP 192.168.0.105:49221->mail.mac.com:imap (ESTABLISHED)
+Mail       164 admin   24r     REG      14,3   5151552   788057 /usr/share/langid/langid.inv
+Mail       164 admin   25r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Mail       164 admin   26r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Mail       164 admin   27u     REG      14,3    122880  1731300 /Users/admin/Library/Mail/AvailableFeeds
+Mail       164 admin   29u    IPv4 0x4c75a68       0t0      TCP 192.168.0.105:49599->idisk.mac.com:http (CLOSED)
+Mail       164 admin   30u  KQUEUE                              count=0, state=0
+Mail       164 admin   31r     DIR      14,3        68    58608 /Network
+Mail       164 admin   32u  KQUEUE                              count=0, state=0x2
+Mail       164 admin   33u    unix 0x3135f68       0t0          ->0x3135110
+Mail       164 admin   35u    unix 0x3135000       0t0          ->0x4c9cf68
+scriptrun  165 admin  cwd      DIR      14,3      1326        2 /
+scriptrun  165 admin  txt      REG      14,3     47020  1865370 /Users/admin/Library/Mail/Bundles/SpamSieve.mailbundle/Contents/Resources/scriptrunner
+scriptrun  165 admin  txt      REG      14,3     71072   730267 /System/Library/Components/AppleScript.component/Contents/MacOS/AppleScript
+scriptrun  165 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+scriptrun  165 admin  txt      REG      14,3    959696  1916714 /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+scriptrun  165 admin  txt      REG      14,3   3126048   730284 /System/Library/PrivateFrameworks/AppleScript.framework/Versions/A/AppleScript
+scriptrun  165 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+scriptrun  165 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+scriptrun  165 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+scriptrun  165 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+scriptrun  165 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+scriptrun  165 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+scriptrun  165 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+scriptrun  165 admin    1     PIPE 0x2bf42c4     16384          
+scriptrun  165 admin    2     PIPE 0x2bf42c4     16384          
+scriptrun  165 admin    3r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+scriptrun  165 admin    4r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+scriptrun  165 admin    5r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SpamSieve  168 admin  cwd      DIR      14,3      1326        2 /
+SpamSieve  168 admin  txt      REG      14,3     33796  1917625 /Applications/SpamSieve.app/Contents/MacOS/SpamSieve
+SpamSieve  168 admin  txt      REG      14,3    130576   716386 /System/Library/Frameworks/ExceptionHandling.framework/Versions/A/ExceptionHandling
+SpamSieve  168 admin  txt      REG      14,3    290736   727645 /usr/lib/libexslt.0.dylib
+SpamSieve  168 admin  txt      REG      14,3   2646944   730335 /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/AppleScriptKit
+SpamSieve  168 admin  txt      REG      14,3   2060768   741801 /System/Library/Frameworks/OSAKit.framework/Versions/A/OSAKit
+SpamSieve  168 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+SpamSieve  168 admin  txt      REG      14,3     59923  1917854 /Applications/SpamSieve.app/Contents/Resources/SpamSieveFoerster.icns
+SpamSieve  168 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+SpamSieve  168 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+SpamSieve  168 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+SpamSieve  168 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SpamSieve  168 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+SpamSieve  168 admin  txt      REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SpamSieve  168 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+SpamSieve  168 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SpamSieve  168 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SpamSieve  168 admin  txt      REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+SpamSieve  168 admin  txt      REG      14,3    959696  1916714 /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+SpamSieve  168 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+SpamSieve  168 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+SpamSieve  168 admin  txt      REG      14,3    578704  1917418 /Applications/SpamSieve.app/Contents/Frameworks/MJTFoundation.framework/Versions/A/MJTFoundation
+SpamSieve  168 admin  txt      REG      14,3    460844  1917279 /Applications/SpamSieve.app/Contents/Frameworks/MJTApplication.framework/Versions/A/MJTApplication
+SpamSieve  168 admin  txt      REG      14,3    595108  1917408 /Applications/SpamSieve.app/Contents/Frameworks/MJTDatabase.framework/Versions/A/MJTDatabase
+SpamSieve  168 admin  txt      REG      14,3   1475480  1917621 /Applications/SpamSieve.app/Contents/Frameworks/SpamSieveFramework.framework/Versions/A/SpamSieveFramework
+SpamSieve  168 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+SpamSieve  168 admin    1     PIPE 0x2bf2a28     16384          
+SpamSieve  168 admin    2     PIPE 0x2bf2a28     16384          
+SpamSieve  168 admin    3r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SpamSieve  168 admin    4u     REG      14,3     23552  3261807 /Users/admin/Library/Caches/com.c-command.SpamSieve/Cache.db
+SpamSieve  168 admin    5w     REG      14,3   4763424  1618671 /Users/admin/Library/Logs/SpamSieve/SpamSieve Log.log
+SpamSieve  168 admin    6u     REG      14,3  13110272  1605850 /Users/admin/Library/Application Support/SpamSieve/History.db
+SpamSieve  168 admin    7u     REG      14,3      2048  3261845 /private/var/tmp/sqlite_pRLJkFmsmcGyXVE
+SpamSieve  168 admin    8u    IPv4 0x35a5e64       0t0      TCP 192.168.0.105:49222->basic-whippit.bitters.dreamhost.com:http (CLOSE_WAIT)
+SpamSieve  168 admin    9u    unix 0x31352a8       0t0          ->0x3135330
+SpamSieve  168 admin   10u    unix 0x3135330       0t0          ->0x31352a8
+SpamSieve  168 admin   11w     REG      14,3      8898  1618672 /Users/admin/Library/Logs/SpamSieve/Tokenizer Log.log
+SpamSieve  168 admin   12u     REG      14,3    307200  1730396 /Users/admin/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+SpamSieve  168 admin   13r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SpamSieve  168 admin   14r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SpamSieve  168 admin   15r     REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+SpamSieve  168 admin   16r     REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SystemUIS  178 admin  cwd      DIR      14,3      1326        2 /
+SystemUIS  178 admin  txt      REG      14,3    869472   765264 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+SystemUIS  178 admin  txt      REG      14,3    256976   765257 /System/Library/PrivateFrameworks/SystemUIPlugin.framework/Versions/A/SystemUIPlugin
+SystemUIS  178 admin  txt      REG      14,3   1706480   741078 /System/Library/PrivateFrameworks/NetworkConfig.framework/Versions/A/NetworkConfig
+SystemUIS  178 admin  txt      REG      14,3    330912   738306 /System/Library/PrivateFrameworks/ICANotifications.framework/Versions/A/ICANotifications
+SystemUIS  178 admin  txt      REG      14,3    182144   814070 /System/Library/PrivateFrameworks/iPod.framework/Versions/A/iPod
+SystemUIS  178 admin  txt      REG      14,3    150000   730837 /System/Library/PrivateFrameworks/BezelServices.framework/Versions/A/BezelServices
+SystemUIS  178 admin  txt      REG      14,3   5364960   713797 /System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+SystemUIS  178 admin  txt      REG      14,3   5992752  1923480 /System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages
+SystemUIS  178 admin  txt      REG      14,3    960704  1924754 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Apple80211
+SystemUIS  178 admin  txt      REG      14,3    275296   710978 /System/Library/Frameworks/AppleTalk.framework/Versions/A/AppleTalk
+SystemUIS  178 admin  txt      REG      14,3   1148272   721749 /System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit
+SystemUIS  178 admin  txt      REG      14,3    912640   727213 /usr/lib/libcurl.4.dylib
+SystemUIS  178 admin  txt      REG      14,3    231280   730439 /System/Library/CoreServices/Menu Extras/User.menu/Contents/MacOS/User
+SystemUIS  178 admin  txt      REG      14,3    148736   712609 /System/Library/Extensions/AudioIPCDriver.kext/Contents/Resources/AudioIPCPlugIn.bundle/Contents/MacOS/AudioIPCPlugIn
+SystemUIS  178 admin  txt      REG      14,3    123056   709131 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+SystemUIS  178 admin  txt      REG      14,3     99424   762498 /System/Library/CoreServices/Menu Extras/Script Menu.menu/Contents/MacOS/Script Menu
+SystemUIS  178 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+SystemUIS  178 admin  txt      REG      14,3    238192  1923895 /System/Library/CoreServices/Menu Extras/AirPort.menu/Contents/MacOS/AirPort
+SystemUIS  178 admin  txt      REG      14,3    211488   712719 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+SystemUIS  178 admin  txt      REG      14,3    301616   718923 /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/IOUSBLib.bundle/Contents/MacOS/IOUSBLib
+SystemUIS  178 admin  txt      REG      14,3    253552  1924772 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/ClientController.bundle/Contents/MacOS/ClientController
+SystemUIS  178 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+SystemUIS  178 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SystemUIS  178 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+SystemUIS  178 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+SystemUIS  178 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+SystemUIS  178 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SystemUIS  178 admin  txt      REG      14,3    566400   727369 /System/Library/PrivateFrameworks/EAP8021X.framework/Versions/A/EAP8021X
+SystemUIS  178 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+SystemUIS  178 admin  txt      REG      14,3    529040   742021 /System/Library/PrivateFrameworks/InternetConnect.framework/Versions/A/InternetConnect
+SystemUIS  178 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+SystemUIS  178 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SystemUIS  178 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+SystemUIS  178 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+SystemUIS  178 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+SystemUIS  178 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+SystemUIS  178 admin    1     PIPE 0x2bf2e74     16384          
+SystemUIS  178 admin    2     PIPE 0x2bf2e74     16384          
+SystemUIS  178 admin    3u  KQUEUE                              count=0, state=0x2
+SystemUIS  178 admin    4r     DIR      14,3       170   731130 /Library/Image Capture/Devices
+SystemUIS  178 admin    5r     DIR      14,3       102   738330 /Library/Image Capture/TWAIN Data Sources
+SystemUIS  178 admin    6r     DIR      14,3       510   737873 /System/Library/Image Capture/Devices
+SystemUIS  178 admin    7r     DIR      14,3        68   738331 /System/Library/Image Capture/TWAIN Data Sources
+SystemUIS  178 admin    8r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SystemUIS  178 admin    9u    IPv4 0x2a267a8       0t0      UDP *:*
+SystemUIS  178 admin   10r     CHR      10,2       0t0 51167748 /dev/ath0
+SystemUIS  178 admin   11u    unix 0x2bf1088       0t0          ->0x3135cc0
+SystemUIS  178 admin   12u    unix 0x3135cc0       0t0          ->0x2bf1088
+SystemUIS  178 admin   13r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SystemUIS  178 admin   14r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     180 admin  cwd      DIR      14,3      1326        2 /
+Safari     180 admin  txt      REG      14,3   3078800   877280 /Applications/Safari.app/Contents/MacOS/Safari
+Safari     180 admin  txt      REG      14,3    553072  1924916 /System/Library/PrivateFrameworks/SyndicationUI.framework/Versions/A/SyndicationUI
+Safari     180 admin  txt      REG      14,3       512   877558 /Applications/Safari.app/Contents/Resources/Search_SnapBackPressed.tif
+Safari     180 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+Safari     180 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Safari     180 admin  txt      REG      14,3   1763409   716445 /System/Library/Fonts/Times.dfont
+Safari     180 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Safari     180 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Safari     180 admin  txt      REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     180 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Safari     180 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Safari     180 admin  txt      REG      14,3    103824   726511 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/ATSHI.dylib
+Safari     180 admin  txt      REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Safari     180 admin  txt      REG      14,3       484   722346 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/PDFKit.framework/Versions/A/Resources/ThumbnailView.tif
+Safari     180 admin  txt      REG      14,3       556   722344 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/PDFKit.framework/Versions/A/Resources/OutlineView.tif
+Safari     180 admin  txt      REG      14,3    124328   736440 /System/Library/Fonts/Geeza Pro.ttf
+Safari     180 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Safari     180 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Safari     180 admin  txt      REG      14,3    211488   712719 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGXCoreImage.A.dylib
+Safari     180 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Safari     180 admin  txt      REG      14,3     18532   880021 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+Safari     180 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Safari     180 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Safari     180 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Safari     180 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     180 admin  txt      REG      14,3    126648   712338 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/Resources/tokruleLE.data
+Safari     180 admin  txt      REG      14,3     72512   871208 /Library/Internet Plug-Ins/JavaPluginCocoa.bundle/Contents/MacOS/JavaPluginCocoa
+Safari     180 admin  txt      REG      14,3    265984   873369 /System/Library/Frameworks/JavaVM.framework/Versions/A/JavaVM
+Safari     180 admin  txt      REG      14,3    367168   712398 /System/Library/CoreServices/Encodings/libTraditionalChineseConverter.dylib
+Safari     180 admin  txt      REG      14,3  10823828   712481 /System/Library/Fonts/儷黑 Pro.ttf
+Safari     180 admin  txt      REG      14,3    905872   733873 /System/Library/Frameworks/CoreAudioKit.framework/Versions/A/CoreAudioKit
+Safari     180 admin  txt      REG      14,3    208144   712725 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libFontStreams.A.dylib
+Safari     180 admin  txt      REG      14,3    959696  1916714 /Library/QuickTime/DivX Decoder.component/Contents/MacOS/DivX Decoder
+Safari     180 admin  txt      REG      14,3    119968   849984 /System/Library/Contextual Menu Items/AutomatorCMM.plugin/Contents/MacOS/AutomatorCMM
+Safari     180 admin  txt      REG      14,3    102912   737194 /System/Library/Contextual Menu Items/BluetoothContextualMenu.plugin/Contents/MacOS/BluetoothContextualMenu
+Safari     180 admin  txt      REG      14,3    150000   730837 /System/Library/PrivateFrameworks/BezelServices.framework/Versions/A/BezelServices
+Safari     180 admin  txt      REG      14,3    183072   765042 /System/Library/Contextual Menu Items/FolderActionsMenu.plugin/Contents/MacOS/FolderActionsMenu
+Safari     180 admin  txt      REG      14,3   3657552   718086 /System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth
+Safari     180 admin  txt      REG      14,3    531341   716442 /System/Library/Fonts/Monaco.dfont
+Safari     180 admin  txt      REG      14,3   9585712   739207 /Library/Internet Plug-Ins/Flash Player.plugin/Contents/MacOS/Flash Player
+Safari     180 admin  txt      REG      14,3  15394588   720665 /System/Library/Fonts/AppleGothic.ttf
+Safari     180 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Safari     180 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Safari     180 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Safari     180 admin  txt      REG      14,3    450560   712390 /System/Library/CoreServices/Encodings/libJapaneseConverter.dylib
+Safari     180 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Safari     180 admin    1     PIPE 0x2bf483c     16384          
+Safari     180 admin    2     PIPE 0x2bf483c     16384          
+Safari     180 admin    3u     REG      14,3    406528  1732708 /Users/admin/Library/Safari/WebpageIcons.db
+Safari     180 admin    4r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Safari     180 admin    5u     REG      14,3  11068416  3256773 /Users/admin/Library/Caches/com.apple.Safari/Cache.db
+Safari     180 admin    6u     REG      14,3   1132544  1731332 /Users/admin/Library/PubSub/Database/Database.sqlite3
+Safari     180 admin    7r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Safari     180 admin    8r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     180 admin    9u     REG      14,3    311296  3256771 /Users/admin/Library/Safari/HistoryIndex.sk
+Safari     180 admin   10r     REG      14,3      8600   739211 /Library/Internet Plug-Ins/Flash Player.plugin/Contents/Resources/Flash Player.rsrc
+Safari     180 admin   11u    unix 0x3135880       0t0          ->0x311d770
+Safari     180 admin   12u    unix 0x311d770       0t0          ->0x3135880
+Safari     180 admin   13r     REG      14,3    126648   712338 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/Resources/tokruleLE.data
+Safari     180 admin   14r     REG      14,3       286   739210 /Library/Internet Plug-Ins/Flash Player.plugin/Contents/Resources/English.lproj/Localized.rsrc
+Safari     180 admin   15r     REG      14,3      8600   739211 /Library/Internet Plug-Ins/Flash Player.plugin/Contents/Resources/Flash Player.rsrc
+Safari     180 admin   16r     REG      14,3       286   739210 /Library/Internet Plug-Ins/Flash Player.plugin/Contents/Resources/English.lproj/Localized.rsrc
+Safari     180 admin   17r     REG      14,3    141372  1889524 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Safari     180 admin   18r     REG      14,3     56050  1889522 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     180 admin   19u    IPv4 0x4e8ae64       0t0      TCP 192.168.0.105:49667->golgote.hst.nerim.net:http (CLOSE_WAIT)
+Safari     180 admin   42r     CHR       8,0      0t62 45742212 /dev/random
+Safari     180 admin   48r     CHR       8,0     0t205 45742212 /dev/random
+Terminal   219 admin  cwd      DIR      14,3      1734  1595057 /Users/admin
+Terminal   219 admin  txt      REG      14,3   1085536   725651 /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+Terminal   219 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Terminal   219 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Terminal   219 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Terminal   219 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Terminal   219 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Terminal   219 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Terminal   219 admin  txt      REG      14,3    531341   716442 /System/Library/Fonts/Monaco.dfont
+Terminal   219 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Terminal   219 admin  txt      REG      14,3     97968  1925593 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Terminal   219 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Terminal   219 admin  txt      REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Terminal   219 admin  txt      REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Terminal   219 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Terminal   219 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Terminal   219 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Terminal   219 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Terminal   219 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Terminal   219 admin    1     PIPE 0x2bf2898     16384          
+Terminal   219 admin    2     PIPE 0x2bf2898     16384          
+Terminal   219 admin    3r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Terminal   219 admin    4     PIPE 0x2bf49cc     16384          
+Terminal   219 admin    5     PIPE 0x2bf4774     16384          
+Terminal   219 admin    6     PIPE 0x2bf2e10     16384          
+Terminal   219 admin    7     PIPE 0x2bf276c     16384          
+Terminal   219 admin    9r     REG      14,3    144580   717333 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Terminal   219 admin   10r     REG      14,3    459965   717309 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Terminal   219 admin   12u     CHR      15,0   0t93217 45743492 /dev/ptmx
+Terminal   219 admin   13u     CHR      15,1   0t96249 45743492 /dev/ptmx
+AppleSpel  268 admin  cwd      DIR      14,3      1326        2 /
+AppleSpel  268 admin  txt      REG      14,3   1323376   744453 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell
+AppleSpel  268 admin  txt      REG      14,3    126648   712338 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/Resources/tokruleLE.data
+AppleSpel  268 admin  txt      REG      14,3     84400   721648 /usr/lib/liblangid.dylib
+AppleSpel  268 admin  txt      REG      14,3   5151552   788057 /usr/share/langid/langid.inv
+AppleSpel  268 admin  txt      REG      14,3    537504   744468 /System/Library/Services/AppleSpell.service/Contents/Resources/English.lproj/bindict
+AppleSpel  268 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+AppleSpel  268 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+AppleSpel  268 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+AppleSpel  268 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+AppleSpel  268 admin    1     PIPE 0x2bf25dc     16384          
+AppleSpel  268 admin    2     PIPE 0x2bf25dc     16384          
+AppleSpel  268 admin    3r     REG      14,3    926208   744472 /System/Library/Services/AppleSpell.service/Contents/Resources/English.lproj/Dictionary.dat
+AppleSpel  268 admin    4r     REG      14,3    126648   712338 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/Resources/tokruleLE.data
+AppleSpel  268 admin    5r     REG      14,3   5151552   788057 /usr/share/langid/langid.inv
+tcsh       280 admin  cwd      DIR      14,3      1734  1595057 /Users/admin
+tcsh       280 admin  txt      REG      14,3    610864   728260 /bin/tcsh
+tcsh       280 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+tcsh       280 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+tcsh       280 admin   15u     CHR      16,0   0t92505 81438468 /dev/ttys000
+tcsh       280 admin   16u     CHR      16,0   0t92505 81438468 /dev/ttys000
+tcsh       280 admin   17u     CHR      16,0   0t92505 81438468 /dev/ttys000
+tcsh       280 admin   18u     CHR      16,0   0t92505 81438468 /dev/ttys000
+tcsh       280 admin   19u     CHR      16,0   0t92505 81438468 /dev/ttys000
+mdworker   299 admin  cwd      DIR      14,3      1326        2 /
+mdworker   299 admin  txt      REG      14,3    340496   725569 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdworker
+mdworker   299 admin  txt      REG      14,3     56544  1924922 /System/Library/Spotlight/Mail.mdimporter/Contents/MacOS/Mail
+mdworker   299 admin  txt      REG      14,3    130576   716386 /System/Library/Frameworks/ExceptionHandling.framework/Versions/A/ExceptionHandling
+mdworker   299 admin  txt      REG      14,3    992640   739843 /System/Library/Frameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+mdworker   299 admin  txt      REG      14,3     49264   764597 /System/Library/Spotlight/Application.mdimporter/Contents/MacOS/Application
+mdworker   299 admin  txt      REG      14,3     47808   761824 /System/Library/Spotlight/Bookmarks.mdimporter/Contents/MacOS/Bookmarks
+mdworker   299 admin  txt      REG      14,3    121232   728706 /System/Library/Spotlight/RichText.mdimporter/Contents/MacOS/RichText
+mdworker   299 admin  txt      REG      14,3   7390944  1924618 /System/Library/Frameworks/Message.framework/Versions/B/Message
+mdworker   299 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+mdworker   299 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+mdworker   299 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+mdworker   299 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+mdworker   299 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+mdworker   299 admin    1w     CHR       3,2       0t0 45502212 /dev/null
+mdworker   299 admin    2w     CHR       3,2       0t0 45502212 /dev/null
+mdworker   299 admin    3u  KQUEUE                              count=0, state=0x2
+mdworker   299 admin    4r     DIR      14,3       340   730618 /Library/Spotlight
+mdworker   299 admin    5r     DIR      14,3       714   706224 /System/Library/Spotlight
+mdworker   299 admin    6r     REG      14,3      6148  1696884 /Users/admin/Programs/Permanent Eraser/build/Development/.DS_Store
+mdworker   299 admin    7u  KQUEUE                              count=0, state=0x2
+mdworker   299 admin   11u     REG      14,3    307200  1730396 /Users/admin/Library/Application Support/AddressBook/AddressBook-v22.abcddb
+SyncServe  311 admin  cwd      DIR      14,3       306       32 /private/tmp
+SyncServe  311 admin  txt      REG      14,3    687984   764917 /System/Library/Frameworks/SyncServices.framework/Versions/A/Resources/SyncServer.app/Contents/MacOS/SyncServer
+SyncServe  311 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+SyncServe  311 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+SyncServe  311 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+SyncServe  311 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+SyncServe  311 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+SyncServe  311 admin    1     PIPE 0x2bf2640     16384          
+SyncServe  311 admin    2     PIPE 0x2bf2640     16384          
+SyncServe  311 admin    3u  KQUEUE                              count=0, state=0x1
+SyncServe  311 admin    4u    unix 0x3135220       0t0          ->0x30427f8
+SyncServe  311 admin    5u    unix 0x30427f8       0t0          ->0x3135220
+SyncServe  311 admin   16u    unix 0x3042550       0t0          ->0x4c9ce58
+tcsh       328 admin  cwd      DIR      14,3      1734  1696720 /Users/admin/Programs/Permanent Eraser
+tcsh       328 admin  txt      REG      14,3    610864   728260 /bin/tcsh
+tcsh       328 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+tcsh       328 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+tcsh       328 admin   15u     CHR      16,1   0t94105 81668484 /dev/ttys001
+tcsh       328 admin   16u     CHR      16,1   0t94105 81668484 /dev/ttys001
+tcsh       328 admin   17u     CHR      16,1   0t94105 81668484 /dev/ttys001
+tcsh       328 admin   18u     CHR      16,1   0t94105 81668484 /dev/ttys001
+tcsh       328 admin   19u     CHR      16,1   0t94105 81668484 /dev/ttys001
+quicklook 1495 admin  cwd      DIR      14,3       306       32 /private/tmp
+quicklook 1495 admin  txt      REG      14,3    162112   745841 /System/Library/Frameworks/QuickLook.framework/Versions/A/Resources/quicklookd.app/Contents/MacOS/quicklookd
+quicklook 1495 admin  txt      REG      14,3     71424   746031 /System/Library/Frameworks/QuickLook.framework/Versions/A/Resources/Generators/Text.qlgenerator/Contents/MacOS/Text
+quicklook 1495 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+quicklook 1495 admin  txt      REG      14,3    531341   716442 /System/Library/Fonts/Monaco.dfont
+quicklook 1495 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+quicklook 1495 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+quicklook 1495 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+quicklook 1495 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+quicklook 1495 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+quicklook 1495 admin    1     PIPE 0x2bf27d0     16384          
+quicklook 1495 admin    2     PIPE 0x2bf27d0     16384          
+quicklook 1495 admin    3u  KQUEUE                              count=0, state=0x2
+quicklook 1495 admin    4r     DIR      14,3       136   745813 /Library/QuickLook
+quicklook 1495 admin    5r     DIR      14,3       136   741841 /System/Library/QuickLook
+quicklook 1495 admin   23u    unix 0x311d990       0t0          ->0x3135198
+Permanent 1497 admin  cwd      DIR      14,3      1326        2 /
+Permanent 1497 admin  txt      REG      14,3    168604  3256488 /Users/admin/Programs/Permanent Eraser/build/Development/Permanent Eraser.app/Contents/MacOS/Permanent Eraser
+Permanent 1497 admin  txt      REG      14,3   2295501   716441 /System/Library/Fonts/LucidaGrande.dfont
+Permanent 1497 admin  txt      REG      14,3  14499184  1727199 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.ATS/annex_aux
+Permanent 1497 admin  txt      REG      14,3   2402112   716437 /System/Library/Fonts/Helvetica.dfont
+Permanent 1497 admin  txt      REG      14,3   5364960   713797 /System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+Permanent 1497 admin  txt      REG      14,3    103824   726511 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/ATSHI.dylib
+Permanent 1497 admin  txt      REG      14,3     19336  1717010 /private/var/folders/D5/D5kB9DoIHBKK1uRBYugVAk+++TI/-Caches-/com.apple.IntlDataCache.le.sbdl
+Permanent 1497 admin  txt      REG      14,3   3840000   746428 /System/Library/CoreServices/RawCamera.bundle/Contents/MacOS/RawCamera
+Permanent 1497 admin  txt      REG      14,3  10234096   717734 /usr/share/icu/icudt36l.dat
+Permanent 1497 admin  txt      REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Permanent 1497 admin  txt      REG      14,3   1831880   713450 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/SArtFile.bin
+Permanent 1497 admin  txt      REG      14,3   5836820   713280 /System/Library/PrivateFrameworks/CoreUI.framework/Versions/A/Resources/ArtFile.bin
+Permanent 1497 admin  txt      REG      14,3    807948   721428 /System/Library/Keyboard Layouts/AppleKeyboardLayouts.bundle/Contents/Resources/AppleKeyboardLayouts-L.dat
+Permanent 1497 admin  txt      REG      14,3   4169728  3257038 /Library/Caches/com.apple.LaunchServices-023501.csstore
+Permanent 1497 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+Permanent 1497 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+Permanent 1497 admin  txt      REG      14,3    450560   712390 /System/Library/CoreServices/Encodings/libJapaneseConverter.dylib
+Permanent 1497 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+Permanent 1497 admin    1     PIPE 0x2bf23e8     16384          
+Permanent 1497 admin    2     PIPE 0x2bf23e8     16384          
+Permanent 1497 admin    3r     REG      14,3   5425538   717326 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Permanent 1497 admin    4     PIPE 0x2bf26a4     16384          
+Permanent 1497 admin    5     PIPE 0x2bf2708     16384          
+Permanent 1497 admin    6     PIPE 0x2bf24b0     16384          
+Permanent 1497 admin    7     PIPE 0x2bf21f4     16384          
+Permanent 1497 admin    8     PIPE 0x2bf2384     16384          
+Permanent 1497 admin    9     PIPE 0x2bf2320     16384          
+Permanent 1497 admin   10     PIPE 0x2bf2514     16384          
+Permanent 1497 admin   11     PIPE 0x2bf2190     16384          
+Permanent 1497 admin   12u  KQUEUE                              count=0, state=0
+Permanent 1497 admin   17u  KQUEUE                              count=0, state=0x2
+Permanent 1497 admin   18u  KQUEUE                              count=0, state=0x2
+srm       1507 admin  cwd      DIR      14,3      1326        2 /
+srm       1507 admin  txt      REG      14,3     64384   809281 /usr/bin/srm
+srm       1507 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+srm       1507 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+srm       1507 admin    0r     CHR       3,2       0t0 45502212 /dev/null
+srm       1507 admin    1     PIPE 0x2bf2258     16384          
+srm       1507 admin    2     PIPE 0x2bf2258     16384          
+srm       1507 admin    3w     REG      14,3     11479  3264104 /Users/admin/Programs/Permanent Eraser/tempfiles/992.txt
+lsof      1508 admin  cwd      DIR      14,3      1734  1696720 /Users/admin/Programs/Permanent Eraser
+lsof      1508 admin  txt      REG      14,3    209648   727649 /usr/sbin/lsof
+lsof      1508 admin  txt      REG      14,3   1059536   727354 /usr/lib/dyld
+lsof      1508 admin  txt      REG      14,3 130797568  1925024 /private/var/db/dyld/dyld_shared_cache_i386
+lsof      1508 admin    0u     CHR      16,1   0t94105 81668484 /dev/ttys001
+lsof      1508 admin    1w     REG      14,3         0  3264114 /Users/admin/Programs/Permanent Eraser/openfiles.txt
+lsof      1508 admin    2u     CHR      16,1   0t94105 81668484 /dev/ttys001
+lsof      1508 admin    4     PIPE 0x2bf22bc     16384          
+lsof      1508 admin    5     PIPE 0x2bf20c8     16384          

@@ -1,0 +1,32 @@
+#!/bin/bash
+
+BIN=@PACKAGE@
+MAN=@PACKAGE@.1
+prefix=@prefix@
+exec_prefix=@prefix@
+BINDIR=@bindir@
+MANDIR=@mandir@/man1
+INSTROOT=./dstroot
+VERSION=@BCWIPE_VER@-@BCWIPE_REL@
+PKG=$BIN-$VERSION.pkg
+DMG=BCWipe-$VERSION.dmg
+
+mkdir $INSTROOT
+mkdir -p $INSTROOT/$BINDIR 
+mkdir -p $INSTROOT/$MANDIR
+install -m 755 $BIN $INSTROOT/$BINDIR
+install -m 644 $MAN $INSTROOT/$MANDIR
+
+# when building on mac, clean up osx garbage
+find $INSTROOT -name .DS_Store -delete
+
+sudo chown -R root:staff $INSTROOT
+
+#>= OS X 10.3
+/Developer/Applications/Utilities/PackageMaker.app/Contents/MacOS/PackageMaker --root $INSTROOT --id com.jetico.bcwipe --title "bcwipe-$VERSION" --out $PKG --version $VERSION --root-volume-only --verbose
+
+cp COPYING $PKG/Contents/Resources/License
+hdiutil create -srcfolder $PKG $DMG
+
+sudo rm -rf $INSTROOT
+sudo rm -rf $PKG

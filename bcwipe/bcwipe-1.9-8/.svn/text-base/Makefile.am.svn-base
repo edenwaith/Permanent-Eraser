@@ -1,0 +1,5 @@
+bin_PROGRAMS=bcwipe
+bcwipe_SOURCES=wipe.c wipe.h options.c options.h schemes.c schemes.h sha1.c sha1.h sha1random.c sha1random.h log.c log.h standard.h rand.h rand.c prng.c
+man_MANS=bcwipe.1
+EXTRA_DIST=$(man_MANS) bcwipe.spec.in osxpkg.sh.in
+AM_CFLAGS=-g -D_LARGE_FILES -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 

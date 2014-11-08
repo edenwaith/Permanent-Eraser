@@ -1,0 +1,1064 @@
+COMMAND    PID  USER   FD     TYPE    DEVICE SIZE/OFF     NODE NAME
+ATSServer   69 admin  cwd      DIR      14,2     1224        2 /
+ATSServer   69 admin  txt      REG      14,2  6679916   466829 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Support/ATSServer
+ATSServer   69 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+ATSServer   69 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+ATSServer   69 admin  txt      REG      14,2   133076   533780 /Library/Caches/com.apple.ATS/501/System.fcache
+ATSServer   69 admin  txt      REG      14,2   307743   463838 /System/Library/Fonts/Monaco.dfont
+ATSServer   69 admin  txt      REG      14,2   157820   533779 /Library/Caches/com.apple.ATS/501/Local.fcache
+ATSServer   69 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+ATSServer   69 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+ATSServer   69 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+ATSServer   69 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+ATSServer   69 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+ATSServer   69 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+ATSServer   69 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+ATSServer   69 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+ATSServer   69 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+ATSServer   69 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+ATSServer   69 admin  txt      REG      14,2   263296   471372 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/WebServicesCore.framework/Versions/A/WebServicesCore
+ATSServer   69 admin  txt      REG      14,2  1750392   471363 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+ATSServer   69 admin  txt      REG      14,2   383528   471171 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+ATSServer   69 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+ATSServer   69 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+ATSServer   69 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+ATSServer   69 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+ATSServer   69 admin    1w     CHR       3,2      0t0 41792260 /dev/null
+ATSServer   69 admin    2w     CHR       3,2  0t11333 41792260 /dev/null
+ATSServer   69 admin    3r  PSXSHM               4096          /tmp/com.apple.csseed.65
+ATSServer   69 admin    4r  PSXSHM               4096          apple.shm.notification_center
+ATSServer   69 admin    5u     REG      14,2   110592   532280 /Library/Caches/com.apple.ATS/501/filetoken.db
+ATSServer   69 admin    6u     REG      14,2    77824   532281 /Library/Caches/com.apple.ATS/501/fonts.db
+ATSServer   69 admin    7u     REG      14,2    24576   532282 /Library/Caches/com.apple.ATS/501/qdfams.db
+ATSServer   69 admin    8u     REG      14,2     8192   532283 /Library/Caches/com.apple.ATS/501/annex.db
+ATSServer   69 admin    9u     REG      14,2   959804   532284 /Library/Caches/com.apple.ATS/501/annex_aux
+loginwind   70 admin  cwd      DIR      14,2      510   512202 /Users/admin
+loginwind   70 admin  txt      REG      14,2   807460   446280 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow
+loginwind   70 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+loginwind   70 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+loginwind   70 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+loginwind   70 admin  txt      REG      14,2   455960   482360 /System/Library/LoginPlugins/DisplayServices.loginPlugin/Contents/MacOS/DisplayServices
+loginwind   70 admin  txt      REG      14,2    89068   482435 /System/Library/LoginPlugins/FSDisconnect.loginPlugin/Contents/MacOS/FSDisconnect
+loginwind   70 admin  txt      REG      14,2    19336   434803 /System/Library/Caches/com.apple.IntlDataCache.le.sbdl
+loginwind   70 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+loginwind   70 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+loginwind   70 admin  txt      REG      14,2   304912   482262 /System/Library/LoginPlugins/BezelServices.loginPlugin/Contents/MacOS/BezelServices
+loginwind   70 admin  txt      REG      14,2   171032   461259 /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/IOUSBLib.bundle/Contents/MacOS/IOUSBLib
+loginwind   70 admin  txt      REG      14,2   186416   460041 /System/Library/Extensions/IOHIDFamily.kext/Contents/PlugIns/IOHIDLib.plugin/Contents/MacOS/IOHIDLib
+loginwind   70 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+loginwind   70 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+loginwind   70 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+loginwind   70 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+loginwind   70 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+loginwind   70 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+loginwind   70 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+loginwind   70 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+loginwind   70 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+loginwind   70 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+loginwind   70 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+loginwind   70 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+loginwind   70 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+loginwind   70 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+loginwind   70 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+loginwind   70 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+loginwind   70 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+loginwind   70 admin  txt      REG      14,2   107648   513962 /usr/lib/libbsm.dylib
+loginwind   70 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+loginwind   70 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+loginwind   70 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+loginwind   70 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+loginwind   70 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+loginwind   70 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+loginwind   70 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+loginwind   70 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+loginwind   70 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+loginwind   70 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+loginwind   70 admin  txt      REG      14,2   309644   471394 /System/Library/Frameworks/DirectoryService.framework/Versions/A/DirectoryService
+loginwind   70 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+loginwind   70 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+loginwind   70 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+loginwind   70 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+loginwind   70 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+loginwind   70 admin  txt      REG      14,2   503768   496665 /System/Library/PrivateFrameworks/Admin.framework/Versions/A/Admin
+loginwind   70 admin  txt      REG      14,2   304544   478890 /System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+loginwind   70 admin  txt      REG      14,2    89308   499047 /System/Library/PrivateFrameworks/FileSync.framework/Versions/A/FileSync
+loginwind   70 admin  txt      REG      14,2    43236   500939 /System/Library/PrivateFrameworks/MonitorPanel.framework/Versions/A/MonitorPanel
+loginwind   70 admin  txt      REG      14,2    62972   500859 /System/Library/PrivateFrameworks/MachineSettings.framework/Versions/A/MachineSettings
+loginwind   70 admin  txt      REG      14,2    63744   498762 /System/Library/PrivateFrameworks/DisplayServices.framework/Versions/A/DisplayServices
+loginwind   70 admin  txt      REG      14,2   152676   478739 /System/Library/Frameworks/ScreenSaver.framework/Versions/A/ScreenSaver
+loginwind   70 admin    0u     CHR       3,2      0t0 41792260 /dev/null
+loginwind   70 admin    1u     CHR       0,0    0t139 41792772 /dev/console
+loginwind   70 admin    2u     CHR       0,0    0t139 41792772 /dev/console
+loginwind   70 admin    3r  PSXSHM               4096          apple.shm.notification_center
+loginwind   70 admin    4u    unix 0x2845198      0t0          ->0x2845550
+loginwind   70 admin    5r  PSXSHM               4096          /tmp/com.apple.csseed.65
+loginwind   70 admin    6r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+loginwind   70 admin    7r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+loginwind   70 admin    8w     REG      14,2    15390   535397 /Library/Logs/console/501/console.log
+loginwind   70 admin    9u     CHR       5,0  0t15324 41791748 /dev/ptyp0
+loginwind   70 admin   10u     CHR       4,0      0t0 41791876 /dev/ttyp0
+pbs         80 admin  cwd      DIR      14,2     1224        2 /
+pbs         80 admin  txt      REG      14,2   136456   451001 /System/Library/CoreServices/pbs
+pbs         80 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+pbs         80 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+pbs         80 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+pbs         80 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+pbs         80 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+pbs         80 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+pbs         80 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+pbs         80 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+pbs         80 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+pbs         80 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+pbs         80 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+pbs         80 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+pbs         80 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+pbs         80 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+pbs         80 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+pbs         80 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+pbs         80 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+pbs         80 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+pbs         80 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+pbs         80 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+pbs         80 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+pbs         80 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+pbs         80 admin    0u     CHR       3,2      0t0 41792260 /dev/null
+pbs         80 admin    1u     CHR       0,0    0t139 41792772 /dev/console
+pbs         80 admin    2u     CHR       0,0    0t139 41792772 /dev/console
+pbs         80 admin    3r  PSXSHM               4096          /tmp/com.apple.csseed.65
+pbs         80 admin    4r  PSXSHM               4096          apple.shm.notification_center
+Dock        86 admin  cwd      DIR      14,2     1224        2 /
+Dock        86 admin  txt      REG      14,2  1363604   443685 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+Dock        86 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Dock        86 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Dock        86 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+Dock        86 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Dock        86 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Dock        86 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Dock        86 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Dock        86 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Dock        86 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Dock        86 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Dock        86 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Dock        86 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Dock        86 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Dock        86 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Dock        86 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+Dock        86 admin  txt      REG      14,2   383528   471171 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+Dock        86 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Dock        86 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Dock        86 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Dock        86 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Dock        86 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Dock        86 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Dock        86 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+Dock        86 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+Dock        86 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Dock        86 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Dock        86 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Dock        86 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+Dock        86 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+Dock        86 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Dock        86 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+Dock        86 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Dock        86 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Dock        86 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Dock        86 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+Dock        86 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+Dock        86 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Dock        86 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Dock        86 admin    5r  PSXSHM               4096          apple.shm.notification_center
+SystemUIS   87 admin  cwd      DIR      14,2     1224        2 /
+SystemUIS   87 admin  txt      REG      14,2   719396   456464 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+SystemUIS   87 admin  txt      REG      14,2     1936   452206 /System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchWidget_Pressed-1.tiff
+SystemUIS   87 admin  txt      REG      14,2     1518   452204 /System/Library/CoreServices/Search.bundle/Contents/Resources/MDSearchWidget_Normal-1.tiff
+SystemUIS   87 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+SystemUIS   87 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+SystemUIS   87 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+SystemUIS   87 admin  txt      REG      14,2   894932   452006 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+SystemUIS   87 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+SystemUIS   87 admin  txt      REG      14,2   547144   434802 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+SystemUIS   87 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SystemUIS   87 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+SystemUIS   87 admin  txt      REG      14,2    72452   457692 /System/Library/Extensions/AppleHDA.kext/Contents/PlugIns/AppleHDAHALPlugIn.bundle/Contents/MacOS/AppleHDAHALPlugIn
+SystemUIS   87 admin  txt      REG      14,2    90016   446913 /System/Library/CoreServices/Menu Extras/Bluetooth.menu/Contents/MacOS/Bluetooth
+SystemUIS   87 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SystemUIS   87 admin  txt      REG      14,2   146752   446651 /System/Library/CoreServices/Menu Extras/AirPort.menu/Contents/MacOS/AirPort
+SystemUIS   87 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+SystemUIS   87 admin  txt      REG      14,2  2244215   463837 /System/Library/Fonts/LucidaGrande.dfont
+SystemUIS   87 admin  txt      REG      14,2   246856   496808 /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/ClientController.bundle/Contents/MacOS/ClientController
+SystemUIS   87 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+SystemUIS   87 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+SystemUIS   87 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+SystemUIS   87 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+SystemUIS   87 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+SystemUIS   87 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+SystemUIS   87 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+SystemUIS   87 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+SystemUIS   87 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+SystemUIS   87 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+SystemUIS   87 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+SystemUIS   87 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+SystemUIS   87 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+SystemUIS   87 admin  txt      REG      14,2   383528   471171 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+SystemUIS   87 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+SystemUIS   87 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+SystemUIS   87 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+SystemUIS   87 admin  txt      REG      14,2  1693860   470945 /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+SystemUIS   87 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+SystemUIS   87 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+SystemUIS   87 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+SystemUIS   87 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+SystemUIS   87 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+SystemUIS   87 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+SystemUIS   87 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+SystemUIS   87 admin  txt      REG      14,2   583452   467111 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+SystemUIS   87 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+SystemUIS   87 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+SystemUIS   87 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+SystemUIS   87 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+SystemUIS   87 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+SystemUIS   87 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+SystemUIS   87 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+SystemUIS   87 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+SystemUIS   87 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+SystemUIS   87 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+SystemUIS   87 admin  txt      REG      14,2   304544   478890 /System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+SystemUIS   87 admin  txt      REG      14,2   825052   479297 /System/Library/Frameworks/SecurityInterface.framework/Versions/A/SecurityInterface
+SystemUIS   87 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+SystemUIS   87 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+SystemUIS   87 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+SystemUIS   87 admin  txt      REG      14,2  8294640   478347 /System/Library/Frameworks/QuickTime.framework/Versions/A/QuickTime
+SystemUIS   87 admin  txt      REG      14,2   653680   500986 /System/Library/PrivateFrameworks/NetworkConfig.framework/Versions/A/NetworkConfig
+SystemUIS   87 admin  txt      REG      14,2  1431140   472521 /System/Library/Frameworks/IOBluetooth.framework/Versions/A/IOBluetooth
+SystemUIS   87 admin  txt      REG      14,2   107620   504922 /System/Library/PrivateFrameworks/SystemUIPlugin.framework/Versions/A/SystemUIPlugin
+SystemUIS   87 admin  txt      REG      14,2  1714700   477830 /System/Library/Frameworks/QTKit.framework/Versions/A/QTKit
+SystemUIS   87 admin  txt      REG      14,2    78404   500729 /System/Library/PrivateFrameworks/iPod.framework/Versions/A/iPod
+SystemUIS   87 admin  txt      REG      14,2   266688   499026 /System/Library/PrivateFrameworks/EAP8021X.framework/Versions/A/EAP8021X
+SystemUIS   87 admin  txt      REG      14,2   306132   472567 /System/Library/Frameworks/IOBluetoothUI.framework/Versions/A/IOBluetoothUI
+SystemUIS   87 admin  txt      REG      14,2   507024   500318 /System/Library/PrivateFrameworks/InternetConnect.framework/Versions/A/InternetConnect
+SystemUIS   87 admin  txt      REG      14,2   147756   499828 /System/Library/PrivateFrameworks/ICANotifications.framework/Versions/A/ICANotifications
+SystemUIS   87 admin  txt      REG      14,2   416700   497687 /System/Library/PrivateFrameworks/CoreMediaPrivate.framework/Versions/A/CoreMediaPrivate
+SystemUIS   87 admin  txt      REG      14,2   836396   497567 /System/Library/PrivateFrameworks/CoreMediaIOServicesPrivate.framework/Versions/A/CoreMediaIOServicesPrivate
+SystemUIS   87 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+SystemUIS   87 admin    1w     CHR       0,0     0t54 41792772 /dev/console
+SystemUIS   87 admin    2w     CHR       0,0     0t54 41792772 /dev/console
+SystemUIS   87 admin    3r  PSXSHM               4096          apple.shm.notification_center
+SystemUIS   87 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+SystemUIS   87 admin    5r  PSXSHM               4096          apple.shm.notification_center
+SystemUIS   87 admin    6r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+SystemUIS   87 admin    7r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+SystemUIS   87 admin    8r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder      89 admin  cwd      DIR      14,2     1224        2 /
+Finder      89 admin  txt      REG      14,2  7467920   444260 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+Finder      89 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Finder      89 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Finder      89 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+Finder      89 admin  txt      REG      14,2    17852   434804 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+Finder      89 admin  txt      REG      14,2    43196   511150 /System/Library/TextEncodings/Unicode Encodings.bundle/Contents/MacOS/Unicode Encodings
+Finder      89 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Finder      89 admin  txt      REG      14,2   232275   444446 /System/Library/CoreServices/Finder.app/Contents/Resources/Finder.rsrc
+Finder      89 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder      89 admin  txt      REG      14,2   547144   434802 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Finder      89 admin  txt      REG      14,2  2244215   463837 /System/Library/Fonts/LucidaGrande.dfont
+Finder      89 admin  txt      REG      14,2    56050   478354 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder      89 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Finder      89 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+Finder      89 admin  txt      REG      14,2   141372   478372 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Finder      89 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+Finder      89 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Finder      89 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Finder      89 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Finder      89 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Finder      89 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Finder      89 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Finder      89 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+Finder      89 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Finder      89 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Finder      89 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Finder      89 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Finder      89 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Finder      89 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+Finder      89 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Finder      89 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Finder      89 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+Finder      89 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Finder      89 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Finder      89 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Finder      89 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Finder      89 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+Finder      89 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+Finder      89 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Finder      89 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Finder      89 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Finder      89 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+Finder      89 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+Finder      89 admin  txt      REG      14,2   928692   469210 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/NavigationServices.framework/Versions/A/NavigationServices
+Finder      89 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Finder      89 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+Finder      89 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+Finder      89 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Finder      89 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Finder      89 admin  txt      REG      14,2  8294640   478347 /System/Library/Frameworks/QuickTime.framework/Versions/A/QuickTime
+Finder      89 admin  txt      REG      14,2    89308   499047 /System/Library/PrivateFrameworks/FileSync.framework/Versions/A/FileSync
+Finder      89 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Finder      89 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+Finder      89 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+Finder      89 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Finder      89 admin    4u  KQUEUE                             count=0, state=0x2
+Finder      89 admin    5r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Finder      89 admin    6r     REG      14,2   232275   444446 /System/Library/CoreServices/Finder.app/Contents/Resources/Finder.rsrc
+Finder      89 admin    7r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Finder      89 admin    8r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder      89 admin    9r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Finder      89 admin   10r  PSXSHM               4096          apple.shm.notification_center
+Finder      89 admin   11r     DIR      14,2      238   512205 /Users/admin/Desktop
+Finder      89 admin   12r     DIR      14,2       68   535399 /Users/admin/.Trash
+Finder      89 admin   13r     DIR      14,3       68  3268703 /Volumes/Leopard/.Trashes/501
+Finder      89 admin   15r     DIR      14,3      204  1597911 /Volumes/Leopard/Users/admin/Desktop/Final Projects/Permanent Eraser/Permanent Eraser 2.2
+Finder      89 admin   16r     REG      14,2   141372   478372 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+Finder      89 admin   17r     REG      14,2    56050   478354 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Finder      89 admin   18r     DIR      14,2      952   186875 /Applications/Utilities
+iTunesHel   92 admin  cwd      DIR      14,2     1224        2 /
+iTunesHel   92 admin  txt      REG      14,2   264580    68407 /Applications/iTunes.app/Contents/Resources/iTunesHelper.app/Contents/MacOS/iTunesHelper
+iTunesHel   92 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+iTunesHel   92 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+iTunesHel   92 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+iTunesHel   92 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+iTunesHel   92 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+iTunesHel   92 admin  txt      REG      14,2   406824   500903 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/MobileDevice
+iTunesHel   92 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+iTunesHel   92 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+iTunesHel   92 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+iTunesHel   92 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+iTunesHel   92 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+iTunesHel   92 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+iTunesHel   92 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+iTunesHel   92 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+iTunesHel   92 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+iTunesHel   92 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+iTunesHel   92 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+iTunesHel   92 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+iTunesHel   92 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+iTunesHel   92 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+iTunesHel   92 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+iTunesHel   92 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+iTunesHel   92 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+iTunesHel   92 admin  txt      REG      14,2  2279820   513973 /usr/lib/libcrypto.0.9.7.dylib
+iTunesHel   92 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+iTunesHel   92 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+iTunesHel   92 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+iTunesHel   92 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+iTunesHel   92 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+iTunesHel   92 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+iTunesHel   92 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+iTunesHel   92 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+iTunesHel   92 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+iTunesHel   92 admin    3r  PSXSHM               4096          apple.shm.notification_center
+iTunesHel   92 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+iTunesHel   92 admin    5r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+iTunesHel   92 admin    6r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+iTunesHel   92 admin    7u    unix 0x2845c38      0t0          ->0x2845cc0
+iTunesHel   92 admin    8u    unix 0x2e57ee0      0t0          ->0x2e57e58
+iTunesHel   92 admin    9u    unix 0x2e57e58      0t0          ->0x2e57ee0
+iTunesHel   92 admin   10r  PSXSHM               4096          apple.shm.notification_center
+iTunesHel   92 admin   11r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Universal   94 admin  cwd      DIR      14,2     1224        2 /
+Universal   94 admin  txt      REG      14,2   136608   495806 /System/Library/PreferencePanes/UniversalAccessPref.prefPane/Contents/Resources/UniversalAccess.app/Contents/MacOS/UniversalAccess
+Universal   94 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Universal   94 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Universal   94 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+Universal   94 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Universal   94 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+Universal   94 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Universal   94 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Universal   94 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Universal   94 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Universal   94 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Universal   94 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Universal   94 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+Universal   94 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Universal   94 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Universal   94 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Universal   94 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Universal   94 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Universal   94 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Universal   94 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Universal   94 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+Universal   94 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Universal   94 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Universal   94 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Universal   94 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Universal   94 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Universal   94 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Universal   94 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Universal   94 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Universal   94 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+Universal   94 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+Universal   94 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+Universal   94 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+Universal   94 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+Universal   94 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Universal   94 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Universal   94 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Universal   94 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+Universal   94 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+Universal   94 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Universal   94 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Universal   94 admin    5r  PSXSHM               4096          apple.shm.notification_center
+Universal   94 admin    6r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Terminal   145 admin  cwd      DIR      14,2      510   512202 /Users/admin
+Terminal   145 admin  txt      REG      14,2   799796   206507 /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal
+Terminal   145 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Terminal   145 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Terminal   145 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+Terminal   145 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+Terminal   145 admin  txt      REG      14,2  2244215   463837 /System/Library/Fonts/LucidaGrande.dfont
+Terminal   145 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Terminal   145 admin  txt      REG      14,2   307743   463838 /System/Library/Fonts/Monaco.dfont
+Terminal   145 admin  txt      REG      14,2   547144   434802 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Terminal   145 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Terminal   145 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+Terminal   145 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Terminal   145 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+Terminal   145 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Terminal   145 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Terminal   145 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Terminal   145 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Terminal   145 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Terminal   145 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Terminal   145 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+Terminal   145 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Terminal   145 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Terminal   145 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Terminal   145 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Terminal   145 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Terminal   145 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Terminal   145 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Terminal   145 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Terminal   145 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Terminal   145 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Terminal   145 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Terminal   145 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+Terminal   145 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+Terminal   145 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Terminal   145 admin  txt      REG      14,2   583452   467111 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+Terminal   145 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Terminal   145 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Terminal   145 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Terminal   145 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+Terminal   145 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+Terminal   145 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+Terminal   145 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+Terminal   145 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+Terminal   145 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+Terminal   145 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Terminal   145 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Terminal   145 admin  txt      REG      14,2  1284360   514039 /usr/lib/libncurses.5.4.dylib
+Terminal   145 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Terminal   145 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+Terminal   145 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+Terminal   145 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Terminal   145 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Terminal   145 admin    5r  PSXSHM               4096          apple.shm.notification_center
+Terminal   145 admin    6r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Terminal   145 admin    7     PIPE 0x2ca5ef0    16384          
+Terminal   145 admin    8     PIPE 0x2ca5ef0    16384          
+Terminal   145 admin    9r     REG      14,2     3849   207682 /Applications/Utilities/Terminal.app/Contents/Resources/Terminal.rsrc
+Terminal   145 admin   10r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Terminal   145 admin   11u     CHR       5,1   0t3121 41791492 /dev/ptyp1
+Terminal   145 admin   12r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Terminal   145 admin   15u     CHR       5,2 0t223216 41914116 /dev/ptyp2
+Terminal   145 admin   16u     CHR       5,3 0t237954 41913860 /dev/ptyp3
+Terminal   145 admin   17u     CHR       5,4 0t114331 41913604 /dev/ptyp4
+bash       148 admin  cwd      DIR      14,2      238   512205 /Users/admin/Desktop
+bash       148 admin  txt      REG      14,2  1068844   207885 /bin/bash
+bash       148 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+bash       148 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+bash       148 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+bash       148 admin  txt      REG      14,2  1284360   514039 /usr/lib/libncurses.5.4.dylib
+bash       148 admin    0u     CHR       4,1   0t3081 41791620 /dev/ttyp1
+bash       148 admin    1u     CHR       4,1   0t3081 41791620 /dev/ttyp1
+bash       148 admin    2u     CHR       4,1   0t3081 41791620 /dev/ttyp1
+bash       148 admin  255u     CHR       4,1   0t3081 41791620 /dev/ttyp1
+Safari     765 admin  cwd      DIR      14,2     1224        2 /
+Safari     765 admin  txt      REG      14,2  2202288   179729 /Applications/Safari.app/Contents/MacOS/Safari
+Safari     765 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Safari     765 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Safari     765 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+Safari     765 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+Safari     765 admin  txt      REG      14,2  2244215   463837 /System/Library/Fonts/LucidaGrande.dfont
+Safari     765 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Safari     765 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+Safari     765 admin  txt      REG      14,2   991360   463834 /System/Library/Fonts/Helvetica.dfont
+Safari     765 admin  txt      REG      14,2    17852   434804 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+Safari     765 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Safari     765 admin  txt      REG      14,2   547144   434802 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Safari     765 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     765 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+Safari     765 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Safari     765 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Safari     765 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Safari     765 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Safari     765 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Safari     765 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Safari     765 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+Safari     765 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Safari     765 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Safari     765 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Safari     765 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Safari     765 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Safari     765 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+Safari     765 admin  txt      REG      14,2   716088   471128 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+Safari     765 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Safari     765 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Safari     765 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+Safari     765 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Safari     765 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Safari     765 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Safari     765 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Safari     765 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+Safari     765 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+Safari     765 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Safari     765 admin  txt      REG      14,2   583452   467111 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+Safari     765 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Safari     765 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Safari     765 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+Safari     765 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+Safari     765 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Safari     765 admin  txt      REG      14,2   309644   471394 /System/Library/Frameworks/DirectoryService.framework/Versions/A/DirectoryService
+Safari     765 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+Safari     765 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+Safari     765 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+Safari     765 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+Safari     765 admin  txt      REG      14,2   608400   514087 /usr/lib/libsqlite3.0.dylib
+Safari     765 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+Safari     765 admin  txt      REG      14,2   763084   505085 /System/Library/PrivateFrameworks/vmutils.framework/Versions/A/vmutils
+Safari     765 admin  txt      REG      14,2   304544   478890 /System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+Safari     765 admin  txt      REG      14,2   825052   479297 /System/Library/Frameworks/SecurityInterface.framework/Versions/A/SecurityInterface
+Safari     765 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+Safari     765 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Safari     765 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Safari     765 admin  txt      REG      14,2  4002728   463903 /System/Library/Frameworks/AddressBook.framework/Versions/A/AddressBook
+Safari     765 admin  txt      REG      14,2   214036   498914 /System/Library/PrivateFrameworks/DSObjCWrappers.framework/Versions/A/DSObjCWrappers
+Safari     765 admin  txt      REG      14,2  2151612   480322 /System/Library/Frameworks/WebKit.framework/Versions/A/WebKit
+Safari     765 admin  txt      REG      14,2  1939308   480152 /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/JavaScriptCore.framework/Versions/A/JavaScriptCore
+Safari     765 admin  txt      REG      14,2 10624876   480178 /System/Library/Frameworks/WebKit.framework/Versions/A/Frameworks/WebCore.framework/Versions/A/WebCore
+Safari     765 admin  txt      REG      14,2   767096   504752 /System/Library/PrivateFrameworks/Syndication.framework/Versions/A/Syndication
+Safari     765 admin  txt      REG      14,2   268000   504864 /System/Library/PrivateFrameworks/SyndicationUI.framework/Versions/A/SyndicationUI
+Safari     765 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Safari     765 admin    1w     CHR       0,0      0t0 41792772 /dev/console
+Safari     765 admin    2w     CHR       0,0      0t0 41792772 /dev/console
+Safari     765 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Safari     765 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Safari     765 admin    5r  PSXSHM               4096          apple.shm.notification_center
+Safari     765 admin    6r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Safari     765 admin    7r     CHR       8,1    0t320 41962628 /dev/urandom
+Safari     765 admin    8r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Safari     765 admin    9r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Safari     765 admin   10u     REG      14,2    23552   513233 /Users/admin/Library/Syndication/Database3
+Permanent 1074 admin  cwd      DIR      14,2     1224        2 /
+Permanent 1074 admin  txt      REG      14,2   177792   535435 /Applications/Permanent Eraser 2.2.0.app/Contents/MacOS/Permanent Eraser
+Permanent 1074 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+Permanent 1074 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+Permanent 1074 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+Permanent 1074 admin  txt      REG      14,2  2244215   463837 /System/Library/Fonts/LucidaGrande.dfont
+Permanent 1074 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+Permanent 1074 admin  txt      REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Permanent 1074 admin  txt      REG      14,2   991360   463834 /System/Library/Fonts/Helvetica.dfont
+Permanent 1074 admin  txt      REG      14,2   547144   434802 /System/Library/Caches/com.apple.IntlDataCache.le.kbdx
+Permanent 1074 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Permanent 1074 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+Permanent 1074 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Permanent 1074 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+Permanent 1074 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+Permanent 1074 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+Permanent 1074 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+Permanent 1074 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+Permanent 1074 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+Permanent 1074 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+Permanent 1074 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+Permanent 1074 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+Permanent 1074 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+Permanent 1074 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+Permanent 1074 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+Permanent 1074 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+Permanent 1074 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+Permanent 1074 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+Permanent 1074 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+Permanent 1074 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+Permanent 1074 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+Permanent 1074 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+Permanent 1074 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+Permanent 1074 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+Permanent 1074 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+Permanent 1074 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+Permanent 1074 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+Permanent 1074 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+Permanent 1074 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+Permanent 1074 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+Permanent 1074 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+Permanent 1074 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+Permanent 1074 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+Permanent 1074 admin  txt      REG      14,2   204280   466890 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCGATS.A.dylib
+Permanent 1074 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+Permanent 1074 admin  txt      REG      14,2   281504   466908 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libRIP.A.dylib
+Permanent 1074 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+Permanent 1074 admin    1w     CHR       0,0    0t187 41792772 /dev/console
+Permanent 1074 admin    2w     CHR       0,0    0t187 41792772 /dev/console
+Permanent 1074 admin    3r  PSXSHM               4096          apple.shm.notification_center
+Permanent 1074 admin    4r  PSXSHM               4096          /tmp/com.apple.csseed.65
+Permanent 1074 admin    5r  PSXSHM               4096          apple.shm.notification_center
+Permanent 1074 admin    6r     REG      14,2  5425091   468361 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/Extras2.rsrc
+Permanent 1074 admin    7     PIPE 0x2ca5e18    16384          
+Permanent 1074 admin    8r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+Permanent 1074 admin    9r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+Permanent 1074 admin   10     PIPE 0x2ca5f38    16384          
+Permanent 1074 admin   11     PIPE 0x2ca5e60    16384          
+Permanent 1074 admin   12     PIPE 0x2ca5f80    16384          
+Permanent 1074 admin   13     PIPE 0x2ca5dd0    16384          
+Permanent 1074 admin   14     PIPE 0x2ca5d88    16384          
+Permanent 1074 admin   15     PIPE 0x2ca5d40    16384          
+Permanent 1074 admin   16     PIPE 0x2ca5cf8    16384          
+Permanent 1074 admin   17     PIPE 0x2ca5cb0    16384          
+Permanent 1074 admin   18     PIPE 0x2ca5c68    16384          
+Permanent 1074 admin   19     PIPE 0x2ca5c20    16384          
+Permanent 1074 admin   20     PIPE 0x2ca5bd8    16384          
+Permanent 1074 admin   21     PIPE 0x2ca5b90    16384          
+Permanent 1074 admin   22     PIPE 0x2ca5b48    16384          
+Permanent 1074 admin   23     PIPE 0x2ca5b00    16384          
+Permanent 1074 admin   24     PIPE 0x2ca5ab8    16384          
+Permanent 1074 admin   25     PIPE 0x2ca5a70    16384          
+Permanent 1074 admin   26     PIPE 0x2ca5a28    16384          
+Permanent 1074 admin   27     PIPE 0x2ca59e0    16384          
+Permanent 1074 admin   28     PIPE 0x2ca5998    16384          
+Permanent 1074 admin   29     PIPE 0x2ca5950    16384          
+Permanent 1074 admin   30     PIPE 0x2ca5908    16384          
+Permanent 1074 admin   31     PIPE 0x2ca58c0    16384          
+Permanent 1074 admin   32     PIPE 0x2ca5878    16384          
+Permanent 1074 admin   33     PIPE 0x2ca5830    16384          
+Permanent 1074 admin   34     PIPE 0x2ca57e8    16384          
+Permanent 1074 admin   35     PIPE 0x2ca57a0    16384          
+Permanent 1074 admin   36     PIPE 0x2ca5758    16384          
+Permanent 1074 admin   37     PIPE 0x2ca5710    16384          
+Permanent 1074 admin   38     PIPE 0x2ca56c8    16384          
+Permanent 1074 admin   39     PIPE 0x2ca5680    16384          
+Permanent 1074 admin   40     PIPE 0x2ca5638    16384          
+Permanent 1074 admin   41     PIPE 0x2ca55f0    16384          
+Permanent 1074 admin   42     PIPE 0x2ca55a8    16384          
+Permanent 1074 admin   43     PIPE 0x2ca5560    16384          
+Permanent 1074 admin   44     PIPE 0x2ca5518    16384          
+Permanent 1074 admin   45     PIPE 0x2ca54d0    16384          
+Permanent 1074 admin   46     PIPE 0x2ca5488    16384          
+Permanent 1074 admin   47     PIPE 0x2ca5440    16384          
+Permanent 1074 admin   48     PIPE 0x2ca53f8    16384          
+Permanent 1074 admin   49     PIPE 0x2ca53b0    16384          
+Permanent 1074 admin   50     PIPE 0x2ca5368    16384          
+Permanent 1074 admin   51     PIPE 0x2ca5320    16384          
+Permanent 1074 admin   52     PIPE 0x2ca52d8    16384          
+Permanent 1074 admin   53     PIPE 0x2ca5290    16384          
+Permanent 1074 admin   54     PIPE 0x2ca5248    16384          
+Permanent 1074 admin   55     PIPE 0x2ca5200    16384          
+Permanent 1074 admin   56     PIPE 0x2ca51b8    16384          
+Permanent 1074 admin   57     PIPE 0x2ca5170    16384          
+Permanent 1074 admin   58     PIPE 0x2ca5128    16384          
+Permanent 1074 admin   59     PIPE 0x2ca50e0    16384          
+Permanent 1074 admin   60     PIPE 0x2ca5098    16384          
+Permanent 1074 admin   61     PIPE 0x2ca5050    16384          
+Permanent 1074 admin   62     PIPE 0x2ca5008    16384          
+Permanent 1074 admin   63     PIPE 0x2ca4fc0    16384          
+Permanent 1074 admin   64     PIPE 0x2ca4f78    16384          
+Permanent 1074 admin   65     PIPE 0x2ca4f30    16384          
+Permanent 1074 admin   66     PIPE 0x2ca4ee8    16384          
+Permanent 1074 admin   67     PIPE 0x2ca4ea0    16384          
+Permanent 1074 admin   68     PIPE 0x2ca4e58    16384          
+Permanent 1074 admin   69     PIPE 0x2ca4e10    16384          
+Permanent 1074 admin   70     PIPE 0x2ca4dc8    16384          
+Permanent 1074 admin   71     PIPE 0x2ca4cf0    16384          
+Permanent 1074 admin   72     PIPE 0x2ca4d38    16384          
+Permanent 1074 admin   73     PIPE 0x2ca4d80    16384          
+Permanent 1074 admin   74     PIPE 0x2ca4ca8    16384          
+Permanent 1074 admin   75     PIPE 0x2ca4c60    16384          
+Permanent 1074 admin   76     PIPE 0x2ca4c18    16384          
+Permanent 1074 admin   77     PIPE 0x2ca4bd0    16384          
+Permanent 1074 admin   78     PIPE 0x2ca4b88    16384          
+Permanent 1074 admin   79     PIPE 0x2ca4b40    16384          
+Permanent 1074 admin   80     PIPE 0x2ca4af8    16384          
+Permanent 1074 admin   81     PIPE 0x2ca4ab0    16384          
+Permanent 1074 admin   82     PIPE 0x2ca4a68    16384          
+Permanent 1074 admin   83     PIPE 0x2ca4a20    16384          
+Permanent 1074 admin   84     PIPE 0x2ca49d8    16384          
+Permanent 1074 admin   85     PIPE 0x2ca4990    16384          
+Permanent 1074 admin   86     PIPE 0x2ca4948    16384          
+Permanent 1074 admin   87     PIPE 0x2ca4900    16384          
+Permanent 1074 admin   88     PIPE 0x2ca48b8    16384          
+Permanent 1074 admin   89     PIPE 0x2ca4870    16384          
+Permanent 1074 admin   90     PIPE 0x2ca4828    16384          
+Permanent 1074 admin   91     PIPE 0x2ca47e0    16384          
+Permanent 1074 admin   92     PIPE 0x2ca4798    16384          
+Permanent 1074 admin   93     PIPE 0x2ca4750    16384          
+Permanent 1074 admin   94     PIPE 0x2ca4708    16384          
+Permanent 1074 admin   95     PIPE 0x2ca46c0    16384          
+Permanent 1074 admin   96     PIPE 0x2ca4678    16384          
+Permanent 1074 admin   97     PIPE 0x2ca4630    16384          
+Permanent 1074 admin   98     PIPE 0x2ca45e8    16384          
+Permanent 1074 admin   99     PIPE 0x2ca45a0    16384          
+Permanent 1074 admin  100     PIPE 0x2ca4558    16384          
+Permanent 1074 admin  101     PIPE 0x2ca4510    16384          
+Permanent 1074 admin  102     PIPE 0x2ca44c8    16384          
+Permanent 1074 admin  103     PIPE 0x2ca4480    16384          
+Permanent 1074 admin  104     PIPE 0x2ca4438    16384          
+Permanent 1074 admin  105     PIPE 0x2ca4360    16384          
+Permanent 1074 admin  106     PIPE 0x2ca43a8    16384          
+Permanent 1074 admin  107     PIPE 0x2ca43f0    16384          
+Permanent 1074 admin  108     PIPE 0x2ca4318    16384          
+Permanent 1074 admin  109     PIPE 0x2ca42d0    16384          
+Permanent 1074 admin  110     PIPE 0x2ca4288    16384          
+Permanent 1074 admin  111     PIPE 0x2ca4240    16384          
+Permanent 1074 admin  112     PIPE 0x2ca41f8    16384          
+Permanent 1074 admin  113     PIPE 0x2ca41b0    16384          
+Permanent 1074 admin  114     PIPE 0x2ca4168    16384          
+Permanent 1074 admin  115     PIPE 0x2ca4120    16384          
+Permanent 1074 admin  116     PIPE 0x2ca4048    16384          
+Permanent 1074 admin  117     PIPE 0x2ca4090    16384          
+Permanent 1074 admin  118     PIPE 0x2ca40d8    16384          
+Permanent 1074 admin  119     PIPE 0x2ca4000    16384          
+Permanent 1074 admin  120     PIPE 0x38d9f80    16384          
+Permanent 1074 admin  121     PIPE 0x38d9f38    16384          
+Permanent 1074 admin  122     PIPE 0x38d9ef0    16384          
+Permanent 1074 admin  123     PIPE 0x38d9ea8    16384          
+Permanent 1074 admin  124     PIPE 0x38d9e60    16384          
+Permanent 1074 admin  125     PIPE 0x38d9e18    16384          
+Permanent 1074 admin  126     PIPE 0x38d9dd0    16384          
+Permanent 1074 admin  127     PIPE 0x38d9d88    16384          
+Permanent 1074 admin  128     PIPE 0x38d9d40    16384          
+Permanent 1074 admin  129     PIPE 0x38d9cf8    16384          
+Permanent 1074 admin  130     PIPE 0x38d9cb0    16384          
+Permanent 1074 admin  131     PIPE 0x38d9c68    16384          
+Permanent 1074 admin  132     PIPE 0x38d9c20    16384          
+Permanent 1074 admin  133     PIPE 0x38d9bd8    16384          
+Permanent 1074 admin  134     PIPE 0x38d9b90    16384          
+Permanent 1074 admin  135     PIPE 0x38d9b48    16384          
+Permanent 1074 admin  136     PIPE 0x38d9b00    16384          
+Permanent 1074 admin  137     PIPE 0x38d9ab8    16384          
+Permanent 1074 admin  138     PIPE 0x38d9a70    16384          
+Permanent 1074 admin  139     PIPE 0x38d9a28    16384          
+Permanent 1074 admin  140     PIPE 0x38d99e0    16384          
+Permanent 1074 admin  141     PIPE 0x38d9998    16384          
+Permanent 1074 admin  142     PIPE 0x38d9950    16384          
+Permanent 1074 admin  143     PIPE 0x38d9908    16384          
+Permanent 1074 admin  144     PIPE 0x38d98c0    16384          
+Permanent 1074 admin  145     PIPE 0x38d9878    16384          
+Permanent 1074 admin  146     PIPE 0x38d9830    16384          
+Permanent 1074 admin  147     PIPE 0x38d97e8    16384          
+Permanent 1074 admin  148     PIPE 0x38d97a0    16384          
+Permanent 1074 admin  149     PIPE 0x38d96c8    16384          
+Permanent 1074 admin  150     PIPE 0x38d9710    16384          
+Permanent 1074 admin  151     PIPE 0x38d9758    16384          
+Permanent 1074 admin  152     PIPE 0x38d9680    16384          
+Permanent 1074 admin  153     PIPE 0x38d9638    16384          
+Permanent 1074 admin  154     PIPE 0x38d95f0    16384          
+Permanent 1074 admin  155     PIPE 0x38d95a8    16384          
+Permanent 1074 admin  156     PIPE 0x38d9560    16384          
+Permanent 1074 admin  157     PIPE 0x38d9518    16384          
+Permanent 1074 admin  158     PIPE 0x38d94d0    16384          
+Permanent 1074 admin  159     PIPE 0x38d9488    16384          
+Permanent 1074 admin  160     PIPE 0x38d9440    16384          
+Permanent 1074 admin  161     PIPE 0x38d93f8    16384          
+Permanent 1074 admin  162     PIPE 0x38d93b0    16384          
+Permanent 1074 admin  163     PIPE 0x38d9368    16384          
+Permanent 1074 admin  164     PIPE 0x38d9320    16384          
+Permanent 1074 admin  165     PIPE 0x38d92d8    16384          
+Permanent 1074 admin  166     PIPE 0x38d9290    16384          
+Permanent 1074 admin  167     PIPE 0x38d9248    16384          
+Permanent 1074 admin  168     PIPE 0x38d9200    16384          
+Permanent 1074 admin  169     PIPE 0x38d91b8    16384          
+Permanent 1074 admin  170     PIPE 0x38d9170    16384          
+Permanent 1074 admin  171     PIPE 0x38d9128    16384          
+Permanent 1074 admin  172     PIPE 0x38d90e0    16384          
+Permanent 1074 admin  173     PIPE 0x38d9098    16384          
+Permanent 1074 admin  174     PIPE 0x38d9050    16384          
+Permanent 1074 admin  175     PIPE 0x38d9008    16384          
+Permanent 1074 admin  176     PIPE 0x38d8fc0    16384          
+Permanent 1074 admin  177     PIPE 0x38d8f78    16384          
+Permanent 1074 admin  178     PIPE 0x38d8f30    16384          
+Permanent 1074 admin  179     PIPE 0x38d8ee8    16384          
+Permanent 1074 admin  180     PIPE 0x38d8ea0    16384          
+Permanent 1074 admin  181     PIPE 0x38d8e58    16384          
+Permanent 1074 admin  182     PIPE 0x38d8e10    16384          
+Permanent 1074 admin  183     PIPE 0x38d8dc8    16384          
+Permanent 1074 admin  184     PIPE 0x38d8d80    16384          
+Permanent 1074 admin  185     PIPE 0x38d8d38    16384          
+Permanent 1074 admin  186     PIPE 0x38d8cf0    16384          
+Permanent 1074 admin  187     PIPE 0x38d8ca8    16384          
+Permanent 1074 admin  188     PIPE 0x38d8c60    16384          
+Permanent 1074 admin  189     PIPE 0x38d8c18    16384          
+Permanent 1074 admin  190     PIPE 0x38d8bd0    16384          
+Permanent 1074 admin  191     PIPE 0x38d8b88    16384          
+Permanent 1074 admin  192     PIPE 0x38d8b40    16384          
+Permanent 1074 admin  193     PIPE 0x38d8af8    16384          
+Permanent 1074 admin  194     PIPE 0x38d8ab0    16384          
+Permanent 1074 admin  195     PIPE 0x38d8a68    16384          
+Permanent 1074 admin  196     PIPE 0x38d8a20    16384          
+Permanent 1074 admin  197     PIPE 0x38d89d8    16384          
+Permanent 1074 admin  198     PIPE 0x38d8990    16384          
+Permanent 1074 admin  199     PIPE 0x38d8948    16384          
+Permanent 1074 admin  200     PIPE 0x38d8900    16384          
+Permanent 1074 admin  201     PIPE 0x38d88b8    16384          
+Permanent 1074 admin  202     PIPE 0x38d8870    16384          
+Permanent 1074 admin  203     PIPE 0x38d8828    16384          
+Permanent 1074 admin  204     PIPE 0x38d87e0    16384          
+Permanent 1074 admin  205     PIPE 0x38d8798    16384          
+Permanent 1074 admin  206     PIPE 0x38d8750    16384          
+Permanent 1074 admin  207     PIPE 0x38d8708    16384          
+Permanent 1074 admin  208     PIPE 0x38d86c0    16384          
+Permanent 1074 admin  209     PIPE 0x38d8678    16384          
+Permanent 1074 admin  210     PIPE 0x38d8630    16384          
+Permanent 1074 admin  211     PIPE 0x38d85e8    16384          
+Permanent 1074 admin  212     PIPE 0x38d85a0    16384          
+Permanent 1074 admin  213     PIPE 0x38d8558    16384          
+Permanent 1074 admin  214     PIPE 0x38d8510    16384          
+Permanent 1074 admin  215     PIPE 0x38d84c8    16384          
+Permanent 1074 admin  216     PIPE 0x38d8480    16384          
+Permanent 1074 admin  217     PIPE 0x38d8438    16384          
+Permanent 1074 admin  218     PIPE 0x38d83f0    16384          
+Permanent 1074 admin  219     PIPE 0x38d83a8    16384          
+Permanent 1074 admin  220     PIPE 0x38d8360    16384          
+Permanent 1074 admin  221     PIPE 0x38d8318    16384          
+Permanent 1074 admin  222     PIPE 0x38d82d0    16384          
+Permanent 1074 admin  223     PIPE 0x38d8288    16384          
+Permanent 1074 admin  224     PIPE 0x38d8240    16384          
+Permanent 1074 admin  225     PIPE 0x38d81f8    16384          
+Permanent 1074 admin  226     PIPE 0x38d81b0    16384          
+Permanent 1074 admin  227     PIPE 0x38d8168    16384          
+Permanent 1074 admin  228     PIPE 0x38d8120    16384          
+Permanent 1074 admin  229     PIPE 0x38d80d8    16384          
+Permanent 1074 admin  230     PIPE 0x38d8090    16384          
+Permanent 1074 admin  231     PIPE 0x38d8048    16384          
+Permanent 1074 admin  232     PIPE 0x38d8000    16384          
+Permanent 1074 admin  233     PIPE 0x38eef80    16384          
+Permanent 1074 admin  234     PIPE 0x38eef38    16384          
+Permanent 1074 admin  235     PIPE 0x38eeef0    16384          
+Permanent 1074 admin  236     PIPE 0x38eeea8    16384          
+Permanent 1074 admin  237     PIPE 0x38eee60    16384          
+Permanent 1074 admin  238     PIPE 0x38eee18    16384          
+Permanent 1074 admin  239     PIPE 0x38eedd0    16384          
+Permanent 1074 admin  240     PIPE 0x38eed88    16384          
+Permanent 1074 admin  241     PIPE 0x38eed40    16384          
+Permanent 1074 admin  242     PIPE 0x38eecf8    16384          
+Permanent 1074 admin  243     PIPE 0x38eecb0    16384          
+Permanent 1074 admin  244     PIPE 0x38eec68    16384          
+Permanent 1074 admin  245     PIPE 0x38eec20    16384          
+Permanent 1074 admin  246     PIPE 0x38eebd8    16384          
+Permanent 1074 admin  247     PIPE 0x38eeb90    16384          
+Permanent 1074 admin  248     PIPE 0x38eeb48    16384          
+Permanent 1074 admin  249     PIPE 0x38eeb00    16384          
+Permanent 1074 admin  250     PIPE 0x38eeab8    16384          
+Permanent 1074 admin  251     PIPE 0x38eea70    16384          
+Permanent 1074 admin  252     PIPE 0x38eea28    16384          
+Permanent 1074 admin  253     PIPE 0x38ee9e0    16384          
+Permanent 1074 admin  254     PIPE 0x38ee998    16384          
+bash      1144 admin  cwd      DIR      14,2      510   512202 /Users/admin
+bash      1144 admin  txt      REG      14,2  1068844   207885 /bin/bash
+bash      1144 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+bash      1144 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+bash      1144 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+bash      1144 admin  txt      REG      14,2  1284360   514039 /usr/lib/libncurses.5.4.dylib
+bash      1144 admin    0u     CHR       4,2 0t221505 41914244 /dev/ttyp2
+bash      1144 admin    1u     CHR       4,2 0t221505 41914244 /dev/ttyp2
+bash      1144 admin    2u     CHR       4,2 0t221505 41914244 /dev/ttyp2
+bash      1198 admin  cwd      DIR      14,2      510   512202 /Users/admin
+bash      1198 admin  txt      REG      14,2  1068844   207885 /bin/bash
+bash      1198 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+bash      1198 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+bash      1198 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+bash      1198 admin  txt      REG      14,2  1284360   514039 /usr/lib/libncurses.5.4.dylib
+bash      1198 admin    0u     CHR       4,3 0t236023 41913988 /dev/ttyp3
+bash      1198 admin    1u     CHR       4,3 0t236023 41913988 /dev/ttyp3
+bash      1198 admin    2u     CHR       4,3 0t236023 41913988 /dev/ttyp3
+bash      1237 admin  cwd      DIR      14,2      510   512202 /Users/admin
+bash      1237 admin  txt      REG      14,2  1068844   207885 /bin/bash
+bash      1237 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+bash      1237 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+bash      1237 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+bash      1237 admin  txt      REG      14,2  1284360   514039 /usr/lib/libncurses.5.4.dylib
+bash      1237 admin    0u     CHR       4,4 0t113414 41913732 /dev/ttyp4
+bash      1237 admin    1u     CHR       4,4 0t113414 41913732 /dev/ttyp4
+bash      1237 admin    2u     CHR       4,4 0t113414 41913732 /dev/ttyp4
+mdimport  1355 admin  cwd      DIR      14,2     1224        2 /
+mdimport  1355 admin  txt      REG      14,2   155676   471228 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mdimport
+mdimport  1355 admin  txt      REG      14,2    46540   508046 /System/Library/Spotlight/Bookmarks.mdimporter/Contents/MacOS/Bookmarks
+mdimport  1355 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+mdimport  1355 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+mdimport  1355 admin  txt      REG      14,2    17688   443046 /System/Library/CoreServices/CharacterSets/CFUniCharPropertyDatabase.data
+mdimport  1355 admin  txt      REG      14,2    46324   508119 /System/Library/Spotlight/Image.mdimporter/Contents/MacOS/Image
+mdimport  1355 admin  txt      REG      14,2    48016   508199 /System/Library/Spotlight/RichText.mdimporter/Contents/MacOS/RichText
+mdimport  1355 admin  txt      REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+mdimport  1355 admin  txt      REG      14,2   141372   478372 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+mdimport  1355 admin  txt      REG      14,2    56050   478354 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+mdimport  1355 admin  txt      REG      14,2    19336   238754 /Library/Caches/com.apple.IntlDataCache.le.sbdl.501
+mdimport  1355 admin  txt      REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+mdimport  1355 admin  txt      REG      14,2    35048   508034 /System/Library/Spotlight/Application.mdimporter/Contents/MacOS/Application
+mdimport  1355 admin  txt      REG      14,2    40016   508139 /System/Library/Spotlight/PDF.mdimporter/Contents/MacOS/PDF
+mdimport  1355 admin  txt      REG      14,2    38380   508145 /System/Library/Spotlight/PS.mdimporter/Contents/MacOS/PS
+mdimport  1355 admin  txt      REG      14,2    48872   508107 /System/Library/Spotlight/Font.mdimporter/Contents/MacOS/Font
+mdimport  1355 admin  txt      REG      14,2    40140   508205 /System/Library/Spotlight/SystemPrefs.mdimporter/Contents/MacOS/SystemPrefs
+mdimport  1355 admin  txt      REG      14,2    74780   508040 /System/Library/Spotlight/Audio.mdimporter/Contents/MacOS/Audio
+mdimport  1355 admin  txt      REG      14,2    46820   508151 /System/Library/Spotlight/QuartzComposer.mdimporter/Contents/MacOS/QuartzComposer
+mdimport  1355 admin  txt      REG      14,2    17852   434804 /System/Library/Caches/com.apple.IntlDataCache.le.tecx
+mdimport  1355 admin  txt      REG      14,2   147484   409959 /Library/Spotlight/AppleWorks.mdimporter/Contents/MacOS/AppleWorks
+mdimport  1355 admin  txt      REG      14,2    58480   508159 /System/Library/Spotlight/QuickTime.mdimporter/Contents/MacOS/QuickTime
+mdimport  1355 admin  txt      REG      14,2    46932   508131 /System/Library/Spotlight/Mail.mdimporter/Contents/MacOS/Mail
+mdimport  1355 admin  txt      REG      14,2   174060   508125 /System/Library/Spotlight/iPhoto.mdimporter/Contents/MacOS/iPhoto
+mdimport  1355 admin  txt      REG      14,2    43196   511150 /System/Library/TextEncodings/Unicode Encodings.bundle/Contents/MacOS/Unicode Encodings
+mdimport  1355 admin  txt      REG      14,2    69600   409966 /Library/Spotlight/GBSpotlightImporter.mdimporter/Contents/MacOS/GBSpotlightImporter
+mdimport  1355 admin  txt      REG      14,2  1591940   505632 /System/Library/QuickTime/QuickTimeImporters.component/Contents/MacOS/QuickTimeImporters
+mdimport  1355 admin  txt      REG      14,2  2416532   410039 /Library/Spotlight/Microsoft Office.mdimporter/Contents/MacOS/Microsoft Office
+mdimport  1355 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+mdimport  1355 admin  txt      REG      14,2  1519616   535135 /Library/Caches/com.apple.LaunchServices-014501.csstore
+mdimport  1355 admin  txt      REG      14,2  2257772   437967 /System/Library/Components/CoreAudio.component/Contents/MacOS/CoreAudio
+mdimport  1355 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+mdimport  1355 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+mdimport  1355 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+mdimport  1355 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+mdimport  1355 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+mdimport  1355 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+mdimport  1355 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+mdimport  1355 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+mdimport  1355 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+mdimport  1355 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+mdimport  1355 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+mdimport  1355 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+mdimport  1355 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+mdimport  1355 admin  txt      REG      14,2   383528   471171 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+mdimport  1355 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+mdimport  1355 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+mdimport  1355 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+mdimport  1355 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+mdimport  1355 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+mdimport  1355 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+mdimport  1355 admin  txt      REG      14,2   701100   467265 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+mdimport  1355 admin  txt      REG      14,2   730792   467083 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/ImageIO
+mdimport  1355 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+mdimport  1355 admin  txt      REG      14,2    64800   467104 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+mdimport  1355 admin  txt      REG      14,2   583452   467111 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+mdimport  1355 admin  txt      REG      14,2  2176428   514124 /usr/lib/libxml2.2.dylib
+mdimport  1355 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+mdimport  1355 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+mdimport  1355 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+mdimport  1355 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+mdimport  1355 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+mdimport  1355 admin  txt      REG      14,2   309644   471394 /System/Library/Frameworks/DirectoryService.framework/Versions/A/DirectoryService
+mdimport  1355 admin  txt      REG      14,2 22481848   465137 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+mdimport  1355 admin  txt      REG      14,2  1597580   470972 /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+mdimport  1355 admin  txt      REG      14,2  2225348   467607 /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+mdimport  1355 admin  txt      REG      14,2  4395780   478273 /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+mdimport  1355 admin  txt      REG      14,2   340612   471384 /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+mdimport  1355 admin  txt      REG      14,2   155916   466898 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCSync.A.dylib
+mdimport  1355 admin  txt      REG      14,2  8294640   478347 /System/Library/Frameworks/QuickTime.framework/Versions/A/QuickTime
+mdimport  1355 admin  txt      REG      14,2  4002728   463903 /System/Library/Frameworks/AddressBook.framework/Versions/A/AddressBook
+mdimport  1355 admin  txt      REG      14,2   214036   498914 /System/Library/PrivateFrameworks/DSObjCWrappers.framework/Versions/A/DSObjCWrappers
+mdimport  1355 admin  txt      REG      14,2   215432   444122 /System/Library/CoreServices/Encodings/libJapaneseConverter.dylib
+mdimport  1355 admin  txt      REG      14,2   296880   444123 /System/Library/CoreServices/Encodings/libKoreanConverter.dylib
+mdimport  1355 admin  txt      REG      14,2   144796   444127 /System/Library/CoreServices/Encodings/libSimplifiedChineseConverter.dylib
+mdimport  1355 admin  txt      REG      14,2   177316   444130 /System/Library/CoreServices/Encodings/libTraditionalChineseConverter.dylib
+mdimport  1355 admin  txt      REG      14,2   446032   500849 /System/Library/PrivateFrameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+mdimport  1355 admin  txt      REG      14,2  2997168   477972 /System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks/QuartzComposer.framework/Versions/A/QuartzComposer
+mdimport  1355 admin  txt      REG      14,2 34071328   505404 /System/Library/QuickTime/QuickTimeComponents.component/Contents/MacOS/QuickTimeComponents
+mdimport  1355 admin  txt      REG      14,2   877032   505688 /System/Library/QuickTime/QuickTimeMPEG.component/Contents/MacOS/QuickTimeMPEG
+mdimport  1355 admin  txt      REG      14,2  4340156   474503 /System/Library/Frameworks/Message.framework/Versions/B/Message
+mdimport  1355 admin  txt      REG      14,2  2695376   466896 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/Resources/libCMaps.A.dylib
+mdimport  1355 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+mdimport  1355 admin    1w     CHR       3,2      0t0 41792260 /dev/null
+mdimport  1355 admin    2u  KQUEUE                             count=0, state=0x2
+mdimport  1355 admin    3r  PSXSHM               4096          /tmp/com.apple.csseed.65
+mdimport  1355 admin    4r  PSXSHM               4096          apple.shm.notification_center
+mdimport  1355 admin    5r     DIR      14,2      306   409954 /Library/Spotlight
+mdimport  1355 admin    6r     DIR      14,2      612   508029 /System/Library/Spotlight
+mdimport  1355 admin    8u  KQUEUE                             count=0, state=0x2
+mdimport  1355 admin   10r     REG      14,2   137827   468442 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/HIToolbox.rsrc
+mdimport  1355 admin   11r     REG      14,2   498430   468344 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+mdimport  1355 admin   12r     REG      14,2   141372   478372 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/QuickTime.rsrc
+mdimport  1355 admin   13r     REG      14,2    56050   478354 /System/Library/Frameworks/QuickTime.framework/Versions/A/Resources/English.lproj/Localized.rsrc
+mdimport  1355 admin   15r     CHR       8,1    0t208 41962628 /dev/urandom
+mdimport  1355 admin   16u    unix 0x2e57dd0      0t0          ->0x2845550
+LAServer  1360 admin  cwd      DIR      14,2     1224        2 /
+LAServer  1360 admin  txt      REG      14,2   148464   467218 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/LAServer.app/Contents/MacOS/LAServer
+LAServer  1360 admin  txt      REG      14,2    81316   443048 /System/Library/CoreServices/CharacterSets/CFUnicodeData-L.mapping
+LAServer  1360 admin  txt      REG      14,2   352454   443045 /System/Library/CoreServices/CharacterSets/CFCharacterSetBitmaps.bitmap
+LAServer  1360 admin  txt      REG      14,2   385828   467194 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/JapaneseAnalysisPlugIn.bundle/Contents/MacOS/JapaneseAnalysisPlugIn
+LAServer  1360 admin  txt      REG      14,2   555332   467199 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/JapaneseAnalysisPlugIn.bundle/Contents/Resources/Grammar.data
+LAServer  1360 admin  txt      REG      14,2   242152   467151 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/DictionaryServiceDictPlugIn.bundle/Contents/MacOS/DictionaryServiceDictPlugIn
+LAServer  1360 admin  txt      REG      14,2  1007616   240150 /Library/Dictionaries/Oxford American Writers Thesaurus.dict/Contents/dictionary_1
+LAServer  1360 admin  txt      REG      14,2   223804   467245 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/StandardDictionaryPlugIn.bundle/Contents/MacOS/StandardDictionaryPlugIn
+LAServer  1360 admin  txt      REG      14,2   266240   467168 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Character.dict/Contents/dictionary_1
+LAServer  1360 admin  txt      REG      14,2   606208   467169 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Character.dict/Contents/dictionary_2
+LAServer  1360 admin  txt      REG      14,2    42808   467145 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/ColloquialDictPlugIn.bundle/Contents/MacOS/ColloquialDictPlugIn
+LAServer  1360 admin  txt      REG      14,2    87728   467209 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/JVCDictionaryPlugIn.bundle/Contents/MacOS/JVCDictionaryPlugIn
+LAServer  1360 admin  txt      REG      14,2    71572   467225 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/LastResortDictPlugIn.bundle/Contents/MacOS/LastResortDictPlugIn
+LAServer  1360 admin  txt      REG      14,2   291068   467231 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/NumeralDictionaryPlugIn.bundle/Contents/MacOS/NumeralDictionaryPlugIn
+LAServer  1360 admin  txt      REG      14,2   109446   467189 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Numeral.dict
+LAServer  1360 admin  txt      REG      14,2  5702539   467196 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/JapaneseAnalysisPlugIn.bundle/Contents/Resources/Cooccurrence.data
+LAServer  1360 admin  txt      REG      14,2  2192765   467203 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/JapaneseAnalysisPlugIn.bundle/Contents/Resources/Tokenizer.data
+LAServer  1360 admin  txt      REG      14,2 13557760   238946 /Library/Dictionaries/New Oxford American Dictionary.dict/Contents/dictionary_1
+LAServer  1360 admin  txt      REG      14,2 13570048   467161 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Basic.dict/Contents/dictionary_1
+LAServer  1360 admin  txt      REG      14,2 17850368   467162 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Basic.dict/Contents/dictionary_2
+LAServer  1360 admin  txt      REG      14,2  9839648   519289 /usr/share/icu/icudt32l.dat
+LAServer  1360 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+LAServer  1360 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+LAServer  1360 admin  txt      REG      14,2   889204   466919 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreText.framework/Versions/A/CoreText
+LAServer  1360 admin  txt      REG      14,2  2143988   466569 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/ATS
+LAServer  1360 admin  txt      REG      14,2  9917940   466881 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+LAServer  1360 admin  txt      REG      14,2  2323604   471031 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+LAServer  1360 admin  txt      REG      14,2  2815144   514008 /usr/lib/libicucore.A.dylib
+LAServer  1360 admin  txt      REG      14,2  1580124   514054 /usr/lib/libobjc.A.dylib
+LAServer  1360 admin  txt      REG      14,2  3559472   514092 /usr/lib/libstdc++.6.0.4.dylib
+LAServer  1360 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+LAServer  1360 admin  txt      REG      14,2   220988   513958 /usr/lib/libauto.dylib
+LAServer  1360 admin  txt      REG      14,2  6437868   471075 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+LAServer  1360 admin  txt      REG      14,2  1492540   471239 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+LAServer  1360 admin  txt      REG      14,2   263296   471372 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/WebServicesCore.framework/Versions/A/WebServicesCore
+LAServer  1360 admin  txt      REG      14,2  1750392   471363 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+LAServer  1360 admin  txt      REG      14,2   383528   471171 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+LAServer  1360 admin  txt      REG      14,2  6135340   478825 /System/Library/Frameworks/Security.framework/Versions/A/Security
+LAServer  1360 admin  txt      REG      14,2   141240   471806 /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+LAServer  1360 admin  txt      REG      14,2   507732   479372 /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+LAServer  1360 admin  txt      REG      14,2  1693860   470945 /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+LAServer  1360 admin  txt      REG      14,2   577376   466524 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+LAServer  1360 admin  txt      REG      14,2  2349192   466839 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ColorSync.framework/Versions/A/ColorSync
+LAServer  1360 admin  txt      REG      14,2  1538032   467326 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/PrintCore.framework/Versions/A/PrintCore
+LAServer  1360 admin  txt      REG      14,2  1821328   467447 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/QD.framework/Versions/A/QD
+LAServer  1360 admin  txt      REG      14,2   983724   466975 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/A/HIServices
+LAServer  1360 admin  txt      REG      14,2   316864   467134 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/LangAnalysis
+LAServer  1360 admin  txt      REG      14,2   360804   466930 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/FindByContent.framework/Versions/A/FindByContent
+LAServer  1360 admin  txt      REG      14,2   182868   467596 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/SpeechSynthesis.framework/Versions/A/SpeechSynthesis
+LAServer  1360 admin  txt      REG      14,2   986400   467105 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+LAServer  1360 admin  txt      REG      14,2  1735620   497761 /System/Library/PrivateFrameworks/DesktopServicesPriv.framework/Versions/A/DesktopServicesPriv
+LAServer  1360 admin  txt      REG      14,2  7417264   471901 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+LAServer  1360 admin  txt      REG      14,2   312204   469015 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/ImageCapture.framework/Versions/A/ImageCapture
+LAServer  1360 admin  txt      REG      14,2   158612   470890 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SpeechRecognition.framework/Versions/A/SpeechRecognition
+LAServer  1360 admin  txt      REG      14,2   135584   470818 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/SecurityHI.framework/Versions/A/SecurityHI
+LAServer  1360 admin  txt      REG      14,2    79512   468265 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Help.framework/Versions/A/Help
+LAServer  1360 admin  txt      REG      14,2   453068   469312 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/OpenScripting
+LAServer  1360 admin  txt      REG      14,2   125284   470711 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Print
+LAServer  1360 admin  txt      REG      14,2  1253068   468706 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HTMLRendering.framework/Versions/A/HTMLRendering
+LAServer  1360 admin  txt      REG      14,2   928692   469210 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/NavigationServices.framework/Versions/A/NavigationServices
+LAServer  1360 admin  txt      REG      14,2   205860   468075 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/CarbonSound.framework/Versions/A/CarbonSound
+LAServer  1360 admin  txt      REG      14,2  8993788   468275 /System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Versions/A/HIToolbox
+LAServer  1360 admin  txt      REG      14,2   446032   500849 /System/Library/PrivateFrameworks/LatentSemanticMapping.framework/Versions/A/LatentSemanticMapping
+LAServer  1360 admin    0r     CHR       3,2      0t0 41792260 /dev/null
+LAServer  1360 admin    1w     CHR       3,2      0t0 41792260 /dev/null
+LAServer  1360 admin    2r  PSXSHM               4096          /tmp/com.apple.csseed.65
+LAServer  1360 admin    3r  PSXSHM               4096          /tmp/com.apple.csseed.65
+LAServer  1360 admin    4r  PSXSHM               4096          apple.shm.notification_center
+LAServer  1360 admin    5r     REG      14,2 13570048   467161 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Basic.dict/Contents/dictionary_1
+LAServer  1360 admin    6r     REG      14,2 17850368   467162 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/LangAnalysis.framework/Versions/A/Support/J_Basic.dict/Contents/dictionary_2
+lsof      1385 admin  cwd      DIR      14,2      510   512202 /Users/admin
+lsof      1385 admin  txt      REG      14,2   196788   515725 /usr/sbin/lsof
+lsof      1385 admin  txt      REG      14,2  1688500   513937 /usr/lib/dyld
+lsof      1385 admin  txt      REG      14,2  8000260   514094 /usr/lib/libSystem.B.dylib
+lsof      1385 admin  txt      REG      14,2   251320   513998 /usr/lib/libgcc_s.1.dylib
+lsof      1385 admin    0u     CHR       4,3 0t236023 41913988 /dev/ttyp3
+lsof      1385 admin    1w     REG      14,2        0   535797 /Users/admin/lsof.txt
+lsof      1385 admin    2u     CHR       4,3 0t236023 41913988 /dev/ttyp3
+lsof      1385 admin    4     PIPE 0x38ee908    16384          
+lsof      1385 admin    5     PIPE 0x38ee8c0    16384          

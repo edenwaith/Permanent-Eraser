@@ -1,0 +1,104 @@
+.TH "srm" "1" "1.2.11" "Matt Gauthier" ""
+.SH "NAME"
+srm \- securely remove files or directories
+.SH "SYNOPSIS"
+.B srm
+[\fIOPTION\fR]... \fIFILE\fR...
+.SH "DESCRIPTION"
+.PP 
+.B srm
+removes each specified file by overwriting, renaming, and truncating 
+it before unlinking.  This prevents other people from undeleting or 
+recovering any information about the file from the command line.
+By default srm uses 35 passes to overwrite the file's contents.
+If this seems overkill you can use use the
+\fB\-\-dod\fR,
+\fB\-\-doe\fR,
+\fB\-\-openbsd\fR,
+\fB\-\-simple\fR option which use less passes.
+If you specify more than one option (of those listed above) they are executed in the order shown above.
+.P
+You can use
+.B srm
+to overwrite block devices.  The device node is not removed after
+overwriting.  This feature is available on Linux.
+.P
+.BR srm ,
+like every program that uses the getopt function to parse its
+arguments, lets you use the
+.I \-\-
+option to indicate that all following arguments are non\-options.
+To remove a file called `\-f' in the current directory, you could type either
+.RS
+rm \-\- \-f
+.RE
+or
+.RS
+rm ./\-f
+.SH "OPTIONS"
+.PP 
+Remove (unlink) the FILE(s).
+.TP 
+\fB\-d\fR, \fB\-\-directory\fR
+ignored (for compatibility with \fBrm(1)\fR)
+.TP 
+\fB\-f\fR, \fB\-\-force\fR
+ignore nonexistent files, never prompt
+.TP 
+\fB\-i\fR, \fB\-\-interactive\fR
+prompt before any removal
+.TP 
+\fB\-r\fR, \fB\-R\fR, \fB\-\-recursive\fR
+remove the contents of directories recursively
+.TP 
+\fB\-x\fR, \fB\-\-one\-file\-system\fR
+when removing a hierarchy recursively, skip any directory that is on a
+file system different from that of the corresponding command line
+argument.  (Not supported on Windows)
+.TP 
+\fB\-s\fR, \fB\-\-simple\fR
+only overwrite the file with a single pass of zero bytes
+.TP 
+\fB\-P\fR, \fB\-\-openbsd\fR
+OpenBSD compatible rm.  Files are overwritten three times, first with the byte
+pattern 0xff, then 0x00, and then 0xff again, before they are
+deleted.  Files with multiple links will be unlinked but not overwritten.
+.TP 
+\fB\-D\fR, \fB\-\-dod\fR
+US Dod compliant 7\-pass overwrite.
+.TP 
+\fB\-E\fR, \fB\-\-doe\fR
+US DoE compliant 3\-pass overwrite.  Twice with a random pattern, finally with the bytes "DoE".
+See http://cio.energy.gov/CS\-11_Clearing_and_Media_Sanitization_Guidance.pdf for details.
+.TP 
+\fB\-v\fR, \fB\-\-verbose\fR
+explain what is being done.  If you set this option twice the current write position is shown.
+.TP 
+\fB\-h\fR, \fB\-\-help\fR
+display this help and exit
+.TP 
+\fB\-V\fR, \fB\-\-version\fR
+output version information and exit
+.SH "SIGNALS"
+.TP 
+\fBSIGINFO, SIGUSR2\fR show current write position and filename handled.
+.SH "NOTES"
+.PP 
+.B srm
+can not remove write protected files owned by another user, regardless of
+the permissions on the directory containing the file.
+.PP 
+Development and discussion of srm
+is carried out at https://sourceforge.net/projects/srm/ which
+is also accessible via http://srm.sourceforge.net/.
+.SH "SEE ALSO"
+.TP 
+\fBrm(1)\fR http://www.gnu.org/software/coreutils/manual/coreutils.html#rm\-invocation
+.TP 
+\fBshred(1)\fR http://www.gnu.org/software/coreutils/manual/coreutils.html#shred\-invocation
+.TP 
+\fBwipe(1)\fR http://lambda\-diode.com/software/wipe
+.TP 
+\fBsecure\-delete\fR http://packages.debian.org/lenny/secure\-delete
+.TP 
+\fBscrub(1)\fR http://code.google.com/p/diskscrub/

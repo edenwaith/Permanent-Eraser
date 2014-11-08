@@ -1,0 +1,162 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Development;
+		activeExecutable = BEB16A8111DD8B0100AD23A3 /* PermanentEraser (Upgraded) */;
+		activeTarget = 84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */;
+		addToTargets = (
+			84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */,
+		);
+		codeSenseManager = BEB16A9611DD8B1300AD23A3 /* Code sense */;
+		executables = (
+			BEB16A8111DD8B0100AD23A3 /* PermanentEraser (Upgraded) */,
+			BEB16A8211DD8B0100AD23A3 /* PermanentEraser */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					341,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 299771745;
+			PBXWorkspaceStateSaveDate = 299771745;
+		};
+		perUserProjectItems = {
+			BEB16ABE11DE2A0D00AD23A3 /* PBXBookmark */ = BEB16ABE11DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16ABF11DE2A0D00AD23A3 /* PBXBookmark */ = BEB16ABF11DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16AC011DE2A0D00AD23A3 /* PBXBookmark */ = BEB16AC011DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16AC111DE2A0D00AD23A3 /* PBXBookmark */ = BEB16AC111DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16AC211DE2A0D00AD23A3 /* PBXBookmark */ = BEB16AC211DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16AC311DE2A0D00AD23A3 /* PBXBookmark */ = BEB16AC311DE2A0D00AD23A3 /* PBXBookmark */;
+			BEB16AC411DE2A0D00AD23A3 /* PBXBookmark */ = BEB16AC411DE2A0D00AD23A3 /* PBXBookmark */;
+		};
+		sourceControlManager = BEB16A9511DD8B1300AD23A3 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	29B97326FDCFA39411CA2CEA /* PermanentEraser */ = {
+		activeExec = 0;
+		executables = (
+			BEB16A8211DD8B0100AD23A3 /* PermanentEraser */,
+		);
+	};
+	84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */ = {
+		activeExec = 0;
+		executables = (
+			BEB16A8111DD8B0100AD23A3 /* PermanentEraser (Upgraded) */,
+		);
+	};
+	BEB16A8111DD8B0100AD23A3 /* PermanentEraser (Upgraded) */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "PermanentEraser (Upgraded)";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	BEB16A8211DD8B0100AD23A3 /* PermanentEraser */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = PermanentEraser;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	BEB16A9511DD8B1300AD23A3 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	BEB16A9611DD8B1300AD23A3 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	BEB16ABE11DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = BEB16AB611DE29A600AD23A3 /* plugin.png */;
+	};
+	BEB16ABF11DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = BEB16AB811DE29B000AD23A3 /* update.tiff */;
+	};
+	BEB16AC011DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = BEB16ABC11DE29C400AD23A3 /* general.png */;
+	};
+	BEB16AC111DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 84985DB70D0F8EE500F3FA75 /* PE2_icon_40x40.png */;
+	};
+	BEB16AC211DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */;
+	};
+	BEB16AC311DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = BEB16ABA11DE29BE00AD23A3 /* advanced.tiff */;
+	};
+	BEB16AC411DE2A0D00AD23A3 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = BEB16ABA11DE29BE00AD23A3 /* advanced.tiff */;
+	};
+}

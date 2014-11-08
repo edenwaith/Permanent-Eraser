@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html401/sgml/loosedtd.html">
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href="../sty/task_style.css" rel="stylesheet" media="all">
+		<title>Preferences</title>
+	</head>
+
+	<body>
+	
+		<div id="banner">
+			<div id="machelp">
+				<a class="bread" href="../PermanentEraserHelp.html">Permanent Eraser Help</a>
+			</div>
+			
+			<div id="index">
+				<a class="leftborder" href="idx.html">Index</a>
+			</div>
+		</div>
+		
+		<div id="mainbox">
+			<div id="caticon">
+				<img width="32" height="32" alt="Permanent Eraser Icon" src="../gfx/xicnpe.png">
+			</div>
+			<div id="pagetitle">
+				<h1>Preferences</h1>
+			</div>
+						
+			<p>Click a topic below.</p>
+			<p><a href="prefs-general.html">General Preferences</a></p>
+			<p><a href="prefs-updates.html">Update Preferences</a></p>
+			<p><a href="prefs-plugins.html">Plug-Ins</a></p>
+		</div>
+		
+	</body>
+
+</html>

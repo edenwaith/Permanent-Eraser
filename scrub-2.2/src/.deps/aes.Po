@@ -1,0 +1,5 @@
+aes.o aes.o: aes.c ../config/config.h aes.h
+
+../config/config.h:
+
+aes.h:

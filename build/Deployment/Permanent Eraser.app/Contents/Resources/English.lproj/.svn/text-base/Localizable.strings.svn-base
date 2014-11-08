@@ -1,0 +1,11 @@
+"Cancel" = "Cancel";
+"ErasingFileWarning" = "Are you sure you want to permanently erase this file?";
+"ErasingFilesWarning" = "Are you sure you want to permanently erase these files?";
+"ErasingMessage" = "Erasing";
+"ErasingTrashWarning" = "Are you sure you want to permanently erase the files in the Trash?";
+"ErrorDeletingDiscMessage" = "Permanent Eraser cannot erase the CD/DVD.";
+"ErrorDeletingMessage" = "Permanent Eraser cannot erase the file \"%@\"";
+"ErrorTitle" = "Alert";
+"OK" = "OK";
+"PreparingMessage" = "Preparing to erase…";
+"Quit" = "Quit";
