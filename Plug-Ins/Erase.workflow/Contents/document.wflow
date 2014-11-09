@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>381</string>
+	<key>AMApplicationVersion</key>
+	<string>2.4</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Permanent Eraser</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/Applications/Permanent Eraser.app/Contents/Library/Automator/Erase.action</string>
+				<key>ActionName</key>
+				<string>Erase Selected Items</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>BundleIdentifier</key>
+				<string>com.edenwaith.Automator.Erase</string>
+				<key>CFBundleVersion</key>
+				<string>1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>Erase</string>
+				<key>InputUUID</key>
+				<string>75B44534-9384-44FC-AD4F-5A656F299A06</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>C9D3732A-D55B-4E16-82F2-20DE3C428A2D</string>
+				<key>UUID</key>
+				<string>0C53E515-02AC-409A-815E-1E05091C416F</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Permanent Eraser</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.fileSystemObject</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>serviceProcessesInput</key>
+		<integer>0</integer>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.servicesMenu</string>
+	</dict>
+</dict>
+</plist>

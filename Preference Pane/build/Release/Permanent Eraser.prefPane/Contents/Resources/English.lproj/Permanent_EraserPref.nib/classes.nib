@@ -1,0 +1,46 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {
+                checkForNewVersion = id; 
+                discErasingSelected = id; 
+                fileErasingSelected = id; 
+                openHelp = id; 
+                warningBoxClicked = id; 
+            }; 
+            CLASS = NSPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                "_firstKeyView" = NSButton; 
+                "_initialKeyView" = id; 
+                "_lastKeyView" = id; 
+                "_window" = id; 
+                discErasingButton = NSPopUpButton; 
+                fileErasingButton = NSPopUpButton; 
+                lastCheckedTextField = NSTextField; 
+                warningCheckBox = NSButton; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {
+            ACTIONS = {
+                checkForNewVersion = id; 
+                discErasingSelected = id; 
+                fileErasingSelected = id; 
+                openHelp = id; 
+                warningBoxClicked = id; 
+            }; 
+            CLASS = "Permanent_EraserPref"; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                discErasingButton = NSPopUpButton; 
+                fileErasingButton = NSPopUpButton; 
+                lastCheckedTextField = NSTextField; 
+                warningCheckBox = NSButton; 
+            }; 
+            SUPERCLASS = NSPreferencePane; 
+        }
+    ); 
+    IBVersion = 1; 
+}

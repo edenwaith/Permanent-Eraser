@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>247.1</string>
+	<key>AMApplicationVersion</key>
+	<string>2.1.1</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<false/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.2</string>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/Users/admin/Programs/builds/Permanent Eraser/build/Release/Permanent Eraser.app/Contents/Library/Automator/Erase.action</string>
+				<key>ActionName</key>
+				<string>Erase Selected Items</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>Application</key>
+				<array>
+					<string>Permanent Eraser</string>
+				</array>
+				<key>BundleIdentifier</key>
+				<string>com.edenwaith.Automator.Erase</string>
+				<key>CFBundleVersion</key>
+				<string>1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<false/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>Erase</string>
+				<key>InputUUID</key>
+				<string>B31F8B66-FE78-410B-92BA-74C0C960B3AE</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>C8007DCF-3062-4F85-9CB8-E2650BF7C3DB</string>
+				<key>UUID</key>
+				<string>0AFD039B-C47B-4F6D-8845-41C3D0FAA22C</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Permanent Eraser</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict/>
+	<key>state</key>
+	<dict>
+		<key>AMLogTabViewSelectedIndex</key>
+		<integer>0</integer>
+		<key>libraryState</key>
+		<dict>
+			<key>actionsMajorSplitViewState</key>
+			<dict>
+				<key>expandedPosition</key>
+				<real>239</real>
+				<key>subviewState</key>
+				<array>
+					<string>0.000000, 0.000000, 381.000000, 516.000000, NO</string>
+					<string>0.000000, 517.000000, 381.000000, 153.000000, NO</string>
+				</array>
+			</dict>
+			<key>actionsMinorSplitViewState</key>
+			<dict>
+				<key>expandedPosition</key>
+				<real>0.0</real>
+				<key>subviewState</key>
+				<array>
+					<string>0.000000, 0.000000, 163.000000, 516.000000, NO</string>
+					<string>164.000000, 0.000000, 217.000000, 516.000000, NO</string>
+				</array>
+			</dict>
+			<key>variablesMajorSplitViewState</key>
+			<dict>
+				<key>expandedPosition</key>
+				<real>0.0</real>
+				<key>subviewState</key>
+				<array>
+					<string>0.000000, 0.000000, 381.000000, 555.000000, NO</string>
+					<string>0.000000, 556.000000, 381.000000, 199.000000, NO</string>
+				</array>
+			</dict>
+			<key>variablesMinorSplitViewState</key>
+			<dict>
+				<key>expandedPosition</key>
+				<real>0.0</real>
+				<key>subviewState</key>
+				<array>
+					<string>0.000000, 0.000000, 163.000000, 555.000000, NO</string>
+					<string>164.000000, 0.000000, 217.000000, 555.000000, NO</string>
+				</array>
+			</dict>
+		</dict>
+		<key>majorSplitViewState</key>
+		<dict>
+			<key>expandedPosition</key>
+			<real>381</real>
+			<key>subviewState</key>
+			<array>
+				<string>0.000000, 0.000000, 381.000000, 715.000000, NO</string>
+				<string>382.000000, 0.000000, 619.000000, 715.000000, NO</string>
+			</array>
+		</dict>
+		<key>minorSplitViewState</key>
+		<dict>
+			<key>expandedPosition</key>
+			<real>0.0</real>
+			<key>subviewState</key>
+			<array>
+				<string>0.000000, 0.000000, 619.000000, 524.000000, NO</string>
+				<string>0.000000, 534.000000, 619.000000, 162.000000, NO</string>
+			</array>
+		</dict>
+		<key>windowFrame</key>
+		<string>{{440, 83}, {1000, 792}}</string>
+		<key>workflowViewScrollPosition</key>
+		<string>{{0, 0}, {619, 524}}</string>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>serviceInputTypeIdentifier</key>
+		<string>com.apple.Automator.fileSystemObject</string>
+		<key>serviceOutputTypeIdentifier</key>
+		<string>com.apple.Automator.nothing</string>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.servicesMenu</string>
+	</dict>
+</dict>
+</plist>

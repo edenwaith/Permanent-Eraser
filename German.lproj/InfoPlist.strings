@@ -1,0 +1,6 @@
+/* Localized versions of Info.plist keys */
+
+CFBundleName = "Permanent Eraser";
+/* CFBundleShortVersionString = "Version 2.6.1"; */
+CFBundleGetInfoString = "2.6.2, Copyright © 2003-2013 Edenwaith.";
+NSHumanReadableCopyright = "Copyright © 2003-2013 Edenwaith. \nAlle Rechte vorbehalten.";

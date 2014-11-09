@@ -1,0 +1,40 @@
+Summary: Securely erase data from magnetic and solid-state memory
+Name: BCWipe
+Version: @BCWIPE_VER@
+Release: @BCWIPE_REL@
+License: Jetico, Inc. (c) 2006-2010
+Group: Utilities/System
+Source: bcwipe-%{version}-%{release}.tar.gz
+Packager: Jetico, Inc.
+Vendor: Jetico, Inc.
+URL: http://www.jetico.com/
+BuildRoot: /tmp/bcwipe-%{version}-%{release}-root
+
+%description
+Securely erase data from magnetic and solid-state memory
+
+%prep
+%setup -n bcwipe-%{version}-%{release}
+
+%build
+./configure --prefix=$RPM_BUILD_ROOT --mandir=$RPM_BUILD_ROOT/usr/share/man
+make 
+
+%install
+make install
+
+%__os_install_post
+find $RPM_BUILD_ROOT -type f | sed -e "s#^$RPM_BUILD_ROOT#%attr(-, root, root) #g" > rpm-files
+find $RPM_BUILD_ROOT -type l | sed -e "s#^$RPM_BUILD_ROOT#%attr(-, root, root) #g" >> rpm-files
+find $RPM_BUILD_ROOT -type b | sed -e "s#^$RPM_BUILD_ROOT#%attr(-, root, root) #g" >> rpm-files
+
+%post 
+echo
+echo "See bcwipe(1) to get information on running BestCrypt wipe"
+echo
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files -f rpm-files
+
+%doc COPYING

@@ -1,0 +1,209 @@
+.TH BCWIPE 1 "Mon Feb 4 2008" "Unix" ""
+.SH NAME
+.B bcwipe 
+\- securely erase data from magnetic and solid-state memory
+.nf
+(c) 2002-2008 Jetico, Inc. http://www.jetico.com 
+
+.SH SYNOPSIS
+
+bcwipe [-VvsbBdrifhSF] [-m mode] [ -n sec ] FILE...
+.br
+
+.SH DESCRIPTION
+
+.B bcwipe
+Repeatedly overwrites special patterns to the files to be destroyed.
+In normal mode, 35 passes are used (of which 8 are random). 
+Patterns used were recommended in article by Peter Gutmann 
+.nf 
+(http://www.cs.auckland.ac.nz/~pgut001/pubs/secure_del.html)  
+.fi
+entitled "Secure Deletion of Data from  Magnetic and Solid-State Memory". 
+In quick mode, U.S. DoD(Department of Defence) 5220.22-M standard are 
+used with 7 pass wiping. In custom mode U.S. DoD 5220.22-M standard are
+used with user defined number of passes.
+
+.PP
+.SH "OPTIONS"
+
+.TP 0.5i
+.B -mb
+German BCI/VSITR  7-pass wiping.
+
+.TP 0.5i
+.B -md
+U.S. DoD 5220.22M 7-pass extended character rotation wiping with last pass verification.
+
+.TP 0.5i
+.B -me
+U.S. DoE 3-pass wiping. 
+
+.TP 0.5i
+.B -mf <filename>
+Read wiping scheme from file.
+
+.TP 0.5i
+.B -mg
+35-pass Peter Gutmann's wiping.
+
+.TP 0.5i
+.B -ms
+7-pass Bruce Schneier's wiping.
+
+.TP 0.5i
+.B -mt
+1-pass test mode. 
+First 4 bytes of every 512 bytes block will contain block number.
+
+.TP 0.5i
+.B -mz
+1-pass wiping by zeroes.
+
+.TP 0.5i
+.B -m <mode> (custom wipe)
+U.S. DoD 5220.22-M
+.B n 
+pass extended character rotation wiping with last pass verification.
+
+.TP 0.5i
+.B -n <delay> 
+Wait
+.B delay 
+seconds between wiping passes. Modern enterprise level storage systems (NAS, disk arrays etc.) 
+employ powerful caches. To avoid undesirable caching effects BCWipe allows user to insert adjustable 
+delay between wiping passes. Please note that when wiping with delay between passes disk space is freed 
+after the last pass.
+
+.TP 0.5i
+.B -w (wiping only)
+BCWipe version 1.7 (and later) verifies last pass wiping result according to U.S. DoD 5200.28 standard 
+for all wiping modes above. Use the option to disable the last pass verification. 
+
+.TP 0.5i
+.B -d (do not delete)
+Do not delete file(s) after wiping.
+
+.TP 0.5i
+.B -b (block device) 
+Wipe contents of block devices
+
+.TP 0.5i
+.B -B
+Disable direct IO mode when wiping block devices
+
+.TP 0.5i
+.B -t <threads>  
+Wipe and verify block devices in multi-thread mode. BCWipe run
+.B threads
+worker threads. Useful for wiping multiple disk volumes.
+
+.TP 0.5i
+.B -S (wipe file slack)
+Wipe files slack. File slack is the disk space from the end of a file till the end of the 
+last cluster used by that file. Cluster is minimal portion of disk space
+used by file system.
+
+.TP 0.5i
+.B -F (wipe free space)
+Wipe free space on specified filesystem. 
+
+.TP 0.5i
+.B -s
+Use ISAAC random number genertor by Bob Jenkins
+.br
+.IR http://burtleburtle.net/bob
+Default is SHA-1 (Secure Hash Algorithm). ISAAC is random faster than SHA-1.
+
+.TP 0.5i
+.B -p 
+Use 64Kb random pattern for random passes instead of full random.
+Much faster (especially on slow CPU) but less secure!
+.B (not recommended)
+
+.TP 0.5i
+.B -f (force)
+Force wipe files with no write permissions.
+Also suppress interactive mode.
+
+.TP 0.5i
+.B -r (recurse into subdirectories)
+Remove with wiping the contents of directories recursively.
+
+.TP 0.5i
+.B -i (interactive)
+Prompt whether to wipe each file.
+
+.TP 0.5i
+.B -I (disable interactive)
+Never prompt whether to wipe each file.
+
+.TP 0.5i
+.B -v (verbose)
+Explain what is being done.
+
+.TP 0.5i
+.B -l [logfile]
+Log actions to file. Log to console if filename is omitted
+
+
+.TP 0.5i
+.B -h (help)
+Display help and exit.
+
+.TP 0.5i
+.B -V (version)
+Display version and exit.
+
+.SH Wiping scheme file format
+A file specified in 
+.B -mf
+option is a text file with wiping scheme. Scheme passes must be described in following format:
+.PP
+.B number. {random|complementary|[hex[,hex[,hex[,hex]]]] [, verify]}
+
+.B random
+- random pass
+.br
+.B complementary
+- a pass complementary to previous one
+.br
+.B hex[,hex[,hex[,hex]]]
+- wiping pattern, up to four two-digit hexadecimal numbers
+.br
+.B verify
+- verify wiping pass
+
+.SH EXAMPLES
+.PP
+
+bcwipe -rvf ~/sources 
+# forced wipe of ~/sources directory recursively with Peter Gutmann's scheme
+
+bcwipe -bvmd /dev/hda
+# wipe entire /dev/hda disk with 7-pass DoD standard
+
+bcwipe -r *
+# recursive wipe of current directory with Peter Gutmann's scheme
+
+bcwipe -mfmy_scheme -lwipe.log -b /dev/fd0
+# wipe /dev/fd0 floppy with scheme from my_scheme file; write log to wipe.log file
+
+Contents of my_scheme file from previous example:
+.br
+1. random, verify
+.br
+2. complementary
+.br
+3. AA, A5, 55, verify
+
+
+
+.SH AUTHOR
+
+Original version: Jetico, Inc. <support@jetico.com>
+
+.SH SEE ALSO
+
+bctool(8)
+.br
