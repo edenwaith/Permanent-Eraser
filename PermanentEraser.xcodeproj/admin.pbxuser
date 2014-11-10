@@ -124,7 +124,7 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 412051643;
+			PBXPerProjectTemplateStateSaveDate = 437201100;
 			PBXWorkspaceContents = (
 				{
 					LeftSlideOut = {
@@ -534,7 +534,7 @@
 					WindowLocation = "{13, 94}";
 				},
 			);
-			PBXWorkspaceStateSaveDate = 412051643;
+			PBXWorkspaceStateSaveDate = 437201100;
 		};
 		perUserProjectItems = {
 			8408BBCC186D075500F8A2D4 = 8408BBCC186D075500F8A2D4 /* PBXTextBookmark */;
@@ -550,7 +550,7 @@
 			840DCCA014DE3E140044968A = 840DCCA014DE3E140044968A /* PBXBookmark */;
 			8418788B18751FB40022A3EF = 8418788B18751FB40022A3EF /* PBXTextBookmark */;
 			84215A29150085D3008DD3BB = 84215A29150085D3008DD3BB /* PBXTextBookmark */;
-			842350C7188F68C80007BE59 /* PBXTextBookmark */ = 842350C7188F68C80007BE59 /* PBXTextBookmark */;
+			842350C7188F68C80007BE59 = 842350C7188F68C80007BE59 /* PBXTextBookmark */;
 			84257297151444F7000E82F6 = 84257297151444F7000E82F6 /* PBXTextBookmark */;
 			84257299151444F7000E82F6 = 84257299151444F7000E82F6 /* PBXTextBookmark */;
 			8425729A151444F7000E82F6 = 8425729A151444F7000E82F6 /* PBXTextBookmark */;
@@ -694,6 +694,11 @@
 		name = history.html;
 		path = "/Users/admin/Programs/Permanent Eraser/English.lproj/Permanent Eraser Help/pgs/history.html";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {803, 3718}}";
+			sepNavSelRange = "{1157, 0}";
+			sepNavVisRange = "{687, 1284}";
+		};
 	};
 	8408EB5916067F2B002C5107 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -797,11 +802,6 @@
 		name = history.html;
 		path = "/Users/admin/Programs/Permanent Eraser/English.lproj/Permanent Eraser Help/pgs/history.html";
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {803, 3718}}";
-			sepNavSelRange = "{1157, 0}";
-			sepNavVisRange = "{687, 1284}";
-		};
 	};
 	84215A29150085D3008DD3BB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -1538,7 +1538,7 @@
 	};
 	84CF81EC08F5EACA00F021FB /* English */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 530}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 510}}";
 			sepNavSelRange = "{564, 0}";
 			sepNavVisRange = "{0, 1579}";
 			sepNavVisRect = "{{0, 0}, {623, 372}}";
