@@ -10,6 +10,7 @@
 #import "PEFile.h"
 #import "NSAlertCheckbox.h"
 #import "CTProgressBadge.h"
+#import "NSProcessInfo+PECocoaBackports.h"
 
 #include <unistd.h>		// required to retrieve uid
 #include <sys/param.h>
@@ -32,7 +33,7 @@
     
     NSTimer			*timer;
     
-    BOOL			files_were_dropped;	// were files dropped on the icon?
+    BOOL			filesWereDropped;	// were files dropped on the icon?
 	BOOL			firstTimeHere;		// indicates first pass through the application
 	BOOL			warnBeforeErasing;	// pop up warning message before deleting files
 	BOOL			suppressCannotEraseWarning;	// whether to display warning when a file can't be erased
@@ -74,6 +75,7 @@
 	CTProgressBadge *badge;
 	
 	NSPipe			*pipe;
+	NSThread		*preparationThread;
 	
 	NSUserDefaults	*prefs;
 	
@@ -83,7 +85,6 @@
 - (void) appWillTerminateNotification: (NSNotification *)aNotification;
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification;
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames;
-//- (BOOL) application: (NSApplication *)theApplication openFile: (NSString *)filename;
 - (void) addFileToArray: (NSString *) filename;
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;
@@ -107,7 +108,6 @@
 - (NSString *) fileNameString;
 - (BOOL) checkPermissions: (NSString *)path;
 - (BOOL) containsResourceFork:(NSString *)path;
-- (BOOL) isFileSymbolicLink: (NSString *)path;
 - (BOOL) isVolume: (NSString *) volumePath;
 - (BOOL) isErasableDisc: (NSString *) volumePath;
 - (NSString *) volumeType: (NSString *) volumePath;

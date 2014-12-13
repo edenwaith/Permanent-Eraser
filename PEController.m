@@ -64,7 +64,7 @@
     trash_files			= [[NSMutableArray alloc] init];
 	badge				= [[CTProgressBadge alloc] init];
     pEraser				= nil; 		// initialize the NSTask
-    files_were_dropped 	= NO;
+    filesWereDropped 	= NO;
     uid					= [[NSString alloc] initWithFormat:@"%d", getuid()];
 //	uid					= [NSString stringWithFormat: @"%d", getuid()];	// This has issues and doesn't save properly on Mac OS 10.3 and 10.4
 //	uid					= [[NSNumber numberWithInt: getuid()] stringValue]; 
@@ -242,94 +242,189 @@
 // Need to make the PEController a delegate of the File Owner
 // -------------------------------------------------------------------------
 // Created: 2. June 2003
-// Version: 20 August 2007 22:00
+// Version: 30 November 2014 20:39
 // =========================================================================
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification
 {
-    if (files_were_dropped == YES)
+    if (filesWereDropped == YES)
     {
         [self erase];
     }
     else // Search for files in .Trash and .Trashes
     {
-        BOOL isDir;
-        id object = nil;
-        int j = 0;
-        NSMutableString *currentDirectory = [[NSMutableString alloc] init];
-        NSDirectoryEnumerator *enumerator;
-        
-        NSArray *volumes = [[NSArray alloc] initWithArray: [fm directoryContentsAtPath: @"/Volumes"]];
-        
-		// Note: It seems that it thinks that .DS_Store is also a volume.  Avoid this.
-        for (j = 0; j < [volumes count]; j++)
-        {
-            // Check to see if the .Trashes exist, and if so, get the contents
-            // of the .Trashes and add them to trash_files (full path)
-            [currentDirectory setString: [[[@"/Volumes/" stringByAppendingPathComponent: [volumes objectAtIndex: j]]  
-                                        stringByAppendingPathComponent: @".Trashes"]
-                                        stringByAppendingPathComponent: uid]];
-                                        
-            if ( [fm fileExistsAtPath: currentDirectory isDirectory:&isDir] && isDir )
-            {
-                enumerator = [fm enumeratorAtPath: currentDirectory];
-                
-                while (object = [enumerator nextObject])
-                {
-					
-                    // check for bundled files, i.e. .app, .rtfd, etc.
-                    if ( [fm fileExistsAtPath: [currentDirectory stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
-                        [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [currentDirectory stringByAppendingPathComponent: object]] )
-                    {
-						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
-                        [enumerator skipDescendents];
-                    }
-                    else
-                    {
-						totalFilesSize += [self fileSize: [currentDirectory stringByAppendingPathComponent: object]];
-                        // this will reverse the array so a directory will be erased last after it is empty
-						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
-                    }
-                }
-            }            
-        }
-        
-        // Get the files in the home account's Trash
-        enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
-        
-        while(object = [enumerator nextObject])
-        {
-			// NSLog(@"%@", [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]);
-            // check for bundled files, i.e. .app, .rtfd, etc.
-            if ( [fm fileExistsAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
-                 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]] == YES )
-            {
-				// Generate a dictionary and insert that into the trash_files array
-				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];
-                [enumerator skipDescendents];	
-            }
-            else
-            {
-				// Generate a dictionary and insert that into the trash_files array
-                // this will reverse the array so a directory will be erased last after it's empty
-				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];				
-            }
-        }
-        
-        [volumes dealloc];
-        [currentDirectory dealloc];
+//        BOOL isDir;
+//        id object = nil;
+//        int j = 0;
+//        NSDirectoryEnumerator *enumerator;
+//        NSArray *volumes = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
+//		
+//		// Note: It seems that it thinks that .DS_Store is also a volume.  Avoid this.
+//        for (j = 0; j < [volumes count]; j++)
+//        {
+//            // Check to see if the .Trashes exist, and if so, get the contents
+//            // of the .Trashes and add them to trash_files (full path)			
+//			NSString *currentDirectory = [NSString stringWithString: [[[volumes objectAtIndex:j]
+//										  stringByAppendingPathComponent: @".Trashes"]
+//										  stringByAppendingPathComponent: uid]];
+//                                       
+//            if ( [fm fileExistsAtPath: currentDirectory isDirectory:&isDir] && isDir )
+//            {
+//                enumerator = [fm enumeratorAtPath: currentDirectory];
+//                
+//                while (object = [enumerator nextObject])
+//                {
+//                    // check for bundled files, i.e. .app, .rtfd, etc.
+//                    if ( [fm fileExistsAtPath: [currentDirectory stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
+//                        [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [currentDirectory stringByAppendingPathComponent: object]] )
+//                    {
+//						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
+//                        [enumerator skipDescendents];
+//                    }
+//                    else
+//                    {
+//						totalFilesSize += [self fileSize: [currentDirectory stringByAppendingPathComponent: object]];
+//                        // this will reverse the array so a directory will be erased last after it is empty
+//						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
+//                    }
+//                }
+//            }            
+//        }
+//        
+//        // Get the files in the home account's Trash
+//        enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
+//        
+//        while (object = [enumerator nextObject])
+//        {
+//            // check for bundled files, i.e. .app, .rtfd, etc.
+//            if ( [fm fileExistsAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
+//                 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]] == YES )
+//            {
+//				// Generate a dictionary and insert that into the trash_files array
+//				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];
+//                [enumerator skipDescendents];	
+//            }
+//            else
+//            {
+//				// Generate a dictionary and insert that into the trash_files array
+//                // this will reverse the array so a directory will be erased last after it's empty
+//				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];				
+//            }
+//        }
 		
-        [self erase];
+//        [self erase];
+		
+		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
+		
+		[[NSNotificationCenter defaultCenter] addObserver:self	
+														selector:@selector(preparationFinished:)	
+															name:NSThreadWillExitNotification 
+														  object:preparationThread];
+		
+		[preparationThread start];
+//		[NSThread detachNewThreadSelector: @selector(prepareFiles) toTarget: self withObject: nil];
     }
 }
 
+// Crreated: 10 December 2014 22:22
+- (void) prepareFiles
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	BOOL isDir;
+	id object = nil;
+	int j = 0;
+	NSDirectoryEnumerator *enumerator;
+	NSArray *volumes = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
+	
+	// Note: It seems that it thinks that .DS_Store is also a volume.  Avoid this.
+	for (j = 0; j < [volumes count]; j++)
+	{
+		// Check to see if the .Trashes exist, and if so, get the contents
+		// of the .Trashes and add them to trash_files (full path)			
+		NSString *currentDirectory = [NSString stringWithString: [[[volumes objectAtIndex:j]
+																   stringByAppendingPathComponent: @".Trashes"]
+																  stringByAppendingPathComponent: uid]];
+		
+		if ( [fm fileExistsAtPath: currentDirectory isDirectory:&isDir] && isDir )
+		{
+			enumerator = [fm enumeratorAtPath: currentDirectory];
+			
+			while (object = [enumerator nextObject])
+			{
+				// check for bundled files, i.e. .app, .rtfd, etc.
+				if ( [fm fileExistsAtPath: [currentDirectory stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
+					[[NSWorkspace sharedWorkspace] isFilePackageAtPath: [currentDirectory stringByAppendingPathComponent: object]] )
+				{
+					[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
+					[enumerator skipDescendents];
+				}
+				else
+				{
+					totalFilesSize += [self fileSize: [currentDirectory stringByAppendingPathComponent: object]];
+					// this will reverse the array so a directory will be erased last after it is empty
+					[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
+				}
+			}
+		}            
+	}
+	
+	// Get the files in the home account's Trash
+	enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
+	
+	while (object = [enumerator nextObject])
+	{
+		// check for bundled files, i.e. .app, .rtfd, etc.
+		if ( [fm fileExistsAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
+			[[NSWorkspace sharedWorkspace] isFilePackageAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]] == YES )
+		{
+			// Generate a dictionary and insert that into the trash_files array
+			[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];
+			[enumerator skipDescendents];
+		}
+		else
+		{
+			// Generate a dictionary and insert that into the trash_files array
+			// this will reverse the array so a directory will be erased last after it's empty
+			[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];				
+		}
+	}
+	
+	[pool release];
+	
+	[NSThread exit];
+}
 
+- (void)preparationFinished: (NSNotification *)aNotification 
+{
+	if ([preparationThread isFinished] == YES)
+	NSLog(@"Hurrah, the thread ended! %@", aNotification);
+	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
+	[preparationThread release], preparationThread = nil;
+	
+	[self erase];
+}
+
+
+// =========================================================================
+// (void) application:(NSApplication*) openFiles:
+// -------------------------------------------------------------------------
+// This method is only called when a file is dragged-n-dropped onto the
+// PE icon.  The timer is called to add each of the new files.
+// -------------------------------------------------------------------------
+// Created: 
+// Version: 
+// =========================================================================
 - (void) application:(NSApplication *)sender openFiles:(NSArray *)filenames
 {
     BOOL isDir;
 	BOOL isDir2;
     id object = nil;
-    files_were_dropped = YES;
 	int fn_idx = 0;
+	
+	if ([filenames count] > 0)
+	{
+		filesWereDropped = YES;
+	}
 	
 //	NSLog(@"Filenames count: %d", [filenames count]);
 	
@@ -338,40 +433,38 @@
 		NSString *filename = [filenames objectAtIndex: fn_idx];
 //		NSLog(@"Filename: %@", filename);
 		
-	// Set this up to identify only burnable discs
-	if ([self isVolume: filename] == YES && [self isErasableDisc: filename])
-	{
-		[self addFileToArray: filename];
-	}
-	else if ( [fm fileExistsAtPath: filename isDirectory:&isDir] && isDir &&
-			 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: filename] == NO && 
-			 [self isFileSymbolicLink: filename] == NO)
-    {
-        NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath: filename];
-		
-		[self addFileToArray: filename];
-        
-        while (object = [enumerator nextObject])
-        {
-			// if an item within the folder is a package
-			if ( [fm fileExistsAtPath: [filename stringByAppendingPathComponent: object] isDirectory:&isDir2] && isDir2 &&
-				[[NSWorkspace sharedWorkspace] isFilePackageAtPath: [filename stringByAppendingPathComponent: object]] == YES )
-            {
-				[self addFileToArray: [filename stringByAppendingPathComponent: object]];
-                [enumerator skipDescendents];
-            }
-            else
-            {				 
-				[self addFileToArray: [filename stringByAppendingPathComponent: object]];
-            }
-            
-        }
-		
-    }
-    else
-    {
-		[self addFileToArray: filename];		
-    }
+		// Set this up to identify only burnable discs
+		if ([self isVolume: filename] == YES && [self isErasableDisc: filename])
+		{
+			[self addFileToArray: filename];
+		}
+		else if ([fm fileExistsAtPath: filename isDirectory:&isDir] && isDir &&
+				 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: filename] == NO && 
+				 [fm isFileSymbolicLink: filename] == NO)
+		{
+			NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath: filename];
+			
+			[self addFileToArray: filename];
+			
+			while (object = [enumerator nextObject])
+			{
+				// if an item within the folder is a package
+				if ( [fm fileExistsAtPath: [filename stringByAppendingPathComponent: object] isDirectory:&isDir2] && isDir2 &&
+					[[NSWorkspace sharedWorkspace] isFilePackageAtPath: [filename stringByAppendingPathComponent: object]] == YES )
+				{
+					[self addFileToArray: [filename stringByAppendingPathComponent: object]];
+					[enumerator skipDescendents];
+				}
+				else
+				{				 
+					[self addFileToArray: [filename stringByAppendingPathComponent: object]];
+				}
+			}
+		}
+		else
+		{
+			[self addFileToArray: filename];		
+		}
 		
 	}
     
@@ -465,13 +558,14 @@
 	BOOL isDir3;
 	
 	// Symbolic link
-	[tempPEFile setIsSymbolicLink: [self isFileSymbolicLink: filename]];
+	[tempPEFile setIsSymbolicLink: [fm isFileSymbolicLink: filename]];
 	
 	// File size
 	if ([fm fileExistsAtPath: filename isDirectory:&isDir3] && isDir3 &&
 		[tempPEFile isSymbolicLink] == NO )
 	{
 		[tempPEFile setIsDirectory: YES];
+		
 		if ([[NSWorkspace sharedWorkspace] isFilePackageAtPath: filename] == YES)
 		{
 			[tempPEFile setIsPackage: YES];
@@ -650,10 +744,7 @@
 				}
 			}
 		}
-		
-		
 	}
-
 }
 
 
@@ -696,7 +787,7 @@
 {
 	unsigned long long pathFileSize = 0;
 	
-	if ([self isFileSymbolicLink: path] == YES)
+	if ([fm isFileSymbolicLink: path] == YES)
 	{
 		NSDictionary *fattrs = [fm fileAttributesAtPath: path traverseLink: NO];
 		
@@ -714,8 +805,6 @@
 		pathFileSize = [self fastFolderSizeAtFSRef: &ref];
 	}
 	
-
-	
 	return (pathFileSize);
 }
 
@@ -730,11 +819,11 @@
 	FSIterator	thisDirEnum = NULL;
 	unsigned long long totalSize = 0;
 	
-	
 	// Iterate the directory contents, recursing as necessary
 	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
 	{
-		const ItemCount kMaxEntriesPerFetch = 256;
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40; // 256;
 		ItemCount actualFetched;
 		FSRef	fetchedRefs[kMaxEntriesPerFetch];
 		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
@@ -742,6 +831,7 @@
 		OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
 										   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
 										   fetchedRefs, NULL, NULL);
+		
 		while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
 		{
 			ItemCount thisIndex;
@@ -750,7 +840,9 @@
 				// Recurse if it's a folder
 				if (fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
 				{
+					
 					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
+					NSLog(@"recurse: %llu", totalSize);
 				}
 				else
 				{
@@ -771,13 +863,14 @@
 											 fetchedRefs, NULL, NULL);
 			}
 		}
+		
 		FSCloseIterator(thisDirEnum);
 	}
 	else
 	{
 		FSCatalogInfo		fsInfo;
 
-		if(FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
 		{
 			if (fsInfo.rsrcLogicalSize > 0)
 			{
@@ -864,65 +957,40 @@
 // [pEraser setArguments: [NSArray arrayWithObjects: @"-P", @"-r", [@"~/.Trash/*" stringByExpandingTildeInPath], nil]];
 // -------------------------------------------------------------------------    
 // Created: 2. June 2003 14:20
-// Version: 29 December 2010 20:30
+// Version: 30 November 2014 21:03
 // =========================================================================
 - (void) erase
 {
     idx = 0;
     num_files = 0;
-	
     num_files = [trash_files count];
-		
-	// If srm already exists, use that version, which will help comply as 
-	// a Universal Binary to use the PPC or Intel version of srm
-//	if ([fm isExecutableFileAtPath: @"/usr/bin/srm"] == YES)
-//	{
-//		util_path = @"/usr/bin/srm";
-//	}
-//	else
-//	{
-		// NOTE: If using a custom erase type such as DoE, use bundled version of srm
-//		util_path  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
-//	}
-
+	
     [indicator setMaxValue: totalFilesSize*100];
-    
 	[indicator setIndeterminate: NO];
     [indicator stopAnimation: self];
-	[erasing_msg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
-
-//	NSLog(@"totalFilesSize: %llu", totalFilesSize);
 	
-//	NSLog(@"Files: %@", trash_files);
+	[erasing_msg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
 	
 	// Throw a warning about erasing files.
 	// Hold down the Option key when launching PE to prevent this warning from appearing.
 	if (warnBeforeErasing == YES)
-	{
-//		int choice = 0;
-		
-		if (files_were_dropped == YES && num_files == 1)	// Erasing one files
+	{		
+		if (filesWereDropped == YES && num_files == 1)	// Erasing one files
 		{
 			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-		informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+														   informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
 			
 			//[alert setAlertStyle: NSCriticalAlertStyle];
 			[alert setShowsCheckbox: YES];
 			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
 			[alert setCheckboxState: NSOffState];
 
-			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-//			choice = [alert runModal];
-//			
-//			if ([alert checkboxState] == NSOnState)
-//			{
-//				[prefs setBool:NO forKey: @"WarnBeforeErasing"];
-//			}			
+			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];			
 		}
-		else if (files_were_dropped == YES && num_files > 1)	// Erasing several files
+		else if (filesWereDropped == YES && num_files > 1)	// Erasing several files
 		{		
 			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
@@ -934,14 +1002,7 @@
 			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
 			[alert setCheckboxState: NSOffState];
 
-			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];			
-//			choice = [alert runModal];
-//			
-//			if ([alert checkboxState] == NSOnState)
-//			{
-//				[prefs setBool:NO forKey: @"WarnBeforeErasing"];
-//			}
-			
+			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}
 		else	// Erasing files from the Trash
 		{
@@ -956,22 +1017,7 @@
 			[alert setCheckboxState: NSOffState];
 			
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
-			
-//			choice = [alert runModal];
-//			
-//			if ([alert checkboxState] == NSOnState)
-//			{
-//				[prefs setBool:NO forKey: @"WarnBeforeErasing"];
-//			}
-			
-		}
-
-		// This code has been moved to the alertDidEnd method
-//		if (NSAlertSecondButtonReturn == choice || NSCancelButton == choice) // Quit button
-//		{
-//			[NSApp terminate:self];
-//		}
-		
+		}		
 	}
 	else	// no warning displayed, start erasing
 	{
@@ -1213,7 +1259,6 @@
 		if (([[trash_files objectAtIndex: idx] isOnSSD] == YES) ||
 		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) )
 		{
-//			NSLog(@"The file %@ may be on an SSD", [[trash_files objectAtIndex: idx] fileName]);
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fsvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
 		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)])
@@ -1230,7 +1275,6 @@
 		}
     }
 	
-
 	// Throw a warning if a file cannot be erased
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
 		([self checkPermissions: [[trash_files objectAtIndex: idx] path]] == NO)  ||
@@ -1364,7 +1408,7 @@
 			
 			
 			[fileSizeMsg setStringValue: [[[self formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [self formatFileSize: (double)totalFilesSize]]];
-	//		[self updateApplicationBadge];
+
 			[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 			
 			if (currentPercentage >= 100)
@@ -1382,7 +1426,6 @@
 	@catch (NSException * exception) 
 	{
 		NSLog(@"Exception name: %@ Reason: %@", [exception name], [exception reason]);
-		// NSLog(@"Exception info: %@", [exception userInfo]);
 	}
 	@finally 
 	{
@@ -1409,6 +1452,7 @@
 - (void) updateIndicator
 {
 	if (osVersion < 0x00001060)
+//	if ([NSProcessInfo isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
 	{
 		[indicator displayIfNeeded];  // force indicator to draw itself
 	}
@@ -1661,33 +1705,6 @@
 
 
 // =========================================================================
-// (BOOL) isFileSymbolicLink: (NSString *)path
-// -------------------------------------------------------------------------
-// Check to see if a file is a symbolic/soft link, so the link
-// can be deleted with rm instead of srm, so the original file is not 
-// accidentally erased.
-// -------------------------------------------------------------------------
-// Version: 19. November 2004 21:28
-// Created: 19. November 2004 21:28
-// =========================================================================
-- (BOOL) isFileSymbolicLink: (NSString *)path
-{
-    NSDictionary *fattrs = [fm fileAttributesAtPath: path traverseLink:NO];
-
-    if ( [[fattrs objectForKey:NSFileType] isEqual: @"NSFileTypeSymbolicLink"])
-    {
-//		NSLog(@"%@ is a symbolic link", path);
-        return (YES);
-    }
-    else
-    {
-        return (NO);
-    }
-
-}
-
-
-// =========================================================================
 // (BOOL) isVolume: (NSString *) volumePath
 // -------------------------------------------------------------------------
 // Check to see if the current "file" is a mounted volume (CD, HD, etc.)
@@ -1751,7 +1768,6 @@
 	{
 		return (NO);
 	}
-
 }
 
 
@@ -1874,7 +1890,7 @@
 
     if (idx >= num_files)  // Jobs are complete.  Quit the app.
     {
-        if (files_were_dropped == NO)
+        if (filesWereDropped == NO)
         {
             // Update the Trash icon to be empty.  This doesn't work in Mac OS 10.1.
             [[NSWorkspace sharedWorkspace] noteFileSystemChanged:[@"~/.Trash/" stringByExpandingTildeInPath]];
