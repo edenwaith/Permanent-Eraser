@@ -58,7 +58,6 @@
 	
     if ( [[fattrs objectForKey:NSFileType] isEqual: @"NSFileTypeSymbolicLink"])
     {
-		//		NSLog(@"%@ is a symbolic link", path);
         return (YES);
     }
     else

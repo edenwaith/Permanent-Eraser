@@ -310,7 +310,7 @@
 //				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];				
 //            }
 //        }
-		
+//		
 //        [self erase];
 		
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
@@ -397,11 +397,12 @@
 - (void)preparationFinished: (NSNotification *)aNotification 
 {
 	if ([preparationThread isFinished] == YES)
-	NSLog(@"Hurrah, the thread ended! %@", aNotification);
-	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
-	[preparationThread release], preparationThread = nil;
-	
-	[self erase];
+	{
+		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
+		[preparationThread release], preparationThread = nil;
+		
+		[self erase];
+	}
 }
 
 
@@ -812,7 +813,9 @@
 // =========================================================================
 // (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef
 // -------------------------------------------------------------------------
-//
+// Reference: http://www.cocoabuilder.com/archive/cocoa/136498-obtain-directory-size.html
+// -------------------------------------------------------------------------
+// Version: 14 December 2014 22:00
 // =========================================================================
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef
 {
@@ -823,7 +826,7 @@
 	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
 	{
 		// 40 is a better number, prevents the memory crash from too many recursive calls
-		const ItemCount kMaxEntriesPerFetch = 40; // 256;
+		const ItemCount kMaxEntriesPerFetch = 40;
 		ItemCount actualFetched;
 		FSRef	fetchedRefs[kMaxEntriesPerFetch];
 		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
@@ -842,7 +845,6 @@
 				{
 					
 					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
-					NSLog(@"recurse: %llu", totalSize);
 				}
 				else
 				{
@@ -859,7 +861,7 @@
 			{
 				// get more items
 				fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
-											 NULL, kFSCatInfoDataSizes | kFSCatInfoNodeFlags, fetchedInfos,
+											 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
 											 fetchedRefs, NULL, NULL);
 			}
 		}
@@ -886,6 +888,119 @@
 	return totalSize;
 }
 
+// fastFolderSizeAtFSRef2 is just an alternate example which was mentioned at
+// the bottom of this post:
+// http://www.cocoabuilder.com/archive/cocoa/136498-obtain-directory-size.html
+typedef struct SFetchedInfo
+{
+	FSRef          fetchedRefs[40];
+	FSCatalogInfo  fetchedInfos[40];
+}SFetchedInfo;
+
+- (unsigned long long) fastFolderSizeAtFSRef2:(FSRef*)theFileRef
+{
+	FSIterator	thisDirEnum = NULL;
+	unsigned long long totalSize = 0;
+	
+	// Iterate the directory contents, recursing as necessary
+	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
+	{
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40;
+		
+
+		
+		// might as well allocate all the storage with a single call...
+        struct SFetchedInfo *fetched = (struct SFetchedInfo*)malloc(sizeof(struct SFetchedInfo));
+		
+		//        if (fetched != NULL)
+		//        {
+		
+		//            ItemCount  actualFetched;
+		//            OSErr      fsErr = FSGetCatalogInfoBulk(thisDirEnum,
+		//													kMaxEntriesPerFetch, &actualFetched,
+		//													NULL, kFSCatInfoDataSizes |
+		//													kFSCatInfoNodeFlags, fetched->fInfos,
+		//													fetched->fFSRefs, NULL, NULL);
+		
+		if (fetched != NULL)
+        {
+            ItemCount  actualFetched;
+            OSErr      fsErr = FSGetCatalogInfoBulk(thisDirEnum,
+													kMaxEntriesPerFetch, &actualFetched,
+													NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags,
+													fetched->fetchedInfos,
+													fetched->fetchedRefs, NULL, NULL);
+			
+			//			ItemCount actualFetched;
+			//			FSRef	fetchedRefs[kMaxEntriesPerFetch];
+			//			FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
+			//			
+			//			OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+			//											   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+			//											   fetchedRefs, NULL, NULL);
+			
+			while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
+			{
+				ItemCount thisIndex;
+				for (thisIndex = 0; thisIndex < actualFetched; thisIndex++)
+				{
+					// Recurse if it's a folder
+					if (fetched->fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
+					{
+						
+						totalSize += [self fastFolderSizeAtFSRef:&fetched->fetchedRefs[thisIndex]];
+//						NSLog(@"recurse: %llu", totalSize);
+					}
+					else
+					{
+						// add the size for this item
+						totalSize += fetched->fetchedInfos[thisIndex].dataLogicalSize + fetched->fetchedInfos[thisIndex].rsrcLogicalSize;
+					}
+				}
+				
+				if (fsErr == errFSNoMoreItems)
+				{
+					break;
+				}
+				else
+				{
+					// get more items
+					//					fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+					//												 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+					//												 fetchedRefs, NULL, NULL);
+					fsErr = FSGetCatalogInfoBulk(thisDirEnum,
+												 kMaxEntriesPerFetch, &actualFetched,
+												 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags,
+												 fetched->fetchedInfos,
+												 fetched->fetchedRefs, NULL, NULL);
+				}
+			}
+			
+			free(fetched);
+		}
+		
+		FSCloseIterator(thisDirEnum);
+	}
+	else
+	{
+		FSCatalogInfo		fsInfo;
+		
+		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		{
+			if (fsInfo.rsrcLogicalSize > 0)
+			{
+				totalSize += (fsInfo.dataLogicalSize + fsInfo.rsrcLogicalSize);
+			}
+			else
+			{
+				totalSize += (fsInfo.dataLogicalSize);
+			}
+		}
+	}
+	
+	return totalSize;
+}
 
 // =========================================================================
 // (NSString *) formatFileSize: (double) file_size
@@ -1964,13 +2079,30 @@
 // This is called when the Cancel button (or ESC key) is pressed.
 // -------------------------------------------------------------------------
 // Created: 10. October 2003 1:32
-// Version: 28 October 2008 22:28
+// Version: 13 December 2014 19:36
 // =========================================================================
 - (IBAction) cancelErasing: (id) sender
 {
-    idx = num_files;
-	wasCanceled = YES;
-    [pEraser terminate];
+	[cancelButton setEnabled:NO];
+	
+	if (preparationThread != nil && [preparationThread isExecuting] == YES)
+	{
+		[preparationThread cancel];
+		
+		// An alternative method might be to periodically check the state of the 
+		// thread in the preparingFiles method, and shutting down if the thread 
+		// has been marked as cancelled, but that could potentially take more time
+		// rather than just shutting down at this point.
+		[preparationThread release], preparationThread = nil;
+		wasCanceled = YES;
+		[self shutdownPE];
+	}
+	else // Stop erasing files
+	{
+		idx = num_files;
+		wasCanceled = YES;
+		[pEraser terminate];
+	}
 }
 
 
@@ -2048,6 +2180,7 @@
 
 #pragma mark -
 #pragma mark General menu methods
+
 // =========================================================================
 // (IBAction) openPreferencePane: (id) sender
 // -------------------------------------------------------------------------
