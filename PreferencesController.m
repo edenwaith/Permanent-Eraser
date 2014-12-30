@@ -43,22 +43,11 @@ static PreferencesController *_sharedWindowController = nil;
 	return @"Preferences";
 }
 
-//- (id) init
-//{
-//	self = [super init];
-//	
-//	if (self)
-//	{
-//	}
-//	
-//	return (self);
-//}
-
 // Created: 2 July 2010 22:45
 - (void) dealloc
 {
 	// Unregister the NSWindowWillCloseNotification
-	    [[NSNotificationCenter defaultCenter] removeObserver: self name: NSWindowWillCloseNotification object:  [_sharedWindowController window]];
+	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSWindowWillCloseNotification object:  [_sharedWindowController window]];
 	[super dealloc];
 }
 
@@ -74,7 +63,8 @@ static PreferencesController *_sharedWindowController = nil;
 	[toolbar setSelectedItemIdentifier:GeneralToolbarItemIdentifier];
 	[[self window] setToolbar:toolbar];
 	
-	if (osVersion >= 0x0000104)
+//	if (osVersion >= 0x0000104)
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
 	{
 		[[self window] setShowsToolbarButton:NO];	// Supported in Mac OS 10.4 and later
 	}
@@ -124,8 +114,8 @@ static PreferencesController *_sharedWindowController = nil;
 	id fileErasingLevel		= [[NSUserDefaults standardUserDefaults] objectForKey: @"FileErasingLevel"];
 	id lastCheckedDate		= [[NSUserDefaults standardUserDefaults] objectForKey: @"LastCheckedDate"];
 	
-	Gestalt(gestaltSystemVersion, (SInt32 *) &osVersion);	// Set OS Version
-	
+//	Gestalt(gestaltSystemVersion, (SInt32 *) &osVersion);	// Set OS Version
+
 	if (opticalErasingLevel != nil)
 	{
 		if ([opticalDiscErasingButton itemWithTitle: NSLocalizedString(opticalErasingLevel, nil)] != nil )
@@ -133,7 +123,7 @@ static PreferencesController *_sharedWindowController = nil;
 			[opticalDiscErasingButton selectItemWithTitle: NSLocalizedString(opticalErasingLevel, nil)];
 		}
 	}
-	
+
 	if (fileErasingLevel != nil)
 	{
 		if ([fileErasingButton itemWithTitle: NSLocalizedString(fileErasingLevel, nil)] != nil)
@@ -142,11 +132,13 @@ static PreferencesController *_sharedWindowController = nil;
 		}
 	}
 
-	if (osVersion >= 0x00001060)	// Mac OS 10.6+
+//	if (osVersion >= 0x00001060)	// Mac OS 10.6+
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)	
 	{
 		pluginPath = [@"~/Library/Services/Erase.workflow" stringByExpandingTildeInPath];
 	}
-	else if (osVersion >= 0x00001040)	// Mac OS 10.4 + 10.5
+	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
+//	else if (osVersion >= 0x00001040)	// Mac OS 10.4 + 10.5
 	{
 		pluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
 	}
@@ -512,7 +504,8 @@ static PreferencesController *_sharedWindowController = nil;
 	if ([sender state] == NSOnState)	// Selected, install plug-in
 	{
 		// Copy plugin to the appropriate location
-		if (osVersion >= 0x00001060)	// Mac OS 10.6+
+//		if (osVersion >= 0x00001060)	// Mac OS 10.6+
+		if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)
 		{
 			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Erase.workflow"];
 			
@@ -533,7 +526,8 @@ static PreferencesController *_sharedWindowController = nil;
 				
 			}
 		}
-		else if (osVersion >= 0x0000105)	// Mac OS X 10.5
+//		else if (osVersion >= 0x0000105)	// Mac OS X 10.5
+		else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 5, 0}] == YES) // Mac OS X 10.5
 		{
 			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Permanent Eraser.workflow"];
 			

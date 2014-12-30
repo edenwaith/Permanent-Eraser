@@ -2,7 +2,7 @@
 //  PermanentEraser
 //
 //  Created by Chad Armstrong on Mon Jun 02 2003.
-//  Copyright (c) 2003-2007 Edenwaith. All rights reserved.
+//  Copyright (c) 2003-2014 Edenwaith. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
@@ -28,8 +28,6 @@
     NSFileManager 	*fm;  
     NSMutableArray 	*trash_files;
 	NSFileHandle	*handle;
-	
-	SInt32			osVersion;
     
     NSTimer			*timer;
     
@@ -78,7 +76,6 @@
 	NSThread		*preparationThread;
 	
 	NSUserDefaults	*prefs;
-	
 }
 
 

@@ -79,9 +79,19 @@
 		8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
 		8405E9DB0B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
 		8405E9DC0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E122A1A3D36E500E0C399 /* NSProcessInfo+Backport.h */; };
+		840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E122B1A3D36E500E0C399 /* NSProcessInfo+Backport.m */; };
+		840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
+		840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
+		840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
 		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */; };
+		84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */; };
 		84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
+		8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
+		8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
+		8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
 		84331B3C14E0D66E009FCE38 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
 		8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
@@ -233,7 +243,14 @@
 		8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSEvent+ModifierKeys.h"; sourceTree = "<group>"; };
 		8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSEvent+ModifierKeys.m"; sourceTree = "<group>"; };
 		8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EraseTrash.xcodeproj; path = EraseTrash/EraseTrash.xcodeproj; sourceTree = "<group>"; };
+		840E122A1A3D36E500E0C399 /* NSProcessInfo+Backport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Backport.h"; path = "Utils/NSProcessInfo+Backport.h"; sourceTree = "<group>"; };
+		840E122B1A3D36E500E0C399 /* NSProcessInfo+Backport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Backport.m"; path = "Utils/NSProcessInfo+Backport.m"; sourceTree = "<group>"; };
+		840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+PECocoaBackports.h"; path = "Utils/NSProcessInfo+PECocoaBackports.h"; sourceTree = "<group>"; };
+		840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+PECocoaBackports.m"; path = "Utils/NSProcessInfo+PECocoaBackports.m"; sourceTree = "<group>"; };
+		840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PECocoaBackportsGlobal.h; path = Utils/PECocoaBackportsGlobal.h; sourceTree = "<group>"; };
 		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
+		84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Utils.h"; path = "Utils/NSProcessInfo+Utils.h"; sourceTree = "<group>"; };
+		84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Utils.m"; path = "Utils/NSProcessInfo+Utils.m"; sourceTree = "<group>"; };
 		84267ED70EE6456D00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED80EE6457900F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84267EDA0EE6458B00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -495,6 +512,13 @@
 				8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */,
 				8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */,
 				8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */,
+				840E122A1A3D36E500E0C399 /* NSProcessInfo+Backport.h */,
+				840E122B1A3D36E500E0C399 /* NSProcessInfo+Backport.m */,
+				840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */,
+				840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */,
+				840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */,
+				84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */,
+				84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -541,6 +565,10 @@
 				84567D08132C621A0070AD1A /* CTProgressBadge.h in Headers */,
 				84567D09132C621A0070AD1A /* PreferencesController.h in Headers */,
 				84567D0A132C621A0070AD1A /* NSFileManager+Utils.h in Headers */,
+				840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */,
+				840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */,
+				840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */,
+				84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +584,8 @@
 				8440847D10C8B57B009EA3C5 /* CTProgressBadge.h in Headers */,
 				849D04A011C9C93F00BCE8F2 /* PreferencesController.h in Headers */,
 				8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */,
+				8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */,
+				8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +796,9 @@
 				84567D20132C621A0070AD1A /* CTProgressBadge.m in Sources */,
 				84567D21132C621A0070AD1A /* PreferencesController.m in Sources */,
 				84567D22132C621A0070AD1A /* NSFileManager+Utils.m in Sources */,
+				840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */,
+				840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,6 +814,7 @@
 				8440847E10C8B57B009EA3C5 /* CTProgressBadge.m in Sources */,
 				849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */,
 				8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */,
+				8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

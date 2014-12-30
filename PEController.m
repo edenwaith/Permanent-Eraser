@@ -2,7 +2,7 @@
 //  PermanentEraser
 //
 //  Created by Chad Armstrong on Mon Jun 02 2003.
-//  Copyright (c) 2003-2007 Edenwaith. All rights reserved.
+//  Copyright (c) 2003-2014 Edenwaith. All rights reserved.
 //
 
 // How to add a badge using Cocoa
@@ -78,8 +78,6 @@
 	beepBeforeTerminating		= YES;
 	suppressCannotEraseWarning	= NO;
 	isCurrentlyErasingDisc		= NO;
-	
-	Gestalt(gestaltSystemVersion, (SInt32 *) &osVersion);	// Set OS Version
 	
 	prefs = [[NSUserDefaults standardUserDefaults] retain];
 	   
@@ -251,68 +249,7 @@
         [self erase];
     }
     else // Search for files in .Trash and .Trashes
-    {
-//        BOOL isDir;
-//        id object = nil;
-//        int j = 0;
-//        NSDirectoryEnumerator *enumerator;
-//        NSArray *volumes = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
-//		
-//		// Note: It seems that it thinks that .DS_Store is also a volume.  Avoid this.
-//        for (j = 0; j < [volumes count]; j++)
-//        {
-//            // Check to see if the .Trashes exist, and if so, get the contents
-//            // of the .Trashes and add them to trash_files (full path)			
-//			NSString *currentDirectory = [NSString stringWithString: [[[volumes objectAtIndex:j]
-//										  stringByAppendingPathComponent: @".Trashes"]
-//										  stringByAppendingPathComponent: uid]];
-//                                       
-//            if ( [fm fileExistsAtPath: currentDirectory isDirectory:&isDir] && isDir )
-//            {
-//                enumerator = [fm enumeratorAtPath: currentDirectory];
-//                
-//                while (object = [enumerator nextObject])
-//                {
-//                    // check for bundled files, i.e. .app, .rtfd, etc.
-//                    if ( [fm fileExistsAtPath: [currentDirectory stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
-//                        [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [currentDirectory stringByAppendingPathComponent: object]] )
-//                    {
-//						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
-//                        [enumerator skipDescendents];
-//                    }
-//                    else
-//                    {
-//						totalFilesSize += [self fileSize: [currentDirectory stringByAppendingPathComponent: object]];
-//                        // this will reverse the array so a directory will be erased last after it is empty
-//						[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
-//                    }
-//                }
-//            }            
-//        }
-//        
-//        // Get the files in the home account's Trash
-//        enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
-//        
-//        while (object = [enumerator nextObject])
-//        {
-//            // check for bundled files, i.e. .app, .rtfd, etc.
-//            if ( [fm fileExistsAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir &&
-//                 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]] == YES )
-//            {
-//				// Generate a dictionary and insert that into the trash_files array
-//				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];
-//                [enumerator skipDescendents];	
-//            }
-//            else
-//            {
-//				// Generate a dictionary and insert that into the trash_files array
-//                // this will reverse the array so a directory will be erased last after it's empty
-//				[self addFileToArray: [[@"~/.Trash/" stringByExpandingTildeInPath] stringByAppendingPathComponent: object]];				
-//            }
-//        }
-//		
-//        [self erase];
-		
+    {		
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self	
@@ -321,7 +258,6 @@
 														  object:preparationThread];
 		
 		[preparationThread start];
-//		[NSThread detachNewThreadSelector: @selector(prepareFiles) toTarget: self withObject: nil];
     }
 }
 
@@ -342,8 +278,8 @@
 		// Check to see if the .Trashes exist, and if so, get the contents
 		// of the .Trashes and add them to trash_files (full path)			
 		NSString *currentDirectory = [NSString stringWithString: [[[volumes objectAtIndex:j]
-																   stringByAppendingPathComponent: @".Trashes"]
-																  stringByAppendingPathComponent: uid]];
+															stringByAppendingPathComponent: @".Trashes"]
+															stringByAppendingPathComponent: uid]];
 		
 		if ( [fm fileExistsAtPath: currentDirectory isDirectory:&isDir] && isDir )
 		{
@@ -396,7 +332,7 @@
 
 - (void)preparationFinished: (NSNotification *)aNotification 
 {
-	if ([preparationThread isFinished] == YES)
+	if (preparationThread != nil)
 	{
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
 		[preparationThread release], preparationThread = nil;
@@ -427,12 +363,9 @@
 		filesWereDropped = YES;
 	}
 	
-//	NSLog(@"Filenames count: %d", [filenames count]);
-	
 	for (fn_idx = 0; fn_idx < [filenames count]; fn_idx++)
 	{
 		NSString *filename = [filenames objectAtIndex: fn_idx];
-//		NSLog(@"Filename: %@", filename);
 		
 		// Set this up to identify only burnable discs
 		if ([self isVolume: filename] == YES && [self isErasableDisc: filename])
@@ -466,7 +399,6 @@
 		{
 			[self addFileToArray: filename];		
 		}
-		
 	}
     
     if (!timer)
@@ -476,74 +408,8 @@
 											   selector: @selector(addNewFiles:)
 											   userInfo: nil
 												repeats: YES];
-    }
-	
+    }	
 }
-
-/*
-// =========================================================================
-// (void) application:(NSApplication*) openFile:
-// -------------------------------------------------------------------------
-// This method is only called when a file is dragged-n-dropped onto the
-// PE icon.  The timer is called to add each of the new files.
-// -------------------------------------------------------------------------
-// Created: 21. April 2004 
-// Version: 29 June 2009 21:25
-// =========================================================================
-- (BOOL) application:(NSApplication *)theApplication openFile:(NSString *)filename
-{
-    BOOL isDir;
-	BOOL isDir2;
-    id object = nil;
-    files_were_dropped = YES;
-
-	// Set this up to identify only burnable discs
-	if ([self isVolume: filename] == YES && [self isErasableDisc: filename])
-	{
-		[self addFileToArray: filename];
-	}
-	else if ( [fm fileExistsAtPath: filename isDirectory:&isDir] && isDir &&
-         [[NSWorkspace sharedWorkspace] isFilePackageAtPath: filename] == NO && 
-		 [self isFileSymbolicLink: filename] == NO)
-    {
-        NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath: filename];
-		
-		[self addFileToArray: filename];
-        
-        while (object = [enumerator nextObject])
-        {
-			// if an item within the folder is a package
-			if ( [fm fileExistsAtPath: [filename stringByAppendingPathComponent: object] isDirectory:&isDir2] && isDir2 &&
-                 [[NSWorkspace sharedWorkspace] isFilePackageAtPath: [filename stringByAppendingPathComponent: object]] == YES )
-            {
-				[self addFileToArray: [filename stringByAppendingPathComponent: object]];
-                [enumerator skipDescendents];
-            }
-            else
-            {				 
-				[self addFileToArray: [filename stringByAppendingPathComponent: object]];
-            }
-            
-        }
-
-    }
-    else
-    {
-		[self addFileToArray: filename];		
-    }
-    
-    if (!timer)
-    {
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.0
-                         target: self
-                         selector: @selector(addNewFiles:)
-                         userInfo: nil
-                         repeats: YES];
-    }
-
-    return YES;
-}
-*/
 
 // =========================================================================
 // (void) addFileToArray: (NSString *) filename
@@ -611,7 +477,8 @@
 	}
 	
 	// This check can only be done on Mac OS 10.6+
-	if (osVersion >= 0x00001060)	// Mac OS 10.6+
+//	if (osVersion >= 0x00001060)	// Mac OS 10.6+
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)	
 	{
 		[tempPEFile setIsOnSSD: [fm isSolidState: [filename fileSystemRepresentation]]];
 	}
@@ -706,15 +573,14 @@
 	NSString *newPluginPath = nil;
 	
 	// Get installed plugin path and app's plugin path
-	if (osVersion >= 0x00001060)	// 10.6 or later
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES) // Mac OS 10.6 or later
 	{
 		oldPluginPath = [@"~/Library/Services/Erase.workflow" stringByExpandingTildeInPath];
 		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Erase.workflow"];
 		
 	}
-	else if (osVersion >= 0x0000104)	// Mac OS 10.4 + 10.5
+	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES) // Mac OS 10.4 + 10.5
 	{
-		// Should this be 0x0000104 or 0x00001040?  Do they both work?
 		oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
 		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Permanent Eraser.workflow"];
 	}
@@ -751,6 +617,7 @@
 
 #pragma mark -
 #pragma mark File Sizing Methods
+
 // =========================================================================
 // (FSRef) convertStringToFSRef: (NSString *) path
 // -------------------------------------------------------------------------
@@ -843,7 +710,6 @@
 				// Recurse if it's a folder
 				if (fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
 				{
-					
 					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
 				}
 				else
@@ -1566,8 +1432,9 @@ typedef struct SFetchedInfo
 // =========================================================================
 - (void) updateIndicator
 {
-	if (osVersion < 0x00001060)
-//	if ([NSProcessInfo isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
+//	if (osVersion < 0x00001060)
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
+//	if ([[NSProcessInfo processInfo] isOperatingSystemLessThanVersion:(PEOperatingSystemVersion){10, 6, 0}] == NO)
 	{
 		[indicator displayIfNeeded];  // force indicator to draw itself
 	}
@@ -1989,6 +1856,7 @@ typedef struct SFetchedInfo
 
 #pragma mark -
 #pragma mark Shutdown methods
+
 // =========================================================================
 // (void) doneErasing: (NSNotification *)aNotification
 // -------------------------------------------------------------------------
@@ -2064,7 +1932,6 @@ typedef struct SFetchedInfo
 				[pEraser release];
 				pEraser = nil;
 			}
-
         }
 		
         [self selectNextFile];
@@ -2101,7 +1968,11 @@ typedef struct SFetchedInfo
 	{
 		idx = num_files;
 		wasCanceled = YES;
-		[pEraser terminate];
+		
+		if (pEraser != nil)
+		{
+			[pEraser terminate];
+		}
 	}
 }
 

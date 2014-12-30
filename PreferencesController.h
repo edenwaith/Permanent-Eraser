@@ -29,8 +29,6 @@
 	IBOutlet NSButton		*pluginInstalledButton;
 	IBOutlet NSTextField	*pluginMsgField;
 	NSString				*pluginPath;
-	
-	SInt32	osVersion;
 }
 
 + (PreferencesController *) sharedWindowController;
