@@ -139,23 +139,24 @@
   }
 
 - (NSImage *)badgeOverlayImageWithProgress:(float)progress insetX:(float)dx y:(float)dy
-  {
-  NSImage *badgeImage = [self progressBadgeOfSize:42 withProgress:progress];
-  NSImage *overlayImage = [[NSImage alloc] initWithSize:NSMakeSize(128,128)];
+{
+	float iconSize = 128.0f;
+	NSImage *badgeImage = [self progressBadgeOfSize:42 withProgress:progress];
+	NSImage *overlayImage = [[NSImage alloc] initWithSize:NSMakeSize(iconSize,iconSize)];
   
-  //draw large icon in the upper right corner of the overlay image
-  [overlayImage lockFocus];
+	//draw large icon in the upper right corner of the overlay image
+	[overlayImage lockFocus];
 	  NSSize badgeSize = [badgeImage size];
 	  // [badgeImage compositeToPoint:NSMakePoint(128-dx-badgeSize.width,128-dy-badgeSize.height) operation:NSCompositeSourceOver];  
 	  [badgeImage compositeToPoint:NSMakePoint(128-dx-badgeSize.width, dy) operation:NSCompositeSourceOver];  
-  [overlayImage unlockFocus];
-  
-  return [overlayImage autorelease];
-  }
+	[overlayImage unlockFocus];
+
+	return [overlayImage autorelease];
+}
 
 - (void)badgeApplicationDockIconWithProgress:(float)progress insetX:(float)dx y:(float)dy
   {
-  NSImage *appIcon      = [NSImage imageNamed:@"NSApplicationIcon"];
+  NSImage *appIcon      = [NSImage imageNamed:@"PE_128x128"];
   NSImage *badgeOverlay = [self badgeOverlayImageWithProgress:progress insetX:dx y:dy];
   
   //Put the appIcon underneath the badgeOverlay

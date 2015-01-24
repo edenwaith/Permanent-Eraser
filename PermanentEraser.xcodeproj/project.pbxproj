@@ -92,6 +92,14 @@
 		8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
 		8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
+		842DA8361A73495F00BFD9F3 /* PE_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8341A73495F00BFD9F3 /* PE_128x128.png */; };
+		842DA8371A73495F00BFD9F3 /* PE_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */; };
+		842DA8381A73495F00BFD9F3 /* PE_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8341A73495F00BFD9F3 /* PE_128x128.png */; };
+		842DA8391A73495F00BFD9F3 /* PE_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */; };
+		842DA8541A73513E00BFD9F3 /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
+		842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
+		842DA8561A73513E00BFD9F3 /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
+		842DA8571A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
 		84331B3C14E0D66E009FCE38 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
 		8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
@@ -254,6 +262,10 @@
 		84267ED70EE6456D00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED80EE6457900F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84267EDA0EE6458B00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842DA8341A73495F00BFD9F3 /* PE_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PE_128x128.png; path = images/PE_128x128.png; sourceTree = "<group>"; };
+		842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PE_128x128@2x.png"; path = "images/PE_128x128@2x.png"; sourceTree = "<group>"; };
+		842DA8521A73513E00BFD9F3 /* PE_40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PE_40x40.png; path = images/PE_40x40.png; sourceTree = "<group>"; };
+		842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PE_40x40@2x.png"; path = "images/PE_40x40@2x.png"; sourceTree = "<group>"; };
 		8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Utils.h"; sourceTree = "<group>"; };
 		8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Utils.m"; sourceTree = "<group>"; };
 		8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTProgressBadge.h; path = Utils/CTProgressBadge.h; sourceTree = "<group>"; };
@@ -478,6 +490,10 @@
 				BEB16AB611DE29A600AD23A3 /* plugin.png */,
 				BEB16AB811DE29B000AD23A3 /* update.tiff */,
 				84985DB70D0F8EE500F3FA75 /* PE2_icon_40x40.png */,
+				842DA8521A73513E00BFD9F3 /* PE_40x40.png */,
+				842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */,
+				842DA8341A73495F00BFD9F3 /* PE_128x128.png */,
+				842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */,
 				8411A3DF0BAE2CBF00AA5045 /* PE.icns */,
 			);
 			name = Images;
@@ -719,6 +735,10 @@
 				84567D16132C621A0070AD1A /* general.png in Resources */,
 				84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */,
 				84907D26154B9AF900B614D0 /* srm in Resources */,
+				842DA8361A73495F00BFD9F3 /* PE_128x128.png in Resources */,
+				842DA8371A73495F00BFD9F3 /* PE_128x128@2x.png in Resources */,
+				842DA8541A73513E00BFD9F3 /* PE_40x40.png in Resources */,
+				842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +759,10 @@
 				849D2F8E12163EC1000F6610 /* Permanent Eraser.workflow in Resources */,
 				84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */,
 				84907D24154B9AE200B614D0 /* srm in Resources */,
+				842DA8381A73495F00BFD9F3 /* PE_128x128.png in Resources */,
+				842DA8391A73495F00BFD9F3 /* PE_128x128@2x.png in Resources */,
+				842DA8561A73513E00BFD9F3 /* PE_40x40.png in Resources */,
+				842DA8571A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,6 +1315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
