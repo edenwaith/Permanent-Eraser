@@ -163,13 +163,30 @@
 //	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.22 green: 0.22 blue: 0.22 alpha:1.0]];
 	[theWindow display];  // redraw the window to display the light grey background.
 	[theWindow center];	// center the window on the screen
+	
 	[erasing_msg setStringValue:NSLocalizedString(@"PreparingMessage", nil)];
 	
 	// Use a spinning indeterminate progress meter when retrieving the list of files
 	[indicator setIndeterminate: YES];
 	[indicator setUsesThreadedAnimation:YES];
     [indicator startAnimation: self];
-
+	
+	// Since the indicator has different heights, depending on the version of Mac OS X,
+	// Adjust the y coordinate for cancelButton to align with the indicator
+	NSRect indicatorFrame =  [indicator frame];
+	NSRect cancelButtonFrame = [cancelButton frame];
+	NSLog(@"indicatorFrame: %@ cancelButtonFrame: %@", NSStringFromRect(indicatorFrame), NSStringFromRect(cancelButtonFrame));
+	// Where: h1 = height of indicator, y1 = y coordinate of indicator, h2 = height of cancelButton, y2 = coordinate of cancelButton
+	// y2 = y1 + 1/2*h1 - 1/2*h2
+	float updatedCancelButtonY = cancelButtonFrame.origin.y; //indicatorFrame.origin.y + 0.5*indicatorFrame.size.height - 0.5*cancelButtonFrame.size.height;
+	
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 7, 0}] == YES)
+	{
+		cancelButtonFrame.origin.y = updatedCancelButtonY-1;
+		[cancelButton setFrame: cancelButtonFrame];
+		NSLog(@"Updated cancelButtonFrame: %@", NSStringFromRect([cancelButton frame]));
+	}
+	
 	// retrieve preference value for warnBeforeErasing
 	// defaults write com.edenwaith.permanenteraser WarnBeforeErasing -bool NO
 	// defaults write com.edenwaith.permanenteraser WarnBeforeErasing -bool YES
@@ -189,7 +206,6 @@
 		else
 		{
 			warnBeforeErasing = YES;
-			// [prefs setBool:NO forKey: @"WarnBeforeErasing"];
 		}
 	}
 	
@@ -876,7 +892,7 @@ typedef struct SFetchedInfo
 // Created: 8 August 2007 22:09
 // Version: 25 May 2010
 // =========================================================================
-- (NSString *) formatFileSize: (double) file_size
+- (NSString *) formatFileSizeOld: (double) file_size
 {
 	NSString *file_size_label;
 	double baseSize = 1024.0;	// For Mac OS 10.6+, set this to 1000.0
@@ -1169,7 +1185,7 @@ typedef struct SFetchedInfo
 			[self updateIndicator];
 		}
 		
-		[fileSizeMsg setStringValue: [[[self formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [self formatFileSize: (double)totalFilesSize]]];
+		[fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
 		[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 		
 		if (currentPercentageCD >= 100)
@@ -1388,7 +1404,7 @@ typedef struct SFetchedInfo
 			}
 			
 			
-			[fileSizeMsg setStringValue: [[[self formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [self formatFileSize: (double)totalFilesSize]]];
+			[fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
 
 			[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 			
@@ -1428,13 +1444,11 @@ typedef struct SFetchedInfo
 // Leopard.
 // -------------------------------------------------------------------------
 // Created: 29 November 2009 22:46
-// Version: 29 November 2009 22:46
+// Version: 16 February 2015 15:04
 // =========================================================================
 - (void) updateIndicator
 {
-//	if (osVersion < 0x00001060)
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
-//	if ([[NSProcessInfo processInfo] isOperatingSystemLessThanVersion:(PEOperatingSystemVersion){10, 6, 0}] == NO)
 	{
 		[indicator displayIfNeeded];  // force indicator to draw itself
 	}

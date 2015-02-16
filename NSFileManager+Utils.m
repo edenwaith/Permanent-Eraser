@@ -7,6 +7,7 @@
 //
 
 #import "NSFileManager+Utils.h"
+#import "NSProcessInfo+PECocoaBackports.h"
 
 @implementation NSFileManager (Utils)
 
@@ -199,54 +200,51 @@
 }
 
 // =========================================================================
-// (NSString *) formatFileSize: (double) file_size
+// (NSString *) formatFileSize: (double) fileSize
 // -------------------------------------------------------------------------
 // Should (double) file)_size be changed to unsigned long long?
 // -------------------------------------------------------------------------
 // Created: 8 August 2007 22:09
-// Version: 12 March 2012 14:01
+// Version: 16 February 2015 15:02
 // =========================================================================
-- (NSString *) formatFileSize: (double) file_size
+- (NSString *) formatFileSize: (double) fileSize
 {
-	NSString *file_size_label;
+	NSString *fileSizeLabel;
 	double baseSize = 1024.0;	// For Mac OS 10.6+, set this to 1000.0
-	
-	SInt32		systemVersion;
-	Gestalt(gestaltSystemVersion, (SInt32 *) &systemVersion); 	// What version of OS X are we running?
-	
-	if (systemVersion >= 0x00001060)
+		
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)
 	{
 		baseSize = 1000.0;
 	}
 	
-	if ( (file_size / baseSize) < 1.0)
+	if ( (fileSize / baseSize) < 1.0)
 	{
-		if (file_size == 1.0)
+		if (fileSize == 1.0)
 		{
-			file_size_label = @" byte";
+			fileSizeLabel = @" byte";
 		}
 		else 
 		{
-			file_size_label = @" bytes";
+			fileSizeLabel = @" bytes";
 		}
 	}
-	else if ((file_size / pow(baseSize, 2)) < 1.0)
+	else if ((fileSize / pow(baseSize, 2)) < 1.0)
 	{
-		file_size = file_size / baseSize;
-		file_size_label = @" KB";
+		fileSize = fileSize / baseSize;
+		fileSizeLabel = @" KB";
 	}
-	else if ((file_size / pow(baseSize, 3)) < 1.0)
+	else if ((fileSize / pow(baseSize, 3)) < 1.0)
 	{
-		file_size = file_size / pow(baseSize, 2);
-		file_size_label = @" MB";
+		fileSize = fileSize / pow(baseSize, 2);
+		fileSizeLabel = @" MB";
 	}
 	else
 	{
-		file_size = file_size / pow(baseSize, 3);
-		file_size_label = @" GB";
+		fileSize = fileSize / pow(baseSize, 3);
+		fileSizeLabel = @" GB";
 	}	
 	
-	return ([NSString stringWithFormat: @"%.2f%@", file_size, file_size_label]);
+	return ([NSString stringWithFormat: @"%.2f%@", fileSize, fileSizeLabel]);
 }
 
 // =========================================================================
