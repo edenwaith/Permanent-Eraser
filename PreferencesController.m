@@ -63,7 +63,6 @@ static PreferencesController *_sharedWindowController = nil;
 	[toolbar setSelectedItemIdentifier:GeneralToolbarItemIdentifier];
 	[[self window] setToolbar:toolbar];
 	
-//	if (osVersion >= 0x0000104)
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
 	{
 		[[self window] setShowsToolbarButton:NO];	// Supported in Mac OS 10.4 and later
@@ -90,7 +89,6 @@ static PreferencesController *_sharedWindowController = nil;
 // =========================================================================
 - (void) prefWindowClosed: (NSNotification *) aNotification
 {
-
 	[[NSUserDefaults standardUserDefaults] synchronize];	// Force the defaults to update
 	
 	[[NSApplication sharedApplication] stopModal];
@@ -132,14 +130,13 @@ static PreferencesController *_sharedWindowController = nil;
 		}
 	}
 
-//	if (osVersion >= 0x00001060)	// Mac OS 10.6+
+	// Mac OS 10.6+
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)	
 	{
 		pluginPath = [@"~/Library/Services/Erase.workflow" stringByExpandingTildeInPath];
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
-//	else if (osVersion >= 0x00001040)	// Mac OS 10.4 + 10.5
-	{
+	{	// Mac OS 10.4 + 10.5
 		pluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
 	}
 	else
@@ -232,14 +229,14 @@ static PreferencesController *_sharedWindowController = nil;
 	if ([identifier isEqualToString:GeneralToolbarItemIdentifier]) 
 	{
 		[item setLabel: NSLocalizedString(@"General", nil)];
-		[item setImage:[NSImage imageNamed:@"general"]];
+		[item setImage:[NSImage imageNamed:NSImageNamePreferencesGeneral]];
 		[item setTarget:self];
 		[item setAction:@selector(toggleActivePreferenceView:)];
 	} 
 	else if ([identifier isEqualToString:UpdateToolbarItemIdentifier]) 
 	{
 		[item setLabel:NSLocalizedString(@"Update", nil)];
-		[item setImage:[NSImage imageNamed:@"update"]];
+		[item setImage:[NSImage imageNamed:@"software_update"]];
 		[item setTarget:self];
 		[item setAction:@selector(toggleActivePreferenceView:)];
 	} 
