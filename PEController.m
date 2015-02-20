@@ -155,7 +155,7 @@
 // Brings focus to the window.  Otherwise, it is greyed out when running.
 // -------------------------------------------------------------------------
 // Created: 2. June 2003 14:20
-// Version: 1 January 2012 23:28
+// Version: 19 February 2015 22:07
 // =========================================================================
 - (void) awakeFromNib 
 {
@@ -173,18 +173,18 @@
 	
 	// Since the indicator has different heights, depending on the version of Mac OS X,
 	// Adjust the y coordinate for cancelButton to align with the indicator
-	NSRect indicatorFrame =  [indicator frame];
 	NSRect cancelButtonFrame = [cancelButton frame];
-	NSLog(@"indicatorFrame: %@ cancelButtonFrame: %@", NSStringFromRect(indicatorFrame), NSStringFromRect(cancelButtonFrame));
-	// Where: h1 = height of indicator, y1 = y coordinate of indicator, h2 = height of cancelButton, y2 = coordinate of cancelButton
-	// y2 = y1 + 1/2*h1 - 1/2*h2
-	float updatedCancelButtonY = cancelButtonFrame.origin.y; //indicatorFrame.origin.y + 0.5*indicatorFrame.size.height - 0.5*cancelButtonFrame.size.height;
+	float updatedCancelButtonY = cancelButtonFrame.origin.y;
 	
-	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 7, 0}] == YES)
-	{
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 10, 0}] == YES)
+	{	// Yosemite and later
 		cancelButtonFrame.origin.y = updatedCancelButtonY-1;
 		[cancelButton setFrame: cancelButtonFrame];
-		NSLog(@"Updated cancelButtonFrame: %@", NSStringFromRect([cancelButton frame]));
+	}
+	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 7, 0}] == YES)
+	{	// Lion through Mavericks
+		cancelButtonFrame.origin.y = updatedCancelButtonY-1.5;
+		[cancelButton setFrame: cancelButtonFrame];
 	}
 	
 	// retrieve preference value for warnBeforeErasing
@@ -246,7 +246,6 @@
 	}
 	
 	[self checkInstalledPlugins];
-	
 }
 
 
