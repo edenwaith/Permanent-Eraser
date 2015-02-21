@@ -239,10 +239,10 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>840D490E1A96EA93008E8326</string>
+						<string>847162C51A982ABD009ED34F</string>
 						<key>history</key>
 						<array>
-							<string>841CCCE11A959F700011B24C</string>
+							<string>840D49101A96F334008E8326</string>
 						</array>
 					</dict>
 					<key>SplitCount</key>
@@ -352,7 +352,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {315, 671}}</string>
+							<string>{{0, 51}, {315, 671}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -403,7 +403,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>840D490D1A96EA93008E8326</string>
+										<string>847162C21A982ABD009ED34F</string>
 										<key>history</key>
 										<array>
 											<string>844717761204CC8D003CC74E</string>
@@ -491,7 +491,7 @@
 											<string>84207A0A1A958470005EC5FB</string>
 											<string>84207A0B1A958470005EC5FB</string>
 											<string>841CCCDC1A959F700011B24C</string>
-											<string>841CCCDE1A959F700011B24C</string>
+											<string>840D490F1A96F334008E8326</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -549,9 +549,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>840D49011A96EA22008E8326</string>
+				<string>847162C31A982ABD009ED34F</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>840D49021A96EA22008E8326</string>
+				<string>847162C41A982ABD009ED34F</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -670,7 +670,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>446098067.72645998</real>
+	<real>446180029.53458601</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -685,9 +685,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>847162C61A982ABD009ED34F</string>
+		<string>847162C71A982ABD009ED34F</string>
 		<string>84D2782E11C1E95B0085D314</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>84207A0F1A958470005EC5FB</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/admin/Programs/Mac/Permanent Eraser/PermanentEraser.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -768,7 +771,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>84D2782E11C1E95B0085D314</string>
-				<string>840D49041A96EA22008E8326</string>
+				<string>847162B81A9822EA009ED34F</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -888,13 +891,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>840D49051A96EA22008E8326</string>
+				<string>847162B91A9822EA009ED34F</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>840D49061A96EA22008E8326</string>
-				<string>840D49071A96EA22008E8326</string>
-				<string>840D49081A96EA22008E8326</string>
-				<string>840D49091A96EA22008E8326</string>
-				<string>840D490A1A96EA22008E8326</string>
+				<string>847162BA1A9822EA009ED34F</string>
+				<string>847162BB1A9822EA009ED34F</string>
+				<string>847162BC1A9822EA009ED34F</string>
+				<string>847162BD1A9822EA009ED34F</string>
+				<string>847162BE1A9822EA009ED34F</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -903,7 +906,7 @@
 			<key>WindowToolGUID</key>
 			<string>1CD10A99069EF8BA00B06720</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -1015,6 +1018,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -1050,7 +1055,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>841CCCE91A959F700011B24C</string>
+				<string>847162BF1A9822EA009ED34F</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1060,7 +1065,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>Identifier</key>
