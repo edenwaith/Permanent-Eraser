@@ -987,44 +987,43 @@ typedef struct SFetchedInfo
 	{		
 		if (filesWereDropped == YES && num_files == 1)	// Erasing one files
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
-															 defaultButton: NSLocalizedString(@"OK", nil)
-														   alternateButton: NSLocalizedString(@"Quit", nil)
-															   otherButton: nil
-														   informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
-			
-			//[alert setAlertStyle: NSCriticalAlertStyle];
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+											 defaultButton: NSLocalizedString(@"OK", nil)
+										   alternateButton: NSLocalizedString(@"Quit", nil)
+											   otherButton: nil
+								 informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+						
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle:NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState:NSOffState];
 
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];			
 		}
 		else if (filesWereDropped == YES && num_files > 1)	// Erasing several files
 		{		
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
-															 defaultButton: NSLocalizedString(@"OK", nil)
-														   alternateButton: NSLocalizedString(@"Quit", nil)
-															   otherButton: nil
-														   informativeText: NSLocalizedString(@"ErasingFilesWarning", nil)];
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+											 defaultButton: NSLocalizedString(@"OK", nil)
+										   alternateButton: NSLocalizedString(@"Quit", nil)
+											   otherButton: nil
+								 informativeTextWithFormat: NSLocalizedString(@"ErasingFilesWarning", nil)];
 			
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}
 		else	// Erasing files from the Trash
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-														   informativeText: NSLocalizedString(@"ErasingTrashWarning", nil)];
+														   informativeTextWithFormat: NSLocalizedString(@"ErasingTrashWarning", nil)];
 			
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 			
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}		
@@ -1052,9 +1051,9 @@ typedef struct SFetchedInfo
 // Created: 29 December 2010 20:30
 // Version: 29 December 2010 20:30
 // =========================================================================
-- (void) alertDidEnd: (NSAlertCheckbox *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo
+- (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo
 {
-	if ([alert checkboxState] == NSOnState)
+	if ([[alert suppressionButton] state] == NSOnState)	
 	{
 		[prefs setBool:NO forKey: @"WarnBeforeErasing"];
 	}
@@ -1294,19 +1293,19 @@ typedef struct SFetchedInfo
 		
 		if (suppressCannotEraseWarning == NO)
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-														   informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+														   informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [[trash_files objectAtIndex: idx] fileName]] ];
 
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 			
 			choice = [alert runModal];
 			
-			if ([alert checkboxState] == NSOnState)
+			if ([[alert suppressionButton] state] == NSOnState) 
 			{
 				// This setting is not saved permanently and is only set on a per-session basis
 				suppressCannotEraseWarning = YES;

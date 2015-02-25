@@ -8,7 +8,7 @@
 #import <Cocoa/Cocoa.h>
 #import <DiscRecording/DiscRecording.h>
 #import "PEFile.h"
-#import "NSAlertCheckbox.h"
+//#import "NSAlertCheckbox.h"
 #import "CTProgressBadge.h"
 #import "NSProcessInfo+PECocoaBackports.h"
 
@@ -89,10 +89,10 @@
 - (FSRef) convertStringToFSRef: (NSString *) path ;
 - (unsigned long long) fileSize: (NSString *) path;
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
-- (NSString *) formatFileSize: (double) file_size;
+//- (NSString *) formatFileSize: (double) file_size;
 - (void) addNewFiles : (NSTimer *) aTimer;
 - (void) erase;
-- (void) alertDidEnd: (NSAlertCheckbox *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
+- (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
 - (void) selectNextFile;
 - (void) eraseDisc;
 - (void) eraseNotification: (NSNotification*) notification;
