@@ -82,6 +82,7 @@
 - (void) appWillTerminateNotification: (NSNotification *)aNotification;
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification;
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames;
+- (void) prepareFiles;
 - (void) addFileToArray: (NSString *) filename;
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;

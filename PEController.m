@@ -64,6 +64,7 @@
     trash_files			= [[NSMutableArray alloc] init];
 	badge				= [[CTProgressBadge alloc] init];
     pEraser				= nil; 		// initialize the NSTask
+	preparationThread   = nil;
     filesWereDropped 	= NO;
     uid					= [[NSString alloc] initWithFormat:@"%d", getuid()];
 //	uid					= [NSString stringWithFormat: @"%d", getuid()];	// This has issues and doesn't save properly on Mac OS 10.3 and 10.4
@@ -127,6 +128,12 @@
 	pEraser = nil;
     [uid release];
     [trash_files release];
+	
+	if (preparationThread != nil)
+	{
+		[preparationThread release];
+		preparationThread = nil;
+	}
 	
     [super dealloc];
 }
@@ -261,10 +268,12 @@
 {
     if (filesWereDropped == YES)
     {
-        [self erase];
+        //[self erase];
     }
     else // Search for files in .Trash and .Trashes
     {		
+		/*
+		 // Perhaps consider naming the thread...
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self	
@@ -273,6 +282,9 @@
 														  object:preparationThread];
 		
 		[preparationThread start];
+		*/
+		
+		[self prepareFiles];
     }
 }
 
@@ -285,7 +297,7 @@
 // =========================================================================
 - (void) prepareFiles
 {
-	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+//	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	BOOL isDir;
 	id object = nil;
@@ -346,16 +358,18 @@
 		}
 	}
 	
-	[pool release];
+	[self erase];
 	
-	[NSThread exit];
+//	[pool release];
+//	
+//	[NSThread exit];
 }
 
 
 // =========================================================================
 // (void)preparationFinished: (NSNotification *)aNotification 
 // -------------------------------------------------------------------------
-// 
+// Stub code for now...
 // -------------------------------------------------------------------------
 // Crreated: 10 December 2014
 // =========================================================================
@@ -376,12 +390,16 @@
 // -------------------------------------------------------------------------
 // This method is only called when a file is dragged-n-dropped onto the
 // PE icon.  The timer is called to add each of the new files.
+// This method is initially called after applicationWillFinishLaunching, but
+// before applicationDidFinishLaunching.  Subsequent calls to this method
+// can be called after applicationDidFinishLaunching, which was particularyly
+// seen in Yosemite with a large batch of files.
 // -------------------------------------------------------------------------
-// Created: 
-// Version: 
+// Created: 2009 or 2010
+// Version: 21 March 2015 17:25
 // =========================================================================
 - (void) application:(NSApplication *)sender openFiles:(NSArray *)filenames
-{
+{	
     BOOL isDir;
 	BOOL isDir2;
     id object = nil;
@@ -430,6 +448,9 @@
 		}
 	}
     
+	// Fire timer at some later time. A timeInterval of 0.0 tells the run loop
+	// to process this right away, but first it has to get through all the pending
+	// open file messages.
     if (!timer)
     {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.0
@@ -439,6 +460,26 @@
 												repeats: YES];
     }	
 }
+
+
+// =========================================================================
+// (void) addNewFiles : (NSTimer *) aTimer
+// -------------------------------------------------------------------------
+// Add new files to the list of files that were dragged-n-dropped on the icon
+// This method is called by the timer that is set-up in the application:openFile:
+// method.
+// -------------------------------------------------------------------------
+// Created: 30 March 2004 23:52
+// Version: 21 March 2015 20:27
+// =========================================================================
+- (void) addNewFiles: (NSTimer *) aTimer
+{
+    [aTimer invalidate];
+    timer = nil;
+
+	[self erase];
+}
+
 
 // =========================================================================
 // (void) addFileToArray: (NSString *) filename
@@ -942,21 +983,6 @@ typedef struct SFetchedInfo
 #pragma mark -
 
 // =========================================================================
-// (void) addNewFiles : (NSTimer *) aTimer
-// -------------------------------------------------------------------------
-// Add new files to the list of files that were dragged-n-dropped on the icon
-// -------------------------------------------------------------------------
-// Created: 30. March 2004 23:52
-// Version: 30. March 2004 23:52
-// =========================================================================
-- (void) addNewFiles : (NSTimer *) aTimer
-{
-    [aTimer invalidate];
-    timer = nil;
-}
-
-
-// =========================================================================
 // (void) erase: 
 // -------------------------------------------------------------------------
 // NSFileManager: http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSFileManager_Class/Reference/Reference.html
@@ -984,7 +1010,7 @@ typedef struct SFetchedInfo
 	// Throw a warning about erasing files.
 	// Hold down the Option key when launching PE to prevent this warning from appearing.
 	if (warnBeforeErasing == YES)
-	{		
+	{	
 		if (filesWereDropped == YES && num_files == 1)	// Erasing one files
 		{
 			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
@@ -1111,7 +1137,6 @@ typedef struct SFetchedInfo
 	DRErase* erase;	
 
 	[progress_msg setStringValue: [self fileNameString]];
-	//[progress_msg setStringValue: [[trash_files objectAtIndex: idx] fileName]];
 	[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
 
 	device = [DRDevice deviceForBSDName: [self bsdDevNode: [[trash_files objectAtIndex: idx] path]]];	
@@ -1454,15 +1479,23 @@ typedef struct SFetchedInfo
 // always redraw itself properly.  This is not done in Mac OS 10.6+, since
 // it caused the program to crash when the window was minimized in Snow 
 // Leopard.
+//
+// The crashing issue was likely due to trying to update the interface
+// when not on the main thread.
 // -------------------------------------------------------------------------
 // Created: 29 November 2009 22:46
-// Version: 16 February 2015 15:04
+// Version: 20 March 2015 19:52
 // =========================================================================
 - (void) updateIndicator
 {
-	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
+	// If this is not the main thread, make a call to the main thread to update the interface.
+	if ([[NSThread currentThread] isMainThread] == NO)
 	{
-		[indicator displayIfNeeded];  // force indicator to draw itself
+		[indicator performSelectorOnMainThread:@selector(displayIfNeeded) withObject:nil waitUntilDone:NO];
+	}
+	else 
+	{
+		[indicator displayIfNeeded];
 	}
 }
 
