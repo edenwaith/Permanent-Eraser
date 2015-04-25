@@ -1348,7 +1348,7 @@
 					</object>
 					<object class="NSMenuItem" id="644146181">
 						<reference key="NSMenu" ref="912741385"/>
-						<string key="NSTitle">Preferences</string>
+						<string key="NSTitle">Preferences...</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSMnemonicLoc">2147483647</int>
 						<reference key="NSOnImage" ref="35465992"/>

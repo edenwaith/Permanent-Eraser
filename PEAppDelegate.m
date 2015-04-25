@@ -64,9 +64,6 @@
     
     [openPanel setCanChooseDirectories:YES];
     
-    // NSHomeDirectory() can be used instead of the first nil (for the directory
-    // path) to set the default directory to be the home directory.  Having
-    // the path set to nil opens to the last opened directory.
     result = [openPanel runModalForDirectory:nil file:nil types:nil];
     
     if (result == NSOKButton) 
