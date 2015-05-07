@@ -137,7 +137,7 @@ static PreferencesController *_sharedWindowController = nil;
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
 	{	// Mac OS 10.4 + 10.5
-		pluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+		pluginPath = [@"~/Library/Contextual Menu Items/EraseCMI.plugin" stringByExpandingTildeInPath];
 	}
 	else
 	{
@@ -466,20 +466,6 @@ static PreferencesController *_sharedWindowController = nil;
 //	NSLog(@"Formatted date string for locale %@: %@", [[dateFormatter locale] localeIdentifier], formattedDateString);
 	
 	return (formattedDateString);
-	
-	/*
-	// NOTE: This has been disabled since Mac OS 10.3 support is dropped in PE 2.6
-	NSString *formattedDateString = [[NSString alloc] initWithString:
-										[theDate
-										 descriptionWithCalendarFormat:@"%A %1d %B %Y %H:%M:%S" 
-										 timeZone:nil
-										 locale:[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]
-									 ]];
-//	NSLog(@"formattedDateString: %@", formattedDateString);
-	
-	return (formattedDateString);
-	*/
-
 }
 
 
@@ -501,7 +487,7 @@ static PreferencesController *_sharedWindowController = nil;
 	if ([sender state] == NSOnState)	// Selected, install plug-in
 	{
 		// Copy plugin to the appropriate location
-//		if (osVersion >= 0x00001060)	// Mac OS 10.6+
+		// Mac OS 10.6+
 		if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)
 		{
 			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Erase.workflow"];
@@ -523,16 +509,16 @@ static PreferencesController *_sharedWindowController = nil;
 				
 			}
 		}
-//		else if (osVersion >= 0x0000105)	// Mac OS X 10.5
+		// Mac OS X 10.5
 		else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 5, 0}] == YES) // Mac OS X 10.5
 		{
-			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Permanent Eraser.workflow"];
+			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"EraseCMI.plugin"];
 			
 			if ([fm fileExistsAtPath: pluginSourcePath] == YES) 
 			{
 				NSError *err = nil;
 				
-				// If the ~/Library/Workflows/Applications/Finder/ folder does not exist, create it first
+				// If the ~/Library/Contextual Menu Items/ folder does not exist, create it first
 				if ([fm fileExistsAtPath: [pluginPath stringByDeletingLastPathComponent]] == NO)
 				{
 					if ([fm createDirectoryAtPath:[pluginPath stringByDeletingLastPathComponent] withIntermediateDirectories: YES attributes: nil error: &err] == NO)
@@ -553,8 +539,18 @@ static PreferencesController *_sharedWindowController = nil;
 	{
 		if ([fm fileExistsAtPath: pluginPath] == YES)
 		{
-			[fm removeFileAtPath: pluginPath  handler: nil];
+			NSError *err = nil;
+			if ([fm removeItemAtPath: pluginPath error: &err] == NO)
+			{
+				NSLog(@"Error: Failed to delete file %@ (%@)", pluginPath, [err localizedDescription]);
+			}
 		}		 
+	}
+	
+	// For the Contextual Menu Item plug-in, restart the Finder
+	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
+	{
+		[[NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:[NSArray arrayWithObject:@"Finder"]] waitUntilExit];
 	}
 }
 
