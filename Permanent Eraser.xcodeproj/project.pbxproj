@@ -15,6 +15,7 @@
 		8401145A19EF637100AA17E6 /* trash2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8401145619EF637100AA17E6 /* trash2.png */; };
 		8401145D19EF63AD00AA17E6 /* empty_trash_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8401145B19EF63AD00AA17E6 /* empty_trash_alt.png */; };
 		8401145E19EF63AD00AA17E6 /* full_trash_alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 8401145C19EF63AD00AA17E6 /* full_trash_alt.png */; };
+		840473521B1EA6E4001327EB /* PLWeakCompatibilityStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 840473511B1EA6E4001327EB /* PLWeakCompatibilityStubs.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -37,6 +38,8 @@
 		8401145619EF637100AA17E6 /* trash2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash2.png; sourceTree = "<group>"; };
 		8401145B19EF63AD00AA17E6 /* empty_trash_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = empty_trash_alt.png; sourceTree = "<group>"; };
 		8401145C19EF63AD00AA17E6 /* full_trash_alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_trash_alt.png; sourceTree = "<group>"; };
+		840473501B1EA6E4001327EB /* PLWeakCompatibilityStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLWeakCompatibilityStubs.h; path = PLWeakCompatibility/PLWeakCompatibilityStubs.h; sourceTree = "<group>"; };
+		840473511B1EA6E4001327EB /* PLWeakCompatibilityStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLWeakCompatibilityStubs.m; path = PLWeakCompatibility/PLWeakCompatibilityStubs.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Permanent_Eraser-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Permanent_Eraser-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +106,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				840473451B1EA6C7001327EB /* PLWeakCompatibility */,
 				256AC3F00F4B6AF500CF3369 /* Permanent_Eraser_Prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
 			);
@@ -140,6 +144,15 @@
 				8401145619EF637100AA17E6 /* trash2.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		840473451B1EA6C7001327EB /* PLWeakCompatibility */ = {
+			isa = PBXGroup;
+			children = (
+				840473501B1EA6E4001327EB /* PLWeakCompatibilityStubs.h */,
+				840473511B1EA6E4001327EB /* PLWeakCompatibilityStubs.m */,
+			);
+			name = PLWeakCompatibility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +225,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* PEAppDelegate.m in Sources */,
+				840473521B1EA6E4001327EB /* PLWeakCompatibilityStubs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
