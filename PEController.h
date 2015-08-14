@@ -56,8 +56,7 @@
     
     IBOutlet id				theWindow;
 
-    IBOutlet NSTextField	*progress_msg;
-	IBOutlet NSTextField	*erasing_msg;
+	IBOutlet NSTextField	*erasingMsg;
 	IBOutlet NSTextField	*fileSizeMsg;
 	
 	IBOutlet NSImageView	*fileIcon;

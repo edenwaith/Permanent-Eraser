@@ -167,17 +167,16 @@
 - (void) awakeFromNib 
 {
 	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.909 green: 0.909 blue: 0.909 alpha:1.0]];
-//	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.22 green: 0.22 blue: 0.22 alpha:1.0]];
 	[theWindow display];  // redraw the window to display the light grey background.
 	[theWindow center];	// center the window on the screen
 	
-	[erasing_msg setStringValue:NSLocalizedString(@"PreparingMessage", nil)];
+	[erasingMsg setStringValue:NSLocalizedString(@"PreparingMessage", nil)];
 	
 	// Use a spinning indeterminate progress meter when retrieving the list of files
 	[indicator setIndeterminate: YES];
 	[indicator setUsesThreadedAnimation:YES];
     [indicator startAnimation: self];
-	
+		
 	// Since the indicator has different heights, depending on the version of Mac OS X,
 	// Adjust the y coordinate for cancelButton to align with the indicator
 	NSRect cancelButtonFrame = [cancelButton frame];
@@ -185,12 +184,12 @@
 	
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 10, 0}] == YES)
 	{	// Yosemite and later
-		cancelButtonFrame.origin.y = updatedCancelButtonY-1;
+		cancelButtonFrame.origin.y = updatedCancelButtonY-2.0;
 		[cancelButton setFrame: cancelButtonFrame];
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 7, 0}] == YES)
 	{	// Lion through Mavericks
-		cancelButtonFrame.origin.y = updatedCancelButtonY-1.5;
+		cancelButtonFrame.origin.y = updatedCancelButtonY-2.5;
 		[cancelButton setFrame: cancelButtonFrame];
 	}
 	
@@ -272,7 +271,7 @@
     }
     else // Search for files in .Trash and .Trashes
     {		
-		/*
+		
 		 // Perhaps consider naming the thread...
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
 		
@@ -282,9 +281,9 @@
 														  object:preparationThread];
 		
 		[preparationThread start];
-		*/
 		
-		[self prepareFiles];
+		
+//		[self prepareFiles];
     }
 }
 
@@ -297,7 +296,7 @@
 // =========================================================================
 - (void) prepareFiles
 {
-//	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	
 	BOOL isDir;
 	id object = nil;
@@ -360,9 +359,9 @@
 	
 	[self erase];
 	
-//	[pool release];
-//	
-//	[NSThread exit];
+	[pool release];
+	
+	[NSThread exit];
 }
 
 
@@ -375,12 +374,13 @@
 // =========================================================================
 - (void)preparationFinished: (NSNotification *)aNotification 
 {
-	if (preparationThread != nil)
+	if (preparationThread != nil && wasCanceled == NO)
 	{
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
 		[preparationThread release], preparationThread = nil;
 		
-		[self erase];
+//		[self erase];
+		[self performSelectorOnMainThread:@selector(erase) withObject:nil waitUntilDone:NO];
 	}
 }
 
@@ -1005,7 +1005,7 @@ typedef struct SFetchedInfo
 	[indicator setIndeterminate: NO];
     [indicator stopAnimation: self];
 	
-	[erasing_msg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
+	[erasingMsg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
 	
 	// Throw a warning about erasing files.
 	// Hold down the Option key when launching PE to prevent this warning from appearing.
@@ -1136,7 +1136,7 @@ typedef struct SFetchedInfo
 	DRDevice* device;
 	DRErase* erase;	
 
-	[progress_msg setStringValue: [self fileNameString]];
+	[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
 	[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
 
 	device = [DRDevice deviceForBSDName: [self bsdDevNode: [[trash_files objectAtIndex: idx] path]]];	
@@ -1356,8 +1356,8 @@ typedef struct SFetchedInfo
      
 		pipe = [[NSPipe alloc] init];
 		
-		[progress_msg setStringValue: [self fileNameString]];
-		//[progress_msg setStringValue: [[trash_files objectAtIndex: idx] fileName]];
+		[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
+
 		if ([[trash_files objectAtIndex: idx] icon] != nil)
 		{
 			[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
@@ -1623,7 +1623,7 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (NSString *) fileNameString
 // -------------------------------------------------------------------------
-// If a file name is too long (over the length of the progress_msg field), 
+// If a file name is too long (over the length of the eraseMsg field), 
 // the entire string will not print properly in the text field in the 
 // interface.  This checks if the file name exceeds the length limit, and
 // if so, then it puts an ellipse (ellipsis) in the middle of the file name
@@ -1637,7 +1637,7 @@ typedef struct SFetchedInfo
 	return ([[trash_files objectAtIndex: idx] fileName]);
 	
 	/*
-	 // Deprecated code.  Just use IB to truncate the middle of the text field
+	 // Deprecated code.  Just use IB to truncate the end of the text field
     NSMutableString *current_file_name = [[NSMutableString alloc] initWithString: [[trash_files objectAtIndex: idx] fileName]];
     int cfl_length = [current_file_name length];
     float cfl_len = 0.0;
@@ -2021,7 +2021,17 @@ typedef struct SFetchedInfo
 		// rather than just shutting down at this point.
 		[preparationThread release], preparationThread = nil;
 		wasCanceled = YES;
-		[self shutdownPE];
+		
+		// TODO: If the alert dialog is starting to drop down, dismiss it
+		
+		if ([[NSThread currentThread] isMainThread] == NO)
+		{
+			[self performSelectorOnMainThread:@selector(shutdownPE) withObject:nil waitUntilDone:NO];
+		}
+		else
+		{
+			[self shutdownPE];
+		}
 	}
 	else // Stop erasing files
 	{
