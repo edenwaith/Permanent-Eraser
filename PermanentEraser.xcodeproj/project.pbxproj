@@ -153,8 +153,6 @@
 		849D04A011C9C93F00BCE8F2 /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D049E11C9C93F00BCE8F2 /* PreferencesController.h */; };
 		849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D049F11C9C93F00BCE8F2 /* PreferencesController.m */; };
 		849D2F8612163E84000F6610 /* Erase.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
-		849D2F8E12163EC1000F6610 /* Permanent Eraser.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */; };
-		849D2FB51216401E000F6610 /* Permanent Eraser.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */; };
 		849D2FB61216401E000F6610 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
 		84DF85180F5A37CC00C272F1 /* PEFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF85160F5A37CC00C272F1 /* PEFile.h */; };
@@ -219,7 +217,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				849D2FB51216401E000F6610 /* Permanent Eraser.workflow in CopyFiles */,
 				849D2FB61216401E000F6610 /* Erase.workflow in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +299,6 @@
 		849D049E11C9C93F00BCE8F2 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		849D049F11C9C93F00BCE8F2 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		849D2F7D12163E84000F6610 /* Erase.workflow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Erase.workflow; path = "Plug-Ins/Erase.workflow"; sourceTree = "<group>"; };
-		849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Permanent Eraser.workflow"; path = "Plug-Ins/Permanent Eraser.workflow"; sourceTree = "<group>"; };
 		84CF81EC08F5EACA00F021FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84CF81F408F5EBCB00F021FB /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DF85160F5A37CC00C272F1 /* PEFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEFile.h; sourceTree = "<group>"; };
@@ -519,7 +515,6 @@
 		849D2F8812163EA5000F6610 /* Plug-Ins */ = {
 			isa = PBXGroup;
 			children = (
-				849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */,
 				849D2F7D12163E84000F6610 /* Erase.workflow */,
 			);
 			name = "Plug-Ins";
@@ -763,7 +758,6 @@
 				849D043C11C9C75500BCE8F2 /* Preferences.nib in Resources */,
 				BEB16AB711DE29A600AD23A3 /* plugin.png in Resources */,
 				849D2F8612163E84000F6610 /* Erase.workflow in Resources */,
-				849D2F8E12163EC1000F6610 /* Permanent Eraser.workflow in Resources */,
 				84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */,
 				84907D24154B9AE200B614D0 /* srm in Resources */,
 				842DA8381A73495F00BFD9F3 /* PE_128x128.png in Resources */,

@@ -550,7 +550,31 @@ static PreferencesController *_sharedWindowController = nil;
 	// For the Contextual Menu Item plug-in, restart the Finder
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
 	{
+		[self removeOldPlugin];
 		[[NSTask launchedTaskWithLaunchPath:@"/usr/bin/killall" arguments:[NSArray arrayWithObject:@"Finder"]] waitUntilExit];
+	}
+}
+
+// =========================================================================
+// (void) removeOldPlugin
+// -------------------------------------------------------------------------
+// For Leopard, remove the old workflow which is no longer used due to the 
+// new EraseCMI.plugin.
+// -------------------------------------------------------------------------
+// Created: 12 December 2015 21:30
+// Version: 12 December 2015 21:30
+// =========================================================================
+- (void) removeOldPlugin
+{
+	NSString *oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+	
+	if ([[NSFileManager defaultManager] fileExistsAtPath: oldPluginPath] == YES)
+	{
+		NSError *err = nil;
+		if ([[NSFileManager defaultManager] removeItemAtPath: oldPluginPath error: &err] == NO)
+		{
+			NSLog(@"Error: Failed to delete file %@ (%@)", oldPluginPath, [err localizedDescription]);
+		}
 	}
 }
 

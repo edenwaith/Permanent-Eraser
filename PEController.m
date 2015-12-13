@@ -265,12 +265,21 @@
 // =========================================================================
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification
 {
-    if (filesWereDropped == YES)
-    {
-        //[self erase];
-    }
-    else // Search for files in .Trash and .Trashes
-    {		
+    if (filesWereDropped != YES) // Search for files in .Trash and .Trashes
+    {	
+		NSBundle *dockBundle = [NSBundle bundleWithPath:@"/System/Library/CoreServices/Dock.app"];
+		
+		if (dockBundle != nil)
+		{
+			NSString *trashFullPath = [dockBundle pathForResource:@"trashfull" ofType:@"png"];
+			
+			if (trashFullPath != nil)
+			{
+				NSImage *trashFullImage = [[NSImage alloc] initWithContentsOfFile:trashFullPath];
+				[fileIcon setImage: trashFullImage];
+				[trashFullImage release];
+			}
+		}
 		
 		 // Perhaps consider naming the thread...
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
@@ -282,8 +291,6 @@
 		
 		[preparationThread start];
 		
-		
-//		[self prepareFiles];
     }
 }
 
@@ -357,8 +364,6 @@
 		}
 	}
 	
-	[self erase];
-	
 	[pool release];
 	
 	[NSThread exit];
@@ -368,9 +373,10 @@
 // =========================================================================
 // (void)preparationFinished: (NSNotification *)aNotification 
 // -------------------------------------------------------------------------
-// Stub code for now...
+// Call back method when the preparation thread is finished
 // -------------------------------------------------------------------------
 // Crreated: 10 December 2014
+// Version:  13 September 2015
 // =========================================================================
 - (void)preparationFinished: (NSNotification *)aNotification 
 {
@@ -379,11 +385,16 @@
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
 		[preparationThread release], preparationThread = nil;
 		
-//		[self erase];
+//		[self checkRunningThreadFromMethod:@"preparationFinished"];
+		
 		[self performSelectorOnMainThread:@selector(erase) withObject:nil waitUntilDone:NO];
 	}
 }
 
+- (void)checkRunningThreadFromMethod: (NSString *)methodName {
+	BOOL isRunningOnMainThread = [[NSThread currentThread] isMainThread];
+	NSLog(@"Running on main thread from %@ : %@", methodName, isRunningOnMainThread ? @"Yes" : @"No");
+}
 
 // =========================================================================
 // (void) application:(NSApplication*) openFiles:
@@ -392,7 +403,7 @@
 // PE icon.  The timer is called to add each of the new files.
 // This method is initially called after applicationWillFinishLaunching, but
 // before applicationDidFinishLaunching.  Subsequent calls to this method
-// can be called after applicationDidFinishLaunching, which was particularyly
+// can be called after applicationDidFinishLaunching, which was often
 // seen in Yosemite with a large batch of files.
 // -------------------------------------------------------------------------
 // Created: 2009 or 2010
@@ -997,6 +1008,7 @@ typedef struct SFetchedInfo
 // =========================================================================
 - (void) erase
 {
+//	[self checkRunningThreadFromMethod: @"erase"];
     idx = 0;
     num_files = 0;
     num_files = [trash_files count];
@@ -1311,7 +1323,7 @@ typedef struct SFetchedInfo
 	
 	// Throw a warning if a file cannot be erased
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
-		([self checkPermissions: [[trash_files objectAtIndex: idx] path]] == NO)  ||
+		// ([self checkPermissions: [[trash_files objectAtIndex: idx] path]] == NO)  ||
 		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
 	{
 		int choice = -1; 
@@ -1689,18 +1701,19 @@ typedef struct SFetchedInfo
 {
 	int fd;
 	const char * cpath = [path UTF8String];
+	BOOL isWritable = YES;
 	
 	if ( ((fd = open(cpath, O_WRONLY)) == -1) && (errno == EACCES) ) 
 	{
 		if ( chmod(cpath, S_IRUSR | S_IWUSR) == -1 ) 
 		{
-		  return (NO);
+			isWritable = NO;
 		}
 	}
 
 	close(fd);
 	
-	return (YES);
+	return isWritable;
 }
 
 
