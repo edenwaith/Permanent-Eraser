@@ -92,6 +92,10 @@
 		840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
 		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		8413969F1CCF178F00DEC0F7 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8413969D1CCF178F00DEC0F7 /* STPrivilegedTask.h */; };
+		841396A01CCF178F00DEC0F7 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413969E1CCF178F00DEC0F7 /* STPrivilegedTask.m */; };
+		841396A11CCF178F00DEC0F7 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8413969D1CCF178F00DEC0F7 /* STPrivilegedTask.h */; };
+		841396A21CCF178F00DEC0F7 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8413969E1CCF178F00DEC0F7 /* STPrivilegedTask.m */; };
 		84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */; };
 		84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */; };
 		84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
@@ -267,6 +271,8 @@
 		840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+PECocoaBackports.m"; path = "Utils/NSProcessInfo+PECocoaBackports.m"; sourceTree = "<group>"; };
 		840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PECocoaBackportsGlobal.h; path = Utils/PECocoaBackportsGlobal.h; sourceTree = "<group>"; };
 		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
+		8413969D1CCF178F00DEC0F7 /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPrivilegedTask.h; path = Utils/STPrivilegedTask.h; sourceTree = "<group>"; };
+		8413969E1CCF178F00DEC0F7 /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPrivilegedTask.m; path = Utils/STPrivilegedTask.m; sourceTree = "<group>"; };
 		84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Utils.h"; path = "Utils/NSProcessInfo+Utils.h"; sourceTree = "<group>"; };
 		84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Utils.m"; path = "Utils/NSProcessInfo+Utils.m"; sourceTree = "<group>"; };
 		84267ED70EE6456D00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
@@ -538,6 +544,8 @@
 				840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */,
 				84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */,
 				84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */,
+				8413969D1CCF178F00DEC0F7 /* STPrivilegedTask.h */,
+				8413969E1CCF178F00DEC0F7 /* STPrivilegedTask.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -588,6 +596,7 @@
 				840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */,
 				84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */,
+				8413969F1CCF178F00DEC0F7 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +614,7 @@
 				8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */,
 				8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */,
+				841396A11CCF178F00DEC0F7 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,6 +837,7 @@
 				840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */,
 				840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */,
 				84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */,
+				841396A01CCF178F00DEC0F7 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -843,6 +854,7 @@
 				849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */,
 				8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */,
 				8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				841396A21CCF178F00DEC0F7 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,6 +1021,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
@@ -1116,6 +1129,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.2;
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
@@ -1302,16 +1316,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.2;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				OTHER_LDFLAGS_ppc = "-prebind";
 				SDKROOT = macosx10.5;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Debug;
 		};
@@ -1319,7 +1327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
@@ -1329,6 +1337,7 @@
 		84D1577F08EB759400EF9E06 /* Default */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
 			};
@@ -1434,6 +1443,7 @@
 					ppc,
 					i386,
 				);
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 3.3;
 				GCC_WARN_MISSING_PARENTHESES = NO;
@@ -1542,6 +1552,7 @@
 		84F0303214B815E900B10804 /* Release Panther */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
 			};
