@@ -7,8 +7,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <DiscRecording/DiscRecording.h>
+
 #import "PEFile.h"
-//#import "NSAlertCheckbox.h"
 #import "CTProgressBadge.h"
 #import "NSProcessInfo+PECocoaBackports.h"
 

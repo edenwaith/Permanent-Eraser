@@ -177,7 +177,6 @@ static PreferencesController *_sharedWindowController = nil;
 #ifdef MAC_APP_STORE
 	return [NSArray arrayWithObjects:
 			GeneralToolbarItemIdentifier,
-			PlugInsToolbarItemIdentifier,
 			nil];
 #else
 	return [NSArray arrayWithObjects:
@@ -194,7 +193,6 @@ static PreferencesController *_sharedWindowController = nil;
 #ifdef MAC_APP_STORE
 	return [NSArray arrayWithObjects:
 			GeneralToolbarItemIdentifier,
-			PlugInsToolbarItemIdentifier,
 			nil];
 #else
 	return [NSArray arrayWithObjects:
@@ -212,7 +210,6 @@ static PreferencesController *_sharedWindowController = nil;
 #ifdef MAC_APP_STORE
 	return [NSArray arrayWithObjects:
 			GeneralToolbarItemIdentifier,
-			PlugInsToolbarItemIdentifier,
 			nil];
 #else
 	return [NSArray arrayWithObjects:

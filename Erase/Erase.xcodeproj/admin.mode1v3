@@ -240,6 +240,7 @@
 				<string>build-and-go</string>
 				<string>go</string>
 				<string>clean-target</string>
+				<string>clean</string>
 				<string>com.apple.ide.PBXToolbarStopButton</string>
 				<string>NSToolbarFlexibleSpaceItem</string>
 				<string>com.apple.pbx.toolbar.searchfield</string>
@@ -352,14 +353,14 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>849B2C1016062F460023B428</string>
+										<string>8408D9E41DADDD6D00CD98EF</string>
 										<key>history</key>
 										<array>
 											<string>847D821813FE031500973820</string>
 											<string>847D822D13FE04C900973820</string>
 											<string>84E2A17014AD8355000728E0</string>
 											<string>84221C03155E0BC600768456</string>
-											<string>84E8D2121602BE640056CEAC</string>
+											<string>849B2C1016062F460023B428</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -371,14 +372,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {824, 301}}</string>
+								<string>{{0, 0}, {824, 291}}</string>
 								<key>RubberWindowFrame</key>
 								<string>9 269 1032 609 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>301pt</string>
+							<string>291pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -391,14 +392,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 306}, {824, 262}}</string>
+								<string>{{0, 296}, {824, 272}}</string>
 								<key>RubberWindowFrame</key>
 								<string>9 269 1032 609 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>262pt</string>
+							<string>272pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -417,9 +418,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>849B2C0B16062EF00023B428</string>
+				<string>8408D9661D9CC50A00CD98EF</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>849B2C0C16062EF00023B428</string>
+				<string>8408D9671D9CC50A00CD98EF</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -540,7 +541,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>369504070.60799998</real>
+	<real>497933677.06914699</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -558,7 +559,7 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>842046FA1367AC2200081CBF</string>
-		<string>/Users/admin/Programs/Permanent Eraser/Erase/Erase.xcodeproj</string>
+		<string>/Users/admin/Programs/Mac/Permanent Eraser/Erase/Erase.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>9 269 1032 609 0 0 1440 878 </string>
@@ -638,7 +639,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>842046FA1367AC2200081CBF</string>
-				<string>849B2C0D16062EF00023B428</string>
+				<string>8408D9681D9CC50A00CD98EF</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

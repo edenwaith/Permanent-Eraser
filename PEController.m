@@ -1285,48 +1285,35 @@ typedef struct SFetchedInfo
     }
     else // regular file or directory
     {
-
-		// Perhaps should set the util_path here, and not in another method
-		// If srm already exists, use that version, which will help comply as 
-		// a Universal Binary to use the PPC or Intel version of srm
-		//	if ([fm isExecutableFileAtPath: @"/usr/bin/srm"] == YES)
-		//	{
-		//		util_path = @"/usr/bin/srm";
-		//	}
-		//	else
-		//	{
-		// NOTE: If using a custom erase type such as DoE, use bundled version of srm
 		NSString *utilPath  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
-		//	}
 		
         [pEraser setLaunchPath:utilPath];
 
 		// If the file is on a SSD, only erase once to prevent unnecessary wear on an SSD
 		if (([[trash_files objectAtIndex: idx] isOnSSD] == YES) ||
-		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) )
+		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) ) // 1-pass
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fsvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)])
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)]) // 3-pass DOE
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fEvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingMedium", nil)])
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-		else	// Otherwise, use the 35-pass Gutmann Method
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingGutmann", nil)]) // 35-pass Gutmann Method
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+		else // Default 7-pass DoD
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
     }
 	
 	// Throw a warning if a file cannot be erased
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
-		// ([self checkPermissions: [[trash_files objectAtIndex: idx] path]] == NO)  ||
 		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
 	{
-		int choice = -1; 
+		int choice = -1; // alert button selection
 		
 		if (suppressCannotEraseWarning == NO)
 		{
@@ -1349,7 +1336,6 @@ typedef struct SFetchedInfo
 			}
 		}
 
-
 		if (choice == 0) // Quit button
 		{
 			[[NSApplication sharedApplication] terminate:self];
@@ -1365,7 +1351,6 @@ typedef struct SFetchedInfo
 	}	
 	else
 	{
-     
 		pipe = [[NSPipe alloc] init];
 		
 		[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
