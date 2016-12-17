@@ -111,8 +111,6 @@ static PreferencesController *_sharedWindowController = nil;
 	id opticalErasingLevel	= [[NSUserDefaults standardUserDefaults] objectForKey: @"OpticalDiscErasingLevel"];
 	id fileErasingLevel		= [[NSUserDefaults standardUserDefaults] objectForKey: @"FileErasingLevel"];
 	id lastCheckedDate		= [[NSUserDefaults standardUserDefaults] objectForKey: @"LastCheckedDate"];
-	
-//	Gestalt(gestaltSystemVersion, (SInt32 *) &osVersion);	// Set OS Version
 
 	if (opticalErasingLevel != nil)
 	{

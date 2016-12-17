@@ -162,10 +162,12 @@
 // Brings focus to the window.  Otherwise, it is greyed out when running.
 // -------------------------------------------------------------------------
 // Created: 2. June 2003 14:20
-// Version: 19 February 2015 22:07
+// Version: 10 December 2016 22:00
 // =========================================================================
 - (void) awakeFromNib 
 {
+	[NSApp activateIgnoringOtherApps:YES]; // Bring app to foreground
+	
 	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.909 green: 0.909 blue: 0.909 alpha:1.0]];
 	[theWindow display];  // redraw the window to display the light grey background.
 	[theWindow center];	// center the window on the screen
@@ -264,7 +266,7 @@
 // Version: 30 November 2014 20:39
 // =========================================================================
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification
-{
+{	
     if (filesWereDropped != YES) // Search for files in .Trash and .Trashes
     {	
 		NSBundle *dockBundle = [NSBundle bundleWithPath:@"/System/Library/CoreServices/Dock.app"];
@@ -646,7 +648,7 @@
 // version, if necessary
 // -------------------------------------------------------------------------
 // Created: 2 January 2012 14:11
-// Version: 6 January 2012 17:44
+// Version: 10 December 2016 23:30
 // =========================================================================
 - (void) checkInstalledPlugins
 {
@@ -662,8 +664,18 @@
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES) // Mac OS 10.4 + 10.5
 	{
-		oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
-		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Permanent Eraser.workflow"];
+		NSString *workflowPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+		
+		if ([fm fileExistsAtPath: workflowPath] == YES)
+		{	// If the old workflow is still around, remove it and replace with the newer EraseCMI plugin
+			oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+		}
+		else
+		{	// Otherwise, default to replacing the newer EraseCMI plugin if it is installed
+			oldPluginPath = [@"~/Library/Contextual Menu Items/EraseCMI.plugin" stringByExpandingTildeInPath];
+		}
+		
+		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"EraseCMI.plugin"];
 	}
 	
 	// Check if plugin is installed
