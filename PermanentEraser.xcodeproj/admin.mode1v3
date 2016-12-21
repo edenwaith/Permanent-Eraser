@@ -239,7 +239,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>840F1A7D1E04E09600A16040</string>
+						<string>840F1A8F1E04F76500A16040</string>
 						<key>history</key>
 						<array>
 							<string>840F1A711DFD1AC700A16040</string>
@@ -279,7 +279,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>840F1A7E1E04E09600A16040</string>
+						<string>840F1A901E04F76500A16040</string>
 						<key>history</key>
 						<array>
 							<string>8407E7571DF510B20000F9F7</string>
@@ -335,6 +335,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -393,8 +395,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>49</integer>
-									<integer>41</integer>
+									<integer>39</integer>
 									<integer>37</integer>
 									<integer>36</integer>
 									<integer>35</integer>
@@ -403,7 +404,7 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 372}, {315, 559}}</string>
+							<string>{{0, 473}, {315, 559}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -435,14 +436,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>history.html</string>
+								<string>PermanentEraserHelp.html</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -450,11 +449,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>history.html</string>
+										<string>PermanentEraserHelp.html</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>840F1A7A1E04E09600A16040</string>
+										<string>840F1A8D1E04F76500A16040</string>
 										<key>history</key>
 										<array>
 											<string>844717761204CC8D003CC74E</string>
@@ -507,9 +506,7 @@
 											<string>84153CCD1A92AC2E00E30FB4</string>
 											<string>84153CD01A92F1C200E30FB4</string>
 											<string>84207A001A958145005EC5FB</string>
-											<string>84207A0B1A958470005EC5FB</string>
 											<string>84241C841ABCFA40006E460E</string>
-											<string>84241CA21ABE25FA006E460E</string>
 											<string>84241CA61ABE25FA006E460E</string>
 											<string>849D8E3C1AFB1AD0007CD676</string>
 											<string>842447361B759474007BE5A9</string>
@@ -545,7 +542,12 @@
 											<string>840F1A761E04E09600A16040</string>
 											<string>840F1A771E04E09600A16040</string>
 											<string>840F1A781E04E09600A16040</string>
-											<string>840F1A791E04E09600A16040</string>
+											<string>840F1A841E04F76500A16040</string>
+											<string>840F1A851E04F76500A16040</string>
+											<string>840F1A861E04F76500A16040</string>
+											<string>840F1A871E04F76500A16040</string>
+											<string>840F1A891E04F76500A16040</string>
+											<string>840F1A8B1E04F76500A16040</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -724,7 +726,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>503636118.54548198</real>
+	<real>503641957.049532</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
