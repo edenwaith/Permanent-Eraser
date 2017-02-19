@@ -141,4 +141,9 @@
 	return ([[NSWorkspace sharedWorkspace] iconForFile: _path]);
 }
 
+- (NSString *) description
+{
+	return [self fileName];
+}
+
 @end

@@ -128,7 +128,6 @@
 		84567D10132C621A0070AD1A /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		84567D12132C621A0070AD1A /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 849D043B11C9C75500BCE8F2 /* Preferences.nib */; };
 		84567D13132C621A0070AD1A /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
-		84567D16132C621A0070AD1A /* general.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16ABC11DE29C400AD23A3 /* general.png */; };
 		84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
 		84567D1B132C621A0070AD1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		84567D1C132C621A0070AD1A /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
@@ -154,8 +153,6 @@
 		849D04A011C9C93F00BCE8F2 /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D049E11C9C93F00BCE8F2 /* PreferencesController.h */; };
 		849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D049F11C9C93F00BCE8F2 /* PreferencesController.m */; };
 		849D2F8612163E84000F6610 /* Erase.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
-		849D2F8E12163EC1000F6610 /* Permanent Eraser.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */; };
-		849D2FB51216401E000F6610 /* Permanent Eraser.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */; };
 		849D2FB61216401E000F6610 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
 		84DF85180F5A37CC00C272F1 /* PEFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF85160F5A37CC00C272F1 /* PEFile.h */; };
@@ -173,7 +170,6 @@
 		84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84E724810C0D0E56005C0E9C /* Erase.action */; };
 		84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
 		BEB16AB711DE29A600AD23A3 /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
-		BEB16ABD11DE29C400AD23A3 /* general.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16ABC11DE29C400AD23A3 /* general.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,8 +217,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				849D2FB51216401E000F6610 /* Permanent Eraser.workflow in CopyFiles */,
 				849D2FB61216401E000F6610 /* Erase.workflow in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F0ED491B72FE1000C27D2A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +299,6 @@
 		849D049E11C9C93F00BCE8F2 /* PreferencesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesController.h; sourceTree = "<group>"; };
 		849D049F11C9C93F00BCE8F2 /* PreferencesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesController.m; sourceTree = "<group>"; };
 		849D2F7D12163E84000F6610 /* Erase.workflow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Erase.workflow; path = "Plug-Ins/Erase.workflow"; sourceTree = "<group>"; };
-		849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Permanent Eraser.workflow"; path = "Plug-Ins/Permanent Eraser.workflow"; sourceTree = "<group>"; };
 		84CF81EC08F5EACA00F021FB /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84CF81F408F5EBCB00F021FB /* German */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
 		84DF85160F5A37CC00C272F1 /* PEFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PEFile.h; sourceTree = "<group>"; };
@@ -314,7 +317,6 @@
 		84FCCDE008ECDE4A00333510 /* German */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = German; path = German.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84FCCDEC08ECDE7A00333510 /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BEB16AB611DE29A600AD23A3 /* plugin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plugin.png; path = images/plugin.png; sourceTree = "<group>"; };
-		BEB16ABC11DE29C400AD23A3 /* general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = general.png; path = images/general.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -488,7 +490,6 @@
 		849D043D11C9C7C000BCE8F2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				BEB16ABC11DE29C400AD23A3 /* general.png */,
 				BEB16AB611DE29A600AD23A3 /* plugin.png */,
 				84078F1C1A9449D4009AC273 /* plugin@2x.png */,
 				84078F081A9444C8009AC273 /* software_update.png */,
@@ -514,7 +515,6 @@
 		849D2F8812163EA5000F6610 /* Plug-Ins */ = {
 			isa = PBXGroup;
 			children = (
-				849D2F8912163EC1000F6610 /* Permanent Eraser.workflow */,
 				849D2F7D12163E84000F6610 /* Erase.workflow */,
 			);
 			name = "Plug-Ins";
@@ -641,9 +641,10 @@
 				84E63DB109B53F1500DA4444 /* Resources */,
 				84E63DB909B53F1500DA4444 /* Sources */,
 				84E63DBC09B53F1500DA4444 /* Frameworks */,
-				849D2F6412163B2B000F6610 /* ShellScript */,
 				84F6D3610C0BB41100CC11F4 /* CopyFiles */,
 				849D2FD51216404B000F6610 /* CopyFiles */,
+				849D2F6412163B2B000F6610 /* ShellScript */,
+				84F0ED491B72FE1000C27D2A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -734,7 +735,6 @@
 				84567D10132C621A0070AD1A /* PE.icns in Resources */,
 				84567D12132C621A0070AD1A /* Preferences.nib in Resources */,
 				84567D13132C621A0070AD1A /* plugin.png in Resources */,
-				84567D16132C621A0070AD1A /* general.png in Resources */,
 				84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */,
 				84907D26154B9AF900B614D0 /* srm in Resources */,
 				842DA8361A73495F00BFD9F3 /* PE_128x128.png in Resources */,
@@ -757,9 +757,7 @@
 				8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */,
 				849D043C11C9C75500BCE8F2 /* Preferences.nib in Resources */,
 				BEB16AB711DE29A600AD23A3 /* plugin.png in Resources */,
-				BEB16ABD11DE29C400AD23A3 /* general.png in Resources */,
 				849D2F8612163E84000F6610 /* Erase.workflow in Resources */,
-				849D2F8E12163EC1000F6610 /* Permanent Eraser.workflow in Resources */,
 				84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */,
 				84907D24154B9AE200B614D0 /* srm in Resources */,
 				842DA8381A73495F00BFD9F3 /* PE_128x128.png in Resources */,
@@ -799,7 +797,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\n";
+			shellScript = "# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1118,7 +1116,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_VERSION = 4.2;
+				GCC_VERSION = 4.0;
 				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
@@ -1304,16 +1302,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_VERSION = 4.2;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				OTHER_LDFLAGS_ppc = "-prebind";
 				SDKROOT = macosx10.5;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
 			};
 			name = Debug;
 		};
@@ -1347,17 +1338,21 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_i386 = 4.0;
 				GCC_VERSION_ppc = 4.0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS_ppc = "-prebind";
 				PREBINDING = NO;
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",

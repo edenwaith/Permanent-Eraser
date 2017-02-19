@@ -64,6 +64,7 @@
     trash_files			= [[NSMutableArray alloc] init];
 	badge				= [[CTProgressBadge alloc] init];
     pEraser				= nil; 		// initialize the NSTask
+	preparationThread   = nil;
     filesWereDropped 	= NO;
     uid					= [[NSString alloc] initWithFormat:@"%d", getuid()];
 //	uid					= [NSString stringWithFormat: @"%d", getuid()];	// This has issues and doesn't save properly on Mac OS 10.3 and 10.4
@@ -128,6 +129,12 @@
     [uid release];
     [trash_files release];
 	
+	if (preparationThread != nil)
+	{
+		[preparationThread release];
+		preparationThread = nil;
+	}
+	
     [super dealloc];
 }
 
@@ -155,22 +162,23 @@
 // Brings focus to the window.  Otherwise, it is greyed out when running.
 // -------------------------------------------------------------------------
 // Created: 2. June 2003 14:20
-// Version: 19 February 2015 22:07
+// Version: 10 December 2016 22:00
 // =========================================================================
 - (void) awakeFromNib 
 {
+	[NSApp activateIgnoringOtherApps:YES]; // Bring app to foreground
+	
 	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.909 green: 0.909 blue: 0.909 alpha:1.0]];
-//	[theWindow setBackgroundColor:[NSColor colorWithCalibratedRed: 0.22 green: 0.22 blue: 0.22 alpha:1.0]];
 	[theWindow display];  // redraw the window to display the light grey background.
 	[theWindow center];	// center the window on the screen
 	
-	[erasing_msg setStringValue:NSLocalizedString(@"PreparingMessage", nil)];
+	[erasingMsg setStringValue:NSLocalizedString(@"PreparingMessage", nil)];
 	
 	// Use a spinning indeterminate progress meter when retrieving the list of files
 	[indicator setIndeterminate: YES];
 	[indicator setUsesThreadedAnimation:YES];
     [indicator startAnimation: self];
-	
+		
 	// Since the indicator has different heights, depending on the version of Mac OS X,
 	// Adjust the y coordinate for cancelButton to align with the indicator
 	NSRect cancelButtonFrame = [cancelButton frame];
@@ -178,12 +186,12 @@
 	
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 10, 0}] == YES)
 	{	// Yosemite and later
-		cancelButtonFrame.origin.y = updatedCancelButtonY-1;
+		cancelButtonFrame.origin.y = updatedCancelButtonY-2.0;
 		[cancelButton setFrame: cancelButtonFrame];
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 7, 0}] == YES)
 	{	// Lion through Mavericks
-		cancelButtonFrame.origin.y = updatedCancelButtonY-1.5;
+		cancelButtonFrame.origin.y = updatedCancelButtonY-2.5;
 		[cancelButton setFrame: cancelButtonFrame];
 	}
 	
@@ -258,13 +266,24 @@
 // Version: 30 November 2014 20:39
 // =========================================================================
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification
-{
-    if (filesWereDropped == YES)
-    {
-        [self erase];
-    }
-    else // Search for files in .Trash and .Trashes
-    {		
+{	
+    if (filesWereDropped != YES) // Search for files in .Trash and .Trashes
+    {	
+		NSBundle *dockBundle = [NSBundle bundleWithPath:@"/System/Library/CoreServices/Dock.app"];
+		
+		if (dockBundle != nil)
+		{
+			NSString *trashFullPath = [dockBundle pathForResource:@"trashfull" ofType:@"png"];
+			
+			if (trashFullPath != nil)
+			{
+				NSImage *trashFullImage = [[NSImage alloc] initWithContentsOfFile:trashFullPath];
+				[fileIcon setImage: trashFullImage];
+				[trashFullImage release];
+			}
+		}
+		
+		 // Perhaps consider naming the thread...
 		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self	
@@ -273,6 +292,7 @@
 														  object:preparationThread];
 		
 		[preparationThread start];
+		
     }
 }
 
@@ -355,33 +375,44 @@
 // =========================================================================
 // (void)preparationFinished: (NSNotification *)aNotification 
 // -------------------------------------------------------------------------
-// 
+// Call back method when the preparation thread is finished
 // -------------------------------------------------------------------------
 // Crreated: 10 December 2014
+// Version:  13 September 2015
 // =========================================================================
 - (void)preparationFinished: (NSNotification *)aNotification 
 {
-	if (preparationThread != nil)
+	if (preparationThread != nil && wasCanceled == NO)
 	{
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
 		[preparationThread release], preparationThread = nil;
 		
-		[self erase];
+//		[self checkRunningThreadFromMethod:@"preparationFinished"];
+		
+		[self performSelectorOnMainThread:@selector(erase) withObject:nil waitUntilDone:NO];
 	}
 }
 
+- (void)checkRunningThreadFromMethod: (NSString *)methodName {
+	BOOL isRunningOnMainThread = [[NSThread currentThread] isMainThread];
+	NSLog(@"Running on main thread from %@ : %@", methodName, isRunningOnMainThread ? @"Yes" : @"No");
+}
 
 // =========================================================================
 // (void) application:(NSApplication*) openFiles:
 // -------------------------------------------------------------------------
 // This method is only called when a file is dragged-n-dropped onto the
 // PE icon.  The timer is called to add each of the new files.
+// This method is initially called after applicationWillFinishLaunching, but
+// before applicationDidFinishLaunching.  Subsequent calls to this method
+// can be called after applicationDidFinishLaunching, which was often
+// seen in Yosemite with a large batch of files.
 // -------------------------------------------------------------------------
-// Created: 
-// Version: 
+// Created: 2009 or 2010
+// Version: 21 March 2015 17:25
 // =========================================================================
 - (void) application:(NSApplication *)sender openFiles:(NSArray *)filenames
-{
+{	
     BOOL isDir;
 	BOOL isDir2;
     id object = nil;
@@ -430,6 +461,9 @@
 		}
 	}
     
+	// Fire timer at some later time. A timeInterval of 0.0 tells the run loop
+	// to process this right away, but first it has to get through all the pending
+	// open file messages.
     if (!timer)
     {
         timer = [NSTimer scheduledTimerWithTimeInterval:0.0
@@ -439,6 +473,26 @@
 												repeats: YES];
     }	
 }
+
+
+// =========================================================================
+// (void) addNewFiles : (NSTimer *) aTimer
+// -------------------------------------------------------------------------
+// Add new files to the list of files that were dragged-n-dropped on the icon
+// This method is called by the timer that is set-up in the application:openFile:
+// method.
+// -------------------------------------------------------------------------
+// Created: 30 March 2004 23:52
+// Version: 21 March 2015 20:27
+// =========================================================================
+- (void) addNewFiles: (NSTimer *) aTimer
+{
+    [aTimer invalidate];
+    timer = nil;
+
+	[self erase];
+}
+
 
 // =========================================================================
 // (void) addFileToArray: (NSString *) filename
@@ -594,7 +648,7 @@
 // version, if necessary
 // -------------------------------------------------------------------------
 // Created: 2 January 2012 14:11
-// Version: 6 January 2012 17:44
+// Version: 10 December 2016 23:30
 // =========================================================================
 - (void) checkInstalledPlugins
 {
@@ -610,8 +664,18 @@
 	}
 	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES) // Mac OS 10.4 + 10.5
 	{
-		oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
-		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Permanent Eraser.workflow"];
+		NSString *workflowPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+		
+		if ([fm fileExistsAtPath: workflowPath] == YES)
+		{	// If the old workflow is still around, remove it and replace with the newer EraseCMI plugin
+			oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
+		}
+		else
+		{	// Otherwise, default to replacing the newer EraseCMI plugin if it is installed
+			oldPluginPath = [@"~/Library/Contextual Menu Items/EraseCMI.plugin" stringByExpandingTildeInPath];
+		}
+		
+		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"EraseCMI.plugin"];
 	}
 	
 	// Check if plugin is installed
@@ -942,21 +1006,6 @@ typedef struct SFetchedInfo
 #pragma mark -
 
 // =========================================================================
-// (void) addNewFiles : (NSTimer *) aTimer
-// -------------------------------------------------------------------------
-// Add new files to the list of files that were dragged-n-dropped on the icon
-// -------------------------------------------------------------------------
-// Created: 30. March 2004 23:52
-// Version: 30. March 2004 23:52
-// =========================================================================
-- (void) addNewFiles : (NSTimer *) aTimer
-{
-    [aTimer invalidate];
-    timer = nil;
-}
-
-
-// =========================================================================
 // (void) erase: 
 // -------------------------------------------------------------------------
 // NSFileManager: http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSFileManager_Class/Reference/Reference.html
@@ -971,6 +1020,7 @@ typedef struct SFetchedInfo
 // =========================================================================
 - (void) erase
 {
+//	[self checkRunningThreadFromMethod: @"erase"];
     idx = 0;
     num_files = 0;
     num_files = [trash_files count];
@@ -979,52 +1029,51 @@ typedef struct SFetchedInfo
 	[indicator setIndeterminate: NO];
     [indicator stopAnimation: self];
 	
-	[erasing_msg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
+	[erasingMsg setStringValue:NSLocalizedString(@"ErasingMessage", nil)];
 	
 	// Throw a warning about erasing files.
 	// Hold down the Option key when launching PE to prevent this warning from appearing.
 	if (warnBeforeErasing == YES)
-	{		
+	{	
 		if (filesWereDropped == YES && num_files == 1)	// Erasing one files
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
-															 defaultButton: NSLocalizedString(@"OK", nil)
-														   alternateButton: NSLocalizedString(@"Quit", nil)
-															   otherButton: nil
-														   informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
-			
-			//[alert setAlertStyle: NSCriticalAlertStyle];
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+											 defaultButton: NSLocalizedString(@"OK", nil)
+										   alternateButton: NSLocalizedString(@"Quit", nil)
+											   otherButton: nil
+								 informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErasingFileWarning", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+						
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle:NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState:NSOffState];
 
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];			
 		}
 		else if (filesWereDropped == YES && num_files > 1)	// Erasing several files
 		{		
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
-															 defaultButton: NSLocalizedString(@"OK", nil)
-														   alternateButton: NSLocalizedString(@"Quit", nil)
-															   otherButton: nil
-														   informativeText: NSLocalizedString(@"ErasingFilesWarning", nil)];
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+											 defaultButton: NSLocalizedString(@"OK", nil)
+										   alternateButton: NSLocalizedString(@"Quit", nil)
+											   otherButton: nil
+								 informativeTextWithFormat: NSLocalizedString(@"ErasingFilesWarning", nil)];
 			
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}
 		else	// Erasing files from the Trash
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-														   informativeText: NSLocalizedString(@"ErasingTrashWarning", nil)];
+														   informativeTextWithFormat: NSLocalizedString(@"ErasingTrashWarning", nil)];
 			
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 			
 			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}		
@@ -1052,9 +1101,9 @@ typedef struct SFetchedInfo
 // Created: 29 December 2010 20:30
 // Version: 29 December 2010 20:30
 // =========================================================================
-- (void) alertDidEnd: (NSAlertCheckbox *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo
+- (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo
 {
-	if ([alert checkboxState] == NSOnState)
+	if ([[alert suppressionButton] state] == NSOnState)	
 	{
 		[prefs setBool:NO forKey: @"WarnBeforeErasing"];
 	}
@@ -1111,8 +1160,7 @@ typedef struct SFetchedInfo
 	DRDevice* device;
 	DRErase* erase;	
 
-	[progress_msg setStringValue: [self fileNameString]];
-	//[progress_msg setStringValue: [[trash_files objectAtIndex: idx] fileName]];
+	[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
 	[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
 
 	device = [DRDevice deviceForBSDName: [self bsdDevNode: [[trash_files objectAtIndex: idx] path]]];	
@@ -1249,70 +1297,56 @@ typedef struct SFetchedInfo
     }
     else // regular file or directory
     {
-
-		// Perhaps should set the util_path here, and not in another method
-		// If srm already exists, use that version, which will help comply as 
-		// a Universal Binary to use the PPC or Intel version of srm
-		//	if ([fm isExecutableFileAtPath: @"/usr/bin/srm"] == YES)
-		//	{
-		//		util_path = @"/usr/bin/srm";
-		//	}
-		//	else
-		//	{
-		// NOTE: If using a custom erase type such as DoE, use bundled version of srm
 		NSString *utilPath  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
-		//	}
 		
         [pEraser setLaunchPath:utilPath];
 
 		// If the file is on a SSD, only erase once to prevent unnecessary wear on an SSD
 		if (([[trash_files objectAtIndex: idx] isOnSSD] == YES) ||
-		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) )
+		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) ) // 1-pass
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fsvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)])
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)]) // 3-pass DOE
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fEvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingMedium", nil)])
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-		else	// Otherwise, use the 35-pass Gutmann Method
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingGutmann", nil)]) // 35-pass Gutmann Method
 		{
 			[pEraser setArguments: [NSArray arrayWithObjects: @"-fvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+		else // Default 7-pass DoD
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
 		}
     }
 	
 	// Throw a warning if a file cannot be erased
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
-		([self checkPermissions: [[trash_files objectAtIndex: idx] path]] == NO)  ||
 		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
 	{
-		int choice = -1; 
+		int choice = -1; // alert button selection
 		
 		if (suppressCannotEraseWarning == NO)
 		{
-			NSAlertCheckbox *alert = [NSAlertCheckbox alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-														   informativeText: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+														   informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [[trash_files objectAtIndex: idx] fileName]] ];
 
-			[alert setShowsCheckbox: YES];
-			[alert setCheckboxText: NSLocalizedString(@"DoNotShowMessage", nil)];
-			[alert setCheckboxState: NSOffState];
+			[alert setShowsSuppressionButton: YES];
+			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
+			[[alert suppressionButton] setState: NSOffState];
 			
 			choice = [alert runModal];
 			
-			if ([alert checkboxState] == NSOnState)
+			if ([[alert suppressionButton] state] == NSOnState) 
 			{
 				// This setting is not saved permanently and is only set on a per-session basis
 				suppressCannotEraseWarning = YES;
 			}
 		}
-
 
 		if (choice == 0) // Quit button
 		{
@@ -1329,11 +1363,10 @@ typedef struct SFetchedInfo
 	}	
 	else
 	{
-     
 		pipe = [[NSPipe alloc] init];
 		
-		[progress_msg setStringValue: [self fileNameString]];
-		//[progress_msg setStringValue: [[trash_files objectAtIndex: idx] fileName]];
+		[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
+
 		if ([[trash_files objectAtIndex: idx] icon] != nil)
 		{
 			[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
@@ -1455,15 +1488,23 @@ typedef struct SFetchedInfo
 // always redraw itself properly.  This is not done in Mac OS 10.6+, since
 // it caused the program to crash when the window was minimized in Snow 
 // Leopard.
+//
+// The crashing issue was likely due to trying to update the interface
+// when not on the main thread.
 // -------------------------------------------------------------------------
 // Created: 29 November 2009 22:46
-// Version: 16 February 2015 15:04
+// Version: 20 March 2015 19:52
 // =========================================================================
 - (void) updateIndicator
 {
-	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == NO)
+	// If this is not the main thread, make a call to the main thread to update the interface.
+	if ([[NSThread currentThread] isMainThread] == NO)
 	{
-		[indicator displayIfNeeded];  // force indicator to draw itself
+		[indicator performSelectorOnMainThread:@selector(displayIfNeeded) withObject:nil waitUntilDone:NO];
+	}
+	else 
+	{
+		[indicator displayIfNeeded];
 	}
 }
 
@@ -1591,7 +1632,7 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (NSString *) fileNameString
 // -------------------------------------------------------------------------
-// If a file name is too long (over the length of the progress_msg field), 
+// If a file name is too long (over the length of the eraseMsg field), 
 // the entire string will not print properly in the text field in the 
 // interface.  This checks if the file name exceeds the length limit, and
 // if so, then it puts an ellipse (ellipsis) in the middle of the file name
@@ -1605,7 +1646,7 @@ typedef struct SFetchedInfo
 	return ([[trash_files objectAtIndex: idx] fileName]);
 	
 	/*
-	 // Deprecated code.  Just use IB to truncate the middle of the text field
+	 // Deprecated code.  Just use IB to truncate the end of the text field
     NSMutableString *current_file_name = [[NSMutableString alloc] initWithString: [[trash_files objectAtIndex: idx] fileName]];
     int cfl_length = [current_file_name length];
     float cfl_len = 0.0;
@@ -1657,18 +1698,19 @@ typedef struct SFetchedInfo
 {
 	int fd;
 	const char * cpath = [path UTF8String];
+	BOOL isWritable = YES;
 	
 	if ( ((fd = open(cpath, O_WRONLY)) == -1) && (errno == EACCES) ) 
 	{
 		if ( chmod(cpath, S_IRUSR | S_IWUSR) == -1 ) 
 		{
-		  return (NO);
+			isWritable = NO;
 		}
 	}
 
 	close(fd);
 	
-	return (YES);
+	return isWritable;
 }
 
 
@@ -1989,7 +2031,17 @@ typedef struct SFetchedInfo
 		// rather than just shutting down at this point.
 		[preparationThread release], preparationThread = nil;
 		wasCanceled = YES;
-		[self shutdownPE];
+		
+		// TODO: If the alert dialog is starting to drop down, dismiss it
+		
+		if ([[NSThread currentThread] isMainThread] == NO)
+		{
+			[self performSelectorOnMainThread:@selector(shutdownPE) withObject:nil waitUntilDone:NO];
+		}
+		else
+		{
+			[self shutdownPE];
+		}
 	}
 	else // Stop erasing files
 	{

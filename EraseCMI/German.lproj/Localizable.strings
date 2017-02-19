@@ -1,0 +1,10 @@
+﻿/* 
+   Localizable.strings
+   EraseCMI
+
+   Created by Chad Armstrong on 7/5/15.
+   Copyright 2015 Edenwaith. All rights reserved.
+ */
+
+"EraseItem" = "Löschen “%@„";
+"EraseItems" = "%d Objekte löschen";

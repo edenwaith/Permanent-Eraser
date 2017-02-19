@@ -7,8 +7,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import <DiscRecording/DiscRecording.h>
+
 #import "PEFile.h"
-#import "NSAlertCheckbox.h"
 #import "CTProgressBadge.h"
 #import "NSProcessInfo+PECocoaBackports.h"
 
@@ -56,8 +56,7 @@
     
     IBOutlet id				theWindow;
 
-    IBOutlet NSTextField	*progress_msg;
-	IBOutlet NSTextField	*erasing_msg;
+	IBOutlet NSTextField	*erasingMsg;
 	IBOutlet NSTextField	*fileSizeMsg;
 	
 	IBOutlet NSImageView	*fileIcon;
@@ -82,6 +81,7 @@
 - (void) appWillTerminateNotification: (NSNotification *)aNotification;
 - (void) applicationDidFinishLaunching: (NSNotification *) aNotification;
 - (void)application:(NSApplication *)sender openFiles:(NSArray *)filenames;
+- (void) prepareFiles;
 - (void) addFileToArray: (NSString *) filename;
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;
@@ -89,10 +89,10 @@
 - (FSRef) convertStringToFSRef: (NSString *) path ;
 - (unsigned long long) fileSize: (NSString *) path;
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
-- (NSString *) formatFileSize: (double) file_size;
+//- (NSString *) formatFileSize: (double) file_size;
 - (void) addNewFiles : (NSTimer *) aTimer;
 - (void) erase;
-- (void) alertDidEnd: (NSAlertCheckbox *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
+- (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
 - (void) selectNextFile;
 - (void) eraseDisc;
 - (void) eraseNotification: (NSNotification*) notification;

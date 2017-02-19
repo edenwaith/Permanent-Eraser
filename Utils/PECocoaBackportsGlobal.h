@@ -26,6 +26,7 @@
 #define __PECocoaBackportsGlobal__
 
 #import <objc/runtime.h>
+// #import </usr/include/objc/objc-class.h>  
 
 CF_INLINE void class_addInstanceMethodIfNecessary(Class clazz, SEL realSelector, SEL fakeSelector) {
     if (!class_getInstanceMethod(clazz, realSelector)) {

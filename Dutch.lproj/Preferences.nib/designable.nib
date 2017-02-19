@@ -2,9 +2,9 @@
 <archive type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1050</int>
-		<string key="IBDocument.SystemVersion">10J869</string>
+		<string key="IBDocument.SystemVersion">10K549</string>
 		<string key="IBDocument.InterfaceBuilderVersion">823</string>
-		<string key="IBDocument.AppKitVersion">1038.35</string>
+		<string key="IBDocument.AppKitVersion">1038.36</string>
 		<string key="IBDocument.HIToolboxVersion">461.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -12,10 +12,10 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="5"/>
-			<integer value="3"/>
-			<integer value="7"/>
 			<integer value="6"/>
+			<integer value="5"/>
+			<integer value="7"/>
+			<integer value="3"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -90,18 +90,18 @@
 							<string key="NSKeyEquivalent"/>
 							<int key="NSPeriodicDelay">400</int>
 							<int key="NSPeriodicInterval">75</int>
-							<object class="NSMenuItem" key="NSMenuItem" id="1010286122">
+							<object class="NSMenuItem" key="NSMenuItem" id="918906570">
 								<reference key="NSMenu" ref="9557005"/>
-								<string key="NSTitle">Gutmann (35x)</string>
+								<string key="NSTitle">DoD (7x)</string>
 								<string key="NSKeyEquiv"/>
 								<int key="NSKeyEquivModMask">1048576</int>
 								<int key="NSMnemonicLoc">2147483647</int>
 								<int key="NSState">1</int>
-								<object class="NSCustomResource" key="NSOnImage" id="828935973">
+								<object class="NSCustomResource" key="NSOnImage" id="350291701">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">NSMenuCheckmark</string>
 								</object>
-								<object class="NSCustomResource" key="NSMixedImage" id="576833810">
+								<object class="NSCustomResource" key="NSMixedImage" id="25154252">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">NSMenuMixedState</string>
 								</object>
@@ -119,23 +119,34 @@
 										<string key="NSKeyEquiv"/>
 										<int key="NSKeyEquivModMask">1048576</int>
 										<int key="NSMnemonicLoc">2147483647</int>
-										<reference key="NSOnImage" ref="828935973"/>
-										<reference key="NSMixedImage" ref="576833810"/>
+										<reference key="NSOnImage" ref="350291701"/>
+										<reference key="NSMixedImage" ref="25154252"/>
 										<string key="NSAction">_popUpItemAction:</string>
 										<reference key="NSTarget" ref="415842885"/>
 									</object>
 									<object class="NSMenuItem" id="374599546">
 										<reference key="NSMenu" ref="9557005"/>
-										<string key="NSTitle">DoD (7x)</string>
+										<string key="NSTitle">DoE (3x)</string>
 										<string key="NSKeyEquiv"/>
 										<int key="NSKeyEquivModMask">1048576</int>
 										<int key="NSMnemonicLoc">2147483647</int>
-										<reference key="NSOnImage" ref="828935973"/>
-										<reference key="NSMixedImage" ref="576833810"/>
+										<reference key="NSOnImage" ref="350291701"/>
+										<reference key="NSMixedImage" ref="25154252"/>
 										<string key="NSAction">_popUpItemAction:</string>
 										<reference key="NSTarget" ref="415842885"/>
 									</object>
-									<reference ref="1010286122"/>
+									<reference ref="918906570"/>
+									<object class="NSMenuItem" id="1010286122">
+										<reference key="NSMenu" ref="9557005"/>
+										<string key="NSTitle">Gutmann (35x)</string>
+										<string key="NSKeyEquiv"/>
+										<int key="NSKeyEquivModMask">1048576</int>
+										<int key="NSMnemonicLoc">2147483647</int>
+										<reference key="NSOnImage" ref="350291701"/>
+										<reference key="NSMixedImage" ref="25154252"/>
+										<string key="NSAction">_popUpItemAction:</string>
+										<reference key="NSTarget" ref="415842885"/>
+									</object>
 								</object>
 							</object>
 							<int key="NSSelectedIndex">2</int>
@@ -169,8 +180,8 @@
 								<int key="NSKeyEquivModMask">1048576</int>
 								<int key="NSMnemonicLoc">2147483647</int>
 								<int key="NSState">1</int>
-								<reference key="NSOnImage" ref="828935973"/>
-								<reference key="NSMixedImage" ref="576833810"/>
+								<reference key="NSOnImage" ref="350291701"/>
+								<reference key="NSMixedImage" ref="25154252"/>
 								<string key="NSAction">_popUpItemAction:</string>
 								<reference key="NSTarget" ref="1026625419"/>
 							</object>
@@ -185,8 +196,8 @@
 										<string key="NSKeyEquiv"/>
 										<int key="NSKeyEquivModMask">1048576</int>
 										<int key="NSMnemonicLoc">2147483647</int>
-										<reference key="NSOnImage" ref="828935973"/>
-										<reference key="NSMixedImage" ref="576833810"/>
+										<reference key="NSOnImage" ref="350291701"/>
+										<reference key="NSMixedImage" ref="25154252"/>
 										<string key="NSAction">_popUpItemAction:</string>
 										<reference key="NSTarget" ref="1026625419"/>
 									</object>
@@ -750,6 +761,7 @@
 							<reference ref="1060884757"/>
 							<reference ref="374599546"/>
 							<reference ref="1010286122"/>
+							<reference ref="918906570"/>
 						</object>
 						<reference key="parent" ref="415842885"/>
 					</object>
@@ -959,6 +971,11 @@
 						<reference key="object" ref="880820468"/>
 						<reference key="parent" ref="862531475"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">84</int>
+						<reference key="object" ref="918906570"/>
+						<reference key="parent" ref="9557005"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1018,6 +1035,7 @@
 					<string>73.IBPluginDependency</string>
 					<string>80.IBPluginDependency</string>
 					<string>81.IBPluginDependency</string>
+					<string>84.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1025,7 +1043,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{264, 437}, {168, 63}}</string>
+					<string>{{264, 417}, {168, 83}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1074,6 +1092,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -1092,7 +1111,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">83</int>
+			<int key="maxID">84</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1182,7 +1201,6 @@
 							<string>fileErasingButton</string>
 							<string>generalPreferenceView</string>
 							<string>lastCheckedTextField</string>
-							<string>lastCheckedTextField2</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
 							<string>pluginInstalledButton</string>
@@ -1197,7 +1215,6 @@
 							<string>NSView</string>
 							<string>NSPopUpButton</string>
 							<string>NSView</string>
-							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSPopUpButton</string>
 							<string>NSButton</string>
@@ -1217,7 +1234,6 @@
 							<string>fileErasingButton</string>
 							<string>generalPreferenceView</string>
 							<string>lastCheckedTextField</string>
-							<string>lastCheckedTextField2</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
 							<string>pluginInstalledButton</string>
@@ -1243,10 +1259,6 @@
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">lastCheckedTextField</string>
-								<string key="candidateClassName">NSTextField</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">lastCheckedTextField2</string>
 								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
@@ -1790,6 +1802,10 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencies">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
+			<integer value="1050" key="NS.object.0"/>
+		</object>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin.macosx</string>
 			<integer value="1050" key="NS.object.0"/>
 		</object>

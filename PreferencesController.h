@@ -51,6 +51,7 @@
 - (NSString *) formatLocalizedDate: (NSDate *) theDate;
 
 - (IBAction) installPluginSelected: (id) sender;
+- (void) removeOldPlugin;
 - (NSString *) displayLocalizedPath: (NSString *) path;
 - (IBAction) openHelpPage: (id) sender;
 
