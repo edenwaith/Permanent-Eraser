@@ -269,6 +269,9 @@
 		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
 		84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Utils.h"; path = "Utils/NSProcessInfo+Utils.h"; sourceTree = "<group>"; };
 		84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Utils.m"; path = "Utils/NSProcessInfo+Utils.m"; sourceTree = "<group>"; };
+		842101CE1F38236C005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		842101D31F38242A005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842101D81F3824EA005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = cy; path = cy.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED70EE6456D00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED80EE6457900F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84267EDA0EE6458B00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -674,6 +677,7 @@
 				zh_TW,
 				sv,
 				Italian,
+				cy,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PermanentEraser */;
 			projectDirPath = "";
@@ -859,6 +863,7 @@
 				8404CE790B7433F600CECB37 /* zh_TW */,
 				845EF8450BE97BD800EE6556 /* sv */,
 				84267ED80EE6457900F4C36D /* Italian */,
+				842101CE1F38236C005B3497 /* cy */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -873,6 +878,7 @@
 				8404CE780B7433D600CECB37 /* zh_TW */,
 				845EF8410BE97B9E00EE6556 /* sv */,
 				84267ED70EE6456D00F4C36D /* Italian */,
+				842101D81F3824EA005B3497 /* cy */,
 			);
 			name = MainMenu.nib;
 			sourceTree = "<group>";
@@ -905,6 +911,7 @@
 				8404CE870B74349F00CECB37 /* zh_TW */,
 				845EF8480BE97BE100EE6556 /* sv */,
 				84267EDA0EE6458B00F4C36D /* Italian */,
+				842101D31F38242A005B3497 /* cy */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1312,7 +1319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
@@ -1368,7 +1375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;

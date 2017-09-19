@@ -1,4 +1,4 @@
-"Cancel" = "Cancel";
+"Cancel" = "Canslo";
 "Complete" = "Complete";
 "DoNotShowMessage" = "Do not show this message again";
 "Download" = "Download";
@@ -22,11 +22,11 @@
 "OK" = "OK";
 "Plug-Ins" = "Plug-Ins";
 "PluginInstallMessage" = "The plug-in %@ will be installed in the folder %@";
-"Preferences" = "Preferences...";
+"Preferences" = "Dewisiadau...";
 "PreparingMessage" = "Preparing to erase…";
-"Quick" = "Quick";
-"Quit" = "Quit";
 "RecentVersionMsg" = "You have the most recent version of Permanent Eraser.";
+"Quick" = "Quick";
+"Quit" = "Gadael";
 "SoftwareUpToDate" = "Software is Up-To-Date";
 "Update" = "Update";
 "UpdateFailure" = "Could not check for update";

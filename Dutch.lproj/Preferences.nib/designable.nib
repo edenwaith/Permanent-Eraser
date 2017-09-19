@@ -12,10 +12,10 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
 			<integer value="5"/>
-			<integer value="7"/>
 			<integer value="3"/>
+			<integer value="7"/>
+			<integer value="6"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -289,7 +289,7 @@
 					<object class="NSButton" id="271899892">
 						<reference key="NSNextResponder" ref="962199208"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{199, 28}, {97, 18}}</string>
+						<string key="NSFrame">{{199, 28}, {115, 18}}</string>
 						<reference key="NSSuperview" ref="962199208"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="7440897">
@@ -1015,6 +1015,7 @@
 					<string>4.ImportedFromIB2</string>
 					<string>40.IBPluginDependency</string>
 					<string>41.IBPluginDependency</string>
+					<string>41.IBViewBoundsToFrameTransform</string>
 					<string>42.IBPluginDependency</string>
 					<string>43.IBPluginDependency</string>
 					<string>44.IBPluginDependency</string>
@@ -1072,6 +1073,9 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABBiAAAwpAAAA</bytes>
+					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1085,7 +1089,7 @@
 					<string>{{301, 638}, {400, 165}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{153, 490}, {400, 165}}</string>
+					<string>{{75, 556}, {400, 165}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1198,8 +1202,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activeContentView</string>
+							<string>checkNowButton</string>
+							<string>discErasingLabel</string>
 							<string>fileErasingButton</string>
+							<string>fileErasingLabel</string>
 							<string>generalPreferenceView</string>
+							<string>lastCheckedLabel</string>
 							<string>lastCheckedTextField</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
@@ -1213,8 +1221,12 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSView</string>
+							<string>NSButton</string>
+							<string>NSTextField</string>
 							<string>NSPopUpButton</string>
+							<string>NSTextField</string>
 							<string>NSView</string>
+							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSPopUpButton</string>
 							<string>NSButton</string>
@@ -1231,8 +1243,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activeContentView</string>
+							<string>checkNowButton</string>
+							<string>discErasingLabel</string>
 							<string>fileErasingButton</string>
+							<string>fileErasingLabel</string>
 							<string>generalPreferenceView</string>
+							<string>lastCheckedLabel</string>
 							<string>lastCheckedTextField</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
@@ -1250,12 +1266,28 @@
 								<string key="candidateClassName">NSView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">checkNowButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">discErasingLabel</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">fileErasingButton</string>
 								<string key="candidateClassName">NSPopUpButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">fileErasingLabel</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">generalPreferenceView</string>
 								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lastCheckedLabel</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">lastCheckedTextField</string>
