@@ -7,7 +7,7 @@
 		<key>Container</key>
 		<string>List</string>
 		<key>Optional</key>
-		<false/>
+		<true/>
 		<key>Types</key>
 		<array>
 			<string>com.apple.cocoa.path</string>
@@ -22,13 +22,16 @@
 	<key>AMCategory</key>
 	<string>AMCategoryFilesAndFolders</string>
 	<key>AMDefaultParameters</key>
-	<dict/>
+	<dict>
+		<key>fileErasingLevel</key>
+		<integer>1</integer>
+	</dict>
 	<key>AMDescription</key>
 	<dict>
 		<key>AMDAlert</key>
-		<string></string>
+		<string>This will erase the freespace from the selected disk.</string>
 		<key>AMDInput</key>
-		<string></string>
+		<string>Path to a disk.</string>
 		<key>AMDNote</key>
 		<string></string>
 		<key>AMDOptions</key>
@@ -38,8 +41,10 @@
 		<key>AMDRequires</key>
 		<string></string>
 		<key>AMDResult</key>
-		<string></string>
+		<string>Returns the path of the selected disk.</string>
 		<key>AMDSummary</key>
+		<string>Erase the free space for a selected disk.</string>
+		<key>AMDWebsite</key>
 		<string></string>
 	</dict>
 	<key>AMIconName</key>
@@ -48,10 +53,10 @@
 	<array>
 		<string>secure</string>
 		<string>erase</string>
-		<string>trash</string>
+		<string>freespace</string>
 	</array>
 	<key>AMName</key>
-	<string>EraseTrash</string>
+	<string>Erase Freespace</string>
 	<key>AMProvides</key>
 	<dict>
 		<key>Container</key>
@@ -81,11 +86,11 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>EraseTrash version 1.2.1, Copyright (c) 2007-2017, Edenwaith.</string>
+	<string>1.0, Copyright © 2017 Edenwaith, All Rights Reserved</string>
 	<key>CFBundleIconFile</key>
-	<string>PE</string>
+	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>com.edenwaith.Automator.EraseTrash</string>
+	<string>com.edenwaith.Automator.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -93,12 +98,14 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2.1</string>
+	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.2.1</string>
+	<string>1.0</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2017 Edenwaith, All Rights Reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>EraseTrash</string>
+	<string>EraseFreespace</string>
 </dict>
 </plist>

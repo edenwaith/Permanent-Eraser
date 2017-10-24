@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 658A2E03067AB99300421F51 /* Automator */;
+		activeTarget = 8D5B49AC048680CD000E48DA /* EraseFreespace */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* EraseFreespace */,
+		);
+		codeSenseManager = 658A2DD0067AB96600421F51 /* Code sense */;
+		executables = (
+			658A2E03067AB99300421F51 /* Automator */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					229,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					628,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					568,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					588,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 529040281;
+			PBXWorkspaceStateSaveDate = 529040281;
+		};
+		perUserProjectItems = {
+			841D65311F7CB7E000E4EE22 = 841D65311F7CB7E000E4EE22 /* PBXTextBookmark */;
+			841D65321F7CB7E000E4EE22 = 841D65321F7CB7E000E4EE22 /* PBXTextBookmark */;
+			841D65331F7CB7E000E4EE22 = 841D65331F7CB7E000E4EE22 /* PBXTextBookmark */;
+			841D65341F7CB7E000E4EE22 = 841D65341F7CB7E000E4EE22 /* PlistBookmark */;
+			841D656D1F7DDECF00E4EE22 = 841D656D1F7DDECF00E4EE22 /* PlistBookmark */;
+			848B2B9A1F9EE376008F678E /* PBXBookmark */ = 848B2B9A1F9EE376008F678E /* PBXBookmark */;
+			848B2B9B1F9EE376008F678E /* PBXTextBookmark */ = 848B2B9B1F9EE376008F678E /* PBXTextBookmark */;
+			848B2B9C1F9EE376008F678E /* PBXTextBookmark */ = 848B2B9C1F9EE376008F678E /* PBXTextBookmark */;
+			848B2B9D1F9EE376008F678E /* PBXTextBookmark */ = 848B2B9D1F9EE376008F678E /* PBXTextBookmark */;
+			848B2B9E1F9EE376008F678E /* PlistBookmark */ = 848B2B9E1F9EE376008F678E /* PlistBookmark */;
+			848B2B9F1F9EE376008F678E /* PlistBookmark */ = 848B2B9F1F9EE376008F678E /* PlistBookmark */;
+			848B2BAD1F9EE583008F678E /* PlistBookmark */ = 848B2BAD1F9EE583008F678E /* PlistBookmark */;
+			848B2BAE1F9EE583008F678E /* PBXTextBookmark */ = 848B2BAE1F9EE583008F678E /* PBXTextBookmark */;
+			848B2BAF1F9EE583008F678E /* PBXTextBookmark */ = 848B2BAF1F9EE583008F678E /* PBXTextBookmark */;
+			848B2BB21F9EE5A8008F678E /* PBXTextBookmark */ = 848B2BB21F9EE5A8008F678E /* PBXTextBookmark */;
+		};
+		sourceControlManager = 658A2DCF067AB96600421F51 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1251, 416}}";
+			sepNavSelRange = "{67, 0}";
+			sepNavVisRange = "{0, 1445}";
+		};
+	};
+	6518174F067A8D39005BD953 /* EraseFreespace.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 399}}";
+			sepNavSelRange = "{397, 0}";
+			sepNavVisRange = "{0, 438}";
+		};
+	};
+	65181750067A8D39005BD953 /* EraseFreespace.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {806, 2288}}";
+			sepNavSelRange = "{1212, 0}";
+			sepNavVisRange = "{645, 808}";
+		};
+	};
+	658A2DCF067AB96600421F51 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+		scmType = "";
+	};
+	658A2DD0067AB96600421F51 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	658A2E03067AB99300421F51 /* Automator */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+			YES,
+		);
+		argumentStrings = (
+			"-action \"EraseFreespace.action\"",
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 658A2E04067AB99300421F51 /* Automator.app */;
+		libgmallocEnabled = 0;
+		name = Automator;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+			$cs = 1;
+			$ds = 1;
+			$eflags = 1;
+			$es = 1;
+			$fs = 1;
+			$gs = 1;
+			$r10 = 1;
+			$r11 = 1;
+			$r12 = 1;
+			$r13 = 1;
+			$r14 = 1;
+			$r15 = 1;
+			$r8 = 1;
+			$r9 = 1;
+			$rax = 1;
+			$rbp = 1;
+			$rbx = 1;
+			$rcx = 1;
+			$rdi = 1;
+			$rdx = 1;
+			$rip = 1;
+			$rsi = 1;
+			$rsp = 1;
+			$ss = 1;
+		};
+	};
+	658A2E04067AB99300421F51 /* Automator.app */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = wrapper.application;
+		name = Automator.app;
+		path = /Applications/Automator.app;
+		sourceTree = "<absolute>";
+	};
+	841D65311F7CB7E000E4EE22 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6518174F067A8D39005BD953 /* EraseFreespace.h */;
+		name = "EraseFreespace.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 359;
+		vrLoc = 0;
+	};
+	841D65321F7CB7E000E4EE22 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 738;
+		vrLoc = 0;
+	};
+	841D65331F7CB7E000E4EE22 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 65181750067A8D39005BD953 /* EraseFreespace.m */;
+		name = "EraseFreespace.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 362;
+		vrLoc = 43;
+	};
+	841D65341F7CB7E000E4EE22 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	841D656D1F7DDECF00E4EE22 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleInfoDictionaryVersion,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	848B2B9A1F9EE376008F678E /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 848B2B1B1F95A9B8008F678E /* PE.icns */;
+	};
+	848B2B9B1F9EE376008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 6518174F067A8D39005BD953 /* EraseFreespace.h */;
+		name = "EraseFreespace.h: 19";
+		rLen = 0;
+		rLoc = 397;
+		rType = 0;
+		vrLen = 438;
+		vrLoc = 0;
+	};
+	848B2B9C1F9EE376008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 65181750067A8D39005BD953 /* EraseFreespace.m */;
+		name = "EraseFreespace.m: 47";
+		rLen = 0;
+		rLoc = 1212;
+		rType = 0;
+		vrLen = 808;
+		vrLoc = 645;
+	};
+	848B2B9D1F9EE376008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 15";
+		rLen = 0;
+		rLoc = 374;
+		rType = 0;
+		vrLen = 1473;
+		vrLoc = 0;
+	};
+	848B2B9E1F9EE376008F678E /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			AMDefaultParameters,
+			fileErasingLevel,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 1;
+		rLoc = 0;
+	};
+	848B2B9F1F9EE376008F678E /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			AMDefaultParameters,
+			fileErasingLevel,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	848B2BAD1F9EE583008F678E /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			AMDescription,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	848B2BAE1F9EE583008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 15";
+		rLen = 0;
+		rLoc = 374;
+		rType = 0;
+		vrLen = 1473;
+		vrLoc = 0;
+	};
+	848B2BAF1F9EE583008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 13";
+		rLen = 0;
+		rLoc = 374;
+		rType = 0;
+		vrLen = 1444;
+		vrLoc = 0;
+	};
+	848B2BB21F9EE5A8008F678E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 3";
+		rLen = 0;
+		rLoc = 67;
+		rType = 0;
+		vrLen = 1445;
+		vrLoc = 0;
+	};
+	8D5B49AC048680CD000E48DA /* EraseFreespace */ = {
+		activeExec = 0;
+	};
+}
