@@ -301,7 +301,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>9</integer>
+									<integer>8</integer>
 									<integer>6</integer>
 									<integer>0</integer>
 								</array>
@@ -337,14 +337,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>InfoPlist.strings</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,18 +350,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>InfoPlist.strings</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>848B2B5F1F95B680008F678E</string>
+										<string>848B2C601FA02599008F678E</string>
 										<key>history</key>
 										<array>
 											<string>841D655F1F7DDECF00E4EE22</string>
 											<string>848B2B501F95B64A008F678E</string>
 											<string>848B2B511F95B64A008F678E</string>
-											<string>848B2B5D1F95B680008F678E</string>
-											<string>848B2B5E1F95B680008F678E</string>
+											<string>848B2C5E1FA02599008F678E</string>
+											<string>848B2C5F1FA02599008F678E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -544,7 +542,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>529905280.14016199</real>
+	<real>530589081.97292399</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -561,7 +559,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>848B2B601F95B680008F678E</string>
 		<string>848B2B591F95B64A008F678E</string>
 		<string>848B2B5A1F95B64A008F678E</string>
 		<string>1C78EAAD065D492600B07095</string>

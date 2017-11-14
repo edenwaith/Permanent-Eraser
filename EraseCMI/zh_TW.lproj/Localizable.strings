@@ -1,0 +1,10 @@
+/* 
+   Localizable.strings
+   EraseCMI
+
+   Created by Chad Armstrong on 9/26/17.
+   Copyright 2015-2017 Edenwaith. All rights reserved.
+ */
+
+"EraseItem" = "清除 \"%@\"";
+"EraseItems" = "清除 %d 個項目";

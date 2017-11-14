@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="57"/>
 			<integer value="203"/>
+			<integer value="57"/>
 			<integer value="249"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
@@ -62,7 +62,7 @@
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="998175410">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">About Permanent Eraser</string>
+									<string key="NSTitle">Ynghylch Permanent Eraser</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="698102398"/>
@@ -81,7 +81,7 @@
 								</object>
 								<object class="NSMenuItem" id="992822732">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Preferences...</string>
+									<string key="NSTitle">Dewisiadau...</string>
 									<string key="NSKeyEquiv">,</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -101,7 +101,7 @@
 								</object>
 								<object class="NSMenuItem" id="428890698">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Services</string>
+									<string key="NSTitle">Gwasanaethau</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -109,9 +109,7 @@
 									<reference key="NSMixedImage" ref="906676587"/>
 									<string key="NSAction">submenuAction:</string>
 									<object class="NSMenu" key="NSSubmenu" id="269535000">
-										<object class="NSMutableString" key="NSTitle">
-											<characters key="NS.bytes">Services</characters>
-										</object>
+										<string key="NSTitle">Gwasanaethau</string>
 										<object class="NSMutableArray" key="NSMenuItems">
 											<bool key="EncodedWithXMLCoder">YES</bool>
 										</object>
@@ -131,7 +129,7 @@
 								</object>
 								<object class="NSMenuItem" id="109450187">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Hide Permanent Eraser</string>
+									<string key="NSTitle">Cuddio Permanent Eraser</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -140,7 +138,7 @@
 								</object>
 								<object class="NSMenuItem" id="429193958">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Hide Others</string>
+									<string key="NSTitle">Cuddio'r Gweddill</string>
 									<string key="NSKeyEquiv">h</string>
 									<int key="NSKeyEquivModMask">1572864</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -149,7 +147,7 @@
 								</object>
 								<object class="NSMenuItem" id="1022947271">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Show All</string>
+									<string key="NSTitle">Dangos y Cyfan</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -169,7 +167,7 @@
 								</object>
 								<object class="NSMenuItem" id="219853909">
 									<reference key="NSMenu" ref="1055476549"/>
-									<string key="NSTitle">Quit Permanent Eraser</string>
+									<string key="NSTitle">Gadael Permanent Eraser</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -182,7 +180,7 @@
 					</object>
 					<object class="NSMenuItem" id="519927797">
 						<reference key="NSMenu" ref="639350264"/>
-						<string key="NSTitle">File</string>
+						<string key="NSTitle">Ffeil</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -190,14 +188,12 @@
 						<reference key="NSMixedImage" ref="906676587"/>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="863610879">
-							<object class="NSMutableString" key="NSTitle">
-								<characters key="NS.bytes">File</characters>
-							</object>
+							<string key="NSTitle">Ffeil</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="944302588">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">New</string>
+									<string key="NSTitle">Newydd</string>
 									<string key="NSKeyEquiv">n</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -206,7 +202,7 @@
 								</object>
 								<object class="NSMenuItem" id="826251178">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Open...</string>
+									<string key="NSTitle">Agor...</string>
 									<string key="NSKeyEquiv">o</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -215,7 +211,7 @@
 								</object>
 								<object class="NSMenuItem" id="1011851308">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Open Recent</string>
+									<string key="NSTitle">Agor Ffeil Ddiweddar</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -223,14 +219,12 @@
 									<reference key="NSMixedImage" ref="906676587"/>
 									<string key="NSAction">submenuAction:</string>
 									<object class="NSMenu" key="NSSubmenu" id="82164371">
-										<object class="NSMutableString" key="NSTitle">
-											<characters key="NS.bytes">Open Recent</characters>
-										</object>
+										<string key="NSTitle">Agor Ffeil Ddiweddar</string>
 										<object class="NSMutableArray" key="NSMenuItems">
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSMenuItem" id="870642699">
 												<reference key="NSMenu" ref="82164371"/>
-												<string key="NSTitle">Clear Menu</string>
+												<string key="NSTitle">Clirio'r Ddewislen</string>
 												<string key="NSKeyEquiv"/>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -254,7 +248,7 @@
 								</object>
 								<object class="NSMenuItem" id="841969020">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Close</string>
+									<string key="NSTitle">Cau</string>
 									<string key="NSKeyEquiv">w</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -263,7 +257,7 @@
 								</object>
 								<object class="NSMenuItem" id="1067680270">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Save</string>
+									<string key="NSTitle">Cadw</string>
 									<string key="NSKeyEquiv">s</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -272,7 +266,7 @@
 								</object>
 								<object class="NSMenuItem" id="169883287">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Save As...</string>
+									<string key="NSTitle">Cadw Fel...</string>
 									<string key="NSKeyEquiv">S</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -281,7 +275,7 @@
 								</object>
 								<object class="NSMenuItem" id="864390789">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Revert</string>
+									<string key="NSTitle">Dychwelyd</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="698102398"/>
@@ -300,7 +294,7 @@
 								</object>
 								<object class="NSMenuItem" id="593476922">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Page Setup...</string>
+									<string key="NSTitle">Gosodiad Tudalen...</string>
 									<string key="NSKeyEquiv">P</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -309,7 +303,7 @@
 								</object>
 								<object class="NSMenuItem" id="788479327">
 									<reference key="NSMenu" ref="863610879"/>
-									<string key="NSTitle">Print...</string>
+									<string key="NSTitle">Argraffu...</string>
 									<string key="NSKeyEquiv">p</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -321,7 +315,7 @@
 					</object>
 					<object class="NSMenuItem" id="578043514">
 						<reference key="NSMenu" ref="639350264"/>
-						<string key="NSTitle">Edit</string>
+						<string key="NSTitle">Golygu</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -329,14 +323,12 @@
 						<reference key="NSMixedImage" ref="906676587"/>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="860567940">
-							<object class="NSMutableString" key="NSTitle">
-								<characters key="NS.bytes">Edit</characters>
-							</object>
+							<string key="NSTitle">Golygu</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="798146270">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Undo</string>
+									<string key="NSTitle">Dadwneud</string>
 									<string key="NSKeyEquiv">z</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -345,7 +337,7 @@
 								</object>
 								<object class="NSMenuItem" id="448158031">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Redo</string>
+									<string key="NSTitle">Ailwneud</string>
 									<string key="NSKeyEquiv">Z</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -365,7 +357,7 @@
 								</object>
 								<object class="NSMenuItem" id="396493108">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Cut</string>
+									<string key="NSTitle">Torri</string>
 									<string key="NSKeyEquiv">x</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -374,7 +366,7 @@
 								</object>
 								<object class="NSMenuItem" id="70891624">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Copy</string>
+									<string key="NSTitle">Copïo</string>
 									<string key="NSKeyEquiv">c</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -383,7 +375,7 @@
 								</object>
 								<object class="NSMenuItem" id="494050927">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Paste</string>
+									<string key="NSTitle">Gludo</string>
 									<string key="NSKeyEquiv">v</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -392,7 +384,7 @@
 								</object>
 								<object class="NSMenuItem" id="438540011">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Delete</string>
+									<string key="NSTitle">Dileu</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -401,7 +393,7 @@
 								</object>
 								<object class="NSMenuItem" id="715396175">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Select All</string>
+									<string key="NSTitle">Dewis y Cyfan</string>
 									<string key="NSKeyEquiv">a</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -421,7 +413,7 @@
 								</object>
 								<object class="NSMenuItem" id="53870130">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Find</string>
+									<string key="NSTitle">Canfod</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -436,7 +428,7 @@
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSMenuItem" id="956314933">
 												<reference key="NSMenu" ref="15239473"/>
-												<string key="NSTitle">Find...</string>
+												<string key="NSTitle">Canfod...</string>
 												<string key="NSKeyEquiv">f</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -445,7 +437,7 @@
 											</object>
 											<object class="NSMenuItem" id="700852685">
 												<reference key="NSMenu" ref="15239473"/>
-												<string key="NSTitle">Find Next</string>
+												<string key="NSTitle">Canfod Nesaf</string>
 												<string key="NSKeyEquiv">g</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -454,7 +446,7 @@
 											</object>
 											<object class="NSMenuItem" id="875393842">
 												<reference key="NSMenu" ref="15239473"/>
-												<string key="NSTitle">Find Previous</string>
+												<string key="NSTitle">Canfod Blaenorol</string>
 												<string key="NSKeyEquiv">d</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -463,7 +455,7 @@
 											</object>
 											<object class="NSMenuItem" id="199472681">
 												<reference key="NSMenu" ref="15239473"/>
-												<string key="NSTitle">Use Selection for Find</string>
+												<string key="NSTitle">Defnyddio'r Detholiad i Chwilio</string>
 												<string key="NSKeyEquiv">e</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -472,7 +464,7 @@
 											</object>
 											<object class="NSMenuItem" id="22843310">
 												<reference key="NSMenu" ref="15239473"/>
-												<string key="NSTitle">Scroll to Selection</string>
+												<string key="NSTitle">Sgrolio i Ddethol</string>
 												<string key="NSKeyEquiv">j</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -484,7 +476,7 @@
 								</object>
 								<object class="NSMenuItem" id="298909697">
 									<reference key="NSMenu" ref="860567940"/>
-									<string key="NSTitle">Spelling</string>
+									<string key="NSTitle">Sillafu</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -492,12 +484,12 @@
 									<reference key="NSMixedImage" ref="906676587"/>
 									<string key="NSAction">submenuAction:</string>
 									<object class="NSMenu" key="NSSubmenu" id="127533711">
-										<string key="NSTitle">Spelling</string>
+										<string key="NSTitle">Sillafu</string>
 										<object class="NSMutableArray" key="NSMenuItems">
 											<bool key="EncodedWithXMLCoder">YES</bool>
 											<object class="NSMenuItem" id="198246177">
 												<reference key="NSMenu" ref="127533711"/>
-												<string key="NSTitle">Spelling...</string>
+												<string key="NSTitle">Sillafu...</string>
 												<string key="NSKeyEquiv">:</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -506,7 +498,7 @@
 											</object>
 											<object class="NSMenuItem" id="950366140">
 												<reference key="NSMenu" ref="127533711"/>
-												<string key="NSTitle">Check Spelling</string>
+												<string key="NSTitle">Gwirio'r Ddogfen Nawr</string>
 												<string key="NSKeyEquiv">;</string>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -515,7 +507,7 @@
 											</object>
 											<object class="NSMenuItem" id="1040992810">
 												<reference key="NSMenu" ref="127533711"/>
-												<string key="NSTitle">Check Spelling as You Type</string>
+												<string key="NSTitle">Gwirio Sillafu wrth i chi Deipio</string>
 												<string key="NSKeyEquiv"/>
 												<int key="NSKeyEquivModMask">1048576</int>
 												<int key="NSMnemonicLoc">2147483647</int>
@@ -530,7 +522,7 @@
 					</object>
 					<object class="NSMenuItem" id="707560234">
 						<reference key="NSMenu" ref="639350264"/>
-						<string key="NSTitle">Window</string>
+						<string key="NSTitle">Ffenestr</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -538,14 +530,12 @@
 						<reference key="NSMixedImage" ref="906676587"/>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="48895917">
-							<object class="NSMutableString" key="NSTitle">
-								<characters key="NS.bytes">Window</characters>
-							</object>
+							<string key="NSTitle">Ffenestr</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="760542160">
 									<reference key="NSMenu" ref="48895917"/>
-									<string key="NSTitle">Minimize</string>
+									<string key="NSTitle">Lleihau</string>
 									<string key="NSKeyEquiv">m</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -565,7 +555,7 @@
 								</object>
 								<object class="NSMenuItem" id="414748380">
 									<reference key="NSMenu" ref="48895917"/>
-									<string key="NSTitle">Bring All to Front</string>
+									<string key="NSTitle">Dwyn Popeth i'r Blaen</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -578,7 +568,7 @@
 					</object>
 					<object class="NSMenuItem" id="504459110">
 						<reference key="NSMenu" ref="639350264"/>
-						<string key="NSTitle">Help</string>
+						<string key="NSTitle">Cymorth</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -586,12 +576,12 @@
 						<reference key="NSMixedImage" ref="906676587"/>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="963340100">
-							<string key="NSTitle">Help</string>
+							<string key="NSTitle">Cymorth</string>
 							<object class="NSMutableArray" key="NSMenuItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSMenuItem" id="204615436">
 									<reference key="NSMenu" ref="963340100"/>
-									<string key="NSTitle">Permanent Eraser Help</string>
+									<string key="NSTitle">Permanent Eraser Cymorth</string>
 									<string key="NSKeyEquiv">?</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -611,7 +601,7 @@
 								</object>
 								<object class="NSMenuItem" id="974306806">
 									<reference key="NSMenu" ref="963340100"/>
-									<string key="NSTitle">Permanent Eraser Website</string>
+									<string key="NSTitle">Permanent Eraser Gwefan</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -620,7 +610,7 @@
 								</object>
 								<object class="NSMenuItem" id="991212038">
 									<reference key="NSMenu" ref="963340100"/>
-									<string key="NSTitle">Send Feedback</string>
+									<string key="NSTitle">Anfon Adborth</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -641,7 +631,7 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{275, 331}, {400, 107}}</string>
 				<int key="NSWTFlags">1886912512</int>
-				<string key="NSWindowTitle">Erasing</string>
+				<string key="NSWindowTitle">Wrthi'n Dileu</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<object class="NSMutableString" key="NSViewClass">
 					<characters key="NS.bytes">View</characters>
@@ -723,7 +713,7 @@
 							<object class="NSButtonCell" key="NSCell" id="898595159">
 								<int key="NSCellFlags">67239424</int>
 								<int key="NSCellFlags2">134348800</int>
-								<string key="NSContents">Cancel</string>
+								<string key="NSContents">Canslo</string>
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">11</double>
@@ -778,7 +768,7 @@
 						<object class="NSTextField" id="556591827">
 							<reference key="NSNextResponder" ref="1041042973"/>
 							<int key="NSvFlags">256</int>
-							<string key="NSFrame">{{57, 20}, {242, 11}}</string>
+							<string key="NSFrame">{{57, 19.5}, {242, 11}}</string>
 							<reference key="NSSuperview" ref="1041042973"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSTextFieldCell" key="NSCell" id="1013668364">
@@ -788,7 +778,7 @@
 								<object class="NSFont" key="NSSupport">
 									<string key="NSName">LucidaGrande</string>
 									<double key="NSSize">9</double>
-									<int key="NSfFlags">3614</int>
+									<int key="NSfFlags">16</int>
 								</object>
 								<reference key="NSControlView" ref="556591827"/>
 								<reference key="NSBackgroundColor" ref="318904066"/>
@@ -809,7 +799,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="NSMenuItem" id="541292153">
 						<reference key="NSMenu" ref="433015653"/>
-						<string key="NSTitle">Cancel</string>
+						<string key="NSTitle">Canslo</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -1726,6 +1716,7 @@
 					<string>-3.ImportedFromIB2</string>
 					<string>103.IBPluginDependency</string>
 					<string>103.ImportedFromIB2</string>
+					<string>106.IBEditorWindowLastContentRect</string>
 					<string>106.IBPluginDependency</string>
 					<string>106.ImportedFromIB2</string>
 					<string>111.IBPluginDependency</string>
@@ -1734,10 +1725,12 @@
 					<string>112.ImportedFromIB2</string>
 					<string>124.IBPluginDependency</string>
 					<string>124.ImportedFromIB2</string>
+					<string>125.IBEditorWindowLastContentRect</string>
 					<string>125.IBPluginDependency</string>
 					<string>125.ImportedFromIB2</string>
 					<string>126.IBPluginDependency</string>
 					<string>126.ImportedFromIB2</string>
+					<string>130.IBEditorWindowLastContentRect</string>
 					<string>130.IBPluginDependency</string>
 					<string>130.ImportedFromIB2</string>
 					<string>131.IBPluginDependency</string>
@@ -1764,6 +1757,7 @@
 					<string>157.ImportedFromIB2</string>
 					<string>158.IBPluginDependency</string>
 					<string>158.ImportedFromIB2</string>
+					<string>159.IBEditorWindowLastContentRect</string>
 					<string>159.IBPluginDependency</string>
 					<string>159.ImportedFromIB2</string>
 					<string>160.IBPluginDependency</string>
@@ -1780,6 +1774,7 @@
 					<string>167.ImportedFromIB2</string>
 					<string>168.IBPluginDependency</string>
 					<string>168.ImportedFromIB2</string>
+					<string>169.IBEditorWindowLastContentRect</string>
 					<string>169.IBPluginDependency</string>
 					<string>169.ImportedFromIB2</string>
 					<string>171.IBPluginDependency</string>
@@ -1792,6 +1787,7 @@
 					<string>174.ImportedFromIB2</string>
 					<string>184.IBPluginDependency</string>
 					<string>184.ImportedFromIB2</string>
+					<string>185.IBEditorWindowLastContentRect</string>
 					<string>185.IBPluginDependency</string>
 					<string>185.ImportedFromIB2</string>
 					<string>187.IBPluginDependency</string>
@@ -1826,6 +1822,7 @@
 					<string>228.ImportedFromIB2</string>
 					<string>23.IBPluginDependency</string>
 					<string>23.ImportedFromIB2</string>
+					<string>24.IBEditorWindowLastContentRect</string>
 					<string>24.IBPluginDependency</string>
 					<string>24.ImportedFromIB2</string>
 					<string>249.IBEditorWindowLastContentRect</string>
@@ -1876,6 +1873,7 @@
 					<string>79.ImportedFromIB2</string>
 					<string>80.IBPluginDependency</string>
 					<string>80.ImportedFromIB2</string>
+					<string>81.IBEditorWindowLastContentRect</string>
 					<string>81.IBPluginDependency</string>
 					<string>81.ImportedFromIB2</string>
 					<string>82.IBPluginDependency</string>
@@ -1891,6 +1889,21 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{345, 741}, {253, 73}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>{{393, 751}, {185, 23}}</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>{{287, 748}, {64, 6}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1917,6 +1930,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{389, 551}, {288, 103}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1933,6 +1947,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{205, 611}, {184, 203}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1945,18 +1960,7 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
+					<string>{{389, 571}, {275, 63}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1970,9 +1974,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
-					<string>{{83, 481}, {400, 107}}</string>
+					<string>{{146, 350}, {400, 107}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{83, 481}, {400, 107}}</string>
+					<string>{{146, 350}, {400, 107}}</string>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
 					<boolean value="YES"/>
@@ -1995,9 +1999,10 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>{{271, 761}, {225, 53}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{42, 765}, {111, 23}}</string>
+					<string>{{42, 765}, {112, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2019,22 +2024,14 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{0, 814}, {376, 20}}</string>
+					<string>{{0, 814}, {434, 20}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
-					<string>{{12, 631}, {254, 183}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<boolean value="YES"/>
+					<string>{{12, 631}, {275, 183}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2047,6 +2044,15 @@
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<boolean value="YES"/>
+					<string>{{158, 611}, {235, 203}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2073,7 +2079,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">300</int>
+			<int key="maxID">310</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

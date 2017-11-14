@@ -16,6 +16,8 @@
 }
 
 - (id)runWithInput:(id)input fromAction:(AMAction *)anAction error:(NSDictionary **)errorInfo;
+- (NSDictionary *)errorInfoWithMessage: (NSString *)errorMessage;
 - (BOOL)isVolume: (NSString *) volumePath;
+- (void) outputData: (NSFileHandle *) fileHandle;
 
 @end

@@ -56,7 +56,7 @@
 		<string>freespace</string>
 	</array>
 	<key>AMName</key>
-	<string>Erase Freespace</string>
+	<string>Erase Free Space</string>
 	<key>AMProvides</key>
 	<dict>
 		<key>Container</key>

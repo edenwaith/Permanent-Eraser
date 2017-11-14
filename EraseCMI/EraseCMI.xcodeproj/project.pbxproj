@@ -11,6 +11,7 @@
 		4F94F01507B3098F00AE9F13 /* EraseCMI.c in Sources */ = {isa = PBXBuildFile; fileRef = 60288D7F009E31430BCA0CAD /* EraseCMI.c */; };
 		4F94F01907B3098F00AE9F13 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60764980009F79710BCA0CAD /* Carbon.framework */; };
 		847DEF991B6E981600C5011C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 847DEF971B6E981600C5011C /* Localizable.strings */; };
+		849427361D9A2222007B9058 /* PlugIn.icns in Resources */ = {isa = PBXBuildFile; fileRef = 849427351D9A2222007B9058 /* PlugIn.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +21,13 @@
 		60288D7F009E31430BCA0CAD /* EraseCMI.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = EraseCMI.c; sourceTree = "<group>"; };
 		60764980009F79710BCA0CAD /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		84448BE41B49F7F50007C71F /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84753CD91FB8FC1F009C7EC5 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84753CDA1FB8FC2A009C7EC5 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/Localizable.strings; sourceTree = "<group>"; };
 		847DEF981B6E981600C5011C /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		847DEF9F1B6E984700C5011C /* German */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = German; path = German.lproj/Localizable.strings; sourceTree = "<group>"; };
+		849427351D9A2222007B9058 /* PlugIn.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PlugIn.icns; sourceTree = "<group>"; };
+		84F728271F7B46CA009F73C0 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84F7282A1F7B46E2009F73C0 /* zh_TW */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh_TW; path = zh_TW.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,7 @@
 		089C167CFE841241C02AAC07 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				849427351D9A2222007B9058 /* PlugIn.icns */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 				847DEF971B6E981600C5011C /* Localizable.strings */,
 			);
@@ -128,6 +135,8 @@
 				Japanese,
 				French,
 				German,
+				zh_TW,
+				cy,
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* SampleCMPlugin */;
 			projectDirPath = "";
@@ -145,6 +154,7 @@
 			files = (
 				4F94F01307B3098F00AE9F13 /* InfoPlist.strings in Resources */,
 				847DEF991B6E981600C5011C /* Localizable.strings in Resources */,
+				849427361D9A2222007B9058 /* PlugIn.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +187,8 @@
 			children = (
 				089C167EFE841241C02AAC07 /* English */,
 				84448BE41B49F7F50007C71F /* German */,
+				84F7282A1F7B46E2009F73C0 /* zh_TW */,
+				84753CD91FB8FC1F009C7EC5 /* cy */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -186,6 +198,8 @@
 			children = (
 				847DEF981B6E981600C5011C /* English */,
 				847DEF9F1B6E984700C5011C /* German */,
+				84F728271F7B46CA009F73C0 /* zh_TW */,
+				84753CDA1FB8FC2A009C7EC5 /* cy */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -235,12 +249,11 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1)";
 				ARCHS_STANDARD_32_BIT_PRE_XCODE_3_1 = "ppc i386";
-				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.5;
 				PREBINDING = NO;
-				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
 			};
 			name = Debug;
 		};
@@ -252,7 +265,7 @@
 				GCC_VERSION = 4.0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.4u.sdk";
 			};

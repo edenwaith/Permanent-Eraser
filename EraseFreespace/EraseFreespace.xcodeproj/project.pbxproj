@@ -23,6 +23,7 @@
 		650E79E2067AB5AE00B4A4EC /* Automator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 650E79E1067AB5AE00B4A4EC /* Automator.framework */; };
 		65181752067A8D39005BD953 /* EraseFreespace.m in Sources */ = {isa = PBXBuildFile; fileRef = 65181750067A8D39005BD953 /* EraseFreespace.m */; };
 		848B2B1C1F95A9B8008F678E /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 848B2B1B1F95A9B8008F678E /* PE.icns */; };
+		848B2C711FA03627008F678E /* OSAKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848B2C701FA03627008F678E /* OSAKit.framework */; };
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		6518174F067A8D39005BD953 /* EraseFreespace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EraseFreespace.h; sourceTree = "<group>"; };
 		65181750067A8D39005BD953 /* EraseFreespace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EraseFreespace.m; sourceTree = "<group>"; };
 		848B2B1B1F95A9B8008F678E /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
+		848B2C701FA03627008F678E /* OSAKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OSAKit.framework; path = System/Library/Frameworks/OSAKit.framework; sourceTree = SDKROOT; };
 		8D5B49B6048680CD000E48DA /* EraseFreespace.action */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EraseFreespace.action; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -49,6 +51,7 @@
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
 				650E79E2067AB5AE00B4A4EC /* Automator.framework in Frameworks */,
+				848B2C711FA03627008F678E /* OSAKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
+				848B2C701FA03627008F678E /* OSAKit.framework */,
 			);
 			name = EraseFreespace;
 			sourceTree = "<group>";

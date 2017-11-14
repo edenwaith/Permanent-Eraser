@@ -75,23 +75,12 @@
 			PBXWorkspaceStateSaveDate = 529216722;
 		};
 		perUserProjectItems = {
-			841D653F1F7DDECF00E4EE22 = 841D653F1F7DDECF00E4EE22 /* PBXTextBookmark */;
-			841D65401F7DDECF00E4EE22 = 841D65401F7DDECF00E4EE22 /* PBXBookmark */;
-			841D65411F7DDECF00E4EE22 = 841D65411F7DDECF00E4EE22 /* PBXTextBookmark */;
-			841D65421F7DDECF00E4EE22 = 841D65421F7DDECF00E4EE22 /* PBXTextBookmark */;
-			841D65431F7DDECF00E4EE22 = 841D65431F7DDECF00E4EE22 /* PBXBookmark */;
-			841D65441F7DDECF00E4EE22 = 841D65441F7DDECF00E4EE22 /* PBXTextBookmark */;
+			841D65411F7DDECF00E4EE22 /* PBXTextBookmark */ = 841D65411F7DDECF00E4EE22 /* PBXTextBookmark */;
+			841D65421F7DDECF00E4EE22 /* PBXTextBookmark */ = 841D65421F7DDECF00E4EE22 /* PBXTextBookmark */;
 			848B2B2C1F95ABBF008F678E /* PBXTextBookmark */ = 848B2B2C1F95ABBF008F678E /* PBXTextBookmark */;
-			848B2B2D1F95ABBF008F678E /* PBXTextBookmark */ = 848B2B2D1F95ABBF008F678E /* PBXTextBookmark */;
-			848B2B2E1F95ABBF008F678E /* PlistBookmark */ = 848B2B2E1F95ABBF008F678E /* PlistBookmark */;
-			848B2B2F1F95ABBF008F678E /* PlistBookmark */ = 848B2B2F1F95ABBF008F678E /* PlistBookmark */;
-			848B2B401F95B14E008F678E /* PlistBookmark */ = 848B2B401F95B14E008F678E /* PlistBookmark */;
-			848B2B411F95B14E008F678E /* PBXTextBookmark */ = 848B2B411F95B14E008F678E /* PBXTextBookmark */;
-			848B2B421F95B14E008F678E /* PBXTextBookmark */ = 848B2B421F95B14E008F678E /* PBXTextBookmark */;
-			848B2B491F95B156008F678E /* PBXTextBookmark */ = 848B2B491F95B156008F678E /* PBXTextBookmark */;
-			848B2B4A1F95B156008F678E /* PlistBookmark */ = 848B2B4A1F95B156008F678E /* PlistBookmark */;
-			848B2B4B1F95B156008F678E /* PlistBookmark */ = 848B2B4B1F95B156008F678E /* PlistBookmark */;
-			84E2A16414AD8328000728E0 = 84E2A16414AD8328000728E0 /* PlistBookmark */;
+			848B34F71FB6BCBC008F678E /* PBXTextBookmark */ = 848B34F71FB6BCBC008F678E /* PBXTextBookmark */;
+			848B34F81FB6BCBC008F678E /* PlistBookmark */ = 848B34F81FB6BCBC008F678E /* PlistBookmark */;
+			848B34F91FB6BCBC008F678E /* PlistBookmark */ = 848B34F91FB6BCBC008F678E /* PlistBookmark */;
 		};
 		sourceControlManager = 658A2DCF067AB96600421F51 /* Source Control */;
 		userBuildSettings = {
@@ -102,7 +91,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1209, 481}}";
 			sepNavSelRange = "{831, 14}";
-			sepNavVisRange = "{372, 872}";
+			sepNavVisRange = "{372, 873}";
 			sepNavVisRect = "{{0, 211}, {557, 267}}";
 		};
 	};
@@ -183,27 +172,6 @@
 		path = /Applications/Automator.app;
 		sourceTree = "<absolute>";
 	};
-	8405D6FC0BF95CA0008F4B90 /* PE.tiff */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = image.tiff;
-		name = PE.tiff;
-		path = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/PE.tiff";
-		sourceTree = "<absolute>";
-	};
-	841D653F1F7DDECF00E4EE22 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 089C167EFE841241C02AAC07 /* English */;
-		name = "InfoPlist.strings: 23";
-		rLen = 76;
-		rLoc = 804;
-		rType = 0;
-		vrLen = 835;
-		vrLoc = 480;
-	};
-	841D65401F7DDECF00E4EE22 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 8405D6FC0BF95CA0008F4B90 /* PE.tiff */;
-	};
 	841D65411F7DDECF00E4EE22 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 32DBCF630370AF2F00C91783 /* EraseTrash_Prefix.pch */;
@@ -224,20 +192,6 @@
 		vrLen = 351;
 		vrLoc = 0;
 	};
-	841D65431F7DDECF00E4EE22 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = 65181750067A8D39005BD953 /* EraseTrash.m */;
-	};
-	841D65441F7DDECF00E4EE22 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 65181750067A8D39005BD953 /* EraseTrash.m */;
-		name = "EraseTrash.m: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 459;
-		vrLoc = 0;
-	};
 	848B2B2C1F95ABBF008F678E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 65181750067A8D39005BD953 /* EraseTrash.m */;
@@ -248,7 +202,7 @@
 		vrLen = 459;
 		vrLoc = 0;
 	};
-	848B2B2D1F95ABBF008F678E /* PBXTextBookmark */ = {
+	848B34F71FB6BCBC008F678E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 089C167EFE841241C02AAC07 /* English */;
 		name = "InfoPlist.strings: 3";
@@ -258,84 +212,7 @@
 		vrLen = 881;
 		vrLoc = 0;
 	};
-	848B2B2E1F95ABBF008F678E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			CFBundleShortVersionString,
-		);
-		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	848B2B2F1F95ABBF008F678E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			AMKeywords,
-			1,
-		);
-		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	848B2B401F95B14E008F678E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			AMDescription,
-			AMDOptions,
-		);
-		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775807;
-	};
-	848B2B411F95B14E008F678E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 089C167EFE841241C02AAC07 /* English */;
-		rLen = 14;
-		rLoc = 831;
-		rType = 0;
-	};
-	848B2B421F95B14E008F678E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 089C167EFE841241C02AAC07 /* English */;
-		name = "InfoPlist.strings: 23";
-		rLen = 14;
-		rLoc = 831;
-		rType = 0;
-		vrLen = 872;
-		vrLoc = 372;
-	};
-	848B2B491F95B156008F678E /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 089C167EFE841241C02AAC07 /* English */;
-		name = "InfoPlist.strings: 3";
-		rLen = 0;
-		rLoc = 96;
-		rType = 0;
-		vrLen = 1152;
-		vrLoc = 372;
-	};
-	848B2B4A1F95B156008F678E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			AMDescription,
-			AMDRelatedActions,
-		);
-		rLen = 14;
-		rLoc = 6;
-	};
-	848B2B4B1F95B156008F678E /* PlistBookmark */ = {
+	848B34F81FB6BCBC008F678E /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
 		fallbackIsa = PBXBookmark;
@@ -348,17 +225,16 @@
 		rLen = 0;
 		rLoc = 9223372036854775807;
 	};
-	84E2A16414AD8328000728E0 /* PlistBookmark */ = {
+	848B34F91FB6BCBC008F678E /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
-			CFBundleGetInfoString,
 		);
-		name = "/Users/admin/Programs/Permanent Eraser/EraseTrash/Info.plist";
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775808;
+		rLoc = 9223372036854775807;
 	};
 	8D5B49AC048680CD000E48DA /* EraseTrash */ = {
 		activeExec = 0;
