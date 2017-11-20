@@ -296,8 +296,6 @@
 								<string>089C167CFE841241C02AAC07</string>
 								<string>19C28FB8FE9D52D311CA2CBB</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>848B2C7A1FA036C0008F678E</string>
-								<string>848B2C7B1FA036C0008F678E</string>
 								<string>1C37FAAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
@@ -359,7 +357,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>848B34F61FB6BCBA008F678E</string>
+										<string>84753D951FBD3605009C7EC5</string>
 										<key>history</key>
 										<array>
 											<string>848B2B9A1F9EE376008F678E</string>
@@ -367,7 +365,7 @@
 											<string>848B2C561FA024E6008F678E</string>
 											<string>848B2C6B1FA03445008F678E</string>
 											<string>848B2CB71FA44005008F678E</string>
-											<string>848B34F51FB6BCBA008F678E</string>
+											<string>848B34F61FB6BCBA008F678E</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -425,9 +423,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>848B2BA01F9EE376008F678E</string>
+				<string>84753D961FBD3605009C7EC5</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>848B2BA11F9EE376008F678E</string>
+				<string>84753D971FBD3605009C7EC5</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -548,7 +546,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>532069562.34118497</real>
+	<real>532493829.42011797</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -565,12 +563,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C0AD2AF069F1E9B00FABCE6</string>
-		<string>848B2BA31F9EE376008F678E</string>
-		<string>848B2BA41F9EE376008F678E</string>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>841D65391F7CB7E000E4EE22</string>
-		<string>1C78EAAD065D492600B07095</string>
+		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/EraseFreespace.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -612,8 +606,6 @@
 							<string>218pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -653,7 +645,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>841D65391F7CB7E000E4EE22</string>
-				<string>848B2AF11F907891008F678E</string>
+				<string>84753D981FBD3605009C7EC5</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -666,7 +658,7 @@
 			<key>WindowToolGUID</key>
 			<string>841D65391F7CB7E000E4EE22</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
@@ -697,8 +689,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {316, 185}}</string>
-											<string>{{316, 0}, {378, 185}}</string>
+											<string>{{0, 0}, {316, 194}}</string>
+											<string>{{316, 0}, {378, 194}}</string>
 										</array>
 									</dict>
 									<key>VerticalSplitView</key>
@@ -713,8 +705,8 @@
 										<string>yes</string>
 										<key>sizes</key>
 										<array>
-											<string>{{0, 0}, {694, 185}}</string>
-											<string>{{0, 185}, {694, 196}}</string>
+											<string>{{0, 0}, {694, 194}}</string>
+											<string>{{0, 194}, {694, 187}}</string>
 										</array>
 									</dict>
 								</dict>
@@ -747,7 +739,7 @@
 										<real>148</real>
 									</array>
 									<key>Frame</key>
-									<string>{{316, 0}, {378, 185}}</string>
+									<string>{{316, 0}, {378, 194}}</string>
 									<key>RubberWindowFrame</key>
 									<string>733 386 694 422 0 0 1440 878 </string>
 								</dict>
@@ -775,13 +767,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>848B2AF21F907891008F678E</string>
+				<string>84753D991FBD3605009C7EC5</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>848B2AF31F907891008F678E</string>
-				<string>848B2AF41F907891008F678E</string>
-				<string>848B2AF51F907891008F678E</string>
-				<string>848B2AF61F907891008F678E</string>
-				<string>848B2AF71F907891008F678E</string>
+				<string>84753D9A1FBD3605009C7EC5</string>
+				<string>84753D9B1FBD3605009C7EC5</string>
+				<string>84753D9C1FBD3605009C7EC5</string>
+				<string>84753D9D1FBD3605009C7EC5</string>
+				<string>84753D9E1FBD3605009C7EC5</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>

@@ -19,18 +19,11 @@
 - (id)runWithInput:(id)input fromAction:(AMAction *)anAction error:(NSDictionary **)errorInfo
 {
 	// Accept items of type public.volume or com.apple.cocoa.path
-	NSString *erasingLevel = nil; // @"1";
-	NSString *diskPath = nil; // @"/Volumes/Kingston";
-	 
-	
-	
-	
-	// TODO: Check if the item is a mounted volume
-	NSLog(@"input's type: %@", NSStringFromClass([input class]));
+	NSString *erasingLevel = nil;
+	NSString *diskPath = nil;
 	
 	if (input != nil && [input isKindOfClass:[NSArray class]] && [input count] > 0) 
 	{
-		NSLog(@"input:: %@", input);
 		diskPath = [input objectAtIndex: 0];
 		
 		if (diskPath == nil) 
@@ -42,13 +35,11 @@
 		} 
 		else if ([self isVolume: diskPath] == NO) 
 		{
-			NSLog(@"%@ is not an available volume.", diskPath);
 			NSString *errorMessage = [NSString stringWithFormat: @"Error: %@ is not an available volume.", diskPath];
 			*errorInfo = [self errorInfoWithMessage: errorMessage];
 			
 			return input;
 		}
-		
 	} 
 	else 
 	{
@@ -61,12 +52,9 @@
 	// Get the selected erasing level using key bindings
 	NSNumber *fileErasingLevel = [[self parameters] objectForKey:@"fileErasingLevel"];
 	
-	NSLog(@"parameters: %@", [self parameters]);
-	
-	if (fileErasingLevel != nil) {
-		NSLog(@"fileErasingLevel: %@ %@", NSStringFromClass([fileErasingLevel class]), fileErasingLevel);
+	if (fileErasingLevel != nil) 
+	{
 		erasingLevel = [fileErasingLevel stringValue];
-		NSLog(@"erasingLevel:: %@", erasingLevel);
 		
 		if (floor(NSAppKitVersionNumber) < NSAppKitVersionNumber10_6) {
 			// If Leopard, the option cannot be 0 or 4, so change to 1 or 3
@@ -105,6 +93,7 @@
 	
 	[nc removeObserver: self];
 	
+	// The following commented line is another method to detect and read the output from the running task
 	// [nc addObserver: self selector:@selector(dataReady:) name: NSFileHandleReadCompletionNotification object:fileHandle];
 	[nc addObserver: self selector:@selector(taskTerminated:) name:NSTaskDidTerminateNotification object:task];
 	
@@ -113,10 +102,10 @@
 	// [fileHandle readInBackgroundAndNotify];
 
 	[NSThread detachNewThreadSelector: @selector(outputData:) toTarget: self withObject: fileHandle];
-	NSLog(@"task was launched");
 	
 	return input;
 }
+
 
 - (void) outputData: (NSFileHandle *) fileHandle
 {
@@ -126,7 +115,7 @@
 	while ([data=[fileHandle availableData] length])
 	{
 		NSString *dataString = [[NSString alloc] initWithData:data encoding: NSUTF8StringEncoding];
-		// [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]
+		// If any output is ever provided for this Automator Action, this might be useful to display
 		NSLog(@"dataString:: %@", [dataString stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]);
 		[dataString release];
 	}
@@ -135,6 +124,35 @@
 	
 	[NSThread exit];
 	
+}
+
+
+- (void)taskTerminated:(NSNotification *)note {
+	
+	[[NSNotificationCenter defaultCenter] removeObserver: self];
+	
+	[outputPipe release];
+	outputPipe = nil;
+	
+	[task release];
+	task = nil;
+}
+
+- (BOOL)isVolume: (NSString *) volumePath
+{
+	BOOL isPathVolume = NO;
+	NSArray * volumesList = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
+	
+	if ([volumesList containsObject:volumePath] == YES)
+	{
+		isPathVolume = YES;
+	}
+	else
+	{
+		isPathVolume = NO;
+	}
+	
+	return (isPathVolume);
 }
 
 /*
@@ -173,6 +191,8 @@
 	return [NSDictionary dictionaryWithObjects:objsArray forKeys:keysArray];
 }
 
+#pragma mark - Unused Alternative Methods
+
 - (void)appendData: (NSData*)data {
 	// do stuff
 	NSString *s = [[NSString alloc] initWithData:data encoding: NSUTF8StringEncoding];
@@ -196,36 +216,10 @@
 	}
 }
 
-- (void)taskTerminated:(NSNotification *)note {
-	NSLog(@"taskTerminated:");
-	
-	[[NSNotificationCenter defaultCenter] removeObserver: self];
-	
-	[outputPipe release];
-	outputPipe = nil;
-	
-	[task release];
-	task = nil;
-}
-
-- (BOOL)isVolume: (NSString *) volumePath
-{
-	BOOL isPathVolume = NO;
-	NSArray * volumesList = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
-	
-	if ([volumesList containsObject:volumePath] == YES)
-	{
-		isPathVolume = YES;
-	}
-	else
-	{
-		isPathVolume = NO;
-	}
-	
-	return (isPathVolume);
-}
 
 /*
+// This was example code used to parse the output when running diskutil
+// If any output is provided for this Automator Action, this might be useful.
 - (void)parseData:(NSNotification *)notification {
 	NSCharacterSet* nonDigits = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
 	// NSString *percentageString = @"[ | 0%..10%..20%..30%.................................... ]";
