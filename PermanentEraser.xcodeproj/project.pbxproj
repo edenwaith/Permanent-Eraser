@@ -146,6 +146,8 @@
 		84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
 		845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
 		845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
+		84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84907D24154B9AE200B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
 		84907D26154B9AF900B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D25154B9AF900B614D0 /* srm */; };
 		84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
@@ -179,6 +181,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
 			remoteInfo = EraseTrash;
+		};
+		84753CF31FB904FB009C7EC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8D5B49B6048680CD000E48DA;
+			remoteInfo = EraseFreespace;
 		};
 		84E724800C0D0E56005C0E9C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -236,6 +245,7 @@
 			dstPath = Contents/Library/Automator;
 			dstSubfolderSpec = 1;
 			files = (
+				84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */,
 				84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */,
 				84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */,
 			);
@@ -269,6 +279,9 @@
 		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
 		84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Utils.h"; path = "Utils/NSProcessInfo+Utils.h"; sourceTree = "<group>"; };
 		84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Utils.m"; path = "Utils/NSProcessInfo+Utils.m"; sourceTree = "<group>"; };
+		842101CE1F38236C005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		842101D31F38242A005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cy; path = cy.lproj/Localizable.strings; sourceTree = "<group>"; };
+		842101D81F3824EA005B3497 /* cy */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = cy; path = cy.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED70EE6456D00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Italian; path = Italian.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		84267ED80EE6457900F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84267EDA0EE6458B00F4C36D /* Italian */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Italian; path = Italian.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -290,6 +303,7 @@
 		845EF8410BE97B9E00EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		845EF8450BE97BD800EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		845EF8480BE97BE100EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EraseFreespace.xcodeproj; path = EraseFreespace/EraseFreespace.xcodeproj; sourceTree = "<group>"; };
 		847BA6E41303A20400427D14 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = Dutch.lproj/Preferences.nib; sourceTree = "<group>"; };
 		847BA6E51303A20800427D14 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/Preferences.nib; sourceTree = "<group>"; };
 		84907D23154B9AE200B614D0 /* srm */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = srm; path = "srm/srm for pe/srm"; sourceTree = "<group>"; };
@@ -462,6 +476,14 @@
 			name = DiscRecording;
 			sourceTree = "<group>";
 		};
+		84753CED1FB904FB009C7EC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84753CF41FB904FB009C7EC5 /* EraseFreespace.action */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		84907D21154B9AB800B614D0 /* srm */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +575,7 @@
 		84F6D5010C0BDD9F00CC11F4 /* Automator */ = {
 			isa = PBXGroup;
 			children = (
+				84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */,
 				84E724770C0D0E56005C0E9C /* Erase.xcodeproj */,
 				8409A24D0C0C586A00951A52 /* EraseTrash.xcodeproj */,
 			);
@@ -674,6 +697,7 @@
 				zh_TW,
 				sv,
 				Italian,
+				cy,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* PermanentEraser */;
 			projectDirPath = "";
@@ -681,6 +705,10 @@
 				{
 					ProductGroup = 84E724780C0D0E56005C0E9C /* Products */;
 					ProjectRef = 84E724770C0D0E56005C0E9C /* Erase.xcodeproj */;
+				},
+				{
+					ProductGroup = 84753CED1FB904FB009C7EC5 /* Products */;
+					ProjectRef = 84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */;
 				},
 				{
 					ProductGroup = 8409A24E0C0C586A00951A52 /* Products */;
@@ -702,6 +730,13 @@
 			fileType = wrapper.cfbundle;
 			path = EraseTrash.action;
 			remoteRef = 8409A2560C0C586B00951A52 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84753CF41FB904FB009C7EC5 /* EraseFreespace.action */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EraseFreespace.action;
+			remoteRef = 84753CF31FB904FB009C7EC5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		84E724810C0D0E56005C0E9C /* Erase.action */ = {
@@ -767,6 +802,7 @@
 				84078F0C1A9444C8009AC273 /* software_update.png in Resources */,
 				84078F0D1A9444C8009AC273 /* software_update@2x.png in Resources */,
 				84078F1E1A9449D4009AC273 /* plugin@2x.png in Resources */,
+				84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,6 +895,7 @@
 				8404CE790B7433F600CECB37 /* zh_TW */,
 				845EF8450BE97BD800EE6556 /* sv */,
 				84267ED80EE6457900F4C36D /* Italian */,
+				842101CE1F38236C005B3497 /* cy */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -873,6 +910,7 @@
 				8404CE780B7433D600CECB37 /* zh_TW */,
 				845EF8410BE97B9E00EE6556 /* sv */,
 				84267ED70EE6456D00F4C36D /* Italian */,
+				842101D81F3824EA005B3497 /* cy */,
 			);
 			name = MainMenu.nib;
 			sourceTree = "<group>";
@@ -905,6 +943,7 @@
 				8404CE870B74349F00CECB37 /* zh_TW */,
 				845EF8480BE97BE100EE6556 /* sv */,
 				84267EDA0EE6458B00F4C36D /* Italian */,
+				842101D31F38242A005B3497 /* cy */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1312,7 +1351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
 				SDKROOT = macosx10.5;
@@ -1368,7 +1407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Developer ID Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;

@@ -28,24 +28,28 @@
 		<key>AMDAlert</key>
 		<string></string>
 		<key>AMDInput</key>
-		<string>(* AMDInput text to further explain the types accepted as input goes here. (optional) *)</string>
+		<string>List of files to be erased</string>
 		<key>AMDNote</key>
 		<string></string>
 		<key>AMDOptions</key>
 		<string></string>
 		<key>AMDRelatedActions</key>
-		<string>(* AMDRelatedActions bundle ids go here. (optional) *)</string>
+		<string></string>
 		<key>AMDRequires</key>
 		<string></string>
 		<key>AMDResult</key>
-		<string>(* AMDResult text to further explain the types provided as output goes here. (optional) *)</string>
+		<string></string>
 		<key>AMDSummary</key>
-		<string>(* AMDSummary text to explain what your action does goes here. *)</string>
+		<string>Erase the selected files using the 35-pass Gutmann algorithm.</string>
 	</dict>
 	<key>AMIconName</key>
 	<string>PE</string>
 	<key>AMKeywords</key>
-	<array/>
+	<array>
+		<string>secure</string>
+		<string>erase</string>
+		<string>file</string>
+	</array>
 	<key>AMName</key>
 	<string>Erase</string>
 	<key>AMProvides</key>
@@ -77,7 +81,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>Erase version 1.2, Copyright (c) 2007-2012, Edenwaith.</string>
+	<string>Erase version 1.2.1, Copyright (c) 2007-2017, Edenwaith.</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
@@ -89,11 +93,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>NSPrincipalClass</key>
 	<string>Erase</string>
 </dict>

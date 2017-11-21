@@ -34,7 +34,7 @@
 		<key>AMDOptions</key>
 		<string></string>
 		<key>AMDRelatedActions</key>
-		<string>(* AMDRelatedActions bundle ids go here. (optional) *)</string>
+		<string></string>
 		<key>AMDRequires</key>
 		<string></string>
 		<key>AMDResult</key>
@@ -45,7 +45,11 @@
 	<key>AMIconName</key>
 	<string>PE</string>
 	<key>AMKeywords</key>
-	<array/>
+	<array>
+		<string>secure</string>
+		<string>erase</string>
+		<string>trash</string>
+	</array>
 	<key>AMName</key>
 	<string>EraseTrash</string>
 	<key>AMProvides</key>
@@ -77,7 +81,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleGetInfoString</key>
-	<string>EraseTrash version 1.2, Copyright (c) 2007-2012, Edenwaith.</string>
+	<string>EraseTrash version 1.2.1, Copyright (c) 2007-2017, Edenwaith.</string>
 	<key>CFBundleIconFile</key>
 	<string>PE</string>
 	<key>CFBundleIdentifier</key>
@@ -89,11 +93,11 @@
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>NSPrincipalClass</key>
 	<string>EraseTrash</string>
 </dict>

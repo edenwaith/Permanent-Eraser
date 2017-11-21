@@ -49,6 +49,15 @@
 #include <CoreFoundation/CFPlugInCOM.h>
 
 // -----------------------------------------------------------------------------
+//	References
+// -----------------------------------------------------------------------------
+// Inside Contextual Menu Items, Part 1: http://www.macdevcenter.com/pub/a/mac/2004/05/28/cm_pt1.html
+// Inside Contextual Menu Items, Part 2: http://www.macdevcenter.com/pub/a/mac/2004/06/04/cm_pt2.html
+// Writing Contextual Menu Plugins for OS X, part 1: http://www.mactech.com/articles/mactech/Vol.18/18.08/MenuPlugins/index.html
+// Writing Contextual Menu Plugins for OS X, part 2: http://www.mactech.com/articles/mactech/Vol.19/19.01/1901MenuPlugins/index.html
+// UUID Generator: http://www.hsoi.com/hsoishop/software/
+
+// -----------------------------------------------------------------------------
 //	constants
 // -----------------------------------------------------------------------------
 
@@ -241,7 +250,7 @@ static OSStatus EraseCMIExamineContext(
 	// CMI Check List
 	// + Only allow as a Finder CMI
 	// + Generate the menu item's name
-	// - Create localizations
+	// + Create localizations
 	// + Support Unicode menu names
 	// + Handle the request
 	// + Find PE on the system (Use Launch Services)
@@ -259,7 +268,7 @@ static OSStatus EraseCMIExamineContext(
 	procInfo.processInfoLength = sizeof(ProcessInfoRec);
 	procInfo.processName = procName;
 	procInfo.processAppSpec = &appFSSpec;
-	GetFrontProcess( &curProcess);
+	GetFrontProcess(&curProcess);
 	
 	if (noErr == GetProcessInformation(&curProcess, &procInfo)) 
 	{
@@ -280,6 +289,8 @@ static OSStatus EraseCMIExamineContext(
 	{
 		long numItems = 0;
 		OSErr err = AECountItems(inContext, &numItems);
+		// As a Finder plug-in, the main bundle ID is com.apple.finder, instead of com.edenwaith.EraseCMI
+		CFBundleRef pluginBundle = CFBundleGetBundleWithIdentifier(CFSTR("com.edenwaith.EraseCMI"));
 		
 		if (err != noErr) {
 			return (true);
@@ -297,22 +308,8 @@ static OSStatus EraseCMIExamineContext(
 			CFStringRef displayName;
 			LSCopyDisplayNameForRef( &fsref, &displayName );
 			
-			// TODO: Localize
-			CFStringRef menuName = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFSTR( "Erase \"%@\"" ), displayName);
-			
-			// Experimental localization, which never seemed to work.
-			/*
-			// As a Finder plug-in, the main bundle ID is com.apple.finder, instead of com.edenwaith.EraseCMI
-			CFBundleRef pluginBundle = CFBundleGetBundleWithIdentifier(CFSTR("com.edenwaith.EraseCMI"));
-			CFStringRef bundleID = CFBundleGetIdentifier(pluginBundle);
-			CFShow(bundleID);
-			CFRelease(bundleID);
-			
-			CFStringRef eraseItemsKey = CFSTR("EraseItems");
-			CFStringRef eraseString = CFCopyLocalizedStringFromTableInBundle(eraseItemsKey, CFSTR("Localizable"), pluginBundle, NULL); // CFCopyLocalizedStringFromTable(browseKey, CFSTR("MenuNames"), NULL); // CFCopyLocalizedString (CFSTR("EraseItems"), NULL);
-			CFShow(eraseString);
-			CFRelease(eraseString);
-			*/
+			CFStringRef localizedString = CFCopyLocalizedStringFromTableInBundle(CFSTR("EraseItem"), CFSTR("Localizable"), pluginBundle, "Erase file");
+			CFStringRef menuName = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, localizedString, displayName);
 			
 			if ( menuName != NULL )
 			{
@@ -325,24 +322,36 @@ static OSStatus EraseCMIExamineContext(
 				}
 				
 				// Be a good memory steward and clean up!
-				CFRelease( menuName );
+				CFRelease(menuName);
+			}
+			
+			if (localizedString != NULL)
+			{
+				CFRelease(localizedString);
 			}
 		}
-		else
+		else // Multiple items selected
 		{
-			//CFCopyLocalizedStringFromTable(key, CFSTR("Localizable"), comment)
-			CFStringRef localizedMenuName = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFSTR( "Erase %d Items" ), numItems);
-			OSStatus theError = noErr;
-			theError = AddCommandToList(localizedMenuName, theCommandID, outCommandPairs );
+			CFStringRef localizedString = CFCopyLocalizedStringFromTableInBundle(CFSTR("EraseItems"), CFSTR("Localizable"), pluginBundle, "Erase file");
+			CFStringRef menuName = CFStringCreateWithFormat( kCFAllocatorDefault, NULL, localizedString, numItems);
 			
-			if (theError != noErr) 
+			if (menuName != NULL)
 			{
-				fprintf(stderr, "Error creating the menu name\n");
+				OSStatus theError = noErr;
+				theError = AddCommandToList(menuName, theCommandID, outCommandPairs );
+				
+				if (theError != noErr) 
+				{
+					fprintf(stderr, "Error creating the menu name\n");
+				}
+				
+				CFRelease(menuName);
 			}
-			// CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFCopyLocalizedStringFromTable (CFSTR("EraseItems"), CFSTR("Localizable"), NULL), numItems);
-			//CFStringCreateWithFormat( kCFAllocatorDefault, NULL, CFSTR( "%@ %d %@" ), CFCopyLocalizedString (CFSTR("Erase"), "Erase"), numItems, CFCopyLocalizedString (CFSTR("Files"), "Files"));
-			// AddCommandToAEDescList( CFStringGetPascalStringPtr(localizedMenuName, kCFStringEncodingMacRoman), kTextEncodingMacRoman, typeChar, 943, 0, 0, outCommandPairs );
-			//AddCommandToList(localizedMenuName, 943, outCommandPairs);
+			
+			if (localizedString != NULL)
+			{
+				CFRelease(localizedString);
+			}
 		}
 
 		// Add line separator

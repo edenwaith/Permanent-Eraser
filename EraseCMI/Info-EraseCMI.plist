@@ -7,7 +7,7 @@
 	<key>CFBundleExecutable</key>
 	<string>EraseCMI</string>
 	<key>CFBundleIconFile</key>
-	<string></string>
+	<string>PlugIn.icns</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.edenwaith.EraseCMI</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -19,7 +19,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.1.1</string>
 	<key>CFPlugInDynamicRegisterFunction</key>
 	<string></string>
 	<key>CFPlugInDynamicRegistration</key>

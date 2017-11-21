@@ -1,6 +1,5 @@
 "Cancel" = "Annuler";
-/* "Complete" = "Complet"; */
-"Complete" = "Complete";
+"Complete" = "Complet";
 "DoNotShowMessage" = "Ne plus afficher ce message";
 "Download" = "Télécharger";
 "ErasingFileWarning" = "Vous êtes sûr de vouloir supprimer ce fichier «%@»?";
@@ -18,18 +17,26 @@
 "MoreInfo" = "Plus d'info";
 "NewVersionAvailable" = "Une nouvelle version est disponible";
 "NewVersionAvailableMsg" = "La version %@ de Permanent Eraser est disponible.";
-"NoPluginMessage" = "No plug-in is available for this version of Mac OS.";
+"NoPluginMessage" = "No plug-in is available for this version of macOS.";
 "Of" = " de ";
 "OK" = "OK";
 "Plug-Ins" = "Modules externes";
 "PluginInstallMessage" = "The plug-in %@ will be installed in the folder %@";
 "Preferences" = "Préférences...";
 "PreparingMessage" = "Préparation de la suppression encours…";
-/* "Quick" = "Rapide"; */
-"Quick" = "Quick";
+"Quick" = "Rapide";
 "Quit" = "Quitter";
 "RecentVersionMsg" = "Vous avez la version la plus récente de Permanent Eraser.";
 "SoftwareUpToDate" = "Le logiciel est à jour";
 "Update" = "Mettre à jour";
 "UpdateFailure" = "Échec à trouver une mise-à-jour";
 "UpdateFailureMsg" = "Un problème est survenu durant la tentative de recherche d'une nouvelle version de Permanent Eraser.  Edenwaith.com peut être indisponible temporairement ou votre réseau peut être en panne.";
+/* Localized strings for Preferences */
+"FileErasingLevel" = "File erasing level:";
+"CDDVDErasingLevel" = "CD/DVD erasing level:";
+"WarnBeforeErasing" = "Warn before erasing";
+"PlaySounds" = "Play sounds";
+"CheckNow" = "Check Now";
+"LastChecked" = "Last checked:";
+"Never" = "Never";
+"InstallContextualPlugIn" = "Install Contextual Plug-In";

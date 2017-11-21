@@ -16,7 +16,7 @@
 	// NSEnumerator *enumerate = [input objectEnumerator];
 
 	NSTask		*peTask		= [[NSTask alloc] init];
-	NSString	*appPath;
+	NSString	*appPath	= nil;
 
 	// Add your code here, returning the data to be passed to the next action.
 	

@@ -13,9 +13,9 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="7"/>
-			<integer value="6"/>
-			<integer value="3"/>
 			<integer value="5"/>
+			<integer value="3"/>
+			<integer value="6"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -214,7 +214,7 @@
 					<object class="NSButton" id="339861963">
 						<reference key="NSNextResponder" ref="962199208"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{199, 54}, {149, 18}}</string>
+						<string key="NSFrame">{{199, 54}, {183, 18}}</string>
 						<reference key="NSSuperview" ref="962199208"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="587526509">
@@ -241,12 +241,12 @@
 					<object class="NSTextField" id="677148368">
 						<reference key="NSNextResponder" ref="962199208"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{82, 116}, {114, 17}}</string>
+						<string key="NSFrame">{{17, 116}, {179, 17}}</string>
 						<reference key="NSSuperview" ref="962199208"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="352642769">
 							<int key="NSCellFlags">68288064</int>
-							<int key="NSCellFlags2">272630784</int>
+							<int key="NSCellFlags2">71304192</int>
 							<string key="NSContents">File erasing level:</string>
 							<reference key="NSSupport" ref="1004448560"/>
 							<reference key="NSControlView" ref="677148368"/>
@@ -273,12 +273,12 @@
 					<object class="NSTextField" id="395212279">
 						<reference key="NSNextResponder" ref="962199208"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{51, 84}, {145, 17}}</string>
+						<string key="NSFrame">{{17, 84}, {179, 17}}</string>
 						<reference key="NSSuperview" ref="962199208"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="904726474">
 							<int key="NSCellFlags">68288064</int>
-							<int key="NSCellFlags2">272630784</int>
+							<int key="NSCellFlags2">71304192</int>
 							<string key="NSContents">CD/DVD erasing level:</string>
 							<reference key="NSSupport" ref="1004448560"/>
 							<reference key="NSControlView" ref="395212279"/>
@@ -289,7 +289,7 @@
 					<object class="NSButton" id="271899892">
 						<reference key="NSNextResponder" ref="962199208"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{199, 28}, {97, 18}}</string>
+						<string key="NSFrame">{{199, 28}, {183, 18}}</string>
 						<reference key="NSSuperview" ref="962199208"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="7440897">
@@ -341,15 +341,17 @@
 					<object class="NSTextField" id="751070308">
 						<reference key="NSNextResponder" ref="791836663"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{17, 57}, {99, 17}}</string>
+						<string key="NSFrame">{{-2.5, 57}, {144, 17}}</string>
 						<reference key="NSSuperview" ref="791836663"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="4292114">
-							<int key="NSCellFlags">67239424</int>
-							<int key="NSCellFlags2">71303168</int>
+							<int key="NSCellFlags">67239488</int>
+							<int key="NSCellFlags2">71305216</int>
 							<string key="NSContents">Last checked: </string>
 							<reference key="NSSupport" ref="1004448560"/>
 							<reference key="NSControlView" ref="751070308"/>
+							<bool key="NSDrawsBackground">YES</bool>
+							<int key="NSTextBezelStyle">1</int>
 							<reference key="NSBackgroundColor" ref="115089150"/>
 							<reference key="NSTextColor" ref="623540327"/>
 						</object>
@@ -357,7 +359,7 @@
 					<object class="NSTextField" id="862086212">
 						<reference key="NSNextResponder" ref="791836663"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{118, 57}, {265, 17}}</string>
+						<string key="NSFrame">{{147, 57}, {253, 17}}</string>
 						<reference key="NSSuperview" ref="791836663"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="130055502">
@@ -383,7 +385,7 @@
 					<object class="NSButton" id="542504422">
 						<reference key="NSNextResponder" ref="67613153"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{108, 112}, {184, 18}}</string>
+						<string key="NSFrame">{{108, 112}, {274, 18}}</string>
 						<reference key="NSSuperview" ref="67613153"/>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="246825537">
@@ -646,6 +648,38 @@
 						<reference key="destination" ref="862531475"/>
 					</object>
 					<int key="connectionID">83</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">fileErasingLabel</string>
+						<reference key="source" ref="1000222173"/>
+						<reference key="destination" ref="677148368"/>
+					</object>
+					<int key="connectionID">92</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">discErasingLabel</string>
+						<reference key="source" ref="1000222173"/>
+						<reference key="destination" ref="395212279"/>
+					</object>
+					<int key="connectionID">93</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">lastCheckedLabel</string>
+						<reference key="source" ref="1000222173"/>
+						<reference key="destination" ref="751070308"/>
+					</object>
+					<int key="connectionID">94</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">checkNowButton</string>
+						<reference key="source" ref="1000222173"/>
+						<reference key="destination" ref="684285902"/>
+					</object>
+					<int key="connectionID">95</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1082,7 +1116,7 @@
 						<bytes key="NSTransformStruct">P4AAAL+AAABC7AAAwpAAAA</bytes>
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{77, 364}, {400, 165}}</string>
+					<string>{{77, 365}, {400, 165}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<boolean value="YES"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1115,7 +1149,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">91</int>
+			<int key="maxID">95</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1202,8 +1236,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activeContentView</string>
+							<string>checkNowButton</string>
+							<string>discErasingLabel</string>
 							<string>fileErasingButton</string>
+							<string>fileErasingLabel</string>
 							<string>generalPreferenceView</string>
+							<string>lastCheckedLabel</string>
 							<string>lastCheckedTextField</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
@@ -1217,8 +1255,12 @@
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>NSView</string>
+							<string>NSButton</string>
+							<string>NSTextField</string>
 							<string>NSPopUpButton</string>
+							<string>NSTextField</string>
 							<string>NSView</string>
+							<string>NSTextField</string>
 							<string>NSTextField</string>
 							<string>NSPopUpButton</string>
 							<string>NSButton</string>
@@ -1235,8 +1277,12 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activeContentView</string>
+							<string>checkNowButton</string>
+							<string>discErasingLabel</string>
 							<string>fileErasingButton</string>
+							<string>fileErasingLabel</string>
 							<string>generalPreferenceView</string>
+							<string>lastCheckedLabel</string>
 							<string>lastCheckedTextField</string>
 							<string>opticalDiscErasingButton</string>
 							<string>playSoundsButton</string>
@@ -1254,12 +1300,28 @@
 								<string key="candidateClassName">NSView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">checkNowButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">discErasingLabel</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">fileErasingButton</string>
 								<string key="candidateClassName">NSPopUpButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">fileErasingLabel</string>
+								<string key="candidateClassName">NSTextField</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">generalPreferenceView</string>
 								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lastCheckedLabel</string>
+								<string key="candidateClassName">NSTextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">lastCheckedTextField</string>

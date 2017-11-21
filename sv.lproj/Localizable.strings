@@ -17,7 +17,7 @@
 "MoreInfo" = "Mer information";
 "NewVersionAvailable" = "Ny version tillgänglig";
 "NewVersionAvailableMsg" = "Version %@ av Permanent Eraser är tillgänglig";
-"NoPluginMessage" = "Inga insticksfiler är tillgängliga för den här versionen av Mac OS.";
+"NoPluginMessage" = "Inga insticksfiler är tillgängliga för den här versionen av macOS.";
 "Of" = " av ";
 "OK" = "OK";
 "Plug-Ins" = "Insticksfiler";
@@ -32,3 +32,12 @@
 "Update" = "Uppdatering";
 "UpdateFailure" = "Kunde inte söka efter uppdatering";
 "UpdateFailureMsg" = "Ett problem uppstod vid försök att söka efter en ny version av Permanent Eraser.  Edenwaith.com kan tillfälligt vara nere eller så har din internetuppkoppling slutat att fungera.";
+/* Localized strings for Preferences */
+"FileErasingLevel" = "File erasing level:";
+"CDDVDErasingLevel" = "CD/DVD erasing level:";
+"WarnBeforeErasing" = "Warn before erasing";
+"PlaySounds" = "Play sounds";
+"CheckNow" = "Check Now";
+"LastChecked" = "Last checked:";
+"Never" = "Never";
+"InstallContextualPlugIn" = "Install Contextual Plug-In";

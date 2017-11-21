@@ -1,0 +1,10 @@
+/* 
+   Localizable.strings
+   EraseCMI
+
+   Created by Chad Armstrong on 11/12/17.
+   Copyright 2015-2017 Edenwaith. All rights reserved.
+ */
+
+"EraseItem" = "Dileu \"%@\"";
+"EraseItems" = "Dileu %d Eitem";

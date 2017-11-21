@@ -21,9 +21,13 @@
 	
 	IBOutlet NSPopUpButton	*fileErasingButton;
 	IBOutlet NSPopUpButton	*opticalDiscErasingButton;
+	IBOutlet NSTextField	*fileErasingLabel;
+	IBOutlet NSTextField	*discErasingLabel;
 	IBOutlet NSButton		*warnBeforeErasingButton;
 	IBOutlet NSButton		*playSoundsButton;
 	
+	IBOutlet NSButton		*checkNowButton;
+	IBOutlet NSTextField	*lastCheckedLabel; // Label which says: "Last checked:"
 	IBOutlet NSTextField	*lastCheckedTextField;
 	
 	IBOutlet NSButton		*pluginInstalledButton;

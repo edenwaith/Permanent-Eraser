@@ -6,5 +6,5 @@
    Copyright 2015 Edenwaith. All rights reserved.
  */
 
-"EraseItem" = "Löschen “%@„";
+"EraseItem" = "Löschen „%@“";
 "EraseItems" = "%d Objekte löschen";

@@ -112,6 +112,20 @@ static PreferencesController *_sharedWindowController = nil;
 	id fileErasingLevel		= [[NSUserDefaults standardUserDefaults] objectForKey: @"FileErasingLevel"];
 	id lastCheckedDate		= [[NSUserDefaults standardUserDefaults] objectForKey: @"LastCheckedDate"];
 
+	// GENERAL -----
+	
+	// Set the file and disc erasing level text
+	
+	NSArray *fileErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"FileErasingSimple", nil), NSLocalizedString(@"FileErasingDoE", nil), NSLocalizedString(@"FileErasingMedium", nil), NSLocalizedString(@"FileErasingGutmann", nil), nil];
+	NSArray *discErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Quick", nil), NSLocalizedString(@"Complete", nil), nil];
+	
+	[fileErasingButton removeAllItems];
+	[fileErasingButton addItemsWithTitles: fileErasingTitles];
+	
+	[opticalDiscErasingButton removeAllItems];
+	[opticalDiscErasingButton addItemsWithTitles: discErasingTitles];
+	
+	// TODO: Set the initial item if there isn't an option available
 	if (opticalErasingLevel != nil)
 	{
 		if ([opticalDiscErasingButton itemWithTitle: NSLocalizedString(opticalErasingLevel, nil)] != nil )
@@ -127,7 +141,20 @@ static PreferencesController *_sharedWindowController = nil;
 			[fileErasingButton selectItemWithTitle: NSLocalizedString(fileErasingLevel, nil)];
 		}
 	}
+	
+	[fileErasingLabel setStringValue: NSLocalizedString(@"FileErasingLevel", nil)];
+	[discErasingLabel setStringValue: NSLocalizedString(@"CDDVDErasingLevel", nil)];
+	[warnBeforeErasingButton setTitle: NSLocalizedString(@"WarnBeforeErasing", nil)];
+	[playSoundsButton setTitle: NSLocalizedString(@"PlaySounds", nil)];
 
+	// UPDATE -----
+	[checkNowButton setTitle: NSLocalizedString(@"CheckNow", nil)];
+	[lastCheckedLabel setStringValue: NSLocalizedString(@"LastChecked", nil)];
+	
+	// if lastCheckedDate is nil, set the lastCheckedTextField string to "Never"
+	
+	// PLUG-INS -----
+	
 	// Mac OS 10.6+
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)	
 	{
@@ -147,6 +174,8 @@ static PreferencesController *_sharedWindowController = nil;
 	{
 		[pluginInstalledButton setState: NSOnState];
 	}
+	
+	[pluginInstalledButton setTitle: NSLocalizedString(@"InstallContextualPlugIn", nil)];
 	
 	if ([pluginPath isEqualToString: @""] == YES)
 	{
@@ -411,6 +440,7 @@ static PreferencesController *_sharedWindowController = nil;
 	[lastCheckedTextField setStringValue: [self formatLocalizedDate: theDate]];
 	// Need save the date here in preferences...
 	[[NSUserDefaults standardUserDefaults] setObject: theDate forKey: @"LastCheckedDate"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 	
     if ( latestVersionNumber == nil )
     {
