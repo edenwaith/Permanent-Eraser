@@ -88,6 +88,12 @@
 											   object:nil];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self 
+											 selector:@selector(privilegedTaskFinished:) 
+												 name:STPrivilegedTaskDidTerminateNotification 
+											   object:nil];
+
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self 
 											 selector:@selector(appWillTerminateNotification:) 
 												 name:NSApplicationWillTerminateNotification 
 											   object:NSApp];
@@ -120,6 +126,7 @@
 - (void) dealloc 
 {
 	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSTaskDidTerminateNotification object: nil];
+	[[NSNotificationCenter defaultCenter] removeObserver: self name: STPrivilegedTaskDidTerminateNotification object: nil];
 	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSApplicationWillTerminateNotification object: nil];	
 	
 	[badge release];
@@ -1322,6 +1329,8 @@ typedef struct SFetchedInfo
     }
 	
 	// Throw a warning if a file cannot be erased
+	// TODO: Need to check if the file can be deleted, but needs admin rights
+	
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
 		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
 	{
@@ -1840,7 +1849,7 @@ typedef struct SFetchedInfo
 	if (statfs([volumePath fileSystemRepresentation], &stat) == 0)
 	{
 		NSString *fileSystemName = [fm stringWithFileSystemRepresentation: stat.f_fstypename length: strlen(stat.f_fstypename)];
-		
+		// TODO: Should check if apfs is a new option here
 		if ([fileSystemName isEqualToString:@"hfs"])
 			return (fileSystemName);	//HFS(+)
 		else if ([fileSystemName isEqualToString:@"nfs"])
@@ -2006,6 +2015,10 @@ typedef struct SFetchedInfo
         [self selectNextFile];
     }
 
+}
+
+- (void)privilegedTaskFinished:(NSNotification *)aNotification {
+	// Need to call many of the same calls as doneErasing, except release the STPrivilegedTask
 }
 
 

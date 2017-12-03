@@ -146,6 +146,14 @@
 		84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
 		845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
 		845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		8467A0BD1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0BE1FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0BF1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0C01FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0C11FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0E21FC4F62E0072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
+		8467A0E91FC4F6770072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
 		84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84907D24154B9AE200B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
@@ -303,6 +311,9 @@
 		845EF8410BE97B9E00EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		845EF8450BE97BD800EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		845EF8480BE97BE100EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPrivilegedTask.h; path = Utils/STPrivilegedTask.h; sourceTree = "<group>"; };
+		8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPrivilegedTask.m; path = Utils/STPrivilegedTask.m; sourceTree = "<group>"; };
+		8467A0E11FC4F62E0072FEC8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EraseFreespace.xcodeproj; path = EraseFreespace/EraseFreespace.xcodeproj; sourceTree = "<group>"; };
 		847BA6E41303A20400427D14 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = Dutch.lproj/Preferences.nib; sourceTree = "<group>"; };
 		847BA6E51303A20800427D14 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/Preferences.nib; sourceTree = "<group>"; };
@@ -352,6 +363,7 @@
 				84567D25132C621A0070AD1A /* Carbon.framework in Frameworks */,
 				84567D26132C621A0070AD1A /* DiscRecording.framework in Frameworks */,
 				84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */,
+				8467A0E91FC4F6770072FEC8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +375,7 @@
 				84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */,
 				845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */,
 				84484D621516A2A000B61DDA /* IOKit.framework in Frameworks */,
+				8467A0E21FC4F62E0072FEC8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +435,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8467A0E11FC4F62E0072FEC8 /* Security.framework */,
 			);
 			name = PermanentEraser;
 			sourceTree = "<group>";
@@ -545,6 +559,8 @@
 		84DF851A0F5A37E400C272F1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */,
+				8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */,
 				8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */,
 				8440847C10C8B57B009EA3C5 /* CTProgressBadge.m */,
 				84E38DE81036450B0099407B /* NSAlertCheckbox.h */,
@@ -592,6 +608,7 @@
 				32CA4F650368D2AA00C91783 /* PermanentEraser_Prefix.h in Headers */,
 				84524315048BDAA40003BAA1 /* PEController.h in Headers */,
 				8405E9D90B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */,
+				8467A0C11FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +628,7 @@
 				840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */,
 				84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */,
+				8467A0BD1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +646,7 @@
 				8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */,
 				8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */,
+				8467A0BF1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,6 +864,7 @@
 				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
 				84524316048BDAA40003BAA1 /* PEController.m in Sources */,
 				8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */,
+				8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -863,6 +883,7 @@
 				840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */,
 				840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */,
 				84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */,
+				8467A0BE1FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +900,7 @@
 				849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */,
 				8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */,
 				8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				8467A0C01FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

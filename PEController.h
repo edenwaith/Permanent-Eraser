@@ -11,6 +11,7 @@
 #import "PEFile.h"
 #import "CTProgressBadge.h"
 #import "NSProcessInfo+PECocoaBackports.h"
+#import "STPrivilegedTask.h"
 
 #include <unistd.h>		// required to retrieve uid
 #include <sys/param.h>
@@ -25,6 +26,7 @@
 @interface PEController : NSObject
 {
     NSTask			*pEraser;
+	STPrivilegedTask *privilegedTask;
     NSFileManager 	*fm;  
     NSMutableArray 	*trash_files;
 	NSFileHandle	*handle;
