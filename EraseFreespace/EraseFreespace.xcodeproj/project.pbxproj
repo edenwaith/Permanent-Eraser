@@ -325,6 +325,37 @@
 			};
 			name = Release;
 		};
+		84A728271FD4CC10007F095B /* Release MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				VALID_ARCHS = "i386 ppc x86_64";
+			};
+			name = "Release MAS";
+		};
+		84A728281FD4CC10007F095B /* Release MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = EraseFreespace_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Automator";
+				OTHER_OSAFLAGS = "-x -t 0 -c 0";
+				PRODUCT_NAME = EraseFreespace;
+				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 x86_64";
+				WRAPPER_EXTENSION = action;
+			};
+			name = "Release MAS";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +364,7 @@
 			buildConfigurations = (
 				4E59C34008A97622001206A8 /* Debug */,
 				4E59C34108A97622001206A8 /* Release */,
+				84A728281FD4CC10007F095B /* Release MAS */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -342,6 +374,7 @@
 			buildConfigurations = (
 				4E59C34408A97622001206A8 /* Debug */,
 				4E59C34508A97622001206A8 /* Release */,
+				84A728271FD4CC10007F095B /* Release MAS */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

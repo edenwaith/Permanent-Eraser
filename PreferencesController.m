@@ -116,6 +116,11 @@ static PreferencesController *_sharedWindowController = nil;
 	
 	// Set the file and disc erasing level text
 	
+#ifdef MAC_APP_STORE
+	// For the MAS version, there is only the General Prefs pane, so hide the toolbar
+	[toolbar setVisible:NO];
+#endif
+	
 	NSArray *fileErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"FileErasingSimple", nil), NSLocalizedString(@"FileErasingDoE", nil), NSLocalizedString(@"FileErasingMedium", nil), NSLocalizedString(@"FileErasingGutmann", nil), nil];
 	NSArray *discErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Quick", nil), NSLocalizedString(@"Complete", nil), nil];
 	

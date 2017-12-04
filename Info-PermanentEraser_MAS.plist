@@ -23,8 +23,10 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>Permanent Eraser</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Permanent Eraser 2.7.2</string>
 	<key>CFBundleIconFile</key>
-	<string>PE.icns</string>
+	<string>PE</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.edenwaith.mac.permanenteraser</string>
 	<key>CFBundleInfoDictionaryVersion</key>

@@ -71,16 +71,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 529216722;
-			PBXWorkspaceStateSaveDate = 529216722;
+			PBXPerProjectTemplateStateSaveDate = 534039305;
+			PBXWorkspaceStateSaveDate = 534039305;
 		};
 		perUserProjectItems = {
-			841D65411F7DDECF00E4EE22 /* PBXTextBookmark */ = 841D65411F7DDECF00E4EE22 /* PBXTextBookmark */;
-			841D65421F7DDECF00E4EE22 /* PBXTextBookmark */ = 841D65421F7DDECF00E4EE22 /* PBXTextBookmark */;
-			848B2B2C1F95ABBF008F678E /* PBXTextBookmark */ = 848B2B2C1F95ABBF008F678E /* PBXTextBookmark */;
-			848B34F71FB6BCBC008F678E /* PBXTextBookmark */ = 848B34F71FB6BCBC008F678E /* PBXTextBookmark */;
-			848B34F81FB6BCBC008F678E /* PlistBookmark */ = 848B34F81FB6BCBC008F678E /* PlistBookmark */;
-			848B34F91FB6BCBC008F678E /* PlistBookmark */ = 848B34F91FB6BCBC008F678E /* PlistBookmark */;
+			841D65411F7DDECF00E4EE22 = 841D65411F7DDECF00E4EE22 /* PBXTextBookmark */;
+			841D65421F7DDECF00E4EE22 = 841D65421F7DDECF00E4EE22 /* PBXTextBookmark */;
+			848B2B2C1F95ABBF008F678E = 848B2B2C1F95ABBF008F678E /* PBXTextBookmark */;
+			848B34F71FB6BCBC008F678E = 848B34F71FB6BCBC008F678E /* PBXTextBookmark */;
+			848B34F81FB6BCBC008F678E = 848B34F81FB6BCBC008F678E /* PlistBookmark */;
+			848B34F91FB6BCBC008F678E = 848B34F91FB6BCBC008F678E /* PlistBookmark */;
 		};
 		sourceControlManager = 658A2DCF067AB96600421F51 /* Source Control */;
 		userBuildSettings = {
@@ -223,7 +223,7 @@
 		);
 		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	848B34F91FB6BCBC008F678E /* PlistBookmark */ = {
 		isa = PlistBookmark;
@@ -234,7 +234,7 @@
 		);
 		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/Info.plist";
 		rLen = 0;
-		rLoc = 9223372036854775807;
+		rLoc = 9223372036854775808;
 	};
 	8D5B49AC048680CD000E48DA /* EraseTrash */ = {
 		activeExec = 0;
