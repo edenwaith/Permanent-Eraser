@@ -117,7 +117,6 @@
 		84567D0C132C621A0070AD1A /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		84567D0D132C621A0070AD1A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		84567D0F132C621A0070AD1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
-		84567D10132C621A0070AD1A /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		84567D12132C621A0070AD1A /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 849D043B11C9C75500BCE8F2 /* Preferences.nib */; };
 		84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
 		84567D1B132C621A0070AD1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -135,6 +134,7 @@
 		84567D2A132C621A0070AD1A /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
 		84583AE60B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
 		84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		845E1A3D1FD87E4E000EBD66 /* PE_MAS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */; };
 		845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
 		845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
 		8467A1391FD395510072FEC8 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
@@ -282,6 +282,7 @@
 		84567D32132C621A0070AD1A /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84567D34132C621A0070AD1A /* Info-PermanentEraser_MAS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-PermanentEraser_MAS.plist"; sourceTree = "<group>"; };
 		84583AE50B54A1840078A640 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE_MAS.icns; sourceTree = "<group>"; };
 		845E65E20B967C6100391EE2 /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
 		845EF8410BE97B9E00EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		845EF8450BE97BD800EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -504,6 +505,7 @@
 				842DA8341A73495F00BFD9F3 /* PE_128x128.png */,
 				842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */,
 				8411A3DF0BAE2CBF00AA5045 /* PE.icns */,
+				845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -746,7 +748,6 @@
 				84567D0C132C621A0070AD1A /* MainMenu.nib in Resources */,
 				84567D0D132C621A0070AD1A /* InfoPlist.strings in Resources */,
 				84567D0F132C621A0070AD1A /* Localizable.strings in Resources */,
-				84567D10132C621A0070AD1A /* PE.icns in Resources */,
 				84567D12132C621A0070AD1A /* Preferences.nib in Resources */,
 				84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */,
 				84907D26154B9AF900B614D0 /* srm in Resources */,
@@ -755,6 +756,7 @@
 				842DA8541A73513E00BFD9F3 /* PE_40x40.png in Resources */,
 				842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */,
 				8467A1391FD395510072FEC8 /* EraseFreespace.action in Resources */,
+				845E1A3D1FD87E4E000EBD66 /* PE_MAS.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
