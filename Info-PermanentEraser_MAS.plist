@@ -23,8 +23,10 @@
 	</array>
 	<key>CFBundleExecutable</key>
 	<string>Permanent Eraser</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Permanent Eraser 2.7.3</string>
 	<key>CFBundleIconFile</key>
-	<string>PE.icns</string>
+	<string>PE_MAS</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.edenwaith.mac.permanenteraser</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -38,11 +40,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.7.2</string>
+	<string>2.7.3</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>29</string>
+	<string>30</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
