@@ -25,15 +25,15 @@
 
 @interface PEController : NSObject
 {
-    NSTask			*pEraser;
+	NSTask			*pEraser;
 	STPrivilegedTask *privilegedTask;
-    NSFileManager 	*fm;  
-    NSMutableArray 	*trash_files;
+	NSFileManager 	*fm;  
+	NSMutableArray 	*trash_files;
 	NSFileHandle	*handle;
     
-    NSTimer			*timer;
+	NSTimer			*timer;
     
-    BOOL			filesWereDropped;	// were files dropped on the icon?
+	BOOL			filesWereDropped;	// were files dropped on the icon?
 	BOOL			firstTimeHere;		// indicates first pass through the application
 	BOOL			warnBeforeErasing;	// pop up warning message before deleting files
 	BOOL			suppressCannotEraseWarning;	// whether to display warning when a file can't be erased

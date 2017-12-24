@@ -1331,6 +1331,11 @@ typedef struct SFetchedInfo
 	// Throw a warning if a file cannot be erased
 	// TODO: Need to check if the file can be deleted, but needs admin rights
 	
+	// isDeletableFileAtPath doesn't cover all cases, use your own checks
+	// When collecting info about each of the files, might be useful to run a quick check
+	// on what files are on read-only volumes.  Perhaps run a quick check for all available volumes
+	// and cache that info so it isn't performed for every single file, which could be potentially slow.
+	
 	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
 		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
 	{
