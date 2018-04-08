@@ -99,6 +99,8 @@
 - (void) eraseDisc;
 - (void) eraseNotification: (NSNotification*) notification;
 - (void) runTask;
+- (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile;
+- (void) setupTaskWithFile: (PEFile *)currentFile;
 - (void) outputData: (NSFileHandle *) handle;
 - (void) updateIndicator;
 - (void) updateApplicationBadge;
@@ -111,7 +113,6 @@
 - (BOOL) isErasableDisc: (NSString *) volumePath;
 - (NSString *) volumeType: (NSString *) volumePath;
 - (NSString *) bsdDevNode: (NSString *) volumePath;
-- (BOOL) directoryIsEmpty: (NSString *) path;
 
 - (void) doneErasing: (NSNotification *)aNotification;
 - (void) sound: (NSSound *) sound didFinishPlaying: (BOOL) aBool;

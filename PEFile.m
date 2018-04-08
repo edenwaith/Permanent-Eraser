@@ -135,6 +135,30 @@
 	_hasResourceFork = hasResourcefork;
 }
 
+- (BOOL) isDeletable
+{
+	return _isDeletable;
+}
+
+- (void) setIsDeletable: (BOOL) isDeletable
+{
+	_isDeletable = isDeletable;
+}
+
+- (BOOL) requiresAuthorizationToDelete 
+{
+	return _requiresAuthorizationToDelete;
+}
+
+- (void) setRequiresAuthorizationToDelete: (BOOL) requiresAuthorizationToDelete
+{
+	_requiresAuthorizationToDelete = requiresAuthorizationToDelete;
+}
+
+- (void) setIsDeletable: (BOOL) isDeletable requiresAuthorizationToDelete: (BOOL) requiresAuth {
+	_isDeletable = isDeletable;
+	_requiresAuthorizationToDelete = requiresAuth;
+}
 
 - (NSImage *) icon
 {

@@ -121,13 +121,13 @@
 // Clean up after the program by deallocing space and unnotifying notifications
 // -------------------------------------------------------------------------
 // Created: 2. June 2003 14:20
-// Version: 27 November 2009 23:23
+// Version: 26 March 2018 21:50
 // =========================================================================
 - (void) dealloc 
 {
-	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSTaskDidTerminateNotification object: nil];
-	[[NSNotificationCenter defaultCenter] removeObserver: self name: STPrivilegedTaskDidTerminateNotification object: nil];
-	[[NSNotificationCenter defaultCenter] removeObserver: self name: NSApplicationWillTerminateNotification object: nil];	
+	// Remove all observed notifications, such as NSTaskDidTerminateNotification, STPrivilegedTaskDidTerminateNotification, 
+	// NSApplicationWillTerminateNotification, etc.
+	[[NSNotificationCenter defaultCenter] removeObserver: self];
 	
 	[badge release];
 	[pipe release];
@@ -135,6 +135,12 @@
 	pEraser = nil;
     [uid release];
     [trash_files release];
+	
+	if (privilegedTask != nil) 
+	{
+		[privilegedTask release];
+		privilegedTask = nil;
+	}
 	
 	if (preparationThread != nil)
 	{
@@ -394,12 +400,11 @@
 		[[NSNotificationCenter defaultCenter] removeObserver: self name: NSThreadWillExitNotification object: preparationThread];
 		[preparationThread release], preparationThread = nil;
 		
-//		[self checkRunningThreadFromMethod:@"preparationFinished"];
-		
 		[self performSelectorOnMainThread:@selector(erase) withObject:nil waitUntilDone:NO];
 	}
 }
 
+// Method for debugging 
 - (void)checkRunningThreadFromMethod: (NSString *)methodName {
 	BOOL isRunningOnMainThread = [[NSThread currentThread] isMainThread];
 	NSLog(@"Running on main thread from %@ : %@", methodName, isRunningOnMainThread ? @"Yes" : @"No");
@@ -507,31 +512,31 @@
 // 
 // -------------------------------------------------------------------------
 // Created: 29 June 2009 22:30
-// Version: 23 May 2010 15:51
+// Version: 30 March 2018 22:43
 // =========================================================================
-- (void) addFileToArray: (NSString *) filename
+- (void) addFileToArray: (NSString *) filePath
 {
-	PEFile *tempPEFile = [[PEFile alloc] initWithPath: filename];
+	PEFile *tempPEFile = [[PEFile alloc] initWithPath: filePath];
 	BOOL isDir3;
 	
 	// Symbolic link
-	[tempPEFile setIsSymbolicLink: [fm isFileSymbolicLink: filename]];
+	[tempPEFile setIsSymbolicLink: [fm isFileSymbolicLink: filePath]];
 	
 	// File size
-	if ([fm fileExistsAtPath: filename isDirectory:&isDir3] && isDir3 &&
+	if ([fm fileExistsAtPath: filePath isDirectory:&isDir3] && isDir3 &&
 		[tempPEFile isSymbolicLink] == NO )
 	{
 		[tempPEFile setIsDirectory: YES];
 		
-		if ([[NSWorkspace sharedWorkspace] isFilePackageAtPath: filename] == YES)
+		if ([[NSWorkspace sharedWorkspace] isFilePackageAtPath: filePath] == YES)
 		{
 			[tempPEFile setIsPackage: YES];
-			[tempPEFile setFilesize: [self fileSize: filename]];
+			[tempPEFile setFilesize: [self fileSize: filePath]];
 		}
-		else if ([self isVolume: filename] == YES && [self isErasableDisc: filename])	// erasable disc
+		else if ([self isVolume: filePath] == YES && [self isErasableDisc: filePath])	// erasable disc
 		{
 			[tempPEFile setIsPackage: NO];
-			[tempPEFile setFilesize: [self fileSize: filename]];
+			[tempPEFile setFilesize: [self fileSize: filePath]];
 		}
 		else	// otherwise, just a directory
 		{
@@ -541,16 +546,16 @@
 	}
 	else
 	{
-		[tempPEFile setFilesize: [self fileSize: filename]];
+		[tempPEFile setFilesize: [self fileSize: filePath]];
 		[tempPEFile setIsDirectory: NO];
 		[tempPEFile setIsPackage: NO];
 	}
 	
 	// Is Volume + Is Erasable Disc
-	if ([self isVolume: filename] == YES)
+	if ([self isVolume: filePath] == YES)
 	{
 		[tempPEFile setIsVolume: NO];
-		if ([self isErasableDisc: filename] == YES)
+		if ([self isErasableDisc: filePath] == YES)
 		{
 			[tempPEFile setIsErasableDisc: YES];
 		}
@@ -567,10 +572,9 @@
 	}
 	
 	// This check can only be done on Mac OS 10.6+
-//	if (osVersion >= 0x00001060)	// Mac OS 10.6+
 	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 6, 0}] == YES)	
 	{
-		[tempPEFile setIsOnSSD: [fm isSolidState: [filename fileSystemRepresentation]]];
+		[tempPEFile setIsOnSSD: [fm isSolidState: [filePath fileSystemRepresentation]]];
 	}
 	else 
 	{
@@ -579,7 +583,7 @@
 
 	
 	// Resource Fork
-	[tempPEFile setHasResourceFork: [self containsResourceFork: filename]];
+	[tempPEFile setHasResourceFork: [self containsResourceFork: filePath]];
 	
 	// Calculate total file size
 	if ( ([tempPEFile isErasableDisc] == YES) || ([tempPEFile isDirectory] == NO) )
@@ -604,7 +608,105 @@
 			[tempPEFile setNumberOfFiles: 1]; // For all other files, folders, and non-bundles, set to 1
 		}
 	}
-			
+	
+	// Check if a file can be deleted, and if not, if it can be deleted by
+	// using escalated permissions
+	BOOL requiresAuthorization = NO; // Check if admin rights are needed to delete
+	BOOL isWritable  = YES; // Can the file be written over
+	BOOL isPathDeletable = YES; // Is the enclosing path writable 
+	BOOL isFileDeletable = YES; // By default, assume the file can be deleted
+	int  deleteErrno = 0; 
+	// In most cases, a file is deletable.  But if it returns back 'no', then
+	// perform additional checks to determine if it is a write issue or if the
+	// file is on a read-only disk.
+	
+	// What if this is a directory (which hasn't been emptied yet)?  
+	// Will that also throw some type of error?  Hmmm...
+	
+	NSDictionary *fileAttributes = [fm fileAttributesAtPath:filePath traverseLink:NO];
+	
+	// If the file is locked by the Finder, unlock it before checking if it can be deleted.
+	if ([[fileAttributes objectForKey:NSFileImmutable] boolValue] == YES)
+	{
+		NSError *error = nil;
+		if ([fm setAttributes: [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:NSFileImmutable] ofItemAtPath:filePath error: &error] == NO) {
+			NSLog(@"Error trying to set the NSFileImmutable attribute: %@", [error localizedDescription]);
+		} else {
+			NSLog(@"Successfully unlocked the file:: %@", [filePath lastPathComponent]);
+		}
+	}
+	
+	// Check if the enclosing path is writable so the file can be deleted
+	isPathDeletable = [fm isDeletableFileAtPath: filePath];
+	
+	if (isPathDeletable == NO) {
+		deleteErrno = errno;
+		perror("isPathDeletable error");
+	}
+	
+	// Check if the file can be overwritten and deleted
+	isWritable = [fm isWritableFileAtPath: filePath];
+	
+	if (isWritable == NO) {
+		deleteErrno = errno;
+		perror("isWritable error");
+	}
+	
+	if (isPathDeletable == NO || isWritable == NO) 
+	{
+		NSNumber *originalPermissions = [fileAttributes objectForKey: NSFilePosixPermissions];
+		mode_t permissionsMask = 0700;
+		mode_t updatedPermissions = [originalPermissions shortValue] | permissionsMask;
+		
+		NSDictionary *attribs = [NSDictionary dictionaryWithObject:[NSNumber numberWithShort:updatedPermissions] forKey:NSFilePosixPermissions];
+		NSError *error = nil;
+		
+#ifdef MAC_APP_STORE
+		// In most cases, this should be set to NO, but do one check to see if the current
+		// user can update the file's permissions so it can be deleted.
+		if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES)
+		{
+			isFileDeletable = YES;
+		}
+		else 
+		{
+			// Since admin rights cannot be granted for MAS apps, set this to NO
+			isFileDeletable = NO;
+		}
+
+#else
+		if (deleteErrno == EPERM) // Error 1 - Operation not permitted
+		{
+			requiresAuthorization = YES;
+		} 
+		else if (deleteErrno == EACCES) // Error 13 - Permissions error
+		{
+			// Try and update the permissions.  If possible, authorization is not necessary
+			if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == NO)
+			{
+				// Was not able to modify the permissions, will need authorization
+				requiresAuthorization = YES;
+			} 
+			else 
+			{
+				// Was able to modify the permissions
+				requiresAuthorization = NO;
+				NSLog(@"Was able to change the permissions on the file:: %@", [filePath lastPathComponent]);
+			}
+		} 
+		else if (deleteErrno == EROFS) // Error 30 - Read-only file system
+		{
+			isFileDeletable = NO;
+		} 
+
+		char *errorMsg = strerror(deleteErrno);
+		NSLog(@"Other error detecting deletability: %s (%d)", errorMsg, deleteErrno);
+
+#endif
+	}
+	
+	[tempPEFile setIsDeletable: isFileDeletable requiresAuthorizationToDelete: requiresAuthorization];
+	
 	[trash_files insertObject: tempPEFile atIndex: 0];
 	
 	[tempPEFile release];
@@ -1287,58 +1389,26 @@ typedef struct SFetchedInfo
 // file instead of the symbolic link.
 // -------------------------------------------------------------------------
 // Created: 4. April 2004 23:35
-// Version: 27 April 2012 22:28
+// Version: 7 April 2018 22:26
 // =========================================================================
 - (void) runTask
-{
-	if (pEraser == nil)
-	{
-		pEraser = [[NSTask alloc] init];
-	}
+{	
+	PEFile *currentFile = [trash_files objectAtIndex: idx];
 	
-    // If the file is a symbolic/soft link
-	if ([[trash_files objectAtIndex: idx] isSymbolicLink] == YES)
-    {
-        [pEraser setLaunchPath:@"/bin/rm"];
-        [pEraser setArguments: [NSArray arrayWithObjects: @"-Pv", [[trash_files objectAtIndex: idx] path], nil] ];
-    }
-    else // regular file or directory
-    {
-		NSString *utilPath  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
-		
-        [pEraser setLaunchPath:utilPath];
+	// TODO: Add this functionality to the STPT class : && ([STPrivilegedTask authorizationFunctionAvailable] == YES)
+	// Check if the file can be deleted, but needs admin rights
+	if (([currentFile isDeletable] == YES) && ([currentFile requiresAuthorizationToDelete] == YES)) 
+	{
+		[self setupPrivilegedTaskWithFile: currentFile];
 
-		// If the file is on a SSD, only erase once to prevent unnecessary wear on an SSD
-		if (([[trash_files objectAtIndex: idx] isOnSSD] == YES) ||
-		    ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) ) // 1-pass
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fsvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)]) // 3-pass DOE
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fEvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingGutmann", nil)]) // 35-pass Gutmann Method
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-		else // Default 7-pass DoD
-		{
-			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
-		}
-    }
-	
-	// Throw a warning if a file cannot be erased
-	// TODO: Need to check if the file can be deleted, but needs admin rights
-	
-	// isDeletableFileAtPath doesn't cover all cases, use your own checks
-	// When collecting info about each of the files, might be useful to run a quick check
-	// on what files are on read-only volumes.  Perhaps run a quick check for all available volumes
-	// and cache that info so it isn't performed for every single file, which could be potentially slow.
-	
-	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
-		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
+	}
+	else if (([currentFile isDeletable] == NO) || 
+		(([currentFile isDirectory] == YES) && ([currentFile isPackage] == NO) && ([[NSFileManager defaultManager] isDirectoryEmpty: [currentFile path]] == NO)))
 	{
+		
+		//	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
+		//		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
+
 		int choice = -1; // alert button selection
 		
 		if (suppressCannotEraseWarning == NO)
@@ -1347,7 +1417,7 @@ typedef struct SFetchedInfo
 															 defaultButton: NSLocalizedString(@"OK", nil)
 														   alternateButton: NSLocalizedString(@"Quit", nil)
 															   otherButton: nil
-														   informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [[trash_files objectAtIndex: idx] fileName]] ];
+														   informativeTextWithFormat: [NSString stringWithFormat: NSLocalizedString(@"ErrorDeletingMessage", nil), [currentFile fileName]] ];
 
 			[alert setShowsSuppressionButton: YES];
 			[[alert suppressionButton] setTitle: NSLocalizedString(@"DoNotShowMessage", nil)];
@@ -1369,53 +1439,197 @@ typedef struct SFetchedInfo
 		else
 		{
 			// Act like the file was erased and move on to the next file
-			[indicator incrementBy:[[trash_files objectAtIndex: idx] filesize]*100.0];
+			[indicator incrementBy:[currentFile filesize]*100.0];
 			[self updateIndicator];
-			[ [NSNotificationCenter defaultCenter] postNotificationName: @"NSTaskDidTerminateNotification" object: self];
+			[[NSNotificationCenter defaultCenter] postNotificationName: @"NSTaskDidTerminateNotification" object: self];
 		}
-		
-	}	
+	}
 	else
 	{
-		pipe = [[NSPipe alloc] init];
-		
-		[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
-
-		if ([[trash_files objectAtIndex: idx] icon] != nil)
-		{
-			[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
-		}
-    
-		[pEraser setStandardOutput:pipe];
-		[pEraser setStandardError:pipe];
-		handle = [pipe fileHandleForReading];
-		NSDictionary *fileAttributes = [fm fileAttributesAtPath: [[trash_files objectAtIndex: idx] path] traverseLink:NO];
-		
-		// If the file is locked by the Finder, unlock it before deleting.
-		if ([[fileAttributes objectForKey:NSFileImmutable] boolValue] == YES)
-		{
-			[fm changeFileAttributes: [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:NSFileImmutable] atPath:[[trash_files objectAtIndex: idx] path]];
-		}
-		
-		// If it is a directory or empty file, add 100 since it doesn't delete like normal files
-		// Note: Might want to reconsider incrementing at all since files of 0 size normally wouldn't add anything 
-		// to the progress bar...
-		if (([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO))
-		{
-			[indicator incrementBy: 100.0];
-		}
-		else if ([[fileAttributes objectForKey:NSFileSize] intValue] == 0) // file is 0K in size
-		{
-			[indicator incrementBy: 100.0];
-		}
-					
-		[pEraser launch];
-		
-		[NSThread detachNewThreadSelector: @selector(outputData:) toTarget: self withObject: handle];
+		[self setupTaskWithFile: currentFile];
 	}
     
 }
 
+// =========================================================================
+// (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile
+// -------------------------------------------------------------------------
+// Set up the path and arguments for the STPrivilegedTask to delete a file.
+// -------------------------------------------------------------------------
+// Created: 7 April 2018 18:00
+// Version: 7 April 2018 18:00
+// =========================================================================
+- (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile {
+	// This file can be deleted, but it will require authorization privileges to erase it.
+	NSLog(@"The file %@ requires authorization to delete it.", [currentFile fileName]);
+		
+	if (privilegedTask == nil)
+	{
+		privilegedTask = [[STPrivilegedTask alloc] init];
+	}
+	
+	// If the file is a symbolic/soft link
+	if ([currentFile isSymbolicLink] == YES)
+	{
+		[privilegedTask setLaunchPath:@"/bin/rm"];
+		[privilegedTask setArguments: [NSArray arrayWithObjects: @"-Pv", [currentFile path], nil] ];
+	}
+	else // regular file or directory
+	{
+		NSString *utilPath  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
+		
+		[privilegedTask setLaunchPath:utilPath];
+		
+		// If the file is on a SSD, only erase once to prevent unnecessary wear on an SSD
+		if (([currentFile isOnSSD] == YES) ||
+			([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) ) // 1-pass
+		{
+			[privilegedTask setArguments: [NSArray arrayWithObjects: @"-fsvrz", [currentFile path], nil] ];
+		}
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)]) // 3-pass DOE
+		{
+			[privilegedTask setArguments: [NSArray arrayWithObjects: @"-fEvrz", [currentFile path], nil] ];
+		}
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingGutmann", nil)]) // 35-pass Gutmann Method
+		{
+			[privilegedTask setArguments: [NSArray arrayWithObjects: @"-fvrz", [currentFile path], nil] ];
+		}
+		else // Default 7-pass DoD
+		{
+			[privilegedTask setArguments: [NSArray arrayWithObjects: @"-fmvrz", [currentFile path], nil] ];
+		}
+	}
+	
+	[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
+	
+	if ([currentFile icon] != nil)
+	{
+		[fileIcon setImage: [currentFile icon]];
+	}
+	
+	NSDictionary *fileAttributes = [fm fileAttributesAtPath: [currentFile path] traverseLink:NO];
+	
+	// If it is a directory or empty file, add 100 since it doesn't delete like normal files
+	// Note: Might want to reconsider incrementing at all since files of 0 size normally wouldn't add anything 
+	// to the progress bar...
+	if (([currentFile isDirectory] == YES) && ([currentFile isPackage] == NO))
+	{
+		[indicator incrementBy: 100.0];
+	}
+	else if ([[fileAttributes objectForKey:NSFileSize] intValue] == 0) // file is 0K in size
+	{
+		[indicator incrementBy: 100.0];
+	}
+	
+	// Due to security limitations, once the privileged task is launch, it cannot be canceled
+	[cancelButton setEnabled:NO];
+	[cancelMenuItem setEnabled:NO];
+	
+	
+	// Launch it, user is prompted for password
+	OSStatus err = [privilegedTask launch];
+	
+	if (err != errAuthorizationSuccess) 
+	{
+		if (err == errAuthorizationCanceled) {
+			NSLog(@"User canceled STPrivilegedTask");
+		} else if (err == errAuthorizationFnNoLongerExists) {
+			NSLog(@"AuthorizationExecuteWithPrivileges is not available");
+		} else {
+			NSLog(@"Could not launch STPrivilegedTask.");
+		}
+		
+		// If there was an error, make the appropriate updates and then 
+		// call the notification to move onto the next file
+		[indicator incrementBy:[currentFile filesize]*100.0];
+		[self updateIndicator];
+		[[NSNotificationCenter defaultCenter] postNotificationName: STPrivilegedTaskDidTerminateNotification object: self];
+	} 
+	else 
+	{
+		NSLog(@"Task successfully launched");
+		[NSThread detachNewThreadSelector: @selector(outputData:) toTarget: self withObject: [privilegedTask outputFileHandle]];
+	}
+}
+
+// =========================================================================
+// (void) setupTaskWithFile: (PEFile *)currentFile
+// -------------------------------------------------------------------------
+// Set up the path and arguments for the NSTask to delete a file.
+// -------------------------------------------------------------------------
+// Created: 7 April 2018 22:00
+// Version: 7 April 2018 22:00
+// =========================================================================
+- (void) setupTaskWithFile: (PEFile *)currentFile
+{
+	if (pEraser == nil)
+	{
+		pEraser = [[NSTask alloc] init];
+	}
+	
+	// If the file is a symbolic/soft link
+	if ([[trash_files objectAtIndex: idx] isSymbolicLink] == YES)
+	{
+		[pEraser setLaunchPath:@"/bin/rm"];
+		[pEraser setArguments: [NSArray arrayWithObjects: @"-Pv", [[trash_files objectAtIndex: idx] path], nil] ];
+	}
+	else // regular file or directory
+	{
+		NSString *utilPath  = [[NSBundle mainBundle] pathForResource:@"srm" ofType:@""];
+		
+		[pEraser setLaunchPath:utilPath];
+		
+		// If the file is on a SSD, only erase once to prevent unnecessary wear on an SSD
+		if (([[trash_files objectAtIndex: idx] isOnSSD] == YES) ||
+			([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingSimple", nil)]) ) // 1-pass
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fsvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingDoE", nil)]) // 3-pass DOE
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fEvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+		else if ([[prefs objectForKey: @"FileErasingLevel"] isEqualToString: NSLocalizedString(@"FileErasingGutmann", nil)]) // 35-pass Gutmann Method
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+		else // Default 7-pass DoD
+		{
+			[pEraser setArguments: [NSArray arrayWithObjects: @"-fmvrz", [[trash_files objectAtIndex: idx] path], nil] ];
+		}
+	}
+	
+	pipe = [[NSPipe alloc] init];
+	
+	[erasingMsg setStringValue: [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"ErasingMessage", nil), [self fileNameString]]];
+	
+	if ([[trash_files objectAtIndex: idx] icon] != nil)
+	{
+		[fileIcon setImage: [[trash_files objectAtIndex: idx] icon]];
+	}
+    
+	[pEraser setStandardOutput:pipe];
+	[pEraser setStandardError:pipe];
+	handle = [pipe fileHandleForReading];
+	
+	NSDictionary *fileAttributes = [fm fileAttributesAtPath: [[trash_files objectAtIndex: idx] path] traverseLink:NO];
+	
+	// If it is a directory or empty file, add 100 since it doesn't delete like normal files
+	// Note: Might want to reconsider incrementing at all since files of 0 size normally wouldn't add anything 
+	// to the progress bar...
+	if (([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO))
+	{
+		[indicator incrementBy: 100.0];
+	}
+	else if ([[fileAttributes objectForKey:NSFileSize] intValue] == 0) // file is 0K in size
+	{
+		[indicator incrementBy: 100.0];
+	}
+	
+	[pEraser launch];
+	
+	[NSThread detachNewThreadSelector: @selector(outputData:) toTarget: self withObject: handle];
+}
 
 // =========================================================================
 // (void) outputData: (NSFileHandle *) current_handle
@@ -1441,7 +1655,8 @@ typedef struct SFetchedInfo
 		{
 			NSString *string = [[NSString alloc] initWithData:data encoding: NSASCIIStringEncoding];
 			NSString *modifiedString = [[NSString alloc] initWithString: [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-			
+			// TODO: Clean up before releasing.
+			NSLog(@"modifiedString:: %@", modifiedString);
 			// stringByTrimmingCharactersInSet is a 10.2+ feature. 
 			NSArray *splitString = [modifiedString componentsSeparatedByString: @"%"];
 			
@@ -1839,13 +2054,22 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (NSString *) volumeType: (NSString *) volumePath
 // -------------------------------------------------------------------------
+// This method returns the file system type name.  This has been updated so
+// it should return any potential value, not just known types such as
+// hfs, nfs, ufs, msdos, afpfs, webdav, cddafs, smbfs, cifs, cd9660,
+// udf, ncp, etc.  There is always the possibility of new or rare file systems
+// such as the new Apple File System (apfs).
+// 
 // Portions of this code by Tjark Derlien and the CocoaTechFoundation 
 // framework
 // (BOOL)getInfoForFile:(NSString *)fullPath application:(NSString **) 
 // appName type:(NSString **)type
+// 
+// NOTE: This appears to be an unused method now.  If used in the future,
+// probably should put it into a category or other helper utility.
 // -------------------------------------------------------------------------
 // Created: 4 December 2005 14:17
-// Version: 4 December 2005 14:17
+// Version: 21 January 2018 16:04
 // =========================================================================
 - (NSString *) volumeType: (NSString *) volumePath
 {
@@ -1854,37 +2078,21 @@ typedef struct SFetchedInfo
 	if (statfs([volumePath fileSystemRepresentation], &stat) == 0)
 	{
 		NSString *fileSystemName = [fm stringWithFileSystemRepresentation: stat.f_fstypename length: strlen(stat.f_fstypename)];
-		// TODO: Should check if apfs is a new option here
-		if ([fileSystemName isEqualToString:@"hfs"])
-			return (fileSystemName);	//HFS(+)
-		else if ([fileSystemName isEqualToString:@"nfs"])
-			return (fileSystemName);	//NFS (may also be FTP)
-		else if ([fileSystemName isEqualToString:@"ufs"])
-			return (fileSystemName);	//UFS
-		else if ([fileSystemName isEqualToString:@"msdos"])
-			return (fileSystemName);	//FAT (USB stick?)
-		else if ([fileSystemName isEqualToString:@"afpfs"])
-			return (fileSystemName);	//Apple Share
-		else if ([fileSystemName isEqualToString:@"webdav"])
-			return (fileSystemName);	//WebDAV
-		else if ([fileSystemName isEqualToString:@"cddafs"])
-			return (fileSystemName);	//audio CD
-		else if ([fileSystemName isEqualToString:@"smbfs"])
-			return (fileSystemName);	//SMB (Samba/Windows share)
-		else if ([fileSystemName isEqualToString:@"cifs"])
-			return (fileSystemName);	//CIFS (Windows share)
-		else if ([fileSystemName isEqualToString:@"cd9660"])
-			return (fileSystemName);	//data CD
-		else if ([fileSystemName isEqualToString:@"udf"])
-			return (fileSystemName);	//UDF (DVD)
-		else if ([fileSystemName isEqualToString:@"ncp"])
-			return (fileSystemName);	//Novell netware
+		
+		// Check that the fileSystemName is not nil or an empty string
+		if ([fileSystemName length] != 0) 
+		{	// return the file system type
+			return fileSystemName;
+		}
 		else
-			return (@"");	// return an empty string
+		{
+			// If fileSystemName is nil or an empty string, return an empty string
+			return @"";
+		}
 	}
 	else
 	{
-		return (@"");
+		return @"";
 	}
 }
 
@@ -1911,31 +2119,6 @@ typedef struct SFetchedInfo
 	
 	return ([[bsdNodePath lastPathComponent] substringToIndex:5]);
 }
-
-
-// =========================================================================
-// (NSString *) directoryIsEmpty: (NSString *) path
-// -------------------------------------------------------------------------
-// 
-// -------------------------------------------------------------------------
-// Created: 27 November 2009 23:35
-// Version: 27 November 2009 23:35
-// =========================================================================
-- (BOOL) directoryIsEmpty: (NSString *) path
-{
-	NSArray *dirContents = [fm subpathsAtPath: path];
-	
-	if (dirContents != nil && [dirContents count] == 0)
-	{
-		return (YES);
-	}
-	else 
-	{
-		return (NO);
-	}
-
-}
-
 
 #pragma mark -
 #pragma mark Shutdown methods
@@ -1991,7 +2174,7 @@ typedef struct SFetchedInfo
     }
     else
     {
-		if ([aNotification object] == nil)	// Sent after erasing an optical disc
+		if ([aNotification object] == nil)	// Sent after erasing an optical disc or STPrivilegedTask
 		{
 			[cancelButton setEnabled:YES];
 			[cancelMenuItem setEnabled:YES];
@@ -2015,15 +2198,31 @@ typedef struct SFetchedInfo
 				[pEraser release];
 				pEraser = nil;
 			}
+			
         }
 		
         [self selectNextFile];
     }
-
 }
 
-- (void)privilegedTaskFinished:(NSNotification *)aNotification {
-	// Need to call many of the same calls as doneErasing, except release the STPrivilegedTask
+
+// =========================================================================
+// (void) privilegedTaskFinished: (NSNotification *) aNotification
+// -------------------------------------------------------------------------
+// Need to call many of the same calls as doneErasing, except release the 
+// STPrivilegedTask
+// -------------------------------------------------------------------------
+// Version: 26 March 2018 21:44
+// =========================================================================
+- (void) privilegedTaskFinished: (NSNotification *) aNotification 
+{	
+	if (privilegedTask != nil) 
+	{
+		[privilegedTask release];
+		privilegedTask = nil;
+	}
+	
+	[self doneErasing:nil];
 }
 
 
@@ -2180,6 +2379,7 @@ typedef struct SFetchedInfo
 	// What if a disc is getting erased, then the NSTask isn't being used...
 	if (pEraser != nil)
 	{
+		// TODO: Also check if the privilegedTask is running and see if it can be suspended
 		if ([pEraser isRunning] == YES)
 		{
 			BOOL suspendResult = [pEraser suspend]; // returns YES if successful
@@ -2226,7 +2426,6 @@ typedef struct SFetchedInfo
 		}
 	}
 
-	
 	prefs = [[NSUserDefaults standardUserDefaults] retain];
 	
 	if ([prefs objectForKey:@"BeepBeforeTerminating"] != nil)
@@ -2240,7 +2439,6 @@ typedef struct SFetchedInfo
 	
 	if ([prefs objectForKey: @"OpticalDiscErasingLevel"] != nil)
 	{
-		// discErasingLevel = [[NSMutableString alloc] initWithString:[prefs objectForKey: @"OpticalDiscErasingLevel"]];
 		[discErasingLevel setString: [prefs objectForKey: @"OpticalDiscErasingLevel"]];
 	}
 	else
@@ -2250,14 +2448,12 @@ typedef struct SFetchedInfo
 	
 	if ([prefs objectForKey: @"FileErasingLevel"] != nil)
 	{
-		// fileErasingLevel = [[NSMutableString alloc] initWithString:[prefs objectForKey: @"FileErasingLevel"]];
 		[fileErasingLevel setString: [prefs objectForKey: @"FileErasingLevel"]];
 	}
 	else
 	{
 		// Assign a default fileErasingLevel
 	}
-
 }
 
 // =========================================================================
@@ -2286,8 +2482,5 @@ typedef struct SFetchedInfo
 {
     [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"mailto:support@edenwaith.com?subject=Permanent%20Eraser%20Feedback"]];
 }
-
-
-
 
 @end

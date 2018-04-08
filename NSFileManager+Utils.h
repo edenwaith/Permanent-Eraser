@@ -35,5 +35,6 @@
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
 - (NSString *) formatFileSize: (double) file_size;
 - (BOOL) isSolidState: (UInt8 const *) cpath;
+- (BOOL) isDirectoryEmpty: (NSString *) path;
 
 @end

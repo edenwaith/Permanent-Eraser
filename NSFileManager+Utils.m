@@ -332,4 +332,27 @@
 	return isSolidState;
 }
 
+// =========================================================================
+// (NSString *) isDirectoryEmpty: (NSString *) path
+// -------------------------------------------------------------------------
+// 
+// -------------------------------------------------------------------------
+// Created: 27 November 2009 23:35
+// Version: 6 April 2018 20:49
+// =========================================================================
+- (BOOL) isDirectoryEmpty: (NSString *) path
+{
+	NSArray *dirContents = [self subpathsAtPath: path];
+	
+	if (dirContents != nil && [dirContents count] == 0)
+	{
+		return YES;
+	}
+	else 
+	{
+		return NO;
+	}
+	
+}
+
 @end
