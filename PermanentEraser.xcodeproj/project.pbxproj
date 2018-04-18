@@ -238,15 +238,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84F0ED491B72FE1000C27D2A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84F6D3610C0BB41100CC11F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -686,7 +677,6 @@
 				84F6D3610C0BB41100CC11F4 /* CopyFiles */,
 				849D2FD51216404B000F6610 /* CopyFiles */,
 				849D2F6412163B2B000F6610 /* ShellScript */,
-				84F0ED491B72FE1000C27D2A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -852,7 +842,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n\n\n";
+			shellScript = "# References for Xcode environment variables: \n# https://gist.github.com/gdavis/6670468\n# https://stackoverflow.com/questions/6910901/how-do-i-print-a-list-of-build-settings-in-xcode-project\n\n# Print out Xcode's environment variables\n# echo `env`\n\n# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\nPE_ERASE_WORKFLOW_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Erase.workflow\"\nPE_ERASEFREESPACE_ACTION_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/EraseFreespace.action\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\necho \"Erase.workflow path: $PE_ERASE_WORKFLOW_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Due to weirdness in Xcode 3, certain items are also being copied into the Resources folder\n# Remove Erase.workflow and EraseFreespace.action from the Resources folder since these files already \n# exist in other locations in the app bundle\nrm -Rf \"$PE_ERASE_WORKFLOW_PATH\"        # Remove Erase.workflow\nrm -Rf \"$PE_ERASEFREESPACE_ACTION_PATH\" # Remove EraseFreespace.action\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

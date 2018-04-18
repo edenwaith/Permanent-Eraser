@@ -436,22 +436,35 @@ static PreferencesController *_sharedWindowController = nil;
 // something, but I still want my internet!  Screw MTV!  I want the Internet!
 // -------------------------------------------------------------------------
 // Created: 7. February 2004 19:25
-// Version: 17 January 2011 20:39
+// Version: 12 April 2018 21:34
 // =========================================================================
 - (IBAction) checkForNewVersion: (id) sender
 {
-    //NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleVersion"];
-    NSString *currentVersionNumber = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *currentVersionNumber   = [[[NSBundle bundleForClass:[self class]] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSDictionary *productVersionDict = [NSDictionary dictionaryWithContentsOfURL: [NSURL URLWithString:@"http://www.edenwaith.com/xml/version.xml"]];
-    NSString *latestVersionNumber = [productVersionDict valueForKey:@"Permanent Eraser"];
+    NSDictionary *peDictionary       = [productVersionDict objectForKey:@"PermanentEraser"];
+	NSString *latestVersionNumber    = [peDictionary valueForKey:@"version"];
+	NSString *minimumSystemVersion   = [peDictionary valueForKey:@"minimumsystemversion"];
     int button = 0;
+	NSInteger major = 0;
+	NSInteger minor = 0;
+	NSInteger patch = 0;
 	
 	NSDate *theDate = [NSDate date];
-	// [lastCheckedTextField setStringValue: [theDate descriptionWithLocale:  [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]] ];
 	[lastCheckedTextField setStringValue: [self formatLocalizedDate: theDate]];
+	
 	// Need save the date here in preferences...
 	[[NSUserDefaults standardUserDefaults] setObject: theDate forKey: @"LastCheckedDate"];
 	[[NSUserDefaults standardUserDefaults] synchronize];
+	
+	if (minimumSystemVersion != nil)
+	{	// Parse out the minimum OS version required for the upgrade.
+		NSArray *parts = [minimumSystemVersion componentsSeparatedByString:@"."];
+
+		major = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		minor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		patch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
 	
     if ( latestVersionNumber == nil )
     {
@@ -465,18 +478,28 @@ static PreferencesController *_sharedWindowController = nil;
 						NSLocalizedString(@"RecentVersionMsg", nil), NSLocalizedString(@"OK", nil), nil, nil);
     }
     else
-    {
-		button = NSRunAlertPanel(NSLocalizedString(@"NewVersionAvailable", nil),
-								 NSLocalizedString(@"NewVersionAvailableMsg", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"MoreInfo", nil), latestVersionNumber);
+    {	// If the current OS meets the minimum system requirement
+		if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){major, minor, patch}] == YES)
+		{
 		
-        if (NSOKButton == button)
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/permanent%20eraser.php"]];
-        }
-        else if (NSAlertOtherReturn == button) // More Info
-        {
-            [[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/permanent%20eraser/"]];
-        }
+			button = NSRunAlertPanel(NSLocalizedString(@"NewVersionAvailable", nil),
+									 NSLocalizedString(@"NewVersionAvailableMsg", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"MoreInfo", nil), latestVersionNumber);
+			
+			if (NSOKButton == button)
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/permanent%20eraser.php"]];
+			}
+			else if (NSAlertOtherReturn == button) // More Info
+			{
+				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/permanent%20eraser/"]];
+			}
+		}
+		else 
+		{	// If the current OS is too old to run the latest version, alert the user that they are on the 
+			// most up-to-date version for their system.
+			NSRunAlertPanel(NSLocalizedString(@"SoftwareUpToDate", nil),
+							NSLocalizedString(@"RecentVersionMsg", nil), NSLocalizedString(@"OK", nil), nil, nil);
+		}
     }
 }
 

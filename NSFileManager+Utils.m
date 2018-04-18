@@ -69,6 +69,48 @@
 }
 
 // =========================================================================
+// (BOOL) containsResourceFork: (NSString *)path
+// -------------------------------------------------------------------------
+// Check to see if a file contains a resource fork.
+// Should gather several of these file-related checks and put them into
+// a separate extension class.
+// -------------------------------------------------------------------------
+// Created: 2 January 2007 19:49
+// Version: 8 April 2007
+// =========================================================================
+// TODO: Should move some of these methods to the NSFileManager+Utils category class
+- (BOOL) containsResourceFork: (NSString *)path 
+{
+	FSRef           fsRef;
+	FSCatalogInfo   fsInfo;
+	BOOL			isDir;
+	
+	// If path is a directory, automatically return NO
+	if ( [self fileExistsAtPath: path isDirectory:&isDir] && isDir )
+	{
+		return (NO);
+	}
+	else if (FSPathMakeRef((unsigned char *) [path fileSystemRepresentation], &fsRef, NULL) == noErr) 
+	{
+		// Another way to check for a resource fork is by using getxattr
+		// ssize_t resourceForkSize = getxattr([pathToFile fileSystemRepresentation], "com.apple.ResourceFork", NULL, 0, 0, 0);
+		if(FSGetCatalogInfo(&fsRef, kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		{
+			if (fsInfo.rsrcLogicalSize > 0)
+			{
+				return (YES);
+			}
+			else
+			{
+				return (NO);
+			}
+		}
+	}
+	
+	return (NO);
+}
+
+// =========================================================================
 // (FSRef) convertStringToFSRef: (NSString *) path
 // -------------------------------------------------------------------------
 // Convert NSString to FSRef

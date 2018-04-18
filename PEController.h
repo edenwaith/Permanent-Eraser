@@ -88,10 +88,9 @@
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;
 
-- (FSRef) convertStringToFSRef: (NSString *) path ;
 - (unsigned long long) fileSize: (NSString *) path;
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
-//- (NSString *) formatFileSize: (double) file_size;
+
 - (void) addNewFiles : (NSTimer *) aTimer;
 - (void) erase;
 - (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
@@ -105,10 +104,8 @@
 - (void) updateIndicator;
 - (void) updateApplicationBadge;
 
-- (NSString *) currentFileName;
 - (NSString *) fileNameString;
 - (BOOL) checkPermissions: (NSString *)path;
-- (BOOL) containsResourceFork:(NSString *)path;
 - (BOOL) isVolume: (NSString *) volumePath;
 - (BOOL) isErasableDisc: (NSString *) volumePath;
 - (NSString *) volumeType: (NSString *) volumePath;
@@ -118,7 +115,6 @@
 - (void) sound: (NSSound *) sound didFinishPlaying: (BOOL) aBool;
 - (void) shutdownPE;
 
-- (IBAction) openPreferencePane: (id) sender;
 - (IBAction) openPreferences: (id) sender;
 - (void) preferencesClosed;
 - (IBAction) goToProductPage : (id) sender;

@@ -9,6 +9,8 @@
 #import "NSEvent+ModifierKeys.h"
 
 
+// NOTE: In PE 3.0, might be able to replace the Carbon calls with +[NSEvent modifierFlags]
+
 @implementation NSEvent (ModifierKeys)
 
 + (BOOL) isControlKeyDown

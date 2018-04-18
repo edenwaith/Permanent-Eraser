@@ -583,7 +583,7 @@
 
 	
 	// Resource Fork
-	[tempPEFile setHasResourceFork: [self containsResourceFork: filePath]];
+	[tempPEFile setHasResourceFork: [fm containsResourceFork: filePath]];
 	
 	// Calculate total file size
 	if ( ([tempPEFile isErasableDisc] == YES) || ([tempPEFile isDirectory] == NO) )
@@ -609,19 +609,15 @@
 		}
 	}
 	
-	// Check if a file can be deleted, and if not, if it can be deleted by
-	// using escalated permissions
+	// Check if a file can be deleted, and if not, if it can be deleted by using 
+	// escalated permissions.  In most cases, a file is deletable.  But if it 
+	// returns back 'no', then perform additional checks to determine if it is 
+	// a write issue or if the file is on a read-only disk.
 	BOOL requiresAuthorization = NO; // Check if admin rights are needed to delete
-	BOOL isWritable  = YES; // Can the file be written over
-	BOOL isPathDeletable = YES; // Is the enclosing path writable 
-	BOOL isFileDeletable = YES; // By default, assume the file can be deleted
-	int  deleteErrno = 0; 
-	// In most cases, a file is deletable.  But if it returns back 'no', then
-	// perform additional checks to determine if it is a write issue or if the
-	// file is on a read-only disk.
-	
-	// What if this is a directory (which hasn't been emptied yet)?  
-	// Will that also throw some type of error?  Hmmm...
+	BOOL isWritable            = YES; // Can the file be written over
+	BOOL isPathDeletable       = YES; // Is the enclosing path writable 
+	BOOL isFileDeletable       = YES; // By default, assume the file can be deleted
+	int  deleteErrno           = 0; 
 	
 	NSDictionary *fileAttributes = [fm fileAttributesAtPath:filePath traverseLink:NO];
 	
@@ -631,10 +627,12 @@
 		NSError *error = nil;
 		if ([fm setAttributes: [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:NO] forKey:NSFileImmutable] ofItemAtPath:filePath error: &error] == NO) {
 			NSLog(@"Error trying to set the NSFileImmutable attribute: %@", [error localizedDescription]);
-		} else {
-			NSLog(@"Successfully unlocked the file:: %@", [filePath lastPathComponent]);
 		}
 	}
+	
+	// Check if the file can be overwritten and deleted.  If there is an error,
+	// save the value of the system errno, since it can easily be changed by
+	// the system if another error occurs.
 	
 	// Check if the enclosing path is writable so the file can be deleted
 	isPathDeletable = [fm isDeletableFileAtPath: filePath];
@@ -656,13 +654,12 @@
 	{
 		NSNumber *originalPermissions = [fileAttributes objectForKey: NSFilePosixPermissions];
 		mode_t permissionsMask = 0700;
-		mode_t updatedPermissions = [originalPermissions shortValue] | permissionsMask;
-		
+		mode_t updatedPermissions = [originalPermissions shortValue] | permissionsMask;  // Updated set of permissions
 		NSDictionary *attribs = [NSDictionary dictionaryWithObject:[NSNumber numberWithShort:updatedPermissions] forKey:NSFilePosixPermissions];
 		NSError *error = nil;
 		
 #ifdef MAC_APP_STORE
-		// In most cases, this should be set to NO, but do one check to see if the current
+		// In most cases, this should be set to NO, but perfom one check to see if the current
 		// user can update the file's permissions so it can be deleted.
 		if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES)
 		{
@@ -673,7 +670,6 @@
 			// Since admin rights cannot be granted for MAS apps, set this to NO
 			isFileDeletable = NO;
 		}
-
 #else
 		if (deleteErrno == EPERM) // Error 1 - Operation not permitted
 		{
@@ -682,26 +678,34 @@
 		else if (deleteErrno == EACCES) // Error 13 - Permissions error
 		{
 			// Try and update the permissions.  If possible, authorization is not necessary
-			if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == NO)
-			{
-				// Was not able to modify the permissions, will need authorization
-				requiresAuthorization = YES;
-			} 
-			else 
+			if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES)
 			{
 				// Was able to modify the permissions
 				requiresAuthorization = NO;
-				NSLog(@"Was able to change the permissions on the file:: %@", [filePath lastPathComponent]);
 			}
+			else 
+			{	// Was not able to modify the permissions, will need authorization
+				if ([STPrivilegedTask authorizationFunctionAvailable] == YES) 
+				{
+					requiresAuthorization = YES;
+				} 
+				else 
+				{
+					// If AuthorizationExecuteWithPrivileges no longer works, then this
+					// file cannot be deleted.
+					isFileDeletable = NO;
+				}
+			} 
 		} 
 		else if (deleteErrno == EROFS) // Error 30 - Read-only file system
 		{
 			isFileDeletable = NO;
-		} 
-
-		char *errorMsg = strerror(deleteErrno);
-		NSLog(@"Other error detecting deletability: %s (%d)", errorMsg, deleteErrno);
-
+		}
+		else 
+		{	
+			char *errorMsg = strerror(deleteErrno);
+			NSLog(@"Other error detecting deletability: %s (%d)", errorMsg, deleteErrno);
+		}
 #endif
 	}
 	
@@ -735,7 +739,7 @@
 	{
 		if ([fm fileExistsAtPath: [path stringByAppendingPathComponent: object] isDirectory:&isDir] && isDir == NO)
 		{
-			if ([self containsResourceFork: [path stringByAppendingPathComponent: object]] == YES)
+			if ([fm containsResourceFork: [path stringByAppendingPathComponent: object]] == YES)
 			{
 				numFiles+=2;
 			}
@@ -828,6 +832,7 @@
 // Created: 10 December 2009 22:37
 // Version: 9 June 2010 21:23
 // =========================================================================
+/*
 - (FSRef) convertStringToFSRef: (NSString *) path
 {
 	// This converts an NSString path to a FSRef correctly.
@@ -845,6 +850,7 @@
 	
 	return output;
 }
+*/
 
 // =========================================================================
 // (unsigned long long) fileSize: (NSString *) path
@@ -871,12 +877,13 @@
 	}
 	else
 	{
-		FSRef ref = [self convertStringToFSRef: path];
+		FSRef ref = [fm convertStringToFSRef: path];
 		pathFileSize = [self fastFolderSizeAtFSRef: &ref];
 	}
 	
 	return (pathFileSize);
 }
+
 
 
 // =========================================================================
@@ -956,6 +963,7 @@
 	return totalSize;
 }
 
+/*
 // fastFolderSizeAtFSRef2 is just an alternate example which was mentioned at
 // the bottom of this post:
 // http://www.cocoabuilder.com/archive/cocoa/136498-obtain-directory-size.html
@@ -1069,48 +1077,8 @@ typedef struct SFetchedInfo
 	
 	return totalSize;
 }
+*/
 
-// =========================================================================
-// (NSString *) formatFileSize: (double) file_size
-// -------------------------------------------------------------------------
-// Should (double) file)_size be changed to unsigned long long?
-// -------------------------------------------------------------------------
-// Created: 8 August 2007 22:09
-// Version: 25 May 2010
-// =========================================================================
-- (NSString *) formatFileSizeOld: (double) file_size
-{
-	NSString *file_size_label;
-	double baseSize = 1024.0;	// For Mac OS 10.6+, set this to 1000.0
-	
-	SInt32		systemVersion;
-	Gestalt(gestaltSystemVersion, (SInt32 *) &systemVersion); 	// What version of OS X are we running?
-	
-	if (systemVersion >= 0x00001060)
-	{
-		baseSize = 1000.0;
-	}
-	
-	if ( (file_size / baseSize) < 1.0)
-		file_size_label = @" bytes";
-	else if ((file_size / pow(baseSize, 2)) < 1.0)
-	{
-		file_size = file_size / baseSize;
-		file_size_label = @" KB";
-	}
-	else if ((file_size / pow(baseSize, 3)) < 1.0)
-	{
-		file_size = file_size / pow(baseSize, 2);
-		file_size_label = @" MB";
-	}
-	else
-	{
-		file_size = file_size / pow(baseSize, 3);
-		file_size_label = @" GB";
-	}	
-	
-	return ([NSString stringWithFormat: @"%.2f%@", file_size, file_size_label]);
-}
 
 #pragma mark -
 
@@ -1388,14 +1356,13 @@ typedef struct SFetchedInfo
 // link, remove it with rm, because srm will try and remove the original
 // file instead of the symbolic link.
 // -------------------------------------------------------------------------
-// Created: 4. April 2004 23:35
-// Version: 7 April 2018 22:26
+// Created: 4 April 2004 23:35
+// Version: 8 April 2018 11:56
 // =========================================================================
 - (void) runTask
 {	
 	PEFile *currentFile = [trash_files objectAtIndex: idx];
 	
-	// TODO: Add this functionality to the STPT class : && ([STPrivilegedTask authorizationFunctionAvailable] == YES)
 	// Check if the file can be deleted, but needs admin rights
 	if (([currentFile isDeletable] == YES) && ([currentFile requiresAuthorizationToDelete] == YES)) 
 	{
@@ -1405,10 +1372,7 @@ typedef struct SFetchedInfo
 	else if (([currentFile isDeletable] == NO) || 
 		(([currentFile isDirectory] == YES) && ([currentFile isPackage] == NO) && ([[NSFileManager defaultManager] isDirectoryEmpty: [currentFile path]] == NO)))
 	{
-		
-		//	if (([fm isDeletableFileAtPath:[[trash_files objectAtIndex: idx] path]] == NO) || 
-		//		(([[trash_files objectAtIndex: idx] isDirectory] == YES) && ([[trash_files objectAtIndex: idx] isPackage] == NO) && ([self directoryIsEmpty: [[trash_files objectAtIndex: idx] path]] == NO)))
-
+		// If the file cannot be deleted, or it is a folder which still contains files which haven't been deleted
 		int choice = -1; // alert button selection
 		
 		if (suppressCannotEraseWarning == NO)
@@ -1457,12 +1421,11 @@ typedef struct SFetchedInfo
 // Set up the path and arguments for the STPrivilegedTask to delete a file.
 // -------------------------------------------------------------------------
 // Created: 7 April 2018 18:00
-// Version: 7 April 2018 18:00
+// Version: 8 April 2018 11:49
 // =========================================================================
-- (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile {
-	// This file can be deleted, but it will require authorization privileges to erase it.
-	NSLog(@"The file %@ requires authorization to delete it.", [currentFile fileName]);
-		
+- (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile 
+{
+	// This file can be deleted, but it will require authorization privileges to erase it.		
 	if (privilegedTask == nil)
 	{
 		privilegedTask = [[STPrivilegedTask alloc] init];
@@ -1521,16 +1484,16 @@ typedef struct SFetchedInfo
 		[indicator incrementBy: 100.0];
 	}
 	
-	// Due to security limitations, once the privileged task is launch, it cannot be canceled
+	// Due to security limitations, once the privileged task is launched, it cannot be canceled
 	[cancelButton setEnabled:NO];
 	[cancelMenuItem setEnabled:NO];
-	
 	
 	// Launch it, user is prompted for password
 	OSStatus err = [privilegedTask launch];
 	
 	if (err != errAuthorizationSuccess) 
 	{
+		// TODO: Should I throw up an alert dialog if the file couldn't be deleted here?
 		if (err == errAuthorizationCanceled) {
 			NSLog(@"User canceled STPrivilegedTask");
 		} else if (err == errAuthorizationFnNoLongerExists) {
@@ -1547,7 +1510,6 @@ typedef struct SFetchedInfo
 	} 
 	else 
 	{
-		NSLog(@"Task successfully launched");
 		[NSThread detachNewThreadSelector: @selector(outputData:) toTarget: self withObject: [privilegedTask outputFileHandle]];
 	}
 }
@@ -1655,9 +1617,6 @@ typedef struct SFetchedInfo
 		{
 			NSString *string = [[NSString alloc] initWithData:data encoding: NSASCIIStringEncoding];
 			NSString *modifiedString = [[NSString alloc] initWithString: [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-			// TODO: Clean up before releasing.
-			NSLog(@"modifiedString:: %@", modifiedString);
-			// stringByTrimmingCharactersInSet is a 10.2+ feature. 
 			NSArray *splitString = [modifiedString componentsSeparatedByString: @"%"];
 			
 			currentPercentage = [[splitString objectAtIndex: 0] intValue];		
@@ -1843,20 +1802,6 @@ typedef struct SFetchedInfo
 
 #pragma mark -
 #pragma mark File Methods
-// =========================================================================
-// (NSString *) currentFileName
-// -------------------------------------------------------------------------
-// Retrieve the short version of the current file (i.e. "foo.txt") being 
-// deleted (so no full path).
-// -------------------------------------------------------------------------
-// Created: 9 October 2005 17:30
-// Version: 9 October 2005 17:30
-// =========================================================================
-- (NSString *) currentFileName
-{
-	return ([[trash_files objectAtIndex: idx] lastPathComponent]);
-}
-
 
 // =========================================================================
 // (NSString *) fileNameString
@@ -1942,48 +1887,6 @@ typedef struct SFetchedInfo
 	return isWritable;
 }
 
-
-// =========================================================================
-// (BOOL) containsResourceFork: (NSString *)path
-// -------------------------------------------------------------------------
-// Check to see if a file contains a resource fork.
-// Should gather several of these file-related checks and put them into
-// a separate extension class.
-// -------------------------------------------------------------------------
-// Created: 2 January 2007 19:49
-// Version: 8 April 2007
-// =========================================================================
-// TODO: Should move some of these methods to the NSFileManager+Utils category class
-- (BOOL) containsResourceFork: (NSString *)path 
-{
-	FSRef           fsRef;
-	FSCatalogInfo   fsInfo;
-	BOOL			isDir;
-
-	// If path is a directory, automatically return NO
-	if ( [fm fileExistsAtPath: path isDirectory:&isDir] && isDir )
-	{
-		return (NO);
-	}
-	else if(FSPathMakeRef((unsigned char *) [path fileSystemRepresentation], &fsRef, NULL) == noErr) 
-	{
-		if(FSGetCatalogInfo(&fsRef, kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
-		{
-			if (fsInfo.rsrcLogicalSize > 0)
-			{
-				return (YES);
-			}
-			else
-			{
-				return (NO);
-			}
-		}
-	}
-	   
-	return (NO);
-}
-
-
 // =========================================================================
 // (BOOL) isVolume: (NSString *) volumePath
 // -------------------------------------------------------------------------
@@ -1995,7 +1898,7 @@ typedef struct SFetchedInfo
 - (BOOL) isVolume: (NSString *) volumePath
 {
 	BOOL isPathVolume = NO;
-	NSArray * volumesList = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
+	NSArray *volumesList = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
 	
 	if ([volumesList containsObject:volumePath] == YES)
 	{
@@ -2209,8 +2112,9 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (void) privilegedTaskFinished: (NSNotification *) aNotification
 // -------------------------------------------------------------------------
-// Need to call many of the same calls as doneErasing, except release the 
-// STPrivilegedTask
+// Notification method which is called after a STPrivilegedTask completes.
+// Release the privilegedTask and then call doneErasing which will then
+// move on to the next set of steps.
 // -------------------------------------------------------------------------
 // Version: 26 March 2018 21:44
 // =========================================================================
@@ -2349,22 +2253,32 @@ typedef struct SFetchedInfo
 #pragma mark General menu methods
 
 // =========================================================================
-// (IBAction) openPreferencePane: (id) sender
+// (BOOL) validateMenuItem: (NSMenuItem*) menuItem
 // -------------------------------------------------------------------------
-// Open the PE preference pane in the System Preferences
-// Not used currently, will be necessary later...
+// Validate the menu items whether they should be enabled or not.
+// This case is only for the Preferences menu item, which should be disabled
+// when either the privileged task is running or a disc is being erased, 
+// since those particular tasks cannot be paused while in operation.
 // -------------------------------------------------------------------------
-// Created: 10 July 2007 22:28
-// Version: 10 July 2007 22:28
+// Created: 8 April 2018 16:50
+// Version: 8 April 2018 16:50
 // =========================================================================
-- (IBAction) openPreferencePane: (id) sender
+- (BOOL) validateMenuItem: (NSMenuItem*) menuItem
 {
-	// ~/Library/PreferencePanes/Permanent Eraser.prefPane
-//	[[NSWorkspace sharedWorkspace] openFile: [@"~/Library/PreferencePanes/Permanent Eraser.prefPane" stringByExpandingTildeInPath]];
-	// /Library/PreferencePanes/Permanent Eraser.prefPane
-	// Otherwise, throw warning that a Pref window can't be opened or found
+    SEL action = [menuItem action];
+	
+    if (action == @selector(openPreferences:)) {
+		if ((privilegedTask != nil) &&  ([privilegedTask isRunning] == YES)) {
+			return NO;
+		} else if (isCurrentlyErasingDisc == YES) {
+			return NO;
+		} else {
+			return YES;
+		}
+    } 
+	
+	return [menuItem isEnabled];
 }
-
 
 // =========================================================================
 // (IBAction) openPreferences: (id) sender
@@ -2377,27 +2291,28 @@ typedef struct SFetchedInfo
 - (IBAction) openPreferences: (id) sender
 {
 	// What if a disc is getting erased, then the NSTask isn't being used...
-	if (pEraser != nil)
+	if ((pEraser != nil) && ([pEraser isRunning] == YES))
 	{
-		// TODO: Also check if the privilegedTask is running and see if it can be suspended
-		if ([pEraser isRunning] == YES)
+		BOOL suspendResult = [pEraser suspend]; // returns YES if successful
+		
+		if (NO == suspendResult)
 		{
-			BOOL suspendResult = [pEraser suspend]; // returns YES if successful
-			
-			if (NO == suspendResult)
-			{
-				// error: wasn't able to suspend the task
-				NSLog(@"Error suspending erasing task.");
-			} 
-			else
-			{
-				[PreferencesController sharedWindowController];
-			}
+			// error: wasn't able to suspend the task
+			NSLog(@"Error suspending erasing task.");
+		} 
+		else
+		{
+			[PreferencesController sharedWindowController];
 		}
 	}
+	else if ((privilegedTask != nil) &&  ([privilegedTask isRunning] == YES))
+	{	// Cannot suspend a privileged task while it is running
+		NSLog(@"Cannot open Preferences while this privileged task is running.");
+	}			 
 	else if (isCurrentlyErasingDisc == YES)
 	{
-		[PreferencesController sharedWindowController];
+		// Do not open Preferences if a disc is being erased.
+		NSLog(@"Cannot open Preferences while a disc is being erased.");
 	}
 	else
 	{
@@ -2459,10 +2374,10 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (IBAction) goToProductPage: (id) sender
 // -------------------------------------------------------------------------
+// Open a web browser to go to the product web page
+// -------------------------------------------------------------------------
 // Created: 30 December 2007 22:31
 // Version: 30 December 2007 22:31
-// -------------------------------------------------------------------------
-// Open a web browser to go to the product web page
 // =========================================================================
 - (IBAction) goToProductPage: (id) sender
 {
@@ -2473,10 +2388,10 @@ typedef struct SFetchedInfo
 // =========================================================================
 // (IBAction) sendFeedback: (id) sender
 // -------------------------------------------------------------------------
+// Send feedback to the support e-mail
+// -------------------------------------------------------------------------
 // Created: 30 December 2007 22:31
 // Version: 30 December 2007 22:31
-// -------------------------------------------------------------------------
-// Open a web browser to go to the product feedback web page
 // =========================================================================
 - (IBAction) sendFeedback: (id) sender
 {

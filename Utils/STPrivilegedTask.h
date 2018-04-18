@@ -72,6 +72,7 @@ extern const OSStatus errAuthorizationFnNoLongerExists;
 -(int)terminationStatus;
 -(void)_checkTaskStatus;
 -(void)waitUntilExit;
++ (BOOL)authorizationFunctionAvailable;
 
 @end
 
