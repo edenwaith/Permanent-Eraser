@@ -350,7 +350,7 @@
 				}
 				else
 				{
-					totalFilesSize += [self fileSize: [currentDirectory stringByAppendingPathComponent: object]];
+					totalFilesSize += [fm fileSize: [currentDirectory stringByAppendingPathComponent: object]];
 					// this will reverse the array so a directory will be erased last after it is empty
 					[self addFileToArray: [currentDirectory stringByAppendingPathComponent: object]];
 				}
@@ -531,12 +531,12 @@
 		if ([[NSWorkspace sharedWorkspace] isFilePackageAtPath: filePath] == YES)
 		{
 			[tempPEFile setIsPackage: YES];
-			[tempPEFile setFilesize: [self fileSize: filePath]];
+			[tempPEFile setFilesize: [fm fileSize: filePath]];
 		}
 		else if ([self isVolume: filePath] == YES && [self isErasableDisc: filePath])	// erasable disc
 		{
 			[tempPEFile setIsPackage: NO];
-			[tempPEFile setFilesize: [self fileSize: filePath]];
+			[tempPEFile setFilesize: [fm fileSize: filePath]];
 		}
 		else	// otherwise, just a directory
 		{
@@ -546,7 +546,7 @@
 	}
 	else
 	{
-		[tempPEFile setFilesize: [self fileSize: filePath]];
+		[tempPEFile setFilesize: [fm fileSize: filePath]];
 		[tempPEFile setIsDirectory: NO];
 		[tempPEFile setIsPackage: NO];
 	}
@@ -661,7 +661,7 @@
 #ifdef MAC_APP_STORE
 		// In most cases, this should be set to NO, but perfom one check to see if the current
 		// user can update the file's permissions so it can be deleted.
-		if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES)
+		if (([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES) && (isPathDeletable == YES))
 		{
 			isFileDeletable = YES;
 		}
@@ -680,8 +680,16 @@
 			// Try and update the permissions.  If possible, authorization is not necessary
 			if ([fm setAttributes: attribs ofItemAtPath: filePath error: &error] == YES)
 			{
-				// Was able to modify the permissions
-				requiresAuthorization = NO;
+				// As long as an enclosing folder(s) are writable, the file can be deleted
+				// Otherwise, if the enclosing folder is read-only, then the file may be
+				// modified and overwritten, but the original file cannot be deleted, so
+				// authorization is needed to fully delete the file.
+				if (isPathDeletable == YES) {
+					// Was able to modify the permissions
+					requiresAuthorization = NO;
+				} else {
+					requiresAuthorization = YES;
+				}
 			}
 			else 
 			{	// Was not able to modify the permissions, will need authorization
@@ -822,265 +830,6 @@
 
 
 #pragma mark -
-#pragma mark File Sizing Methods
-
-// =========================================================================
-// (FSRef) convertStringToFSRef: (NSString *) path
-// -------------------------------------------------------------------------
-// Convert NSString to FSRef
-// -------------------------------------------------------------------------
-// Created: 10 December 2009 22:37
-// Version: 9 June 2010 21:23
-// =========================================================================
-/*
-- (FSRef) convertStringToFSRef: (NSString *) path
-{
-	// This converts an NSString path to a FSRef correctly.
-	// The Dell Inspiron backup was sized properly at 20662092257, whereas the old method
-	// returned the value 25893905653.  If a file name had a semi-colon in it, the entire
-	// parent directory would be given as the file's size.
-	FSRef output;
-	
-	NSURL *fileURL = [NSURL fileURLWithPath: path];
-
-    if (!CFURLGetFSRef( (CFURLRef)fileURL, &output )) 
-	{
-        NSLog( @"Failed to create FSRef." );
-    }	
-	
-	return output;
-}
-*/
-
-// =========================================================================
-// (unsigned long long) fileSize: (NSString *) path
-// -------------------------------------------------------------------------
-// -------------------------------------------------------------------------
-// Created: 10 December 2009 22:45
-// Version: 21 May 2010 22:39
-// =========================================================================
-- (unsigned long long) fileSize: (NSString *) path
-{
-	unsigned long long pathFileSize = 0;
-	
-	if ([fm isFileSymbolicLink: path] == YES)
-	{
-		NSDictionary *fattrs = [fm fileAttributesAtPath: path traverseLink: NO];
-		
-		if (fattrs != nil)
-		{
-			NSNumber *numFileSize;
-			
-			numFileSize = [fattrs objectForKey: NSFileSize];
-			pathFileSize = [numFileSize unsignedLongLongValue];
-		}
-	}
-	else
-	{
-		FSRef ref = [fm convertStringToFSRef: path];
-		pathFileSize = [self fastFolderSizeAtFSRef: &ref];
-	}
-	
-	return (pathFileSize);
-}
-
-
-
-// =========================================================================
-// (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef
-// -------------------------------------------------------------------------
-// Reference: http://www.cocoabuilder.com/archive/cocoa/136498-obtain-directory-size.html
-// -------------------------------------------------------------------------
-// Version: 14 December 2014 22:00
-// =========================================================================
-- (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef
-{
-	FSIterator	thisDirEnum = NULL;
-	unsigned long long totalSize = 0;
-	
-	// Iterate the directory contents, recursing as necessary
-	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
-	{
-		// 40 is a better number, prevents the memory crash from too many recursive calls
-		const ItemCount kMaxEntriesPerFetch = 40;
-		ItemCount actualFetched;
-		FSRef	fetchedRefs[kMaxEntriesPerFetch];
-		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
-		
-		OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
-										   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
-										   fetchedRefs, NULL, NULL);
-		
-		while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
-		{
-			ItemCount thisIndex;
-			for (thisIndex = 0; thisIndex < actualFetched; thisIndex++)
-			{
-				// Recurse if it's a folder
-				if (fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
-				{
-					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
-				}
-				else
-				{
-					// add the size for this item
-					totalSize += fetchedInfos[thisIndex].dataLogicalSize + fetchedInfos[thisIndex].rsrcLogicalSize;
-				}
-			}
-			
-			if (fsErr == errFSNoMoreItems)
-			{
-				break;
-			}
-			else
-			{
-				// get more items
-				fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
-											 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
-											 fetchedRefs, NULL, NULL);
-			}
-		}
-		
-		FSCloseIterator(thisDirEnum);
-	}
-	else
-	{
-		FSCatalogInfo		fsInfo;
-
-		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
-		{
-			if (fsInfo.rsrcLogicalSize > 0)
-			{
-				totalSize += (fsInfo.dataLogicalSize + fsInfo.rsrcLogicalSize);
-			}
-			else
-			{
-				totalSize += (fsInfo.dataLogicalSize);
-			}
-		}
-	}
-	
-	return totalSize;
-}
-
-/*
-// fastFolderSizeAtFSRef2 is just an alternate example which was mentioned at
-// the bottom of this post:
-// http://www.cocoabuilder.com/archive/cocoa/136498-obtain-directory-size.html
-typedef struct SFetchedInfo
-{
-	FSRef          fetchedRefs[40];
-	FSCatalogInfo  fetchedInfos[40];
-}SFetchedInfo;
-
-- (unsigned long long) fastFolderSizeAtFSRef2:(FSRef*)theFileRef
-{
-	FSIterator	thisDirEnum = NULL;
-	unsigned long long totalSize = 0;
-	
-	// Iterate the directory contents, recursing as necessary
-	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
-	{
-		// 40 is a better number, prevents the memory crash from too many recursive calls
-		const ItemCount kMaxEntriesPerFetch = 40;
-		
-
-		
-		// might as well allocate all the storage with a single call...
-        struct SFetchedInfo *fetched = (struct SFetchedInfo*)malloc(sizeof(struct SFetchedInfo));
-		
-		//        if (fetched != NULL)
-		//        {
-		
-		//            ItemCount  actualFetched;
-		//            OSErr      fsErr = FSGetCatalogInfoBulk(thisDirEnum,
-		//													kMaxEntriesPerFetch, &actualFetched,
-		//													NULL, kFSCatInfoDataSizes |
-		//													kFSCatInfoNodeFlags, fetched->fInfos,
-		//													fetched->fFSRefs, NULL, NULL);
-		
-		if (fetched != NULL)
-        {
-            ItemCount  actualFetched;
-            OSErr      fsErr = FSGetCatalogInfoBulk(thisDirEnum,
-													kMaxEntriesPerFetch, &actualFetched,
-													NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags,
-													fetched->fetchedInfos,
-													fetched->fetchedRefs, NULL, NULL);
-			
-			//			ItemCount actualFetched;
-			//			FSRef	fetchedRefs[kMaxEntriesPerFetch];
-			//			FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
-			//			
-			//			OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
-			//											   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
-			//											   fetchedRefs, NULL, NULL);
-			
-			while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
-			{
-				ItemCount thisIndex;
-				for (thisIndex = 0; thisIndex < actualFetched; thisIndex++)
-				{
-					// Recurse if it's a folder
-					if (fetched->fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
-					{
-						
-						totalSize += [self fastFolderSizeAtFSRef:&fetched->fetchedRefs[thisIndex]];
-//						NSLog(@"recurse: %llu", totalSize);
-					}
-					else
-					{
-						// add the size for this item
-						totalSize += fetched->fetchedInfos[thisIndex].dataLogicalSize + fetched->fetchedInfos[thisIndex].rsrcLogicalSize;
-					}
-				}
-				
-				if (fsErr == errFSNoMoreItems)
-				{
-					break;
-				}
-				else
-				{
-					// get more items
-					//					fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
-					//												 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
-					//												 fetchedRefs, NULL, NULL);
-					fsErr = FSGetCatalogInfoBulk(thisDirEnum,
-												 kMaxEntriesPerFetch, &actualFetched,
-												 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags,
-												 fetched->fetchedInfos,
-												 fetched->fetchedRefs, NULL, NULL);
-				}
-			}
-			
-			free(fetched);
-		}
-		
-		FSCloseIterator(thisDirEnum);
-	}
-	else
-	{
-		FSCatalogInfo		fsInfo;
-		
-		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
-		{
-			if (fsInfo.rsrcLogicalSize > 0)
-			{
-				totalSize += (fsInfo.dataLogicalSize + fsInfo.rsrcLogicalSize);
-			}
-			else
-			{
-				totalSize += (fsInfo.dataLogicalSize);
-			}
-		}
-	}
-	
-	return totalSize;
-}
-*/
-
-
-#pragma mark -
 
 // =========================================================================
 // (void) erase: 
@@ -1112,7 +861,7 @@ typedef struct SFetchedInfo
 	// Hold down the Option key when launching PE to prevent this warning from appearing.
 	if (warnBeforeErasing == YES)
 	{	
-		if (filesWereDropped == YES && num_files == 1)	// Erasing one files
+		if (filesWereDropped == YES && num_files == 1)	// Erasing one file
 		{
 			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 											 defaultButton: NSLocalizedString(@"OK", nil)

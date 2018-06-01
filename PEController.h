@@ -88,9 +88,6 @@
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;
 
-- (unsigned long long) fileSize: (NSString *) path;
-- (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
-
 - (void) addNewFiles : (NSTimer *) aTimer;
 - (void) erase;
 - (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;

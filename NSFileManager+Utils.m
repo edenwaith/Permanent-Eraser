@@ -178,11 +178,82 @@
 	FSIterator	thisDirEnum = NULL;
 	unsigned long long totalSize = 0;
 	
+	// Iterate the directory contents, recursing as necessary
+	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
+	{
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40;
+		ItemCount actualFetched;
+		FSRef	fetchedRefs[kMaxEntriesPerFetch];
+		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
+		
+		OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+										   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+										   fetchedRefs, NULL, NULL);
+		
+		while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
+		{
+			ItemCount thisIndex;
+			for (thisIndex = 0; thisIndex < actualFetched; thisIndex++)
+			{
+				// Recurse if it's a folder
+				if (fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
+				{
+					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
+				}
+				else
+				{
+					// add the size for this item
+					totalSize += fetchedInfos[thisIndex].dataLogicalSize + fetchedInfos[thisIndex].rsrcLogicalSize;
+				}
+			}
+			
+			if (fsErr == errFSNoMoreItems)
+			{
+				break;
+			}
+			else
+			{
+				// get more items
+				fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+											 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+											 fetchedRefs, NULL, NULL);
+			}
+		}
+		
+		FSCloseIterator(thisDirEnum);
+	}
+	else
+	{
+		FSCatalogInfo		fsInfo;
+		
+		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		{
+			if (fsInfo.rsrcLogicalSize > 0)
+			{
+				totalSize += (fsInfo.dataLogicalSize + fsInfo.rsrcLogicalSize);
+			}
+			else
+			{
+				totalSize += (fsInfo.dataLogicalSize);
+			}
+		}
+	}
+	
+	return totalSize;
+}
+
+- (unsigned long long) fastFolderSizeAtFSRefOld:(FSRef*)theFileRef
+{
+	FSIterator	thisDirEnum = NULL;
+	unsigned long long totalSize = 0;
+	
 	
 	// Iterate the directory contents, recursing as necessary
 	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
 	{
-		const ItemCount kMaxEntriesPerFetch = 256;
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40; // 256;
 		ItemCount actualFetched;
 		FSRef	fetchedRefs[kMaxEntriesPerFetch];
 		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];

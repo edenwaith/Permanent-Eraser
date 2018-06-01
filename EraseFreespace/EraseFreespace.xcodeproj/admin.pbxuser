@@ -86,17 +86,17 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 534039297;
-			PBXWorkspaceStateSaveDate = 534039297;
+			PBXPerProjectTemplateStateSaveDate = 549166884;
+			PBXWorkspaceStateSaveDate = 549166884;
 		};
 		perUserProjectItems = {
-			84753D951FBD3605009C7EC5 /* PBXTextBookmark */ = 84753D951FBD3605009C7EC5 /* PBXTextBookmark */;
-			848B2B9A1F9EE376008F678E /* PBXBookmark */ = 848B2B9A1F9EE376008F678E /* PBXBookmark */;
-			848B2C551FA024E6008F678E /* PBXTextBookmark */ = 848B2C551FA024E6008F678E /* PBXTextBookmark */;
+			840DD5D620BE3AEA00FBCE02 /* PBXTextBookmark */ = 840DD5D620BE3AEA00FBCE02 /* PBXTextBookmark */;
+			840DD5D720BE3AEA00FBCE02 /* PBXBookmark */ = 840DD5D720BE3AEA00FBCE02 /* PBXBookmark */;
+			840DD5D820BE3AEA00FBCE02 /* PBXTextBookmark */ = 840DD5D820BE3AEA00FBCE02 /* PBXTextBookmark */;
+			840DD5D920BE3AEA00FBCE02 /* PlistBookmark */ = 840DD5D920BE3AEA00FBCE02 /* PlistBookmark */;
+			840DD5DA20BE3AEA00FBCE02 /* PlistBookmark */ = 840DD5DA20BE3AEA00FBCE02 /* PlistBookmark */;
 			848B2C561FA024E6008F678E /* PBXTextBookmark */ = 848B2C561FA024E6008F678E /* PBXTextBookmark */;
-			848B2C6B1FA03445008F678E /* PlistBookmark */ = 848B2C6B1FA03445008F678E /* PlistBookmark */;
 			848B2CB71FA44005008F678E /* PBXTextBookmark */ = 848B2CB71FA44005008F678E /* PBXTextBookmark */;
-			84A7287E1FD4E877007F095B /* PBXTextBookmark */ = 84A7287E1FD4E877007F095B /* PBXTextBookmark */;
 		};
 		sourceControlManager = 658A2DCF067AB96600421F51 /* Source Control */;
 		userBuildSettings = {
@@ -106,8 +106,8 @@
 	089C167EFE841241C02AAC07 /* English */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1251, 422}}";
-			sepNavSelRange = "{67, 0}";
-			sepNavVisRange = "{0, 1445}";
+			sepNavSelRange = "{453, 0}";
+			sepNavVisRange = "{0, 1446}";
 		};
 	};
 	6518174F067A8D39005BD953 /* EraseFreespace.h */ = {
@@ -205,7 +205,7 @@
 		path = /Applications/Automator.app;
 		sourceTree = "<absolute>";
 	};
-	84753D951FBD3605009C7EC5 /* PBXTextBookmark */ = {
+	840DD5D620BE3AEA00FBCE02 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 65181750067A8D39005BD953 /* EraseFreespace.m */;
 		name = "EraseFreespace.m: 195";
@@ -215,19 +215,43 @@
 		vrLen = 1155;
 		vrLoc = 4811;
 	};
-	848B2B9A1F9EE376008F678E /* PBXBookmark */ = {
+	840DD5D720BE3AEA00FBCE02 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 848B2B1B1F95A9B8008F678E /* PE.icns */;
 	};
-	848B2C551FA024E6008F678E /* PBXTextBookmark */ = {
+	840DD5D820BE3AEA00FBCE02 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 089C167EFE841241C02AAC07 /* English */;
-		name = "InfoPlist.strings: 3";
+		name = "InfoPlist.strings: 16";
 		rLen = 0;
-		rLoc = 67;
+		rLoc = 453;
 		rType = 0;
-		vrLen = 1445;
+		vrLen = 1446;
 		vrLoc = 0;
+	};
+	840DD5D920BE3AEA00FBCE02 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			CFBundleVersion,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
+	};
+	840DD5DA20BE3AEA00FBCE02 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			NSPrincipalClass,
+		);
+		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775807;
 	};
 	848B2C561FA024E6008F678E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -246,18 +270,6 @@
 		path = /Developer/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSApplication.h;
 		sourceTree = "<absolute>";
 	};
-	848B2C6B1FA03445008F678E /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-			AMProvides,
-		);
-		name = "/Users/admin/Programs/Mac/Permanent Eraser/EraseFreespace/Info.plist";
-		rLen = 0;
-		rLoc = 9223372036854775808;
-	};
 	848B2CB71FA44005008F678E /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 6518174F067A8D39005BD953 /* EraseFreespace.h */;
@@ -267,16 +279,6 @@
 		rType = 0;
 		vrLen = 554;
 		vrLoc = 0;
-	};
-	84A7287E1FD4E877007F095B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 65181750067A8D39005BD953 /* EraseFreespace.m */;
-		name = "EraseFreespace.m: 195";
-		rLen = 0;
-		rLoc = 5646;
-		rType = 0;
-		vrLen = 1155;
-		vrLoc = 4811;
 	};
 	8D5B49AC048680CD000E48DA /* EraseFreespace */ = {
 		activeExec = 0;

@@ -304,8 +304,9 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>13</integer>
+									<integer>9</integer>
+									<integer>6</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -344,7 +345,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Info.plist</string>
+								<string>InfoPlist.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -352,18 +353,19 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Info.plist</string>
+										<string>InfoPlist.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>84A728801FD4E877007F095B</string>
+										<string>840DD5E120BE3AEB00FBCE02</string>
 										<key>history</key>
 										<array>
 											<string>841D65411F7DDECF00E4EE22</string>
 											<string>841D65421F7DDECF00E4EE22</string>
 											<string>848B2B2C1F95ABBF008F678E</string>
-											<string>848B34F71FB6BCBC008F678E</string>
-											<string>84A7287F1FD4E877007F095B</string>
+											<string>840DD5DE20BE3AEB00FBCE02</string>
+											<string>840DD5DF20BE3AEB00FBCE02</string>
+											<string>840DD5E020BE3AEB00FBCE02</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -375,14 +377,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {580, 315}}</string>
+								<string>{{0, 0}, {580, 308}}</string>
 								<key>RubberWindowFrame</key>
 								<string>12 374 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>315pt</string>
+							<string>308pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -395,14 +397,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 320}, {580, 143}}</string>
+								<string>{{0, 313}, {580, 150}}</string>
 								<key>RubberWindowFrame</key>
 								<string>12 374 788 504 0 0 1440 878 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>143pt</string>
+							<string>150pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -421,9 +423,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>84A728811FD4E877007F095B</string>
+				<string>840DD5E220BE3AEB00FBCE02</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>84A728821FD4E877007F095B</string>
+				<string>840DD5E320BE3AEB00FBCE02</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -544,7 +546,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>534046839.369766</real>
+	<real>549337835.22394001</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -561,7 +563,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>842047131367AD1200081CBF</string>
 		<string>/Users/admin/Programs/Mac/Permanent Eraser/EraseTrash/EraseTrash.xcodeproj</string>
 	</array>
@@ -643,7 +644,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>842047131367AD1200081CBF</string>
-				<string>84A728831FD4E877007F095B</string>
+				<string>840DD5E420BE3AEB00FBCE02</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
