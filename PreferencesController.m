@@ -116,6 +116,11 @@ static PreferencesController *_sharedWindowController = nil;
 	
 	// Set the file and disc erasing level text
 	
+#ifdef MAC_APP_STORE
+	// For the MAS version, there is only the General Prefs pane, so hide the toolbar
+	[toolbar setVisible:NO];
+#endif
+	
 	NSArray *fileErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"FileErasingSimple", nil), NSLocalizedString(@"FileErasingDoE", nil), NSLocalizedString(@"FileErasingMedium", nil), NSLocalizedString(@"FileErasingGutmann", nil), nil];
 	NSArray *discErasingTitles = [NSArray arrayWithObjects:NSLocalizedString(@"Quick", nil), NSLocalizedString(@"Complete", nil), nil];
 	
@@ -125,21 +130,24 @@ static PreferencesController *_sharedWindowController = nil;
 	[opticalDiscErasingButton removeAllItems];
 	[opticalDiscErasingButton addItemsWithTitles: discErasingTitles];
 	
-	// TODO: Set the initial item if there isn't an option available
-	if (opticalErasingLevel != nil)
+	// Set file erasing level
+	if ((fileErasingLevel != nil) && ([fileErasingButton itemWithTitle: NSLocalizedString(fileErasingLevel, nil)] != nil))
 	{
-		if ([opticalDiscErasingButton itemWithTitle: NSLocalizedString(opticalErasingLevel, nil)] != nil )
-		{
-			[opticalDiscErasingButton selectItemWithTitle: NSLocalizedString(opticalErasingLevel, nil)];
-		}
+		[fileErasingButton selectItemWithTitle: NSLocalizedString(fileErasingLevel, nil)];
 	}
-
-	if (fileErasingLevel != nil)
+	else
+	{	// Default setting is DoD 7x
+		[fileErasingButton selectItemWithTitle: NSLocalizedString(@"FileErasingMedium", nil)];
+	}
+	
+	// Set CD/DVD erasing level
+	if ( (opticalErasingLevel != nil) && ([opticalDiscErasingButton itemWithTitle: NSLocalizedString(opticalErasingLevel, nil)] != nil) ) 
 	{
-		if ([fileErasingButton itemWithTitle: NSLocalizedString(fileErasingLevel, nil)] != nil)
-		{
-			[fileErasingButton selectItemWithTitle: NSLocalizedString(fileErasingLevel, nil)];
-		}
+		[opticalDiscErasingButton selectItemWithTitle: NSLocalizedString(opticalErasingLevel, nil)];
+	}
+	else 
+	{
+		[opticalDiscErasingButton selectItemWithTitle: NSLocalizedString(@"Complete", nil)];
 	}
 	
 	[fileErasingLabel setStringValue: NSLocalizedString(@"FileErasingLevel", nil)];
@@ -148,10 +156,19 @@ static PreferencesController *_sharedWindowController = nil;
 	[playSoundsButton setTitle: NSLocalizedString(@"PlaySounds", nil)];
 
 	// UPDATE -----
+	
 	[checkNowButton setTitle: NSLocalizedString(@"CheckNow", nil)];
 	[lastCheckedLabel setStringValue: NSLocalizedString(@"LastChecked", nil)];
 	
 	// if lastCheckedDate is nil, set the lastCheckedTextField string to "Never"
+	if (lastCheckedDate != nil)
+	{		
+		[lastCheckedTextField setStringValue: [self formatLocalizedDate: lastCheckedDate]];
+	}
+	else
+	{
+		[lastCheckedTextField setStringValue: NSLocalizedString(@"Never", nil)];
+	}
 	
 	// PLUG-INS -----
 	
@@ -169,7 +186,6 @@ static PreferencesController *_sharedWindowController = nil;
 		pluginPath = @"";
 	}
 
-	// Test this in Mac OS 10.3 to ensure this doesn't crash!
 	if ([[NSFileManager defaultManager] fileExistsAtPath: pluginPath] == YES)
 	{
 		[pluginInstalledButton setState: NSOnState];
@@ -177,6 +193,7 @@ static PreferencesController *_sharedWindowController = nil;
 	
 	[pluginInstalledButton setTitle: NSLocalizedString(@"InstallContextualPlugIn", nil)];
 	
+	// NOTE: Remove this first conditional in PE 3.0+
 	if ([pluginPath isEqualToString: @""] == YES)
 	{
 		[pluginInstalledButton setEnabled: NO];	// disable for Mac OS 10.3
@@ -186,12 +203,6 @@ static PreferencesController *_sharedWindowController = nil;
 	{
 		[pluginMsgField setStringValue: [NSString stringWithFormat: NSLocalizedString(@"PluginInstallMessage", nil), [pluginPath lastPathComponent], [self displayLocalizedPath: [pluginPath stringByDeletingLastPathComponent]] ]];
 	}
-	
-	if (lastCheckedDate != nil)
-	{		
-		[lastCheckedTextField setStringValue: [self formatLocalizedDate: lastCheckedDate]];
-	}
-
 }
 
 
@@ -473,22 +484,22 @@ static PreferencesController *_sharedWindowController = nil;
 // =========================================================================
 // (NSString *) formatLocalizedDate: (NSDate *) theDate
 // -------------------------------------------------------------------------
-// NOTE: 2012-04-14 This method probably isn't necessary now, since the date
-// format can be set within IB.
+// Format the date using the long style (instead of full), which will format
+// using the appropriate locale.  
 // -------------------------------------------------------------------------
 // Created: 12 March 2011 20:52
-// Version: 14 April 2012 18:07
+// Version: 7 December 2017 19:45
 // =========================================================================
 - (NSString *) formatLocalizedDate: (NSDate *) theDate
 {
 	[NSDateFormatter setDefaultFormatterBehavior:NSDateFormatterBehavior10_4];
 	
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-	[dateFormatter setDateStyle:NSDateFormatterFullStyle];
+	[dateFormatter setDateStyle:NSDateFormatterLongStyle];
 	[dateFormatter setTimeStyle:NSDateFormatterShortStyle];
 	
 	NSString *formattedDateString = [dateFormatter stringFromDate:theDate];
-//	NSLog(@"Formatted date string for locale %@: %@", [[dateFormatter locale] localeIdentifier], formattedDateString);
+	// NSLog(@"Formatted date string for locale %@: %@", [[dateFormatter locale] localeIdentifier], formattedDateString);
 	
 	return (formattedDateString);
 }

@@ -86,8 +86,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 532219727;
-			PBXWorkspaceStateSaveDate = 532219727;
+			PBXPerProjectTemplateStateSaveDate = 534039297;
+			PBXWorkspaceStateSaveDate = 534039297;
 		};
 		perUserProjectItems = {
 			84753D951FBD3605009C7EC5 /* PBXTextBookmark */ = 84753D951FBD3605009C7EC5 /* PBXTextBookmark */;
@@ -96,10 +96,11 @@
 			848B2C561FA024E6008F678E /* PBXTextBookmark */ = 848B2C561FA024E6008F678E /* PBXTextBookmark */;
 			848B2C6B1FA03445008F678E /* PlistBookmark */ = 848B2C6B1FA03445008F678E /* PlistBookmark */;
 			848B2CB71FA44005008F678E /* PBXTextBookmark */ = 848B2CB71FA44005008F678E /* PBXTextBookmark */;
-			848B34F61FB6BCBA008F678E /* PBXTextBookmark */ = 848B34F61FB6BCBA008F678E /* PBXTextBookmark */;
+			84A7287E1FD4E877007F095B /* PBXTextBookmark */ = 84A7287E1FD4E877007F095B /* PBXTextBookmark */;
 		};
 		sourceControlManager = 658A2DCF067AB96600421F51 /* Source Control */;
 		userBuildSettings = {
+			SYMROOT = "/Users/admin/Programs/builds/Permanent Eraser/EraseFreespace/";
 		};
 	};
 	089C167EFE841241C02AAC07 /* English */ = {
@@ -118,7 +119,7 @@
 	};
 	65181750067A8D39005BD953 /* EraseFreespace.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {992, 3718}}";
+			sepNavIntBoundsRect = "{{0, 0}, {992, 3692}}";
 			sepNavSelRange = "{5646, 0}";
 			sepNavVisRange = "{4811, 1155}";
 		};
@@ -267,15 +268,15 @@
 		vrLen = 554;
 		vrLoc = 0;
 	};
-	848B34F61FB6BCBA008F678E /* PBXTextBookmark */ = {
+	84A7287E1FD4E877007F095B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 65181750067A8D39005BD953 /* EraseFreespace.m */;
-		name = "EraseFreespace.m: 112";
+		name = "EraseFreespace.m: 195";
 		rLen = 0;
-		rLoc = 2945;
+		rLoc = 5646;
 		rType = 0;
-		vrLen = 987;
-		vrLoc = 1486;
+		vrLen = 1155;
+		vrLoc = 4811;
 	};
 	8D5B49AC048680CD000E48DA /* EraseFreespace */ = {
 		activeExec = 0;
