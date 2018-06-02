@@ -11,6 +11,7 @@
 #import "PEFile.h"
 #import "CTProgressBadge.h"
 #import "NSProcessInfo+PECocoaBackports.h"
+#import "STPrivilegedTask.h"
 
 #include <unistd.h>		// required to retrieve uid
 #include <sys/param.h>
@@ -24,14 +25,15 @@
 
 @interface PEController : NSObject
 {
-    NSTask			*pEraser;
-    NSFileManager 	*fm;  
-    NSMutableArray 	*trash_files;
+	NSTask			*pEraser;
+	STPrivilegedTask *privilegedTask;
+	NSFileManager 	*fm;  
+	NSMutableArray 	*trash_files;
 	NSFileHandle	*handle;
     
-    NSTimer			*timer;
+	NSTimer			*timer;
     
-    BOOL			filesWereDropped;	// were files dropped on the icon?
+	BOOL			filesWereDropped;	// were files dropped on the icon?
 	BOOL			firstTimeHere;		// indicates first pass through the application
 	BOOL			warnBeforeErasing;	// pop up warning message before deleting files
 	BOOL			suppressCannotEraseWarning;	// whether to display warning when a file can't be erased
@@ -86,10 +88,6 @@
 - (unsigned long long) countNumberOfFiles: (NSString *) path;
 - (void) checkInstalledPlugins;
 
-- (FSRef) convertStringToFSRef: (NSString *) path ;
-- (unsigned long long) fileSize: (NSString *) path;
-- (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
-//- (NSString *) formatFileSize: (double) file_size;
 - (void) addNewFiles : (NSTimer *) aTimer;
 - (void) erase;
 - (void) alertDidEnd: (NSAlert *) alert returnCode: (int) returnCode contextInfo: (void *) contextInfo;
@@ -97,25 +95,23 @@
 - (void) eraseDisc;
 - (void) eraseNotification: (NSNotification*) notification;
 - (void) runTask;
+- (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile;
+- (void) setupTaskWithFile: (PEFile *)currentFile;
 - (void) outputData: (NSFileHandle *) handle;
 - (void) updateIndicator;
 - (void) updateApplicationBadge;
 
-- (NSString *) currentFileName;
 - (NSString *) fileNameString;
 - (BOOL) checkPermissions: (NSString *)path;
-- (BOOL) containsResourceFork:(NSString *)path;
 - (BOOL) isVolume: (NSString *) volumePath;
 - (BOOL) isErasableDisc: (NSString *) volumePath;
 - (NSString *) volumeType: (NSString *) volumePath;
 - (NSString *) bsdDevNode: (NSString *) volumePath;
-- (BOOL) directoryIsEmpty: (NSString *) path;
 
 - (void) doneErasing: (NSNotification *)aNotification;
 - (void) sound: (NSSound *) sound didFinishPlaying: (BOOL) aBool;
 - (void) shutdownPE;
 
-- (IBAction) openPreferencePane: (id) sender;
 - (IBAction) openPreferences: (id) sender;
 - (void) preferencesClosed;
 - (IBAction) goToProductPage : (id) sender;

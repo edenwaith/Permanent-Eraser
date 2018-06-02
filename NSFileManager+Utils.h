@@ -30,10 +30,12 @@
 - (BOOL) createDirectoryAtPathWithIntermediateDirectories: (NSString *) path attributes: (NSDictionary *) attributes;
 
 - (BOOL) isFileSymbolicLink: (NSString *) path;
+- (BOOL) containsResourceFork: (NSString *)path;
 - (FSRef) convertStringToFSRef: (NSString *) path;
 - (unsigned long long) fileSize: (NSString *) path;
 - (unsigned long long) fastFolderSizeAtFSRef:(FSRef*)theFileRef;
 - (NSString *) formatFileSize: (double) file_size;
 - (BOOL) isSolidState: (UInt8 const *) cpath;
+- (BOOL) isDirectoryEmpty: (NSString *) path;
 
 @end

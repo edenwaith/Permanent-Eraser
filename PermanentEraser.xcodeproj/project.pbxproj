@@ -79,14 +79,21 @@
 		8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
 		8405E9DB0B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
 		8405E9DC0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		84078F0A1A9444C8009AC273 /* software_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F081A9444C8009AC273 /* software_update.png */; };
+		84078F0B1A9444C8009AC273 /* software_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F091A9444C8009AC273 /* software_update@2x.png */; };
 		84078F0C1A9444C8009AC273 /* software_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F081A9444C8009AC273 /* software_update.png */; };
 		84078F0D1A9444C8009AC273 /* software_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F091A9444C8009AC273 /* software_update@2x.png */; };
+		84078F1D1A9449D4009AC273 /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
 		84078F1E1A9449D4009AC273 /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
+		840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E122A1A3D36E500E0C399 /* NSProcessInfo+Backport.h */; };
+		840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E122B1A3D36E500E0C399 /* NSProcessInfo+Backport.m */; };
 		840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
 		840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
 		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */; };
+		84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */; };
 		84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
 		8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
@@ -99,6 +106,7 @@
 		842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
 		842DA8561A73513E00BFD9F3 /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
 		842DA8571A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
+		84331B3C14E0D66E009FCE38 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
 		8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
 		8440847D10C8B57B009EA3C5 /* CTProgressBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */; };
@@ -117,7 +125,9 @@
 		84567D0C132C621A0070AD1A /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
 		84567D0D132C621A0070AD1A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		84567D0F132C621A0070AD1A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		84567D10132C621A0070AD1A /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		84567D12132C621A0070AD1A /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 849D043B11C9C75500BCE8F2 /* Preferences.nib */; };
+		84567D13132C621A0070AD1A /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
 		84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
 		84567D1B132C621A0070AD1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		84567D1C132C621A0070AD1A /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
@@ -134,10 +144,18 @@
 		84567D2A132C621A0070AD1A /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
 		84583AE60B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
 		84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
-		845E1A3D1FD87E4E000EBD66 /* PE_MAS.icns in Resources */ = {isa = PBXBuildFile; fileRef = 845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */; };
 		845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
 		845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
-		8467A1391FD395510072FEC8 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
+		8467A0BD1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0BE1FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0BF1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0C01FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0C11FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8467A0E21FC4F62E0072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
+		8467A0E91FC4F6770072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
+		84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
+		84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84907D24154B9AE200B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
 		84907D26154B9AF900B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D25154B9AF900B614D0 /* srm */; };
 		84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
@@ -146,8 +164,6 @@
 		849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D049F11C9C93F00BCE8F2 /* PreferencesController.m */; };
 		849D2F8612163E84000F6610 /* Erase.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		849D2FB61216401E000F6610 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
-		84A727C21FD3AAF5007F095B /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
-		84A7286B1FD4DE00007F095B /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
 		84DF85180F5A37CC00C272F1 /* PEFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF85160F5A37CC00C272F1 /* PEFile.h */; };
 		84DF85190F5A37CC00C272F1 /* PEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DF85170F5A37CC00C272F1 /* PEFile.m */; };
@@ -199,7 +215,16 @@
 			files = (
 				84567D29132C621A0070AD1A /* Erase.action in CopyFiles */,
 				84567D2A132C621A0070AD1A /* EraseTrash.action in CopyFiles */,
-				84A727C21FD3AAF5007F095B /* EraseFreespace.action in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84567D2B132C621A0070AD1A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84331B3C14E0D66E009FCE38 /* Erase.workflow in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,24 +238,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84F0ED491B72FE1000C27D2A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84F6D3610C0BB41100CC11F4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = Contents/Library/Automator;
 			dstSubfolderSpec = 1;
 			files = (
+				84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */,
 				84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */,
 				84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */,
-				84A7286B1FD4DE00007F095B /* EraseFreespace.action in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,11 +298,13 @@
 		84567D32132C621A0070AD1A /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84567D34132C621A0070AD1A /* Info-PermanentEraser_MAS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-PermanentEraser_MAS.plist"; sourceTree = "<group>"; };
 		84583AE50B54A1840078A640 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
-		845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE_MAS.icns; sourceTree = "<group>"; };
 		845E65E20B967C6100391EE2 /* DiscRecording.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DiscRecording.framework; path = /System/Library/Frameworks/DiscRecording.framework; sourceTree = "<absolute>"; };
 		845EF8410BE97B9E00EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		845EF8450BE97BD800EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		845EF8480BE97BE100EE6556 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STPrivilegedTask.h; path = Utils/STPrivilegedTask.h; sourceTree = "<group>"; };
+		8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STPrivilegedTask.m; path = Utils/STPrivilegedTask.m; sourceTree = "<group>"; };
+		8467A0E11FC4F62E0072FEC8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		84753CEC1FB904FB009C7EC5 /* EraseFreespace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EraseFreespace.xcodeproj; path = EraseFreespace/EraseFreespace.xcodeproj; sourceTree = "<group>"; };
 		847BA6E41303A20400427D14 /* Dutch */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = Dutch; path = Dutch.lproj/Preferences.nib; sourceTree = "<group>"; };
 		847BA6E51303A20800427D14 /* sv */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = sv; path = sv.lproj/Preferences.nib; sourceTree = "<group>"; };
@@ -336,6 +354,7 @@
 				84567D25132C621A0070AD1A /* Carbon.framework in Frameworks */,
 				84567D26132C621A0070AD1A /* DiscRecording.framework in Frameworks */,
 				84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */,
+				8467A0E91FC4F6770072FEC8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +366,7 @@
 				84583AE70B54A1840078A640 /* Carbon.framework in Frameworks */,
 				845E65E40B967C6100391EE2 /* DiscRecording.framework in Frameworks */,
 				84484D621516A2A000B61DDA /* IOKit.framework in Frameworks */,
+				8467A0E21FC4F62E0072FEC8 /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +426,7 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				8467A0E11FC4F62E0072FEC8 /* Security.framework */,
 			);
 			name = PermanentEraser;
 			sourceTree = "<group>";
@@ -505,7 +526,6 @@
 				842DA8341A73495F00BFD9F3 /* PE_128x128.png */,
 				842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */,
 				8411A3DF0BAE2CBF00AA5045 /* PE.icns */,
-				845E1A3C1FD87E4E000EBD66 /* PE_MAS.icns */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -530,6 +550,8 @@
 		84DF851A0F5A37E400C272F1 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */,
+				8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */,
 				8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */,
 				8440847C10C8B57B009EA3C5 /* CTProgressBadge.m */,
 				84E38DE81036450B0099407B /* NSAlertCheckbox.h */,
@@ -577,6 +599,7 @@
 				32CA4F650368D2AA00C91783 /* PermanentEraser_Prefix.h in Headers */,
 				84524315048BDAA40003BAA1 /* PEController.h in Headers */,
 				8405E9D90B55C88300483441 /* NSEvent+ModifierKeys.h in Headers */,
+				8467A0C11FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,8 +615,11 @@
 				84567D08132C621A0070AD1A /* CTProgressBadge.h in Headers */,
 				84567D09132C621A0070AD1A /* PreferencesController.h in Headers */,
 				84567D0A132C621A0070AD1A /* NSFileManager+Utils.h in Headers */,
+				840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */,
 				840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */,
+				84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */,
+				8467A0BD1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +637,7 @@
 				8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */,
 				8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				8429FF521A51150A00F011F7 /* PECocoaBackportsGlobal.h in Headers */,
+				8467A0BF1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -625,7 +652,9 @@
 				84567D0B132C621A0070AD1A /* Resources */,
 				84567D1A132C621A0070AD1A /* Sources */,
 				84567D23132C621A0070AD1A /* Frameworks */,
+				84567D27132C621A0070AD1A /* ShellScript */,
 				84567D28132C621A0070AD1A /* CopyFiles */,
+				84567D2B132C621A0070AD1A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -648,7 +677,6 @@
 				84F6D3610C0BB41100CC11F4 /* CopyFiles */,
 				849D2FD51216404B000F6610 /* CopyFiles */,
 				849D2F6412163B2B000F6610 /* ShellScript */,
-				84F0ED491B72FE1000C27D2A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -748,15 +776,18 @@
 				84567D0C132C621A0070AD1A /* MainMenu.nib in Resources */,
 				84567D0D132C621A0070AD1A /* InfoPlist.strings in Resources */,
 				84567D0F132C621A0070AD1A /* Localizable.strings in Resources */,
+				84567D10132C621A0070AD1A /* PE.icns in Resources */,
 				84567D12132C621A0070AD1A /* Preferences.nib in Resources */,
+				84567D13132C621A0070AD1A /* plugin.png in Resources */,
 				84567D19132C621A0070AD1A /* Permanent Eraser Help in Resources */,
 				84907D26154B9AF900B614D0 /* srm in Resources */,
 				842DA8361A73495F00BFD9F3 /* PE_128x128.png in Resources */,
 				842DA8371A73495F00BFD9F3 /* PE_128x128@2x.png in Resources */,
 				842DA8541A73513E00BFD9F3 /* PE_40x40.png in Resources */,
 				842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */,
-				8467A1391FD395510072FEC8 /* EraseFreespace.action in Resources */,
-				845E1A3D1FD87E4E000EBD66 /* PE_MAS.icns in Resources */,
+				84078F0A1A9444C8009AC273 /* software_update.png in Resources */,
+				84078F0B1A9444C8009AC273 /* software_update@2x.png in Resources */,
+				84078F1D1A9449D4009AC273 /* plugin@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,12 +811,26 @@
 				84078F0C1A9444C8009AC273 /* software_update.png in Resources */,
 				84078F0D1A9444C8009AC273 /* software_update@2x.png in Resources */,
 				84078F1E1A9449D4009AC273 /* plugin@2x.png in Resources */,
+				84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		84567D27132C621A0070AD1A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# unzip the plug-ins\ncd \"$PROJECT_DIR\"\ncd Plug-Ins\nunzip -o Erase.zip\nunzip -o Permanent\\ Eraser.zip\n\nrm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\n";
+		};
 		849D2F6412163B2B000F6610 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -797,7 +842,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n\n\n";
+			shellScript = "# References for Xcode environment variables: \n# https://gist.github.com/gdavis/6670468\n# https://stackoverflow.com/questions/6910901/how-do-i-print-a-list-of-build-settings-in-xcode-project\n\n# Print out Xcode's environment variables\n# echo `env`\n\n# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\nPE_ERASE_WORKFLOW_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Erase.workflow\"\nPE_ERASEFREESPACE_ACTION_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/EraseFreespace.action\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\necho \"Erase.workflow path: $PE_ERASE_WORKFLOW_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Due to weirdness in Xcode 3, certain items are also being copied into the Resources folder\n# Remove Erase.workflow and EraseFreespace.action from the Resources folder since these files already \n# exist in other locations in the app bundle\nrm -Rf \"$PE_ERASE_WORKFLOW_PATH\"        # Remove Erase.workflow\nrm -Rf \"$PE_ERASEFREESPACE_ACTION_PATH\" # Remove EraseFreespace.action\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -809,6 +854,7 @@
 				29B9732CFDCFA39411CA2CEA /* main.m in Sources */,
 				84524316048BDAA40003BAA1 /* PEController.m in Sources */,
 				8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */,
+				8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -824,7 +870,10 @@
 				84567D20132C621A0070AD1A /* CTProgressBadge.m in Sources */,
 				84567D21132C621A0070AD1A /* PreferencesController.m in Sources */,
 				84567D22132C621A0070AD1A /* NSFileManager+Utils.m in Sources */,
+				840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */,
 				840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */,
+				8467A0BE1FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,6 +890,7 @@
 				849D04A111C9C93F00BCE8F2 /* PreferencesController.m in Sources */,
 				8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */,
 				8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				8467A0C01FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -966,7 +1016,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
 				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
-				OTHER_CFLAGS = "";
+				OTHER_CFLAGS = "-DMAC_APP_STORE";
 				OTHER_LDFLAGS = "";
 				OTHER_LDFLAGS_ppc = "-prebind";
 				PRODUCT_NAME = "Permanent Eraser";
@@ -1079,7 +1129,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Chad Armstrong";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1092,15 +1142,15 @@
 				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
 				OTHER_CFLAGS = "-DMAC_APP_STORE";
 				OTHER_LDFLAGS = "-lcrypto";
 				OTHER_LDFLAGS_ppc = "-prebind";
 				PRODUCT_NAME = "Permanent Eraser";
 				SDKROOT = macosx10.6;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
 				SECTORDER_FLAGS = "";
 				VALID_ARCHS = "i386 x86_64";
 				WARNING_CFLAGS = (

@@ -69,6 +69,48 @@
 }
 
 // =========================================================================
+// (BOOL) containsResourceFork: (NSString *)path
+// -------------------------------------------------------------------------
+// Check to see if a file contains a resource fork.
+// Should gather several of these file-related checks and put them into
+// a separate extension class.
+// -------------------------------------------------------------------------
+// Created: 2 January 2007 19:49
+// Version: 8 April 2007
+// =========================================================================
+// TODO: Should move some of these methods to the NSFileManager+Utils category class
+- (BOOL) containsResourceFork: (NSString *)path 
+{
+	FSRef           fsRef;
+	FSCatalogInfo   fsInfo;
+	BOOL			isDir;
+	
+	// If path is a directory, automatically return NO
+	if ( [self fileExistsAtPath: path isDirectory:&isDir] && isDir )
+	{
+		return (NO);
+	}
+	else if (FSPathMakeRef((unsigned char *) [path fileSystemRepresentation], &fsRef, NULL) == noErr) 
+	{
+		// Another way to check for a resource fork is by using getxattr
+		// ssize_t resourceForkSize = getxattr([pathToFile fileSystemRepresentation], "com.apple.ResourceFork", NULL, 0, 0, 0);
+		if(FSGetCatalogInfo(&fsRef, kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		{
+			if (fsInfo.rsrcLogicalSize > 0)
+			{
+				return (YES);
+			}
+			else
+			{
+				return (NO);
+			}
+		}
+	}
+	
+	return (NO);
+}
+
+// =========================================================================
 // (FSRef) convertStringToFSRef: (NSString *) path
 // -------------------------------------------------------------------------
 // Convert NSString to FSRef
@@ -136,11 +178,82 @@
 	FSIterator	thisDirEnum = NULL;
 	unsigned long long totalSize = 0;
 	
+	// Iterate the directory contents, recursing as necessary
+	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
+	{
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40;
+		ItemCount actualFetched;
+		FSRef	fetchedRefs[kMaxEntriesPerFetch];
+		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
+		
+		OSErr fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+										   NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+										   fetchedRefs, NULL, NULL);
+		
+		while ((fsErr == noErr) || (fsErr == errFSNoMoreItems))
+		{
+			ItemCount thisIndex;
+			for (thisIndex = 0; thisIndex < actualFetched; thisIndex++)
+			{
+				// Recurse if it's a folder
+				if (fetchedInfos[thisIndex].nodeFlags & kFSNodeIsDirectoryMask)
+				{
+					totalSize += [self fastFolderSizeAtFSRef:&fetchedRefs[thisIndex]];
+				}
+				else
+				{
+					// add the size for this item
+					totalSize += fetchedInfos[thisIndex].dataLogicalSize + fetchedInfos[thisIndex].rsrcLogicalSize;
+				}
+			}
+			
+			if (fsErr == errFSNoMoreItems)
+			{
+				break;
+			}
+			else
+			{
+				// get more items
+				fsErr = FSGetCatalogInfoBulk(thisDirEnum, kMaxEntriesPerFetch, &actualFetched,
+											 NULL, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes | kFSCatInfoNodeFlags, fetchedInfos,
+											 fetchedRefs, NULL, NULL);
+			}
+		}
+		
+		FSCloseIterator(thisDirEnum);
+	}
+	else
+	{
+		FSCatalogInfo		fsInfo;
+		
+		if (FSGetCatalogInfo(theFileRef, kFSCatInfoDataSizes | kFSCatInfoRsrcSizes, &fsInfo, NULL, NULL, NULL) == noErr)
+		{
+			if (fsInfo.rsrcLogicalSize > 0)
+			{
+				totalSize += (fsInfo.dataLogicalSize + fsInfo.rsrcLogicalSize);
+			}
+			else
+			{
+				totalSize += (fsInfo.dataLogicalSize);
+			}
+		}
+	}
+	
+	return totalSize;
+}
+
+- (unsigned long long) fastFolderSizeAtFSRefOld:(FSRef*)theFileRef
+{
+	FSIterator	thisDirEnum = NULL;
+	unsigned long long totalSize = 0;
+	
 	
 	// Iterate the directory contents, recursing as necessary
 	if (FSOpenIterator(theFileRef, kFSIterateFlat, &thisDirEnum) == noErr)
 	{
-		const ItemCount kMaxEntriesPerFetch = 256;
+		// 40 is a better number, prevents the memory crash from too many recursive calls
+		const ItemCount kMaxEntriesPerFetch = 40; // 256;
 		ItemCount actualFetched;
 		FSRef	fetchedRefs[kMaxEntriesPerFetch];
 		FSCatalogInfo fetchedInfos[kMaxEntriesPerFetch];
@@ -330,6 +443,29 @@
 	IOObjectRelease(entryIterator);
 	
 	return isSolidState;
+}
+
+// =========================================================================
+// (NSString *) isDirectoryEmpty: (NSString *) path
+// -------------------------------------------------------------------------
+// 
+// -------------------------------------------------------------------------
+// Created: 27 November 2009 23:35
+// Version: 6 April 2018 20:49
+// =========================================================================
+- (BOOL) isDirectoryEmpty: (NSString *) path
+{
+	NSArray *dirContents = [self subpathsAtPath: path];
+	
+	if (dirContents != nil && [dirContents count] == 0)
+	{
+		return YES;
+	}
+	else 
+	{
+		return NO;
+	}
+	
 }
 
 @end

@@ -23,6 +23,7 @@
 	BOOL				_isSymbolicLink;
 	BOOL				_hasResourceFork;
 	BOOL				_isDeletable;
+	BOOL				_requiresAuthorizationToDelete;
 }
 
 - (id) initWithPath: (NSString *) filepath;
@@ -46,6 +47,12 @@
 - (void) setIsSymbolicLink: (BOOL) isSymbolicLink;
 - (BOOL) hasResourcefork;
 - (void) setHasResourceFork: (BOOL) hasResourcefork;
+- (BOOL) isDeletable;
+- (void) setIsDeletable: (BOOL) isDeletable;
+- (BOOL) requiresAuthorizationToDelete;
+- (void) setRequiresAuthorizationToDelete: (BOOL) requiresAuthorizationToDelete;
+- (void) setIsDeletable: (BOOL) isDeletable requiresAuthorizationToDelete: (BOOL) requiresAuth;
+
 - (NSImage *) icon;
 
 @end
