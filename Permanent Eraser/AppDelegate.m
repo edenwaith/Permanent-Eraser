@@ -78,24 +78,20 @@
 	}
 }
 
-- (IBAction)openPreferences:(id)sender
-{
+- (IBAction)openPreferences:(id)sender {
 	
 }
 
 
-- (IBAction)permanentEraserWebsite:(id)sender
-{
-	
+- (IBAction)permanentEraserWebsite:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/permanent%20eraser/"]];
 }
 
-- (IBAction)sendFeedback:(id)sender
-{
-	
+- (IBAction)sendFeedback:(id)sender {
+	[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"mailto:support@edenwaith.com?subject=Permanent%20Eraser%20Feedback"]];
 }
 
-- (IBAction)quitApplication:(id)sender
-{
+- (IBAction)quitApplication:(id)sender {
 	[NSApp terminate:self];
 }
 
