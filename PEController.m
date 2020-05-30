@@ -296,18 +296,41 @@
 			}
 		}
 		
-		 // Perhaps consider naming the thread...
-		preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
 		
-		[[NSNotificationCenter defaultCenter] addObserver:self	
-														selector:@selector(preparationFinished:)	
-															name:NSThreadWillExitNotification 
-														  object:preparationThread];
-		
-		[preparationThread start];
+		// Need to check if the ap can read from the user's local ~/.Trash.  If it is not possible to see the files 
+		// in the user's local Trash, the app probably requires Full Disk Access to be enabled (in macOS Catalina and later)
+		// Instruct the user to enable Full Disk Access and then quit the app.
+		if ([fm isReadableFileAtPath:[@"~/.Trash" stringByExpandingTildeInPath]] == NO)
+		{						
+			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
+											 defaultButton: NSLocalizedString(@"OpenSecurityPreferences", nil)
+										   alternateButton: NSLocalizedString(@"Quit", nil)
+											   otherButton: nil
+								 informativeTextWithFormat: NSLocalizedString(@"CannotAccessTrash", nil)];
+			
+			// This takes the user to the Enable Full Disk Access section in the Help files
+			[alert setHelpAnchor:@"full-disk-access-help"];
+			[alert setShowsHelp: YES];
+			[alert setAlertStyle: NSCriticalAlertStyle];
+			
+			[alert beginSheetModalForWindow: theWindow modalDelegate:self didEndSelector:@selector(fullDiskAccessAlertDidEnd:returnCode:contextInfo:) contextInfo:nil];			
+		}
+		else 
+		{	
+			 // Perhaps consider naming the thread...
+			preparationThread = [[NSThread alloc] initWithTarget:self selector:@selector(prepareFiles) object:nil];
+			
+			[[NSNotificationCenter defaultCenter] addObserver:self	
+															selector:@selector(preparationFinished:)	
+																name:NSThreadWillExitNotification 
+															  object:preparationThread];
+			
+			[preparationThread start];
+		}
 		
     }
 }
+
 
 // =========================================================================
 // (void) prepareFiles
@@ -325,6 +348,7 @@
 	int j = 0;
 	NSDirectoryEnumerator *enumerator;
 	NSArray *volumes = [[NSWorkspace sharedWorkspace] mountedLocalVolumePaths];
+	
 	
 	// Note: It seems that it thinks that .DS_Store is also a volume.  Avoid this.
 	for (j = 0; j < [volumes count]; j++)
@@ -951,6 +975,45 @@
 	}
 }
 
+
+// =========================================================================
+// (void) fullDiskAccessAlertDidEnd
+// -------------------------------------------------------------------------
+// Call back method from the NSAlert which checks if Full Disk Access needs
+// to be enabled.
+// -------------------------------------------------------------------------
+// Crreated: Mid-May 2020
+// =========================================================================
+- (void) fullDiskAccessAlertDidEnd:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo
+{
+	if (NSAlertSecondButtonReturn == returnCode || NSCancelButton == returnCode)	// Quit
+	{
+		[NSApp terminate:self];
+	}
+	else 
+	{
+		// macOS Mojave and later have Full Disk Access in the Security & Privacy pane
+		if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 14, 0}] == YES)
+		{
+			// Reference for all of the preference anchors: https://apple.stackexchange.com/questions/361045/open-system-preferences-privacy-full-disk-access-with-url
+			[[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"]];
+			[NSApp terminate:self];
+		}
+		else
+		{
+			// For pre-Mojave versions of macOS/Mac OS X, have NSWorkspace directly open the Security pane
+			NSURL *url = [NSURL fileURLWithPath:@"/System/Library/PreferencePanes/Security.prefPane"];
+			if (url != NULL)
+			{
+				[[NSWorkspace sharedWorkspace] openURL:url];
+			}
+			
+			[NSApp terminate:self];
+		}
+	}
+}
+
+
 // =========================================================================
 // (void) selectNextFile
 // -------------------------------------------------------------------------
@@ -1022,7 +1085,9 @@
 		
 		// Continue on as if this was successful in erasing...
 		[indicator incrementBy: [[trash_files objectAtIndex: idx] filesize] * 100.0];
-		// [self updateApplicationBadge];
+		// Does [self updateIndicator] also need to be called here?
+		
+		// Does the badge update properly on macOS Mojave and Catalina?
 		[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 		[self doneErasing:nil];
 	}
@@ -1357,7 +1422,7 @@
 	int lastPercentage = 0;
 	int currentPercentage = 0;
 	unsigned long long currentFileSize = [[trash_files objectAtIndex: idx] filesize];
-
+	
 	// Catch NSFileHandleOperationException which occurred when trying to erase symlinks
 	@try 
 	{
@@ -1376,7 +1441,6 @@
 			// If it is an application, need to keep in mind there are extra files inside, so taking the currentFileSize won't work.
 			if (currentPercentage >= lastPercentage)
 			{
-				
 				[indicator incrementBy: (currentPercentage - lastPercentage) * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
 				[self updateIndicator];
 			}
@@ -1386,9 +1450,8 @@
 				[self updateIndicator];
 			}
 			
-			
 			[fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
-
+			
 			[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 			
 			if (currentPercentage >= 100)
@@ -1448,6 +1511,8 @@
 
 // =========================================================================
 // - (void) updateApplicationBadge
+// -------------------------------------------------------------------------
+// This method has been deprecated and replaced with the CTProgressBadge
 // -------------------------------------------------------------------------
 // http://www.macdevcenter.com/pub/a/mac/2001/10/19/cocoa.html?page=3
 // [[NSColor colorWithCalibratedRed: 0.6 green: 0.6 blue: 0.8 alpha:1.0] set]; // create a custom color
