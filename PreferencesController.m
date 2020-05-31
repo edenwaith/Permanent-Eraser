@@ -481,17 +481,27 @@ static PreferencesController *_sharedWindowController = nil;
     {	// If the current OS meets the minimum system requirement
 		if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){major, minor, patch}] == YES)
 		{
-		
-			button = NSRunAlertPanel(NSLocalizedString(@"NewVersionAvailable", nil),
-									 NSLocalizedString(@"NewVersionAvailableMsg", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"MoreInfo", nil), latestVersionNumber);
-			
-			if (NSOKButton == button)
+			// Ensure that the new version is ahead of the current version
+			if ([self isLatestVersion:latestVersionNumber newerThanCurrentVersion:currentVersionNumber] == YES)
 			{
-				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/permanent%20eraser.php"]];
+				button = NSRunAlertPanel(NSLocalizedString(@"NewVersionAvailable", nil),
+										 NSLocalizedString(@"NewVersionAvailableMsg", nil), NSLocalizedString(@"Download", nil), NSLocalizedString(@"Cancel", nil), NSLocalizedString(@"MoreInfo", nil), latestVersionNumber);
+				
+				if (NSOKButton == button)
+				{
+					[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/downloads/permanent%20eraser.php"]];
+				}
+				else if (NSAlertOtherReturn == button) // More Info
+				{
+					[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/permanent%20eraser/"]];
+				}
 			}
-			else if (NSAlertOtherReturn == button) // More Info
+			else
 			{
-				[[NSWorkspace sharedWorkspace] openURL: [NSURL URLWithString:@"http://www.edenwaith.com/products/permanent%20eraser/"]];
+				// This is an edge case for future builds that might be ahead of the release build and not
+				// falsely assume their is a newer version available
+				NSRunAlertPanel(NSLocalizedString(@"SoftwareUpToDate", nil),
+								NSLocalizedString(@"RecentVersionMsg", nil), NSLocalizedString(@"OK", nil), nil, nil);
 			}
 		}
 		else 
@@ -501,6 +511,53 @@ static PreferencesController *_sharedWindowController = nil;
 							NSLocalizedString(@"RecentVersionMsg", nil), NSLocalizedString(@"OK", nil), nil, nil);
 		}
     }
+}
+
+
+// =========================================================================
+// (BOOL) isLatestVersion: (NSString *)latestVersion newerThanCurrentVersion: (NSString *)currentVersion
+// -------------------------------------------------------------------------
+// Compare if the latest version of the app is newer than the current version
+// -------------------------------------------------------------------------
+// Created: 30 May 2020
+// Version: 30 May 2020
+// =========================================================================
+- (BOOL) isLatestVersion: (NSString *)latestVersion newerThanCurrentVersion: (NSString *)currentVersion
+{
+	NSInteger latestVersionMajor = 0;
+	NSInteger latestVersionMinor = 0;
+	NSInteger latestVersionPatch = 0;
+	NSInteger currentVersionMajor = 0;
+	NSInteger currentVersionMinor = 0;
+	NSInteger currentVersionPatch = 0;
+	
+	if (latestVersion != nil)
+	{
+		NSArray *parts = [latestVersion componentsSeparatedByString:@"."];
+		
+		latestVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		latestVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		latestVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (currentVersion != nil)
+	{	
+		NSArray *parts = [currentVersion componentsSeparatedByString:@"."];
+		
+		currentVersionMajor = [parts count] > 0 ? [[parts objectAtIndex:0] integerValue] : 0;
+		currentVersionMinor = [parts count] > 1 ? [[parts objectAtIndex:1] integerValue] : 0;
+		currentVersionPatch = [parts count] > 2 ? [[parts objectAtIndex:2] integerValue] : 0;
+	}
+	
+	if (latestVersionMajor == currentVersionMajor) 
+	{
+        if (latestVersionMinor == currentVersionMinor) 
+		{
+            return latestVersionPatch >= currentVersionPatch;
+        }
+        return latestVersionMinor >= currentVersionMinor;
+    }
+    return latestVersionMajor >= currentVersionMajor;
 }
 
 
@@ -521,7 +578,7 @@ static PreferencesController *_sharedWindowController = nil;
 	[dateFormatter setDateStyle:NSDateFormatterLongStyle];
 	[dateFormatter setTimeStyle:NSDateFormatterShortStyle];
 	
-	NSString *formattedDateString = [dateFormatter stringFromDate:theDate];
+	NSString *formattedDateString =  [dateFormatter stringFromDate:theDate];
 	// NSLog(@"Formatted date string for locale %@: %@", [[dateFormatter locale] localeIdentifier], formattedDateString);
 	
 	return (formattedDateString);
