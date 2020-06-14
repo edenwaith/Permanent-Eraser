@@ -1,4 +1,5 @@
 "Cancel" = "Cancel";
+"CannotAccessTrash" = "Permanent Eraser cannot access the Trash.  You will need to enable Full Disk Access in the Security & Privacy preference pane to erase the Trash.";
 "Complete" = "Complete";
 "DoNotShowMessage" = "Do not show this message again";
 "Download" = "Download";
@@ -20,6 +21,7 @@
 "NoPluginMessage" = "No plug-in is available for this version of macOS.";
 "Of" = " of ";
 "OK" = "OK";
+"OpenSecurityPreferences" = "Open Security Preferences";
 "Plug-Ins" = "Plug-Ins";
 "PluginInstallMessage" = "The plug-in %@ will be installed in the folder %@";
 "Preferences" = "Preferences...";

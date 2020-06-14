@@ -52,6 +52,7 @@
 - (IBAction) playSoundsSelected: (id) sender;
 
 - (IBAction) checkForNewVersion: (id) sender;
+- (BOOL) isLatestVersion: (NSString *)latestVersion newerThanCurrentVersion: (NSString *)currentVersion;
 - (NSString *) formatLocalizedDate: (NSDate *) theDate;
 
 - (IBAction) installPluginSelected: (id) sender;

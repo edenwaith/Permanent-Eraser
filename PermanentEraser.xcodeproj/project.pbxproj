@@ -85,15 +85,11 @@
 		84078F0D1A9444C8009AC273 /* software_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F091A9444C8009AC273 /* software_update@2x.png */; };
 		84078F1D1A9449D4009AC273 /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
 		84078F1E1A9449D4009AC273 /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
-		840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E122A1A3D36E500E0C399 /* NSProcessInfo+Backport.h */; };
-		840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E122B1A3D36E500E0C399 /* NSProcessInfo+Backport.m */; };
 		840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
 		840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
 		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
-		84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */; };
-		84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */; };
 		84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
 		8429FF141A50DF9300F011F7 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		8429FF151A50DF9400F011F7 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
@@ -177,6 +173,7 @@
 		84E63DBA09B53F1500DA4444 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		84E63DBB09B53F1500DA4444 /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
 		84E63DBD09B53F1500DA4444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		84EA9060248C73BF00582C89 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
 		84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84E724810C0D0E56005C0E9C /* Erase.action */; };
 		84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
 		BEB16AB711DE29A600AD23A3 /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
@@ -615,10 +612,8 @@
 				84567D08132C621A0070AD1A /* CTProgressBadge.h in Headers */,
 				84567D09132C621A0070AD1A /* PreferencesController.h in Headers */,
 				84567D0A132C621A0070AD1A /* NSFileManager+Utils.h in Headers */,
-				840E122C1A3D36E500E0C399 /* NSProcessInfo+Backport.h in Headers */,
 				840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */,
 				840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */,
-				84175C781A4BCB5100E8633D /* NSProcessInfo+Utils.h in Headers */,
 				8467A0BD1FC4ED340072FEC8 /* STPrivilegedTask.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,6 +783,7 @@
 				84078F0A1A9444C8009AC273 /* software_update.png in Resources */,
 				84078F0B1A9444C8009AC273 /* software_update@2x.png in Resources */,
 				84078F1D1A9449D4009AC273 /* plugin@2x.png in Resources */,
+				84EA9060248C73BF00582C89 /* srm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,9 +866,7 @@
 				84567D20132C621A0070AD1A /* CTProgressBadge.m in Sources */,
 				84567D21132C621A0070AD1A /* PreferencesController.m in Sources */,
 				84567D22132C621A0070AD1A /* NSFileManager+Utils.m in Sources */,
-				840E122D1A3D36E500E0C399 /* NSProcessInfo+Backport.m in Sources */,
 				840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */,
-				84175C791A4BCB5100E8633D /* NSProcessInfo+Utils.m in Sources */,
 				8467A0BE1FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1062,7 +1056,7 @@
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = macosx10.6;
 			};
 			name = "Release MAS";
 		};
@@ -1129,7 +1123,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Chad Armstrong";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = "";
@@ -1366,6 +1360,7 @@
 				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				GCC_VERSION = 4.0;
 				GCC_WARN_MISSING_PARENTHESES = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx10.5;
 			};
 			name = Release;

@@ -1,4 +1,5 @@
 "Cancel" = "Avbryt";
+"CannotAccessTrash" = "Permanent Eraser cannot access the Trash.  You will need to enable Full Disk Access in the Security & Privacy preference pane to erase the Trash.";
 "Complete" = "Fullständigt";
 "Download" = "Hämta";
 "DoNotShowMessage" = "Visa inte det här meddelandet igen";
@@ -20,6 +21,7 @@
 "NoPluginMessage" = "Inga insticksfiler är tillgängliga för den här versionen av macOS.";
 "Of" = " av ";
 "OK" = "OK";
+"OpenSecurityPreferences" = "Open Security Preferences";
 "Plug-Ins" = "Insticksfiler";
 "PluginInstallMessage" = "Insticksfilen %@ kommer att installeras i mappen %@";
 "Preferences" = "Inställningar...";
