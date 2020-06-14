@@ -296,12 +296,17 @@
 			}
 		}
 		
-		
-		// Need to check if the ap can read from the user's local ~/.Trash.  If it is not possible to see the files 
+        // Use the enumerator to try and read from the local Trash, which will hopefully pre-populate
+        // this app in the Full Disk Access list.
+        NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
+        
+		// Need to check if the app can read from the user's local ~/.Trash.  If it is not possible to see the files 
 		// in the user's local Trash, the app probably requires Full Disk Access to be enabled (in macOS Catalina and later)
 		// Instruct the user to enable Full Disk Access and then quit the app.
-		if ([fm isReadableFileAtPath:[@"~/.Trash" stringByExpandingTildeInPath]] == NO)
-		{						
+		if ([[enumerator allObjects] count] == 0 && [fm isReadableFileAtPath:[@"~/.Trash" stringByExpandingTildeInPath]] == NO)
+		{	
+            
+            
 			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 											 defaultButton: NSLocalizedString(@"OpenSecurityPreferences", nil)
 										   alternateButton: NSLocalizedString(@"Quit", nil)

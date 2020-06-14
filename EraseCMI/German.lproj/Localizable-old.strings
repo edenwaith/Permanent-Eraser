@@ -1,0 +1,4 @@
+{ 
+"RouletteWheel" = "Die standard American roulette wheel is divided into 38 slots, numbered 1 to 36 plus 0 and 00."; 
+"RouletteColors" = "Even numbered slots are red and odd numbered slots are black. The 0 and 00 slots are green." 
+} 
