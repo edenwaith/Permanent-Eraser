@@ -98,7 +98,7 @@
 - (void) setupPrivilegedTaskWithFile: (PEFile *)currentFile;
 - (void) setupTaskWithFile: (PEFile *)currentFile;
 - (void) outputData: (NSFileHandle *) handle;
-- (void) updateIndicator;
+- (void) updateIndicator: (double) delta;
 - (void) updateApplicationBadge;
 
 - (NSString *) fileNameString;
