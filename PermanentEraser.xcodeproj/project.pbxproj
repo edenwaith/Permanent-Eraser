@@ -88,6 +88,9 @@
 		840E12331A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
 		840E12341A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
 		840E12351A3D4A5600E0C399 /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
+		84103B56249DA8E5000980F8 /* Erase.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84103B53249DA8E5000980F8 /* Erase.action */; };
+		84103B57249DA8E5000980F8 /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84103B54249DA8E5000980F8 /* EraseFreespace.action */; };
+		84103B58249DA8E5000980F8 /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84103B55249DA8E5000980F8 /* EraseTrash.action */; };
 		8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		8411A3E10BAE2CBF00AA5045 /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
 		84221BC1155E00BC00768456 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
@@ -102,6 +105,110 @@
 		842DA8551A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
 		842DA8561A73513E00BFD9F3 /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
 		842DA8571A73513E00BFD9F3 /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
+		843267FE249D9A35001D760C /* PermanentEraser_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */; };
+		843267FF249D9A35001D760C /* PEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84524313048BDAA40003BAA1 /* PEController.h */; };
+		84326800249D9A35001D760C /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
+		84326801249D9A35001D760C /* PEFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF85160F5A37CC00C272F1 /* PEFile.h */; };
+		84326802249D9A35001D760C /* NSAlertCheckbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E38DE81036450B0099407B /* NSAlertCheckbox.h */; };
+		84326803249D9A35001D760C /* CTProgressBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */; };
+		84326804249D9A35001D760C /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D049E11C9C93F00BCE8F2 /* PreferencesController.h */; };
+		84326805249D9A35001D760C /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
+		84326806249D9A35001D760C /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
+		84326807249D9A35001D760C /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
+		84326808249D9A35001D760C /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8432680A249D9A35001D760C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8432680B249D9A35001D760C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8432680C249D9A35001D760C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		8432680D249D9A35001D760C /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		8432680E249D9A35001D760C /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 849D043B11C9C75500BCE8F2 /* Preferences.nib */; };
+		8432680F249D9A35001D760C /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
+		84326810249D9A35001D760C /* Erase.workflow in Resources */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
+		84326811249D9A35001D760C /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
+		84326812249D9A35001D760C /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
+		84326813249D9A35001D760C /* PE_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8341A73495F00BFD9F3 /* PE_128x128.png */; };
+		84326814249D9A35001D760C /* PE_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */; };
+		84326815249D9A35001D760C /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
+		84326816249D9A35001D760C /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
+		84326817249D9A35001D760C /* software_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F081A9444C8009AC273 /* software_update.png */; };
+		84326818249D9A35001D760C /* software_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F091A9444C8009AC273 /* software_update@2x.png */; };
+		84326819249D9A35001D760C /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
+		8432681A249D9A35001D760C /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
+		8432681C249D9A35001D760C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8432681D249D9A35001D760C /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
+		8432681E249D9A35001D760C /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		8432681F249D9A35001D760C /* PEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DF85170F5A37CC00C272F1 /* PEFile.m */; };
+		84326820249D9A35001D760C /* NSAlertCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E38DE91036450B0099407B /* NSAlertCheckbox.m */; };
+		84326821249D9A35001D760C /* CTProgressBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440847C10C8B57B009EA3C5 /* CTProgressBadge.m */; };
+		84326822249D9A35001D760C /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D049F11C9C93F00BCE8F2 /* PreferencesController.m */; };
+		84326823249D9A35001D760C /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
+		84326824249D9A35001D760C /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
+		84326825249D9A35001D760C /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		84326827249D9A35001D760C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		84326828249D9A35001D760C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		84326829249D9A35001D760C /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		8432682A249D9A35001D760C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
+		8432682B249D9A35001D760C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
+		84326831249D9A35001D760C /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
+		8432683F249D9A35001D760C /* PermanentEraser_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */; };
+		84326840249D9A35001D760C /* PEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84524313048BDAA40003BAA1 /* PEController.h */; };
+		84326841249D9A35001D760C /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
+		84326842249D9A35001D760C /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		84326844249D9A35001D760C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		84326845249D9A35001D760C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		84326846249D9A35001D760C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		84326847249D9A35001D760C /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		84326849249D9A35001D760C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8432684A249D9A35001D760C /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
+		8432684B249D9A35001D760C /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		8432684C249D9A35001D760C /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		8432684E249D9A35001D760C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		8432684F249D9A35001D760C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		84326850249D9A35001D760C /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		8432685E249D9A38001D760C /* PermanentEraser_Prefix.h in Headers */ = {isa = PBXBuildFile; fileRef = 32CA4F630368D1EE00C91783 /* PermanentEraser_Prefix.h */; };
+		8432685F249D9A38001D760C /* PEController.h in Headers */ = {isa = PBXBuildFile; fileRef = 84524313048BDAA40003BAA1 /* PEController.h */; };
+		84326860249D9A38001D760C /* NSEvent+ModifierKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = 8405E9D70B55C88300483441 /* NSEvent+ModifierKeys.h */; };
+		84326861249D9A38001D760C /* PEFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 84DF85160F5A37CC00C272F1 /* PEFile.h */; };
+		84326862249D9A38001D760C /* NSAlertCheckbox.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E38DE81036450B0099407B /* NSAlertCheckbox.h */; };
+		84326863249D9A38001D760C /* CTProgressBadge.h in Headers */ = {isa = PBXBuildFile; fileRef = 8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */; };
+		84326864249D9A38001D760C /* PreferencesController.h in Headers */ = {isa = PBXBuildFile; fileRef = 849D049E11C9C93F00BCE8F2 /* PreferencesController.h */; };
+		84326865249D9A38001D760C /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
+		84326866249D9A38001D760C /* NSProcessInfo+PECocoaBackports.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */; };
+		84326867249D9A38001D760C /* PECocoaBackportsGlobal.h in Headers */ = {isa = PBXBuildFile; fileRef = 840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */; };
+		84326868249D9A38001D760C /* STPrivilegedTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 8467A0BB1FC4ED340072FEC8 /* STPrivilegedTask.h */; };
+		8432686A249D9A38001D760C /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8432686B249D9A38001D760C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8432686C249D9A38001D760C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF81EB08F5EACA00F021FB /* Localizable.strings */; };
+		8432686D249D9A38001D760C /* PE.icns in Resources */ = {isa = PBXBuildFile; fileRef = 8411A3DF0BAE2CBF00AA5045 /* PE.icns */; };
+		8432686E249D9A38001D760C /* Preferences.nib in Resources */ = {isa = PBXBuildFile; fileRef = 849D043B11C9C75500BCE8F2 /* Preferences.nib */; };
+		8432686F249D9A38001D760C /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
+		84326870249D9A38001D760C /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
+		84326871249D9A38001D760C /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D25154B9AF900B614D0 /* srm */; };
+		84326872249D9A38001D760C /* PE_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8341A73495F00BFD9F3 /* PE_128x128.png */; };
+		84326873249D9A38001D760C /* PE_128x128@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */; };
+		84326874249D9A38001D760C /* PE_40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8521A73513E00BFD9F3 /* PE_40x40.png */; };
+		84326875249D9A38001D760C /* PE_40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */; };
+		84326876249D9A38001D760C /* software_update.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F081A9444C8009AC273 /* software_update.png */; };
+		84326877249D9A38001D760C /* software_update@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F091A9444C8009AC273 /* software_update@2x.png */; };
+		84326878249D9A38001D760C /* plugin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84078F1C1A9449D4009AC273 /* plugin@2x.png */; };
+		84326879249D9A38001D760C /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
+		8432687B249D9A38001D760C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8432687C249D9A38001D760C /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
+		8432687D249D9A38001D760C /* NSEvent+ModifierKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405E9D80B55C88300483441 /* NSEvent+ModifierKeys.m */; };
+		8432687E249D9A38001D760C /* PEFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DF85170F5A37CC00C272F1 /* PEFile.m */; };
+		8432687F249D9A38001D760C /* NSAlertCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E38DE91036450B0099407B /* NSAlertCheckbox.m */; };
+		84326880249D9A38001D760C /* CTProgressBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8440847C10C8B57B009EA3C5 /* CTProgressBadge.m */; };
+		84326881249D9A38001D760C /* PreferencesController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849D049F11C9C93F00BCE8F2 /* PreferencesController.m */; };
+		84326882249D9A38001D760C /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
+		84326883249D9A38001D760C /* NSProcessInfo+PECocoaBackports.m in Sources */ = {isa = PBXBuildFile; fileRef = 840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */; };
+		84326884249D9A38001D760C /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
+		84326886249D9A38001D760C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		84326887249D9A38001D760C /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84583AE50B54A1840078A640 /* Carbon.framework */; };
+		84326888249D9A38001D760C /* DiscRecording.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E65E20B967C6100391EE2 /* DiscRecording.framework */; };
+		84326889249D9A38001D760C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84484D611516A2A000B61DDA /* IOKit.framework */; };
+		8432688A249D9A38001D760C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
+		8432688D249D9A38001D760C /* Erase.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84E724810C0D0E56005C0E9C /* Erase.action */; };
+		8432688E249D9A38001D760C /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
+		84326890249D9A38001D760C /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		84331B3C14E0D66E009FCE38 /* Erase.workflow in CopyFiles */ = {isa = PBXBuildFile; fileRef = 849D2F7D12163E84000F6610 /* Erase.workflow */; };
 		8438F44A12A89C9600F9F813 /* NSFileManager+Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */; };
 		8438F44B12A89C9600F9F813 /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */; };
@@ -150,8 +257,6 @@
 		8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 8467A0BC1FC4ED340072FEC8 /* STPrivilegedTask.m */; };
 		8467A0E21FC4F62E0072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
 		8467A0E91FC4F6770072FEC8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8467A0E11FC4F62E0072FEC8 /* Security.framework */; };
-		84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
-		84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84753CF41FB904FB009C7EC5 /* EraseFreespace.action */; };
 		84907D24154B9AE200B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
 		84907D26154B9AF900B614D0 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D25154B9AF900B614D0 /* srm */; };
 		84979906122CAD04001DBBF8 /* Permanent Eraser Help in Resources */ = {isa = PBXBuildFile; fileRef = 849798CF122CAD04001DBBF8 /* Permanent Eraser Help */; };
@@ -174,8 +279,6 @@
 		84E63DBB09B53F1500DA4444 /* PEController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84524314048BDAA40003BAA1 /* PEController.m */; };
 		84E63DBD09B53F1500DA4444 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		84EA9060248C73BF00582C89 /* srm in Resources */ = {isa = PBXBuildFile; fileRef = 84907D23154B9AE200B614D0 /* srm */; };
-		84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84E724810C0D0E56005C0E9C /* Erase.action */; };
-		84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8409A2570C0C586B00951A52 /* EraseTrash.action */; };
 		BEB16AB711DE29A600AD23A3 /* plugin.png in Resources */ = {isa = PBXBuildFile; fileRef = BEB16AB611DE29A600AD23A3 /* plugin.png */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +307,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8432682C249D9A35001D760C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/Automator;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326830249D9A35001D760C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84326831249D9A35001D760C /* Erase.workflow in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432688C249D9A38001D760C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Contents/Library/Automator;
+			dstSubfolderSpec = 1;
+			files = (
+				8432688D249D9A38001D760C /* Erase.action in CopyFiles */,
+				8432688E249D9A38001D760C /* EraseTrash.action in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432688F249D9A38001D760C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84326890249D9A38001D760C /* Erase.workflow in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84567D28132C621A0070AD1A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
@@ -241,9 +384,9 @@
 			dstPath = Contents/Library/Automator;
 			dstSubfolderSpec = 1;
 			files = (
-				84753D141FB906E1009C7EC5 /* EraseFreespace.action in CopyFiles */,
-				84EBE8D81055849A006F5AC2 /* Erase.action in CopyFiles */,
-				84EBE8E41055849D006F5AC2 /* EraseTrash.action in CopyFiles */,
+				84103B56249DA8E5000980F8 /* Erase.action in CopyFiles */,
+				84103B57249DA8E5000980F8 /* EraseFreespace.action in CopyFiles */,
+				84103B58249DA8E5000980F8 /* EraseTrash.action in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +415,9 @@
 		840E12301A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+PECocoaBackports.h"; path = "Utils/NSProcessInfo+PECocoaBackports.h"; sourceTree = "<group>"; };
 		840E12311A3D4A5600E0C399 /* NSProcessInfo+PECocoaBackports.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+PECocoaBackports.m"; path = "Utils/NSProcessInfo+PECocoaBackports.m"; sourceTree = "<group>"; };
 		840E12321A3D4A5600E0C399 /* PECocoaBackportsGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PECocoaBackportsGlobal.h; path = Utils/PECocoaBackportsGlobal.h; sourceTree = "<group>"; };
+		84103B53249DA8E5000980F8 /* Erase.action */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Erase.action; path = AutomatorActions/Erase.action; sourceTree = "<group>"; };
+		84103B54249DA8E5000980F8 /* EraseFreespace.action */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EraseFreespace.action; path = AutomatorActions/EraseFreespace.action; sourceTree = "<group>"; };
+		84103B55249DA8E5000980F8 /* EraseTrash.action */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = EraseTrash.action; path = AutomatorActions/EraseTrash.action; sourceTree = "<group>"; };
 		8411A3DF0BAE2CBF00AA5045 /* PE.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = PE.icns; sourceTree = "<group>"; };
 		84175C761A4BCB5100E8633D /* NSProcessInfo+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSProcessInfo+Utils.h"; path = "Utils/NSProcessInfo+Utils.h"; sourceTree = "<group>"; };
 		84175C771A4BCB5100E8633D /* NSProcessInfo+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSProcessInfo+Utils.m"; path = "Utils/NSProcessInfo+Utils.m"; sourceTree = "<group>"; };
@@ -285,6 +431,10 @@
 		842DA8351A73495F00BFD9F3 /* PE_128x128@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PE_128x128@2x.png"; path = "images/PE_128x128@2x.png"; sourceTree = "<group>"; };
 		842DA8521A73513E00BFD9F3 /* PE_40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PE_40x40.png; path = images/PE_40x40.png; sourceTree = "<group>"; };
 		842DA8531A73513E00BFD9F3 /* PE_40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PE_40x40@2x.png"; path = "images/PE_40x40@2x.png"; sourceTree = "<group>"; };
+		8432683B249D9A35001D760C /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84326859249D9A35001D760C /* Info-PermanentEraser__Upgraded__2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-PermanentEraser__Upgraded__2.plist"; sourceTree = "<group>"; };
+		8432685A249D9A38001D760C /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84326899249D9A38001D760C /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8438F44812A89C9600F9F813 /* NSFileManager+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Utils.h"; sourceTree = "<group>"; };
 		8438F44912A89C9600F9F813 /* NSFileManager+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Utils.m"; sourceTree = "<group>"; };
 		8440847B10C8B57B009EA3C5 /* CTProgressBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTProgressBadge.h; path = Utils/CTProgressBadge.h; sourceTree = "<group>"; };
@@ -340,6 +490,40 @@
 				1058C7A3FEA54F0111CA2CBB /* Cocoa.framework in Frameworks */,
 				84583AE60B54A1840078A640 /* Carbon.framework in Frameworks */,
 				845E65E30B967C6100391EE2 /* DiscRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326826249D9A35001D760C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84326827249D9A35001D760C /* Cocoa.framework in Frameworks */,
+				84326828249D9A35001D760C /* Carbon.framework in Frameworks */,
+				84326829249D9A35001D760C /* DiscRecording.framework in Frameworks */,
+				8432682A249D9A35001D760C /* IOKit.framework in Frameworks */,
+				8432682B249D9A35001D760C /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432684D249D9A35001D760C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432684E249D9A35001D760C /* Cocoa.framework in Frameworks */,
+				8432684F249D9A35001D760C /* Carbon.framework in Frameworks */,
+				84326850249D9A35001D760C /* DiscRecording.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326885249D9A38001D760C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84326886249D9A38001D760C /* Cocoa.framework in Frameworks */,
+				84326887249D9A38001D760C /* Carbon.framework in Frameworks */,
+				84326888249D9A38001D760C /* DiscRecording.framework in Frameworks */,
+				84326889249D9A38001D760C /* IOKit.framework in Frameworks */,
+				8432688A249D9A38001D760C /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +593,9 @@
 				17587328FF379C6511CA2CBB /* Permanent Eraser.app */,
 				84E63DC309B53F1500DA4444 /* Permanent Eraser.app */,
 				84567D32132C621A0070AD1A /* Permanent Eraser.app */,
+				8432683B249D9A35001D760C /* Permanent Eraser.app */,
+				8432685A249D9A38001D760C /* Permanent Eraser.app */,
+				84326899249D9A38001D760C /* Permanent Eraser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,6 +603,9 @@
 		29B97314FDCFA39411CA2CEA /* PermanentEraser */ = {
 			isa = PBXGroup;
 			children = (
+				84103B53249DA8E5000980F8 /* Erase.action */,
+				84103B54249DA8E5000980F8 /* EraseFreespace.action */,
+				84103B55249DA8E5000980F8 /* EraseTrash.action */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				84F6D5010C0BDD9F00CC11F4 /* Automator */,
@@ -424,6 +614,7 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				8467A0E11FC4F62E0072FEC8 /* Security.framework */,
+				84326859249D9A35001D760C /* Info-PermanentEraser__Upgraded__2.plist */,
 			);
 			name = PermanentEraser;
 			sourceTree = "<group>";
@@ -600,6 +791,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		843267FD249D9A35001D760C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843267FE249D9A35001D760C /* PermanentEraser_Prefix.h in Headers */,
+				843267FF249D9A35001D760C /* PEController.h in Headers */,
+				84326800249D9A35001D760C /* NSEvent+ModifierKeys.h in Headers */,
+				84326801249D9A35001D760C /* PEFile.h in Headers */,
+				84326802249D9A35001D760C /* NSAlertCheckbox.h in Headers */,
+				84326803249D9A35001D760C /* CTProgressBadge.h in Headers */,
+				84326804249D9A35001D760C /* PreferencesController.h in Headers */,
+				84326805249D9A35001D760C /* NSFileManager+Utils.h in Headers */,
+				84326806249D9A35001D760C /* NSProcessInfo+PECocoaBackports.h in Headers */,
+				84326807249D9A35001D760C /* PECocoaBackportsGlobal.h in Headers */,
+				84326808249D9A35001D760C /* STPrivilegedTask.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432683E249D9A35001D760C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432683F249D9A35001D760C /* PermanentEraser_Prefix.h in Headers */,
+				84326840249D9A35001D760C /* PEController.h in Headers */,
+				84326841249D9A35001D760C /* NSEvent+ModifierKeys.h in Headers */,
+				84326842249D9A35001D760C /* STPrivilegedTask.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432685D249D9A38001D760C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432685E249D9A38001D760C /* PermanentEraser_Prefix.h in Headers */,
+				8432685F249D9A38001D760C /* PEController.h in Headers */,
+				84326860249D9A38001D760C /* NSEvent+ModifierKeys.h in Headers */,
+				84326861249D9A38001D760C /* PEFile.h in Headers */,
+				84326862249D9A38001D760C /* NSAlertCheckbox.h in Headers */,
+				84326863249D9A38001D760C /* CTProgressBadge.h in Headers */,
+				84326864249D9A38001D760C /* PreferencesController.h in Headers */,
+				84326865249D9A38001D760C /* NSFileManager+Utils.h in Headers */,
+				84326866249D9A38001D760C /* NSProcessInfo+PECocoaBackports.h in Headers */,
+				84326867249D9A38001D760C /* PECocoaBackportsGlobal.h in Headers */,
+				84326868249D9A38001D760C /* STPrivilegedTask.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84567D02132C621A0070AD1A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,6 +877,69 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		843267FC249D9A35001D760C /* PermanentEraser (Upgraded) (Copied) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84326833249D9A35001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded) (Copied)" */;
+			buildPhases = (
+				843267FD249D9A35001D760C /* Headers */,
+				84326809249D9A35001D760C /* Resources */,
+				8432681B249D9A35001D760C /* Sources */,
+				84326826249D9A35001D760C /* Frameworks */,
+				8432682C249D9A35001D760C /* CopyFiles */,
+				84326830249D9A35001D760C /* CopyFiles */,
+				84326832249D9A35001D760C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PermanentEraser (Upgraded) (Copied)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = PermanentEraser;
+			productReference = 8432683B249D9A35001D760C /* Permanent Eraser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8432683D249D9A35001D760C /* PermanentEraser (Upgraded) 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84326851249D9A35001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded) 2" */;
+			buildPhases = (
+				8432683E249D9A35001D760C /* Headers */,
+				84326843249D9A35001D760C /* Resources */,
+				84326848249D9A35001D760C /* Sources */,
+				8432684D249D9A35001D760C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PermanentEraser (Upgraded) 2";
+			productInstallPath = "$(HOME)/Applications";
+			productName = PermanentEraser;
+			productReference = 8432685A249D9A38001D760C /* Permanent Eraser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8432685C249D9A38001D760C /* PermanentEraser MAS (Copied) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84326891249D9A38001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser MAS (Copied)" */;
+			buildPhases = (
+				8432685D249D9A38001D760C /* Headers */,
+				84326869249D9A38001D760C /* Resources */,
+				8432687A249D9A38001D760C /* Sources */,
+				84326885249D9A38001D760C /* Frameworks */,
+				8432688B249D9A38001D760C /* ShellScript */,
+				8432688C249D9A38001D760C /* CopyFiles */,
+				8432688F249D9A38001D760C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PermanentEraser MAS (Copied)";
+			productInstallPath = "$(HOME)/Applications";
+			productName = PermanentEraser;
+			productReference = 84326899249D9A38001D760C /* Permanent Eraser.app */;
+			productType = "com.apple.product-type.application";
+		};
 		84567D01132C621A0070AD1A /* PermanentEraser MAS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84567D2E132C621A0070AD1A /* Build configuration list for PBXNativeTarget "PermanentEraser MAS" */;
@@ -721,6 +1022,9 @@
 			);
 			projectRoot = "";
 			targets = (
+				843267FC249D9A35001D760C /* PermanentEraser (Upgraded) (Copied) */,
+				8432683D249D9A35001D760C /* PermanentEraser (Upgraded) 2 */,
+				8432685C249D9A38001D760C /* PermanentEraser MAS (Copied) */,
 				84E63DAD09B53F1500DA4444 /* PermanentEraser (Upgraded) */,
 				29B97326FDCFA39411CA2CEA /* PermanentEraser */,
 				84567D01132C621A0070AD1A /* PermanentEraser MAS */,
@@ -761,6 +1065,64 @@
 				089C165EFE840E0CC02AAC07 /* InfoPlist.strings in Resources */,
 				84CF81ED08F5EACA00F021FB /* Localizable.strings in Resources */,
 				8411A3E00BAE2CBF00AA5045 /* PE.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326809249D9A35001D760C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432680A249D9A35001D760C /* MainMenu.nib in Resources */,
+				8432680B249D9A35001D760C /* InfoPlist.strings in Resources */,
+				8432680C249D9A35001D760C /* Localizable.strings in Resources */,
+				8432680D249D9A35001D760C /* PE.icns in Resources */,
+				8432680E249D9A35001D760C /* Preferences.nib in Resources */,
+				8432680F249D9A35001D760C /* plugin.png in Resources */,
+				84326810249D9A35001D760C /* Erase.workflow in Resources */,
+				84326811249D9A35001D760C /* Permanent Eraser Help in Resources */,
+				84326812249D9A35001D760C /* srm in Resources */,
+				84326813249D9A35001D760C /* PE_128x128.png in Resources */,
+				84326814249D9A35001D760C /* PE_128x128@2x.png in Resources */,
+				84326815249D9A35001D760C /* PE_40x40.png in Resources */,
+				84326816249D9A35001D760C /* PE_40x40@2x.png in Resources */,
+				84326817249D9A35001D760C /* software_update.png in Resources */,
+				84326818249D9A35001D760C /* software_update@2x.png in Resources */,
+				84326819249D9A35001D760C /* plugin@2x.png in Resources */,
+				8432681A249D9A35001D760C /* EraseFreespace.action in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326843249D9A35001D760C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84326844249D9A35001D760C /* MainMenu.nib in Resources */,
+				84326845249D9A35001D760C /* InfoPlist.strings in Resources */,
+				84326846249D9A35001D760C /* Localizable.strings in Resources */,
+				84326847249D9A35001D760C /* PE.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326869249D9A38001D760C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432686A249D9A38001D760C /* MainMenu.nib in Resources */,
+				8432686B249D9A38001D760C /* InfoPlist.strings in Resources */,
+				8432686C249D9A38001D760C /* Localizable.strings in Resources */,
+				8432686D249D9A38001D760C /* PE.icns in Resources */,
+				8432686E249D9A38001D760C /* Preferences.nib in Resources */,
+				8432686F249D9A38001D760C /* plugin.png in Resources */,
+				84326870249D9A38001D760C /* Permanent Eraser Help in Resources */,
+				84326871249D9A38001D760C /* srm in Resources */,
+				84326872249D9A38001D760C /* PE_128x128.png in Resources */,
+				84326873249D9A38001D760C /* PE_128x128@2x.png in Resources */,
+				84326874249D9A38001D760C /* PE_40x40.png in Resources */,
+				84326875249D9A38001D760C /* PE_40x40@2x.png in Resources */,
+				84326876249D9A38001D760C /* software_update.png in Resources */,
+				84326877249D9A38001D760C /* software_update@2x.png in Resources */,
+				84326878249D9A38001D760C /* plugin@2x.png in Resources */,
+				84326879249D9A38001D760C /* srm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,13 +1169,38 @@
 				84078F0C1A9444C8009AC273 /* software_update.png in Resources */,
 				84078F0D1A9444C8009AC273 /* software_update@2x.png in Resources */,
 				84078F1E1A9449D4009AC273 /* plugin@2x.png in Resources */,
-				84753D131FB906A1009C7EC5 /* EraseFreespace.action in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		84326832249D9A35001D760C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# References for Xcode environment variables: \n# https://gist.github.com/gdavis/6670468\n# https://stackoverflow.com/questions/6910901/how-do-i-print-a-list-of-build-settings-in-xcode-project\n\n# Print out Xcode's environment variables\n# echo `env`\n\n# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\nPE_ERASE_WORKFLOW_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Erase.workflow\"\nPE_ERASEFREESPACE_ACTION_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/EraseFreespace.action\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\necho \"Erase.workflow path: $PE_ERASE_WORKFLOW_PATH\"\n\n# rm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\n# cp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Due to weirdness in Xcode 3, certain items are also being copied into the Resources folder\n# Remove Erase.workflow and EraseFreespace.action from the Resources folder since these files already \n# exist in other locations in the app bundle\nrm -Rf \"$PE_ERASE_WORKFLOW_PATH\"        # Remove Erase.workflow\nrm -Rf \"$PE_ERASEFREESPACE_ACTION_PATH\" # Remove EraseFreespace.action\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n";
+		};
+		8432688B249D9A38001D760C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# unzip the plug-ins\ncd \"$PROJECT_DIR\"\ncd Plug-Ins\nunzip -o Erase.zip\nunzip -o Permanent\\ Eraser.zip\n\nrm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\n";
+		};
 		84567D27132C621A0070AD1A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -838,7 +1225,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# References for Xcode environment variables: \n# https://gist.github.com/gdavis/6670468\n# https://stackoverflow.com/questions/6910901/how-do-i-print-a-list-of-build-settings-in-xcode-project\n\n# Print out Xcode's environment variables\n# echo `env`\n\n# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\nPE_ERASE_WORKFLOW_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Erase.workflow\"\nPE_ERASEFREESPACE_ACTION_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/EraseFreespace.action\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\necho \"Erase.workflow path: $PE_ERASE_WORKFLOW_PATH\"\n\nrm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\ncp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Due to weirdness in Xcode 3, certain items are also being copied into the Resources folder\n# Remove Erase.workflow and EraseFreespace.action from the Resources folder since these files already \n# exist in other locations in the app bundle\nrm -Rf \"$PE_ERASE_WORKFLOW_PATH\"        # Remove Erase.workflow\nrm -Rf \"$PE_ERASEFREESPACE_ACTION_PATH\" # Remove EraseFreespace.action\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n";
+			shellScript = "# References for Xcode environment variables: \n# https://gist.github.com/gdavis/6670468\n# https://stackoverflow.com/questions/6910901/how-do-i-print-a-list-of-build-settings-in-xcode-project\n\n# Print out Xcode's environment variables\n# echo `env`\n\n# unzip the plug-ins\n#cd \"$PROJECT_DIR\"\n#cd Plug-Ins\n#unzip -o Erase.zip\n#unzip -o Permanent\\ Eraser.zip\n#rm -Rf __MACOSX\n\n# copy the plug-ins to Contents/Plug-Ins\n\nPE_SRC_PLUGIN_PATH=\"$PROJECT_DIR/EraseCMI/EraseCMI.plugin\"\nPE_DEST_PLUGIN_PATH=\"$CONFIGURATION_BUILD_DIR/$PLUGINS_FOLDER_PATH/EraseCMI.plugin\"\nPE_ERASE_WORKFLOW_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/Erase.workflow\"\nPE_ERASEFREESPACE_ACTION_PATH=\"$CONFIGURATION_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/EraseFreespace.action\"\n\necho \"Configuration Directory: $CONFIGURATION_BUILD_DIR\"\necho \"Project Directory: $PROJECT_DIR\"\necho \"Build Directory: $BUILD_DIR\"\necho \"Plug-in Path: $PLUGINS_FOLDER_PATH\"\necho \"Source plug-in path: $PE_SRC_PLUGIN_PATH\"\necho \"Dest plug-in path: $PE_DEST_PLUGIN_PATH\"\necho \"Erase.workflow path: $PE_ERASE_WORKFLOW_PATH\"\n\n# rm -Rf \"$PE_DEST_PLUGIN_PATH\" # Remove the old copy\n# cp -Rpf \"$PE_SRC_PLUGIN_PATH\" \"$PE_DEST_PLUGIN_PATH\"\n\n# Due to weirdness in Xcode 3, certain items are also being copied into the Resources folder\n# Remove Erase.workflow and EraseFreespace.action from the Resources folder since these files already \n# exist in other locations in the app bundle\nrm -Rf \"$PE_ERASE_WORKFLOW_PATH\"        # Remove Erase.workflow\nrm -Rf \"$PE_ERASEFREESPACE_ACTION_PATH\" # Remove EraseFreespace.action\n\n# Dest plug-in path: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns/EraseCMI.plugin\n# cp: /Users/admin/Programs/builds/Permanent Eraser/build/Permanent Eraser.app/Contents/PlugIns: No such file or directory\n\n\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -851,6 +1238,51 @@
 				84524316048BDAA40003BAA1 /* PEController.m in Sources */,
 				8405E9DA0B55C88300483441 /* NSEvent+ModifierKeys.m in Sources */,
 				8467A0C21FC4ED340072FEC8 /* STPrivilegedTask.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432681B249D9A35001D760C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432681C249D9A35001D760C /* main.m in Sources */,
+				8432681D249D9A35001D760C /* PEController.m in Sources */,
+				8432681E249D9A35001D760C /* NSEvent+ModifierKeys.m in Sources */,
+				8432681F249D9A35001D760C /* PEFile.m in Sources */,
+				84326820249D9A35001D760C /* NSAlertCheckbox.m in Sources */,
+				84326821249D9A35001D760C /* CTProgressBadge.m in Sources */,
+				84326822249D9A35001D760C /* PreferencesController.m in Sources */,
+				84326823249D9A35001D760C /* NSFileManager+Utils.m in Sources */,
+				84326824249D9A35001D760C /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				84326825249D9A35001D760C /* STPrivilegedTask.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84326848249D9A35001D760C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84326849249D9A35001D760C /* main.m in Sources */,
+				8432684A249D9A35001D760C /* PEController.m in Sources */,
+				8432684B249D9A35001D760C /* NSEvent+ModifierKeys.m in Sources */,
+				8432684C249D9A35001D760C /* STPrivilegedTask.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8432687A249D9A38001D760C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8432687B249D9A38001D760C /* main.m in Sources */,
+				8432687C249D9A38001D760C /* PEController.m in Sources */,
+				8432687D249D9A38001D760C /* NSEvent+ModifierKeys.m in Sources */,
+				8432687E249D9A38001D760C /* PEFile.m in Sources */,
+				8432687F249D9A38001D760C /* NSAlertCheckbox.m in Sources */,
+				84326880249D9A38001D760C /* CTProgressBadge.m in Sources */,
+				84326881249D9A38001D760C /* PreferencesController.m in Sources */,
+				84326882249D9A38001D760C /* NSFileManager+Utils.m in Sources */,
+				84326883249D9A38001D760C /* NSProcessInfo+PECocoaBackports.m in Sources */,
+				84326884249D9A38001D760C /* STPrivilegedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +1389,638 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		84326834249D9A35001D760C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		84326835249D9A35001D760C /* Debug MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Debug MAS";
+		};
+		84326836249D9A35001D760C /* Debug Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Debug Panther";
+		};
+		84326837249D9A35001D760C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_CODE_SIGN_FLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		84326838249D9A35001D760C /* Release MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release MAS";
+		};
+		84326839249D9A35001D760C /* Release Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release Panther";
+		};
+		8432683A249D9A35001D760C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		84326852249D9A35001D760C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		84326853249D9A35001D760C /* Debug MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = "Debug MAS";
+		};
+		84326854249D9A35001D760C /* Debug Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = "Debug Panther";
+		};
+		84326855249D9A35001D760C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		84326856249D9A35001D760C /* Release MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release MAS";
+		};
+		84326857249D9A35001D760C /* Release Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release Panther";
+		};
+		84326858249D9A35001D760C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded__2.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		84326892249D9A38001D760C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		84326893249D9A38001D760C /* Debug MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Debug MAS";
+		};
+		84326894249D9A38001D760C /* Debug Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Debug Panther";
+		};
+		84326895249D9A38001D760C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "-DMAC_APP_STORE";
+				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS_ppc = "-prebind";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		84326896249D9A38001D760C /* Release MAS */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "Don't Code Sign";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "-DMAC_APP_STORE";
+				OTHER_LDFLAGS = "-lcrypto";
+				OTHER_LDFLAGS_ppc = "-prebind";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				VALID_ARCHS = "i386 x86_64";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release MAS";
+		};
+		84326897249D9A38001D760C /* Release Panther */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				GCC_VERSION_i386 = 4.0;
+				GCC_VERSION_ppc = 4.0;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
+				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
+				OTHER_CFLAGS = "-DMAC_APP_STORE";
+				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS_ppc = "-prebind";
+				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = "Release Panther";
+		};
+		84326898249D9A38001D760C /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = "Info-PermanentEraser_MAS.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "Permanent Eraser";
+				SECTORDER_FLAGS = "";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
 		84567D2F132C621A0070AD1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1069,20 +2133,14 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_LDFLAGS_ppc = "-prebind";
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1090,7 +2148,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = "Release MAS";
 		};
@@ -1185,17 +2242,14 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
-				GCC_VERSION_ppc = 4.0;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.4;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.4u.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1203,7 +2257,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = "Debug MAS";
 		};
@@ -1376,6 +2429,7 @@
 		84E63DBF09B53F1500DA4444 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1384,21 +2438,15 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_LDFLAGS_ppc = "-prebind";
-				PREBINDING = NO;
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1406,36 +2454,29 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
 		84E63DC009B53F1500DA4444 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_IDENTITY = "Don't Code Sign";
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 4.0;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.5;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.5;
 				OTHER_CFLAGS = "";
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_LDFLAGS_ppc = "-prebind";
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT = macosx10.5;
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.5.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.5.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1443,7 +2484,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -1460,6 +2500,7 @@
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "Permanent Eraser";
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1504,12 +2545,10 @@
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1517,7 +2556,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = "Debug Panther";
 		};
@@ -1602,20 +2640,14 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PermanentEraser_Prefix.h;
-				GCC_VERSION_i386 = 4.0;
-				GCC_VERSION_ppc = 3.3;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Info-PermanentEraser__Upgraded_.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = "";
-				MACOSX_DEPLOYMENT_TARGET_i386 = 10.4;
-				MACOSX_DEPLOYMENT_TARGET_ppc = 10.3;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "";
-				OTHER_LDFLAGS_ppc = "-prebind";
 				PRODUCT_NAME = "Permanent Eraser";
-				SDKROOT_i386 = /Developer/SDKs/MacOSX10.4u.sdk;
-				SDKROOT_ppc = /Developer/SDKs/MacOSX10.3.9.sdk;
+				SDKROOT = macosx10.6;
 				SECTORDER_FLAGS = "";
 				WARNING_CFLAGS = (
 					"-Wmost",
@@ -1623,7 +2655,6 @@
 					"-Wno-unknown-pragmas",
 				);
 				WRAPPER_EXTENSION = app;
-				ZERO_LINK = NO;
 			};
 			name = "Release Panther";
 		};
@@ -1692,6 +2723,48 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		84326833249D9A35001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded) (Copied)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84326834249D9A35001D760C /* Debug */,
+				84326835249D9A35001D760C /* Debug MAS */,
+				84326836249D9A35001D760C /* Debug Panther */,
+				84326837249D9A35001D760C /* Release */,
+				84326838249D9A35001D760C /* Release MAS */,
+				84326839249D9A35001D760C /* Release Panther */,
+				8432683A249D9A35001D760C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84326851249D9A35001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser (Upgraded) 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84326852249D9A35001D760C /* Debug */,
+				84326853249D9A35001D760C /* Debug MAS */,
+				84326854249D9A35001D760C /* Debug Panther */,
+				84326855249D9A35001D760C /* Release */,
+				84326856249D9A35001D760C /* Release MAS */,
+				84326857249D9A35001D760C /* Release Panther */,
+				84326858249D9A35001D760C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		84326891249D9A38001D760C /* Build configuration list for PBXNativeTarget "PermanentEraser MAS (Copied)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84326892249D9A38001D760C /* Debug */,
+				84326893249D9A38001D760C /* Debug MAS */,
+				84326894249D9A38001D760C /* Debug Panther */,
+				84326895249D9A38001D760C /* Release */,
+				84326896249D9A38001D760C /* Release MAS */,
+				84326897249D9A38001D760C /* Release Panther */,
+				84326898249D9A38001D760C /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
 		84567D2E132C621A0070AD1A /* Build configuration list for PBXNativeTarget "PermanentEraser MAS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

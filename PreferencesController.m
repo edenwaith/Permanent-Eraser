@@ -63,10 +63,7 @@ static PreferencesController *_sharedWindowController = nil;
 	[toolbar setSelectedItemIdentifier:GeneralToolbarItemIdentifier];
 	[[self window] setToolbar:toolbar];
 	
-	if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
-	{
-		[[self window] setShowsToolbarButton:NO];	// Supported in Mac OS 10.4 and later
-	}
+    [[self window] setShowsToolbarButton:NO];	// Supported in Mac OS 10.4 and later
 	
 	[self setActiveView:generalPreferenceView animate:NO];
 	[[self window] setTitle:NSLocalizedString(GeneralToolbarItemIdentifier, nil)];
@@ -177,10 +174,6 @@ static PreferencesController *_sharedWindowController = nil;
 	{
 		pluginPath = [@"~/Library/Services/Erase.workflow" stringByExpandingTildeInPath];
 	}
-	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES)
-	{	// Mac OS 10.4 + 10.5
-		pluginPath = [@"~/Library/Contextual Menu Items/EraseCMI.plugin" stringByExpandingTildeInPath];
-	}
 	else
 	{
 		pluginPath = @"";
@@ -193,13 +186,7 @@ static PreferencesController *_sharedWindowController = nil;
 	
 	[pluginInstalledButton setTitle: NSLocalizedString(@"InstallContextualPlugIn", nil)];
 	
-	// NOTE: Remove this first conditional in PE 3.0+
-	if ([pluginPath isEqualToString: @""] == YES)
-	{
-		[pluginInstalledButton setEnabled: NO];	// disable for Mac OS 10.3
-		[pluginMsgField setStringValue: [NSString stringWithFormat: NSLocalizedString(@"NoPluginMessage", nil)]];
-	}
-	else	// For Mac OS 10.4+
+	if ([pluginPath isEqualToString: @""] == NO)
 	{
 		[pluginMsgField setStringValue: [NSString stringWithFormat: NSLocalizedString(@"PluginInstallMessage", nil), [pluginPath lastPathComponent], [self displayLocalizedPath: [pluginPath stringByDeletingLastPathComponent]] ]];
 	}
@@ -236,7 +223,7 @@ static PreferencesController *_sharedWindowController = nil;
 	return [NSArray arrayWithObjects:
 			GeneralToolbarItemIdentifier,
 			UpdateToolbarItemIdentifier,
-			PlugInsToolbarItemIdentifier, // Don't show this one for Mac OS 10.3
+			PlugInsToolbarItemIdentifier,
 			nil];
 #endif
 
@@ -261,6 +248,7 @@ static PreferencesController *_sharedWindowController = nil;
 - (NSToolbarItem *)toolbar:(NSToolbar *)toolbar itemForItemIdentifier:(NSString *)identifier willBeInsertedIntoToolbar:(BOOL)willBeInserted 
 {
 	NSToolbarItem *item = [[[NSToolbarItem alloc] initWithItemIdentifier:identifier] autorelease];
+    
 	if ([identifier isEqualToString:GeneralToolbarItemIdentifier]) 
 	{
 		[item setLabel: NSLocalizedString(@"General", nil)];
@@ -624,32 +612,7 @@ static PreferencesController *_sharedWindowController = nil;
 				}
 				
 			}
-		}
-		// Mac OS X 10.5
-		else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 5, 0}] == YES) // Mac OS X 10.5
-		{
-			NSString *pluginSourcePath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"EraseCMI.plugin"];
-			
-			if ([fm fileExistsAtPath: pluginSourcePath] == YES) 
-			{
-				NSError *err = nil;
-				
-				// If the ~/Library/Contextual Menu Items/ folder does not exist, create it first
-				if ([fm fileExistsAtPath: [pluginPath stringByDeletingLastPathComponent]] == NO)
-				{
-					if ([fm createDirectoryAtPath:[pluginPath stringByDeletingLastPathComponent] withIntermediateDirectories: YES attributes: nil error: &err] == NO)
-					{
-						NSLog(@"Error: Failed to create directory %@ (%@)", [pluginPath stringByDeletingLastPathComponent], [err localizedDescription]);
-					}				
-				}
-			
-				if ([fm copyItemAtPath: pluginSourcePath toPath: pluginPath error: &err] == NO)
-				{
-					NSLog(@"Error: Failed to copy plug-in to %@ pluginPath (%@)", pluginPath, [err localizedDescription]);
-				}
-			}
-		}
-		
+		}		
 	}
 	else	// Remove plug-in
 	{

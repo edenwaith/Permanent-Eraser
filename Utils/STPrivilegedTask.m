@@ -307,7 +307,7 @@ OSStatus const errAuthorizationFnNoLongerExists = -70001;
         // sort of exception, this won't fail gracefully, but that's a risk
         // we'll have to take for now.
         // Pattern by Andy Kim from Potion Factory LLC
-#pragma GCC diagnostic ignored "-Wpedantic" // stop the pedantry!
+// #pragma GCC diagnostic ignored "-Wpedantic" // stop the pedantry!
 #pragma clang diagnostic push
         _AuthExecuteWithPrivsFn = dlsym(RTLD_DEFAULT, "AuthorizationExecuteWithPrivileges");
 #pragma clang diagnostic pop

@@ -296,11 +296,14 @@
 			}
 		}
 		
+        // Use the enumerator to try and read from the local Trash, which will hopefully pre-populate
+        // this app in the Full Disk Access list.
+        NSDirectoryEnumerator *enumerator = [fm enumeratorAtPath:[@"~/.Trash/" stringByExpandingTildeInPath]];
 		
 		// Need to check if the ap can read from the user's local ~/.Trash.  If it is not possible to see the files 
 		// in the user's local Trash, the app probably requires Full Disk Access to be enabled (in macOS Catalina and later)
 		// Instruct the user to enable Full Disk Access and then quit the app.
-		if ([fm isReadableFileAtPath:[@"~/.Trash" stringByExpandingTildeInPath]] == NO)
+		if ([[enumerator allObjects] count] == 0 && [fm isReadableFileAtPath:[@"~/.Trash" stringByExpandingTildeInPath]] == NO)
 		{						
 			NSAlert *alert = [NSAlert alertWithMessageText: NSLocalizedString(@"ErrorTitle", nil)
 											 defaultButton: NSLocalizedString(@"OpenSecurityPreferences", nil)
@@ -807,21 +810,6 @@
 		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"Erase.workflow"];
 		
 	}
-	else if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion:(NSOperatingSystemVersion){10, 4, 0}] == YES) // Mac OS 10.4 + 10.5
-	{
-		NSString *workflowPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
-		
-		if ([fm fileExistsAtPath: workflowPath] == YES)
-		{	// If the old workflow is still around, remove it and replace with the newer EraseCMI plugin
-			oldPluginPath = [@"~/Library/Workflows/Applications/Finder/Permanent Eraser.workflow" stringByExpandingTildeInPath];
-		}
-		else
-		{	// Otherwise, default to replacing the newer EraseCMI plugin if it is installed
-			oldPluginPath = [@"~/Library/Contextual Menu Items/EraseCMI.plugin" stringByExpandingTildeInPath];
-		}
-		
-		newPluginPath = [[[NSBundle mainBundle] builtInPlugInsPath] stringByAppendingPathComponent: @"EraseCMI.plugin"];
-	}
 	
 	// Check if plugin is installed
 	if ([fm fileExistsAtPath: oldPluginPath] == YES && [fm fileExistsAtPath: newPluginPath] == YES)
@@ -1084,8 +1072,8 @@
 		NSRunAlertPanel(NSLocalizedString(@"ErrorTitle",nil), NSLocalizedString(@"ErrorDeletingDiscMessage",nil), NSLocalizedString(@"OK",nil), nil, nil);
 		
 		// Continue on as if this was successful in erasing...
-		[indicator incrementBy: [[trash_files objectAtIndex: idx] filesize] * 100.0];
-		// Does [self updateIndicator] also need to be called here?
+        [self updateIndicator: [[trash_files objectAtIndex: idx] filesize] * 100.0];
+		
 		
 		// Does the badge update properly on macOS Mojave and Catalina?
 		[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
@@ -1128,13 +1116,11 @@
 		// Create an updateProgressBar method
 		if (currentPercentageCD >= lastPercentageCD)
 		{
-			[indicator incrementBy: (currentPercentageCD - lastPercentageCD)  * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
-			[self updateIndicator];
+			[self updateIndicator: (currentPercentageCD - lastPercentageCD)  * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
 		}
 		else
 		{
-			[indicator incrementBy: (100 - currentPercentageCD) * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
-			[self updateIndicator];
+			[self updateIndicator: (100 - currentPercentageCD) * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
 		}
 		
 		[fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
@@ -1217,8 +1203,8 @@
 		else
 		{
 			// Act like the file was erased and move on to the next file
-			[indicator incrementBy:[currentFile filesize]*100.0];
-			[self updateIndicator];
+			// [indicator incrementBy:[currentFile filesize]*100.0];
+			[self updateIndicator: [currentFile filesize]*100.0];
 			[[NSNotificationCenter defaultCenter] postNotificationName: @"NSTaskDidTerminateNotification" object: self];
 		}
 	}
@@ -1291,11 +1277,11 @@
 	// to the progress bar...
 	if (([currentFile isDirectory] == YES) && ([currentFile isPackage] == NO))
 	{
-		[indicator incrementBy: 100.0];
+        [self updateIndicator: 100.0];
 	}
-	else if ([[fileAttributes objectForKey:NSFileSize] intValue] == 0) // file is 0K in size
+	else if ([[fileAttributes objectForKey:NSFileSize] intValue] == 0) // file is 0 bytes in size
 	{
-		[indicator incrementBy: 100.0];
+        [self updateIndicator: 100.0];
 	}
 	
 	// Due to security limitations, once the privileged task is launched, it cannot be canceled
@@ -1318,8 +1304,8 @@
 		
 		// If there was an error, make the appropriate updates and then 
 		// call the notification to move onto the next file
-		[indicator incrementBy:[currentFile filesize]*100.0];
-		[self updateIndicator];
+		// [indicator incrementBy:[currentFile filesize]*100.0];
+		[self updateIndicator: [currentFile filesize]*100.0];
 		[[NSNotificationCenter defaultCenter] postNotificationName: STPrivilegedTaskDidTerminateNotification object: self];
 	} 
 	else 
@@ -1422,36 +1408,71 @@
 	int lastPercentage = 0;
 	int currentPercentage = 0;
 	unsigned long long currentFileSize = [[trash_files objectAtIndex: idx] filesize];
+    unsigned long long numberOfFiles = [[trash_files objectAtIndex: idx] numberOfFiles];
 	
 	// Catch NSFileHandleOperationException which occurred when trying to erase symlinks
 	@try 
 	{
 	
-		while ([data=[current_handle availableData] length] && totalFilesSize != 0)
+		while ( ([data=[current_handle availableData] length] > 0) && (totalFilesSize != 0) )
 		{
 			NSString *string = [[NSString alloc] initWithData:data encoding: NSASCIIStringEncoding];
+            // Strip whitespace and newline characters
 			NSString *modifiedString = [[NSString alloc] initWithString: [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+            // NSLog(@"PE:: modifiedString: %@", modifiedString);
+            
+            // There are casese where there might be multiple lines being sent, so perhaps it would make more sense to
+            // check the currentPercentage by either the last value (e.g. 50%, 75%, 100%).
 			NSArray *splitString = [modifiedString componentsSeparatedByString: @"%"];
 			
-			currentPercentage = [[splitString objectAtIndex: 0] intValue];		
+            // Crash mentions index 1 trying to access an array beyond the bounds [0...0]
+            
+            // Seeing an occasional crash which is resulting in an out of array bounds issue.  Probably happening here.
+            if ([splitString count] > 0)
+            {
+                currentPercentage = [[splitString objectAtIndex: 0] intValue];
+                // NSLog(@"PE:: currentPercentage: %d", currentPercentage);
+            }
+            else 
+            {
+                // NSLog(@"PE:: Error!  splitString is empty!");
+            }
 
-			[string release];
-			[modifiedString release];
+            if (string != nil)
+            {
+                [string release];
+            }
+            
+            if (modifiedString != nil)
+            {
+                [modifiedString release];
+            }
 			
-			// If it is an application, need to keep in mind there are extra files inside, so taking the currentFileSize won't work.
-			if (currentPercentage >= lastPercentage)
-			{
-				[indicator incrementBy: (currentPercentage - lastPercentage) * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
-				[self updateIndicator];
-			}
-			else
-			{
-				[indicator incrementBy: (100 - currentPercentage) * currentFileSize/[[trash_files objectAtIndex: idx] numberOfFiles]];
-				[self updateIndicator];
-			}
-			
-			[fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
-			
+            // unsigned long long numberOfFiles = [[trash_files objectAtIndex: idx] numberOfFiles];
+            
+            // Probably should not call updateIndicator here since it is also updating the fileSizeMsg,
+            // but update the updateIndicator call to use GCD so other places which do call it
+            // will have the updated method.
+            
+            // What if I changed this to dispatch_sync, instead?  Would that fix the crashing?
+            // Is this only crashing near the end, or is it random?
+            // Why do I seem to see this more often on Mojave and Catalina?
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                // If it is an application, need to keep in mind there are extra files inside, so taking the currentFileSize won't work.
+                if (currentPercentage >= lastPercentage)
+                {
+                    [indicator incrementBy: (currentPercentage - lastPercentage) * currentFileSize/numberOfFiles];
+                    [indicator displayIfNeeded];
+                }
+                else
+                {
+                    [indicator incrementBy: (100 - currentPercentage) * currentFileSize/numberOfFiles];
+                    [indicator displayIfNeeded];
+                }
+                
+                [fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
+			});
+            
 			[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 			
 			if (currentPercentage >= 100)
@@ -1466,9 +1487,9 @@
 		}
 	
 	}
-	@catch (NSException * exception) 
+	@catch (NSException *exception) 
 	{
-		NSLog(@"Exception name: %@ Reason: %@", [exception name], [exception reason]);
+		NSLog(@"PE:: Exception name: %@ Reason: %@", [exception name], [exception reason]);
 	}
 	@finally 
 	{
@@ -1481,31 +1502,19 @@
 
 
 // =========================================================================
-// - (void) updateIndicator
+// - (void) updateIndicator: (double) delta
 // -------------------------------------------------------------------------
-// Force the progress indicator to redraw itself.  This was used to correct
-// an issue with older versions of Mac OS X where the indicator did not
-// always redraw itself properly.  This is not done in Mac OS 10.6+, since
-// it caused the program to crash when the window was minimized in Snow 
-// Leopard.
-//
-// The crashing issue was likely due to trying to update the interface
-// when not on the main thread.
+// 
 // -------------------------------------------------------------------------
-// Created: 29 November 2009 22:46
-// Version: 20 March 2015 19:52
+// Created: 21 June 2020 10:52
+// Version: 21 June 2020 10:52
 // =========================================================================
-- (void) updateIndicator
+- (void) updateIndicator: (double) delta
 {
-	// If this is not the main thread, make a call to the main thread to update the interface.
-	if ([[NSThread currentThread] isMainThread] == NO)
-	{
-		[indicator performSelectorOnMainThread:@selector(displayIfNeeded) withObject:nil waitUntilDone:NO];
-	}
-	else 
-	{
-		[indicator displayIfNeeded];
-	}
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [indicator incrementBy:delta];
+        [indicator displayIfNeeded];
+    });
 }
 
 
@@ -2021,8 +2030,7 @@
 	// but do not fill it completely if erasing was canceled.
 	if (([indicator doubleValue] < [indicator maxValue]) && wasCanceled == NO)
 	{
-		[indicator incrementBy: [indicator maxValue] - [indicator doubleValue]];
-		[self updateIndicator];
+		[self updateIndicator: [indicator maxValue] - [indicator doubleValue]];
 	}
 	
 	if (beepBeforeTerminating == YES)
