@@ -1,5 +1,5 @@
 /* Localized versions of Info.plist keys */
 
 CFBundleName = "Permanent Eraser";
-CFBundleGetInfoString = "2.9.0, Copyright © 2003-2020 Edenwaith.";
+CFBundleGetInfoString = "2.9.1, Copyright © 2003-2020 Edenwaith.";
 NSHumanReadableCopyright = "Copyright © 2003-2020 Edenwaith. \nTous droits réservés.";

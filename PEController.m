@@ -1419,23 +1419,16 @@
 			NSString *string = [[NSString alloc] initWithData:data encoding: NSASCIIStringEncoding];
             // Strip whitespace and newline characters
 			NSString *modifiedString = [[NSString alloc] initWithString: [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceAndNewlineCharacterSet]]];
-            // NSLog(@"PE:: modifiedString: %@", modifiedString);
             
             // There are casese where there might be multiple lines being sent, so perhaps it would make more sense to
             // check the currentPercentage by either the last value (e.g. 50%, 75%, 100%).
 			NSArray *splitString = [modifiedString componentsSeparatedByString: @"%"];
 			
             // Crash mentions index 1 trying to access an array beyond the bounds [0...0]
-            
             // Seeing an occasional crash which is resulting in an out of array bounds issue.  Probably happening here.
             if ([splitString count] > 0)
             {
                 currentPercentage = [[splitString objectAtIndex: 0] intValue];
-                // NSLog(@"PE:: currentPercentage: %d", currentPercentage);
-            }
-            else 
-            {
-                // NSLog(@"PE:: Error!  splitString is empty!");
             }
 
             if (string != nil)
@@ -1447,8 +1440,6 @@
             {
                 [modifiedString release];
             }
-			
-            // unsigned long long numberOfFiles = [[trash_files objectAtIndex: idx] numberOfFiles];
             
             // Probably should not call updateIndicator here since it is also updating the fileSizeMsg,
             // but update the updateIndicator call to use GCD so other places which do call it
@@ -1471,9 +1462,11 @@
                 }
                 
                 [fileSizeMsg setStringValue: [[[fm formatFileSize: ([indicator doubleValue] / [indicator maxValue]) *totalFilesSize] stringByAppendingString: NSLocalizedString(@"Of", nil)] stringByAppendingString: [fm formatFileSize: (double)totalFilesSize]]];
+                
+                [badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
 			});
             
-			[badge badgeApplicationDockIconWithProgress:([indicator doubleValue] / [indicator maxValue]) insetX:2 y:0];
+			
 			
 			if (currentPercentage >= 100)
 			{
