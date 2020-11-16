@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3B1831725632191008558A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831625632191008558A5 /* AppDelegate.swift */; };
+		C3B1831925632191008558A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831825632191008558A5 /* ViewController.swift */; };
+		C3B1831B25632192008558A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B1831A25632192008558A5 /* Assets.xcassets */; };
+		C3B1831E25632192008558A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B1831C25632192008558A5 /* Main.storyboard */; };
+		C3B1832A25632192008558A5 /* Permanent_EraserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1832925632192008558A5 /* Permanent_EraserTests.swift */; };
+		C3B1833525632192008558A5 /* Permanent_EraserUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1833425632192008558A5 /* Permanent_EraserUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C3B1832625632192008558A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B1830B25632191008558A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B1831225632191008558A5;
+			remoteInfo = "Permanent Eraser";
+		};
+		C3B1833125632192008558A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B1830B25632191008558A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B1831225632191008558A5;
+			remoteInfo = "Permanent Eraser";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C3B1831325632191008558A5 /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B1831625632191008558A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C3B1831825632191008558A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C3B1831A25632192008558A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C3B1831D25632192008558A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C3B1831F25632192008558A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B1832025632192008558A5 /* Permanent_Eraser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Permanent_Eraser.entitlements; sourceTree = "<group>"; };
+		C3B1832525632192008558A5 /* Permanent EraserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Permanent EraserTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B1832925632192008558A5 /* Permanent_EraserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permanent_EraserTests.swift; sourceTree = "<group>"; };
+		C3B1832B25632192008558A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B1833025632192008558A5 /* Permanent EraserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Permanent EraserUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B1833425632192008558A5 /* Permanent_EraserUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permanent_EraserUITests.swift; sourceTree = "<group>"; };
+		C3B1833625632192008558A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3B1831025632191008558A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832225632192008558A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832D25632192008558A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3B1830A25632191008558A5 = {
+			isa = PBXGroup;
+			children = (
+				C3B1831525632191008558A5 /* Permanent Eraser */,
+				C3B1832825632192008558A5 /* Permanent EraserTests */,
+				C3B1833325632192008558A5 /* Permanent EraserUITests */,
+				C3B1831425632191008558A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3B1831425632191008558A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1831325632191008558A5 /* Permanent Eraser.app */,
+				C3B1832525632192008558A5 /* Permanent EraserTests.xctest */,
+				C3B1833025632192008558A5 /* Permanent EraserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3B1831525632191008558A5 /* Permanent Eraser */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1831625632191008558A5 /* AppDelegate.swift */,
+				C3B1831825632191008558A5 /* ViewController.swift */,
+				C3B1831A25632192008558A5 /* Assets.xcassets */,
+				C3B1831C25632192008558A5 /* Main.storyboard */,
+				C3B1831F25632192008558A5 /* Info.plist */,
+				C3B1832025632192008558A5 /* Permanent_Eraser.entitlements */,
+			);
+			path = "Permanent Eraser";
+			sourceTree = "<group>";
+		};
+		C3B1832825632192008558A5 /* Permanent EraserTests */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1832925632192008558A5 /* Permanent_EraserTests.swift */,
+				C3B1832B25632192008558A5 /* Info.plist */,
+			);
+			path = "Permanent EraserTests";
+			sourceTree = "<group>";
+		};
+		C3B1833325632192008558A5 /* Permanent EraserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C3B1833425632192008558A5 /* Permanent_EraserUITests.swift */,
+				C3B1833625632192008558A5 /* Info.plist */,
+			);
+			path = "Permanent EraserUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3B1831225632191008558A5 /* Permanent Eraser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B1833925632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent Eraser" */;
+			buildPhases = (
+				C3B1830F25632191008558A5 /* Sources */,
+				C3B1831025632191008558A5 /* Frameworks */,
+				C3B1831125632191008558A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Permanent Eraser";
+			productName = "Permanent Eraser";
+			productReference = C3B1831325632191008558A5 /* Permanent Eraser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C3B1832425632192008558A5 /* Permanent EraserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B1833C25632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent EraserTests" */;
+			buildPhases = (
+				C3B1832125632192008558A5 /* Sources */,
+				C3B1832225632192008558A5 /* Frameworks */,
+				C3B1832325632192008558A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3B1832725632192008558A5 /* PBXTargetDependency */,
+			);
+			name = "Permanent EraserTests";
+			productName = "Permanent EraserTests";
+			productReference = C3B1832525632192008558A5 /* Permanent EraserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3B1832F25632192008558A5 /* Permanent EraserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B1833F25632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent EraserUITests" */;
+			buildPhases = (
+				C3B1832C25632192008558A5 /* Sources */,
+				C3B1832D25632192008558A5 /* Frameworks */,
+				C3B1832E25632192008558A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C3B1833225632192008558A5 /* PBXTargetDependency */,
+			);
+			name = "Permanent EraserUITests";
+			productName = "Permanent EraserUITests";
+			productReference = C3B1833025632192008558A5 /* Permanent EraserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3B1830B25632191008558A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					C3B1831225632191008558A5 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					C3B1832425632192008558A5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C3B1831225632191008558A5;
+					};
+					C3B1832F25632192008558A5 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = C3B1831225632191008558A5;
+					};
+				};
+			};
+			buildConfigurationList = C3B1830E25632191008558A5 /* Build configuration list for PBXProject "Permanent Eraser" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C3B1830A25632191008558A5;
+			productRefGroup = C3B1831425632191008558A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3B1831225632191008558A5 /* Permanent Eraser */,
+				C3B1832425632192008558A5 /* Permanent EraserTests */,
+				C3B1832F25632192008558A5 /* Permanent EraserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3B1831125632191008558A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B1831B25632192008558A5 /* Assets.xcassets in Resources */,
+				C3B1831E25632192008558A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832325632192008558A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832E25632192008558A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3B1830F25632191008558A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B1831925632191008558A5 /* ViewController.swift in Sources */,
+				C3B1831725632191008558A5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832125632192008558A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B1832A25632192008558A5 /* Permanent_EraserTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B1832C25632192008558A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3B1833525632192008558A5 /* Permanent_EraserUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C3B1832725632192008558A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B1831225632191008558A5 /* Permanent Eraser */;
+			targetProxy = C3B1832625632192008558A5 /* PBXContainerItemProxy */;
+		};
+		C3B1833225632192008558A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B1831225632191008558A5 /* Permanent Eraser */;
+			targetProxy = C3B1833125632192008558A5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C3B1831C25632192008558A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3B1831D25632192008558A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3B1833725632192008558A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C3B1833825632192008558A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C3B1833A25632192008558A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Permanent Eraser/Permanent_Eraser.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Permanent Eraser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edenwaith.permanenteraser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C3B1833B25632192008558A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Permanent Eraser/Permanent_Eraser.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "Permanent Eraser/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edenwaith.permanenteraser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C3B1833D25632192008558A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				INFOPLIST_FILE = "Permanent EraserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edenwaith.Permanent-EraserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Permanent Eraser.app/Contents/MacOS/Permanent Eraser";
+			};
+			name = Debug;
+		};
+		C3B1833E25632192008558A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				INFOPLIST_FILE = "Permanent EraserTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edenwaith.Permanent-EraserTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Permanent Eraser.app/Contents/MacOS/Permanent Eraser";
+			};
+			name = Release;
+		};
+		C3B1834025632192008558A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				INFOPLIST_FILE = "Permanent EraserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edenwaith.Permanent-EraserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Permanent Eraser";
+			};
+			name = Debug;
+		};
+		C3B1834125632192008558A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 59RQ86687X;
+				INFOPLIST_FILE = "Permanent EraserUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.edenwaith.Permanent-EraserUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Permanent Eraser";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3B1830E25632191008558A5 /* Build configuration list for PBXProject "Permanent Eraser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B1833725632192008558A5 /* Debug */,
+				C3B1833825632192008558A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B1833925632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent Eraser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B1833A25632192008558A5 /* Debug */,
+				C3B1833B25632192008558A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B1833C25632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent EraserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B1833D25632192008558A5 /* Debug */,
+				C3B1833E25632192008558A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B1833F25632192008558A5 /* Build configuration list for PBXNativeTarget "Permanent EraserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B1834025632192008558A5 /* Debug */,
+				C3B1834125632192008558A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3B1830B25632191008558A5 /* Project object */;
+}
