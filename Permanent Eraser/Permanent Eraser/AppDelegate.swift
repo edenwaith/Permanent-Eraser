@@ -43,6 +43,46 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		statusBarItem.menu = self.statusBarMenu
 	}
 
+	@IBAction func seletFilesToDelete(_ sender: Any) {
+		
+		// Set up options for the open panel
+		let openPanel = NSOpenPanel()
+		openPanel.allowsMultipleSelection = true
+		openPanel.canChooseDirectories = true
+		openPanel.canCreateDirectories = false
+		openPanel.canChooseFiles = true
+		
+		openPanel.begin { (result) -> Void in
+			if result == NSApplication.ModalResponse.OK {
+				// Get list of files and collate them
+				let urls = openPanel.urls
+				var totalSize: UInt64 = 0
+				
+				for url in urls {
+					
+					let isDirectory = (try? url.resourceValues(forKeys: [.isDirectoryKey]))?.isDirectory ?? false
+					// Should also test that if something is a package, is it checked in the previous statement?  Yep, for an app, it sees the package as a directory.
+					let isPackage = (try? url.resourceValues(forKeys:[.isPackageKey]))?.isPackage ?? false
+					
+					if isDirectory == true || isPackage == true {
+						totalSize += (try? FileManager.default.allocatedSizeOfDirectory(at: url)) ?? 0
+					} else {
+						totalSize += (try? url.regularFileAllocatedSize()) ?? 0
+					}
+					print("url: \(url)")
+				}
+				
+				print("totalSize: \(totalSize)")
+			}
+		}
+		
+		
+		
+		
+		// For testing purposes, display size of selected file(s)
+	}
+	
+	
 	@IBAction func quitApplication(_ sender: Any) {
 		NSApp.terminate(sender)
 	}

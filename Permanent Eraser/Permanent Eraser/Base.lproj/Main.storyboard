@@ -679,6 +679,9 @@
                     <items>
                         <menuItem title="Erase File" id="UTy-rH-Ic4">
                             <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="seletFilesToDelete:" target="Voe-Tx-rLC" id="zd4-dK-6cZ"/>
+                            </connections>
                         </menuItem>
                         <menuItem title="Erase Trash" id="yip-Xu-Mpq">
                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -693,12 +696,9 @@
                         <menuItem title="Check For Updates..." id="jDi-gS-GIc">
                             <modifierMask key="keyEquivalentModifierMask"/>
                         </menuItem>
-                        <menuItem title="Preferences..." id="UaM-tk-X8z">
-                            <modifierMask key="keyEquivalentModifierMask"/>
-                        </menuItem>
+                        <menuItem title="Preferences..." keyEquivalent="," id="UaM-tk-X8z"/>
                         <menuItem isSeparatorItem="YES" id="WiN-0c-jYQ"/>
-                        <menuItem title="Quit Permanent Eraser" id="7lU-nP-nsR">
-                            <modifierMask key="keyEquivalentModifierMask"/>
+                        <menuItem title="Quit Permanent Eraser" keyEquivalent="q" id="7lU-nP-nsR">
                             <connections>
                                 <action selector="quitApplication:" target="Voe-Tx-rLC" id="daa-Ed-mmW"/>
                             </connections>
