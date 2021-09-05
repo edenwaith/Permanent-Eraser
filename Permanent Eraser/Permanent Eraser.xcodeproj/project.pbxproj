@@ -13,6 +13,9 @@
 		3D37881E26ACA7AA00305268 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37881D26ACA7AA00305268 /* URL+Utils.swift */; };
 		3D37881F26ACA7AA00305268 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37881D26ACA7AA00305268 /* URL+Utils.swift */; };
 		3D37882026ACA7AA00305268 /* URL+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D37881D26ACA7AA00305268 /* URL+Utils.swift */; };
+		3DAE238526E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
+		3DAE238626E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
+		3DAE238726E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
 		C3B1831725632191008558A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831625632191008558A5 /* AppDelegate.swift */; };
 		C3B1831925632191008558A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831825632191008558A5 /* ViewController.swift */; };
 		C3B1831B25632192008558A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B1831A25632192008558A5 /* Assets.xcassets */; };
@@ -41,6 +44,7 @@
 /* Begin PBXFileReference section */
 		3D37881926ACA78400305268 /* FileManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utils.swift"; sourceTree = "<group>"; };
 		3D37881D26ACA7AA00305268 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
+		3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenuServiceProvider.swift; sourceTree = "<group>"; };
 		C3B1831325632191008558A5 /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B1831625632191008558A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B1831825632191008558A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				C3B1831C25632192008558A5 /* Main.storyboard */,
 				C3B1831F25632192008558A5 /* Info.plist */,
 				C3B1832025632192008558A5 /* Permanent_Eraser.entitlements */,
+				3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */,
 			);
 			path = "Permanent Eraser";
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAE238526E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */,
 				3D37881E26ACA7AA00305268 /* URL+Utils.swift in Sources */,
 				C3B1831925632191008558A5 /* ViewController.swift in Sources */,
 				C3B1831725632191008558A5 /* AppDelegate.swift in Sources */,
@@ -284,6 +290,7 @@
 			files = (
 				3D37881B26ACA78400305268 /* FileManager+Utils.swift in Sources */,
 				3D37881F26ACA7AA00305268 /* URL+Utils.swift in Sources */,
+				3DAE238626E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */,
 				C3B1832A25632192008558A5 /* Permanent_EraserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +301,7 @@
 			files = (
 				3D37881C26ACA78400305268 /* FileManager+Utils.swift in Sources */,
 				3D37882026ACA7AA00305268 /* URL+Utils.swift in Sources */,
+				3DAE238726E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */,
 				C3B1833525632192008558A5 /* Permanent_EraserUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

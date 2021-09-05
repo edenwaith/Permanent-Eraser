@@ -16,8 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
 		setupStatusBarMenu()
+		setupServiceProvider()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -25,6 +25,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 	// MARK: -
+	
+	func setupServiceProvider() {
+
+		NSApplication.shared.servicesProvider = ContextualMenuServiceProvider()
+		// Call this for sanity's sake to refresh the known services
+		NSUpdateDynamicServices()
+	}
 	
 	func setupStatusBarMenu() {
 		

@@ -25,12 +25,44 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>LSUIElement</key>
-	<string>NO</string>
+	<string>YES</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2003-2021 Edenwaith.  All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSKeyEquivalent</key>
+			<dict>
+				<key>default</key>
+				<string>E</string>
+			</dict>
+			<key>NSMessage</key>
+			<string>eraseService</string>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>default</key>
+				<string>Erase File</string>
+			</dict>
+			<key>NSPortName</key>
+			<string>Permanent Eraser</string>
+	        <key>NSSendFileTypes</key>
+			<array>
+				<string>public.item</string>
+			</array>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSPasteboardTypeString</string>
+			</array>
+			<key>NSRequiredContext</key>
+			<dict>
+				<key>NSServiceCategory</key>
+				<string>public.item</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
