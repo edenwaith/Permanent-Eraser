@@ -94,6 +94,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		3DAE238826E5B1B700B5B5D1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		C3B1830A25632191008558A5 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +125,7 @@
 		C3B1831525632191008558A5 /* Permanent Eraser */ = {
 			isa = PBXGroup;
 			children = (
+				3DAE238826E5B1B700B5B5D1 /* Classes */,
 				3D37881826ACA75D00305268 /* Extensions */,
 				C3B1831625632191008558A5 /* AppDelegate.swift */,
 				C3B1831825632191008558A5 /* ViewController.swift */,
@@ -124,7 +133,6 @@
 				C3B1831C25632192008558A5 /* Main.storyboard */,
 				C3B1831F25632192008558A5 /* Info.plist */,
 				C3B1832025632192008558A5 /* Permanent_Eraser.entitlements */,
-				3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */,
 			);
 			path = "Permanent Eraser";
 			sourceTree = "<group>";

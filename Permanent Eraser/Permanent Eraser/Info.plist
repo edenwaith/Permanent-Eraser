@@ -49,18 +49,29 @@
 			</dict>
 			<key>NSPortName</key>
 			<string>Permanent Eraser</string>
-	        <key>NSSendFileTypes</key>
+			<!--
+			<key>NSSendFileTypes</key>
 			<array>
+				<string>public.file-url</string>
+				<string>public.url</string>
 				<string>public.item</string>
+				<string>public.folder</string>
 			</array>
+			-->
 			<key>NSSendTypes</key>
 			<array>
-				<string>NSPasteboardTypeString</string>
+				<string>NSStringPboardType</string>
+				<string>public.utf8-plain-text</string>
+				<string>NSURLPboardType</string>
+				<string>public.url</string>
+				<string>public.file-url</string>
 			</array>
 			<key>NSRequiredContext</key>
 			<dict>
-				<key>NSServiceCategory</key>
-				<string>public.item</string>
+            	<key>NSTextContent</key>
+            	<array>
+					<string>FilePath</string>
+				</array>
 			</dict>
 		</dict>
 	</array>
