@@ -62,6 +62,11 @@ class ContextualMenuServiceProvider: NSObject {
 		let urlPath = URL(fileURLWithPath: pboardInfo)
 		let standardizedURL = URL(fileURLWithPath: pboardInfo).standardized
 		
+		// Add this single file to the list of files to delete
+		PEFileManager.sharedManager.addFiles(files: [standardizedURL])
+		
+		// Next up, once all of the files have been added, then start deleting.
+		
 		let pboardInfoType = type(of: pboardInfo)
 		let alert = NSAlert()
 		alert.messageText = "Hola info \(pboardInfo) of type \(pboardInfoType) at \(urlPath.absoluteURL)"

@@ -16,6 +16,12 @@
 		3DAE238526E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
 		3DAE238626E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
 		3DAE238726E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */; };
+		3DAE238A26E723EA00B5B5D1 /* PEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238926E723E900B5B5D1 /* PEFileManager.swift */; };
+		3DAE238B26E723EA00B5B5D1 /* PEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238926E723E900B5B5D1 /* PEFileManager.swift */; };
+		3DAE238C26E723EA00B5B5D1 /* PEFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238926E723E900B5B5D1 /* PEFileManager.swift */; };
+		3DAE238F26E7242A00B5B5D1 /* PEFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238E26E7242A00B5B5D1 /* PEFile.swift */; };
+		3DAE239026E7242A00B5B5D1 /* PEFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238E26E7242A00B5B5D1 /* PEFile.swift */; };
+		3DAE239126E7242A00B5B5D1 /* PEFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE238E26E7242A00B5B5D1 /* PEFile.swift */; };
 		C3B1831725632191008558A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831625632191008558A5 /* AppDelegate.swift */; };
 		C3B1831925632191008558A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B1831825632191008558A5 /* ViewController.swift */; };
 		C3B1831B25632192008558A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3B1831A25632192008558A5 /* Assets.xcassets */; };
@@ -45,6 +51,8 @@
 		3D37881926ACA78400305268 /* FileManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Utils.swift"; sourceTree = "<group>"; };
 		3D37881D26ACA7AA00305268 /* URL+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Utils.swift"; sourceTree = "<group>"; };
 		3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualMenuServiceProvider.swift; sourceTree = "<group>"; };
+		3DAE238926E723E900B5B5D1 /* PEFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEFileManager.swift; sourceTree = "<group>"; };
+		3DAE238E26E7242A00B5B5D1 /* PEFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEFile.swift; sourceTree = "<group>"; };
 		C3B1831325632191008558A5 /* Permanent Eraser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Permanent Eraser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B1831625632191008558A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3B1831825632191008558A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,8 +106,17 @@
 			isa = PBXGroup;
 			children = (
 				3DAE238426E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift */,
+				3DAE238926E723E900B5B5D1 /* PEFileManager.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		3DAE238D26E7240900B5B5D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE238E26E7242A00B5B5D1 /* PEFile.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C3B1830A25632191008558A5 = {
@@ -127,6 +144,7 @@
 			children = (
 				3DAE238826E5B1B700B5B5D1 /* Classes */,
 				3D37881826ACA75D00305268 /* Extensions */,
+				3DAE238D26E7240900B5B5D1 /* Models */,
 				C3B1831625632191008558A5 /* AppDelegate.swift */,
 				C3B1831825632191008558A5 /* ViewController.swift */,
 				C3B1831A25632192008558A5 /* Assets.xcassets */,
@@ -288,7 +306,9 @@
 				3D37881E26ACA7AA00305268 /* URL+Utils.swift in Sources */,
 				C3B1831925632191008558A5 /* ViewController.swift in Sources */,
 				C3B1831725632191008558A5 /* AppDelegate.swift in Sources */,
+				3DAE238A26E723EA00B5B5D1 /* PEFileManager.swift in Sources */,
 				3D37881A26ACA78400305268 /* FileManager+Utils.swift in Sources */,
+				3DAE238F26E7242A00B5B5D1 /* PEFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +316,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAE239026E7242A00B5B5D1 /* PEFile.swift in Sources */,
+				3DAE238B26E723EA00B5B5D1 /* PEFileManager.swift in Sources */,
 				3D37881B26ACA78400305268 /* FileManager+Utils.swift in Sources */,
 				3D37881F26ACA7AA00305268 /* URL+Utils.swift in Sources */,
 				3DAE238626E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */,
@@ -307,6 +329,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAE239126E7242A00B5B5D1 /* PEFile.swift in Sources */,
+				3DAE238C26E723EA00B5B5D1 /* PEFileManager.swift in Sources */,
 				3D37881C26ACA78400305268 /* FileManager+Utils.swift in Sources */,
 				3D37882026ACA7AA00305268 /* URL+Utils.swift in Sources */,
 				3DAE238726E1E12C00B5B5D1 /* ContextualMenuServiceProvider.swift in Sources */,
